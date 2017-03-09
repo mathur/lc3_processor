@@ -1,7 +1,22 @@
 import lc3b_types::*;
 
 module id_datapath (
-    input clk
+    input clk,
+
+    /* Control Inputs */
+    input load_regfile,
+
+    /* Data Inputs */
+    input lc3b_reg dest,
+    input lc3b_reg sr1,
+    input lc3b_reg sr2,
+    input lc3b_reg wb_dest_addr,
+    input lc3b_word wb_dest_data, 
+
+    /* Data Outputs */
+    output lc3b_reg destmux_out
+    output lc3b_word sr1_out,
+    output lc3b_word sr2_out
 );
 
 mux2 #(.width(3)) destmux
@@ -24,60 +39,12 @@ regfile rfile
 (
     .clk(clk),
     .load(load_regfile),
-    .in(regfilemux_out),
+    .in(wb_dest_data),
     .src_a(storemux_out),
     .src_b(sr2),
-    .dest(destmux_out),
+    .dest(wb_dest_mux),
     .reg_a(sr1_out),
     .reg_b(sr2_out)
-);
-
-adjns #(.width(5)) adj5
-(
-    .in(offset5),
-    .out(adj5_out)
-);
-
-adj #(.width(6)) adj6
-(
-    .in(offset6),
-    .out(adj6_out)
-);
-
-adjns #(.width(6)) adj6ns
-(
-    .in(offset6),
-    .out(adj6ns_out)
-);
-
-adj #(.width(9)) adj9
-(
-    .in(offset9),
-    .out(adj9_out)
-);
-
-adj #(.width(11)) adj11
-(
-    .in(offset11),
-    .out(adj11_out)
-);
-
-udjns zext_8
-(
-    .in(mdr_out[7:0]),
-    .out(zext_8_out)
-);
-
-udj trap_zext
-(
-    .in(trap_vector),
-    .out(trap_zext_out)
-);
-
-udjns ldbzext
-(
-    .in(ldbmux_out),
-    .out(ldb_zext_out)
 );
 
 control_gen controls

@@ -37,6 +37,54 @@ alu alu_unit
     .f(alu_out)
 );
 
+adjns #(.width(5)) adj5
+(
+    .in(offset5),
+    .out(adj5_out)
+);
+
+adj #(.width(6)) adj6
+(
+    .in(offset6),
+    .out(adj6_out)
+);
+
+adjns #(.width(6)) adj6ns
+(
+    .in(offset6),
+    .out(adj6ns_out)
+);
+
+adj #(.width(9)) adj9
+(
+    .in(offset9),
+    .out(adj9_out)
+);
+
+adj #(.width(11)) adj11
+(
+    .in(offset11),
+    .out(adj11_out)
+);
+
+udjns zext_8
+(
+    .in(mdr_out[7:0]),
+    .out(zext_8_out)
+);
+
+udj trap_zext
+(
+    .in(trap_vector),
+    .out(trap_zext_out)
+);
+
+udjns ldbzext
+(
+    .in(ldbmux_out),
+    .out(ldb_zext_out)
+);
+
 // MISSING ALL FORWARDING UNIT STUFF
 
 endmodule : ex_datapath
