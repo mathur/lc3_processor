@@ -1,4 +1,4 @@
-module mp2_tb;
+module mp3_tb;
 
 timeunit 1ns;
 timeprecision 1ns;
@@ -15,7 +15,7 @@ logic [127:0] pmem_wdata;
 initial clk = 0;
 always #5 clk = ~clk;
 
-mp2 dut
+mp3 dut
 (
     .clk,
     .pmem_resp,
@@ -37,4 +37,4 @@ physical_memory memory
     .rdata(pmem_rdata)
 );
 
-endmodule : mp2_tb
+endmodule : mp3_tb

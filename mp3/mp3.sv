@@ -1,6 +1,6 @@
 import lc3b_types::*;
 
-module mp2 (
+module mp3 (
 	input clk,
 	input pmem_resp,
 	input lc3b_pmem_line pmem_rdata,
@@ -50,4 +50,4 @@ cache mcache (
     .pmem_wdata
 );
 
-endmodule: mp2
+endmodule: mp3
