@@ -26,15 +26,27 @@ mp3 dut
     .pmem_wdata
 );
 
-physical_memory memory
+magic_memory_dp memory
 (
     .clk,
-    .read(pmem_read),
-    .write(pmem_write),
-    .address(pmem_address),
-    .wdata(pmem_wdata),
-    .resp(pmem_resp),
-    .rdata(pmem_rdata)
+
+    /* Port A */
+    .read_a,
+    .write_a,
+    .wmask_a,
+    .address_a,
+    .wdata_a,
+    .resp_a,
+    .rdata_a,
+
+    /* Port B */
+    .read_b,
+    .write_b,
+    .wmask_b,
+    .address_b,
+    .wdata_b,
+    .resp_b,
+    .rdata_b
 );
 
 endmodule : mp3_tb
