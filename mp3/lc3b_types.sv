@@ -47,4 +47,11 @@ typedef enum bit [3:0] {
     alu_sra
 } lc3b_aluop;
 
+typedef struct packed {
+    lc3b_opcode opcode;
+    lc3b_aluop aluop;
+    logic load_cc;
+    logic load_regfile;   
+} lc3b_control_word;
+
 endpackage : lc3b_types
