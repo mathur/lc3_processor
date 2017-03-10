@@ -29,25 +29,25 @@ cpu mcpu (
 	.mem_wdata(mem_wdata)
 );
 
-cache mcache (
-    .clk(clk),
+// cache mcache (
+//     .clk(clk),
 
-    /* Memory signals from cpu */
-    .mem_resp(mem_resp),
-    .mem_rdata(mem_rdata),
-    .mem_read(mem_read),
-    .mem_write(mem_write),
-    .mem_byte_enable(mem_byte_enable),
-    .mem_address(mem_address),
-    .mem_wdata(mem_wdata),
+//     /* Memory signals from cpu */
+//     .mem_resp(mem_resp),
+//     .mem_rdata(mem_rdata),
+//     .mem_read(mem_read),
+//     .mem_write(mem_write),
+//     .mem_byte_enable(mem_byte_enable),
+//     .mem_address(mem_address),
+//     .mem_wdata(mem_wdata),
 
-    /* Memory signals from main memory */
-    .pmem_resp,
-    .pmem_rdata,
-    .pmem_read,
-    .pmem_write,
-    .pmem_address,
-    .pmem_wdata
-);
+//     /* Memory signals from main memory */
+//     .pmem_resp,
+//     .pmem_rdata,
+//     .pmem_read,
+//     .pmem_write,
+//     .pmem_address,
+//     .pmem_wdata
+// );
 
 endmodule: mp3
