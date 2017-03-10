@@ -15,7 +15,6 @@ begin
 	ctrl.load_regfile = 1'b0;
 	ctrl.load_mar = 1'b0;
 	ctrl.load_mdr = 1'b0;
-	ctrl.load_cc = 1'b0;
 	ctrl.pcmux_sel = 2'b00;
 	ctrl.storemux_sel = 1'b0;
 	ctrl.alumux_sel = 2'b00;
