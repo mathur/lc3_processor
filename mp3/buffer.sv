@@ -3,10 +3,10 @@ import lc3b_types::*;
 module buffer (
     input clk,
     input load,
-    input [2:0] src1_in, src2_in, dest_in,
-    input [15:0] instruction_in, alu_in, br_in, pc_in, pc_br_in, mar_in, mdr_in,
-    output [2:0] src1_out, src2_out, dest_out,
-    output [15:0] instruction_out, alu_out, br_out, pc_out, pc_br_out, mar_out, mdr_out
+    input lc3b_reg src1_in, src2_in, dest_in,
+    input lc3b_word instruction_in, alu_in, br_in, pc_in, pc_br_in, mar_in, mdr_in,
+    output lc3b_reg src1_out, src2_out, dest_out,
+    output lc3b_word instruction_out, alu_out, br_out, pc_out, pc_br_out, mar_out, mdr_out
 );
 
 register #(.width(3)) src1
