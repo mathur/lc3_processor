@@ -5,22 +5,28 @@ module cpu_datapath
     input clk
 );
 
+logic stall;
+logic [1:0] pcmux_sel;
 
 lc3b_reg if_id_src1;
 lc3b_reg if_id_src2;
 lc3b_reg if_id_dest;
 lc3b_word if_id_instruction;
 
-
 lc3b_control_word id_ex_ctrl_data;
 lc3b_word id_ex_src1_data;
 lc3b_word id_ex_src2_data;
 lc3b_word id_ex_dest_data;
 
-
 if_datapath if
 (
-    .clk(clk)
+    .clk(clk),
+    .pcmux_sel(pcmux_sel),
+    .stall(stall),
+    .src1(if_id_src1),
+    .src2(if_id_src2),
+    .dest(if_id_dest),
+    .instruction(if_id_instruction)
 );
 
 buffer if_id_buf
