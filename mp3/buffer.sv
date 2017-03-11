@@ -4,9 +4,9 @@ module buffer (
     input clk,
     input load,
     input lc3b_reg src1_in, src2_in, dest_in,
-    input lc3b_word instruction_in, alu_in, br_in, pc_in, pc_br_in, mar_in, mdr_in,
+    input lc3b_word instruction_in, alu_in, br_in, pc_in, pc_br_in, mar_in, mdr_in, src1_data_in, src2_data_in, dest_data_in,
     output lc3b_reg src1_out, src2_out, dest_out,
-    output lc3b_word instruction_out, alu_out, br_out, pc_out, pc_br_out, mar_out, mdr_out
+    output lc3b_word instruction_out, alu_out, br_out, pc_out, pc_br_out, mar_out, mdr_out, src1_data_out, src2_data_out, dest_data_out
 );
 
 register #(.width(3)) src1
@@ -31,6 +31,30 @@ register #(.width(3)) dest
     .load(load),
     .in(dest_in),
     .out(dest_out)
+);
+
+register #(.width(16)) src1_data
+(
+    .clk(clk),
+    .load(load),
+    .in(src1_data_in),
+    .out(src1_data_out)
+);
+
+register #(.width(16)) src2_data
+(
+    .clk(clk),
+    .load(load),
+    .in(src2_data_in),
+    .out(src2_data_out)
+);
+
+register #(.width(16)) dest_data
+(
+    .clk(clk),
+    .load(load),
+    .in(dest_data_in),
+    .out(dest_data_out)
 );
 
 register #(.width(16)) instruction

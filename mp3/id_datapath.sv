@@ -3,8 +3,11 @@ import lc3b_types::*;
 module id_datapath (
     input clk,
 
-    /* Control Inputs */
-    input load_regfile,
+    /* Control Input */
+    input lc3b_word inst,
+
+    /* Control Output */
+    output lc3b_control_word ctrl,
 
     /* Data Inputs */
     input lc3b_reg dest,
@@ -14,14 +17,18 @@ module id_datapath (
     input lc3b_word wb_dest_data, 
 
     /* Data Outputs */
-    output lc3b_reg destmux_out
+    output lc3b_reg destmux_out,
     output lc3b_word sr1_out,
     output lc3b_word sr2_out
 );
 
+// Only need this here because we are generating the control signal
+// at this stage
+lc3b_control_word internal_ctrl;
+
 mux2 #(.width(3)) destmux
 (
-    .sel(destmux_sel),
+    .sel(internal_ctrl.destmux_sel),
     .a(dest),
     .b(3'b111),
     .f(destmux_out)
@@ -29,7 +36,7 @@ mux2 #(.width(3)) destmux
 
 mux2 #(.width(3)) storemux
 (
-    .sel(storemux_sel),
+    .sel(internal_ctrl.storemux_sel),
     .a(sr1),
     .b(dest),
     .f(storemux_out)
@@ -38,7 +45,7 @@ mux2 #(.width(3)) storemux
 regfile rfile
 (
     .clk(clk),
-    .load(load_regfile),
+    .load(internal_ctrl.load_regfile),
     .in(wb_dest_data),
     .src_a(storemux_out),
     .src_b(sr2),
@@ -47,12 +54,14 @@ regfile rfile
     .reg_b(sr2_out)
 );
 
-control_gen controls
+control_rom controls
 (
-    // nothing
+    .inst(inst)
+    .ctrl(internal_ctrl)
 );
 
-// NEEDED?
+// NEEDED? 
+// tdubey3 - Not yet
 // mux2 #(.width(3)) bubble
 // (
 //     .sel(),
@@ -60,5 +69,7 @@ control_gen controls
 //     .b(),
 //     .f()
 // );
+
+assign ctrl = internal_ctrl;
 
 endmodule : id_datapath
