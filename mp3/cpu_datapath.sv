@@ -24,7 +24,8 @@ module cpu_datapath
 );
 
 // hardcoded for cp1
-logic stall = 1'b0;
+logic stall;
+assign stall = 1'b0;
 
 // if
 logic [1:0] pcmux_sel; // LOGIC TO DRIVE THIS REQUIRED
@@ -127,6 +128,7 @@ id_datapath id
 buffer id_ex_buf
 (
     .clk(clk),
+    .load(~stall),
     .src1_in(if_id_src1),
     .src2_in(if_id_src2),
     .dest_in(if_id_dest),
@@ -174,7 +176,7 @@ ex_datapath ex
 buffer ex_mem_buf
 (
     .clk(clk),
-    .load(),
+    .load(~stall),
     .src1_in(id_ex_src1),
     .src2_in(id_ex_src2),
     .dest_in(id_ex_dest),
@@ -189,7 +191,7 @@ buffer ex_mem_buf
 
 mem_datapath mem
 (
-    .clk(clk)
+    .clk(clk),
 );
 
 buffer mem_wb_buf

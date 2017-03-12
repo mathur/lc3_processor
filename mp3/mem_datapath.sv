@@ -11,10 +11,10 @@ mux8 marmux
     .b(pc_out),
     .c(br_add_out),
     .d(mdr_out),
-     .e(trap_zext_out),
-     .f(16'b0),
-     .g(16'b0),
-     .h(16'b0),
+    .e(trap_zext_out),
+    .f(16'b0),
+    .g(16'b0),
+    .h(16'b0),
     .i(marmux_out)
 );
 
