@@ -67,7 +67,6 @@ if_datapath if
 
 buffer if_id_buf
 (
-
     .clk(clk),
     .load(~stall),
     .src1_in(if_src1),
@@ -84,7 +83,7 @@ buffer if_id_buf
     .src2_data_in(16'b0),
     .dest_data_in(16'b0),
     .ctrl_in($unsigned(1'b0)),
-    .ctrl_out($unsigned(1'b0)), // outputting to zero?
+    .ctrl_out($unsigned(1'b0)),
     .src1_out(if_id_src1),
     .src2_out(if_id_src2),
     .dest_out(if_id_dest),
@@ -146,8 +145,6 @@ buffer id_ex_buf
     .src2_data_out(id_ex_src2_data),
     .dest_data_out(id_ex_dest_data)
 );
-
-
 
 lc3b_control_word id_ex_ctrl_data;
 lc3b_word id_ex_src1_data;

@@ -77,4 +77,22 @@ benable cccomp
     .enable(br_en)
 );
 
+udjns zext_8
+(
+    .in(ex_mdr_in[7:0]),
+    .out(zext_8_out)
+);
+
+udj trap_zext
+(
+    .in(trap_vector),
+    .out(trap_zext_out)
+);
+
+udjns ldbzext
+(
+    .in(ldbmux_out),
+    .out(ldb_zext_out)
+);
+
 endmodule : mem_datapath
