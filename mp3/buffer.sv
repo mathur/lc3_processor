@@ -5,8 +5,26 @@ module buffer (
     input load,
     input lc3b_reg src1_in, src2_in, dest_in,
     input lc3b_word instruction_in, alu_in, br_in, pc_in, pc_br_in, mar_in, mdr_in, src1_data_in, src2_data_in, dest_data_in,
+    input lc3b_control_word ctrl_in,
+    output lc3b_control_word ctrl_out,
     output lc3b_reg src1_out, src2_out, dest_out,
     output lc3b_word instruction_out, alu_out, br_out, pc_out, pc_br_out, mar_out, mdr_out, src1_data_out, src2_data_out, dest_data_out
+);
+
+register #(.width($size(lc3b_control_word))) control_word
+(
+    .clk(clk),
+    .load(load),
+    .in(ctrl_in),
+    .out(ctrl_out)
+);
+
+register #(.width(3)) src1
+(
+    .clk(clk),
+    .load(load),
+    .in(src1_in),
+    .out(src1_out)
 );
 
 register #(.width(3)) src1

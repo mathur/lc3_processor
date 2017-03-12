@@ -2,7 +2,25 @@ import lc3b_types::*;
 
 module cpu_datapath
 (
-    input clk
+    input clk,
+
+    /* Port A */
+    input logic resp_a,
+    input logic [15:0] rdata_a,
+    output read_a,
+    output write_a,
+    output [1:0] wmask_a,
+    output [15:0] address_a,
+    output [15:0] wdata_a,
+
+    /* Port B */
+    input logic resp_b,
+    input logic [15:0] rdata_b,
+    output read_b,
+    output write_b,
+    output [1:0] wmask_b,
+    output [15:0] address_b,
+    output [15:0] wdata_b
 );
 
 logic stall;
@@ -57,7 +75,7 @@ id_datapath id
 
     // TODO: From WB
     .wb_dest_addr,
-    .wb_dest_data, 
+    .wb_dest_data,
 
     /* Data Outputs */
     .destmux_out(id_ex_src1_data),
