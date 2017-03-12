@@ -65,6 +65,7 @@ id_datapath id
     .sr2_out(id_ex_dest_data)
 );
 
+
 buffer id_ex_buf
 (
     .clk(clk),
@@ -75,17 +76,50 @@ buffer id_ex_buf
     .ctrl_in(id_ex_ctrl_data),
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
-    .dest_data_in(id_ex_dest_data)
+    .dest_data_in(id_ex_dest_data),
+    .src1_out(id_ex_src1),
+    .src2_out(id_ex_src2),
+    .dest_out(id_ex_dest),
+    .instruction_out(id_ex_instruction),
+    .pc_out(id_ex_pc),
+    .src1_data_out(id_ex_src1_data),
+    .src2_data_out(id_ex_src2_data),
+    .dest_data_out(id_ex_dest_data)
 );
+
+lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
+lc3b_word id_ex_src1_data, id_ex_src2_data, id_ex_dest_data;
+lc3b_word id_ex_instruction, id_ex_pc;
+lc3b_word ex_alu_out, ex_br_out;
 
 ex_datapath ex
 (
-    .clk(clk)
+    .clk(clk),
+    //INPUTS: Data, Instruction, PC
+    .ex_src1_data_in(id_ex_src1_data),
+    .ex_src2_data_in(id_ex_src2_data),
+    .ex_dest_data_in(id_ex_dest_data),
+    .ex_instruction_in(id_ex_instruction),
+    .ex_pc_in(id_ex_pc),
+    //OUTPUTS: Alu, Branch adder
+    .ex_alu_out(ex_alu_out),
+    .ex_br_out(ex_br_out)
 );
-
+//Load buffer with relevant signals from previous buffer and new signals from EX
 buffer ex_mem_buf
 (
-    .clk(clk)
+    .clk(clk),
+    .load(),
+    .src1_in(id_ex_src1),
+    .src2_in(id_ex_src2),
+    .dest_in(id_ex_dest),
+    .instruction_in(id_ex_instruction),
+    .alu_in(ex_alu_out),
+    .br_in(ex_br_out),
+    .pc_in(id_ex_pc),
+    .src1_data_in(id_ex_src1_data),
+    .src2_data_in(id_ex_src2_data),
+    .dest_data_in(id_ex_dest_data)
 );
 
 mem_datapath mem
