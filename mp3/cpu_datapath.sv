@@ -23,40 +23,80 @@ module cpu_datapath
     output [15:0] wdata_b
 );
 
-logic stall;
-logic [1:0] pcmux_sel;
+// hardcoded for cp1
+logic stall = 1'b0;
 
+// if
+logic [1:0] pcmux_sel; // LOGIC TO DRIVE THIS REQUIRED
+
+lc3b_word if_pc;
+lc3b_reg if_src1;
+lc3b_reg if_src2;
+lc3b_reg if_dest;
+lc3b_word if_instruction;
+
+lc3b_word if_id_pc;
 lc3b_reg if_id_src1;
 lc3b_reg if_id_src2;
 lc3b_reg if_id_dest;
 lc3b_word if_id_instruction;
 
-lc3b_control_word id_ex_ctrl_data;
-lc3b_word id_ex_src1_data;
-lc3b_word id_ex_src2_data;
-lc3b_word id_ex_dest_data;
+assign wmask_a = 2'b11;
+assign write_a = 1'b0;
+assign wdata_a = 16'b0;
 
 if_datapath if
 (
     .clk(clk),
-    .pcmux_sel(pcmux_sel),
+
+    .resp_a(resp_a),
+    .rdata_a(rdata_a),
+    .read_a(read_a),
+    .address_a(address_a),
+
     .stall(stall),
-    .src1(if_id_src1),
-    .src2(if_id_src2),
-    .dest(if_id_dest),
+
+    .pc(if_pc),
+    .pcmux_sel(pcmux_sel),
+    .src1(if_src1),
+    .src2(if_src2),
+    .dest(if_dest),
     .instruction(if_id_instruction)
 );
 
 buffer if_id_buf
 (
+
     .clk(clk),
+    .load(~stall),
+    .src1_in(if_src1),
+    .src2_in(if_src2),
+    .dest_in(if_dest),
+    .instruction_in(if_instruction),
+    .alu_in(16'b0),
+    .br_in(16'b0),
+    .pc_in(if_pc),
+    .pc_br_in(16'b0),
+    .mar_in(16'b0),
+    .mdr_in(16'b0),
+    .src1_data_in(16'b0),
+    .src2_data_in(16'b0),
+    .dest_data_in(16'b0),
+    .ctrl_in($unsigned(1'b0)),
+    .ctrl_out($unsigned(1'b0)), // outputting to zero?
     .src1_out(if_id_src1),
     .src2_out(if_id_src2),
     .dest_out(if_id_dest),
     .instruction_out(if_id_instruction),
-    .src1_data_out(),
-    .src2_data_out(),
-    .dest_data_out()
+    .alu_out(16'b0),
+    .br_out(16'b0),
+    .pc_out(if_id_pc),
+    .pc_br_out(16'b0),
+    .mar_out(16'b0),
+    .mdr_out(16'b0),
+    .src1_data_out(16'b0),
+    .src2_data_out(16'b0),
+    .dest_data_out(16'b0)
 );
 
 id_datapath id
@@ -104,6 +144,13 @@ buffer id_ex_buf
     .src2_data_out(id_ex_src2_data),
     .dest_data_out(id_ex_dest_data)
 );
+
+
+
+lc3b_control_word id_ex_ctrl_data;
+lc3b_word id_ex_src1_data;
+lc3b_word id_ex_src2_data;
+lc3b_word id_ex_dest_data;
 
 lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
 lc3b_word id_ex_src1_data, id_ex_src2_data, id_ex_dest_data;
