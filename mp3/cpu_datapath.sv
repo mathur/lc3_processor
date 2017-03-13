@@ -293,8 +293,8 @@ buffer mem_wb_buf
     .br_out(mem_wb_br),
     .pc_out(mem_wb_pc),
     .pc_br_out(mem_wb_pc_br),
-    .mar_out(16'b0),
-    .mdr_out(16'b0),
+    .mar_out(mem_wb_mdr),
+    .mdr_out(mem_wb_address),
     .src1_data_out(mem_wb_src1_data),
     .src2_data_out(mem_wb_src2_data),
     .dest_data_out(mem_wb_dest_data)
