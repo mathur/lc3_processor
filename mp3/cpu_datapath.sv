@@ -238,9 +238,44 @@ mem_datapath mem
     .clk(clk),
 );
 
+lc3b_control_word mem_wb_ctrl;
+lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
+lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
+lc3b_word mem_wb_src1_data, mem_wb_src2_data;
+
 buffer mem_wb_buf
 (
-    .clk(clk)
+    .clk(clk),
+    .load(~stall),
+    .src1_in(ex_mem_src1),
+    .src2_in(ex_mem_src2),
+    .dest_in(ex_mem_dest),
+    .instruction_in(ex_mem_instruction),
+    .alu_in(ex_mem_alu),
+    .br_in(16'b0),
+    .pc_in(ex_mem_pc),
+    .pc_br_in(ex_mem_pc_br),
+    .mar_in(16'b0),
+    .mdr_in(16'b0),
+    .src1_data_in(ex_mem_src1_data),
+    .src2_data_in(ex_mem_src2_data),
+    .dest_data_in(16'b0),
+    .ctrl_in(ex_mem_ctrl),
+
+    .ctrl_out(mem_wb_ctrl),
+    .src1_out(mem_wb_src1),
+    .src2_out(mem_wb_src2),
+    .dest_out(mem_wb_dest),
+    .instruction_out(mem_wb_instruction),
+    .alu_out(mem_wb_alu),
+    .br_out(16'b0),
+    .pc_out(mem_wb_pc),
+    .pc_br_out(mem_wb_pc_br),
+    .mar_out(16'b0),
+    .mdr_out(16'b0),
+    .src1_data_out(mem_wb_src1_data),
+    .src2_data_out(mem_wb_src2_data),
+    .dest_data_out(16'b0)
 );
 
 wb_datapath wb
