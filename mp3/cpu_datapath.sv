@@ -42,12 +42,6 @@ lc3b_reg if_src2;
 lc3b_reg if_dest;
 lc3b_word if_instruction;
 
-lc3b_word if_id_pc;
-lc3b_reg if_id_src1;
-lc3b_reg if_id_src2;
-lc3b_reg if_id_dest;
-lc3b_word if_id_instruction;
-
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
@@ -68,12 +62,17 @@ if_datapath if
     .src1(if_src1),
     .src2(if_src2),
     .dest(if_dest),
-    .instruction(if_id_instruction)
+    .instruction(if_instruction)
 );
+
+lc3b_reg if_id_src1;
+lc3b_reg if_id_src2;
+lc3b_reg if_id_dest;
+lc3b_word if_id_instruction;
+lc3b_word if_id_pc;
 
 buffer if_id_buf
 (
-
     .clk(clk),
     .load(~stall),
     .src1_in(if_src1),
@@ -91,7 +90,7 @@ buffer if_id_buf
     .dest_data_in(16'b0),
     .ctrl_in($unsigned(1'b0)),
 
-    .ctrl_out($unsigned(1'b0)), // outputting to zero?
+    .ctrl_out($unsigned(1'b0)),
     .src1_out(if_id_src1),
     .src2_out(if_id_src2),
     .dest_out(if_id_dest),
@@ -136,11 +135,10 @@ id_datapath id
     .sr2_out(id_src2_data)
 );
 
-lc3b_control_word id_ex_ctrl_data;
-lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
-lc3b_word id_ex_src1_data, id_ex_src2_data, id_ex_dest_data;
-lc3b_word id_ex_instruction, id_ex_pc;
 lc3b_control_word id_ex_ctrl;
+lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
+lc3b_word id_ex_instruction, id_ex_pc;
+lc3b_word id_ex_src1_data, id_ex_src2_data;
 
 buffer id_ex_buf
 (
@@ -177,7 +175,6 @@ buffer id_ex_buf
     .dest_data_out(16'b0)
 );
 
-
 lc3b_word ex_alu_out, ex_br_out;
 
 ex_datapath ex
@@ -187,7 +184,7 @@ ex_datapath ex
     //INPUTS: Data, Instruction, PC
     .ex_src1_data_in(id_ex_src1_data),
     .ex_src2_data_in(id_ex_src2_data),
-    .ex_dest_data_in(id_ex_dest_data),
+    .ex_dest_data_in(id_ex_dest_data), // TODO: TADAS FIX
     .ex_instruction_in(id_ex_instruction),
     .ex_pc_in(id_ex_pc),
 
@@ -196,11 +193,10 @@ ex_datapath ex
     .ex_br_out(ex_br_out)
 );
 
-lc3b_control_word ex_mem_ctrl_data;
-lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
-lc3b_word ex_mem_src1_data, ex_mem_src2_data, ex_mem_dest_data;
-lc3b_word ex_mem_instruction, ex_mem_pc, ex_mem_pc_br, ex_mem_alu;
 lc3b_control_word ex_mem_ctrl;
+lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
+lc3b_word ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br;
+lc3b_word ex_mem_src1_data, ex_mem_src2_data;
 
 buffer ex_mem_buf
 (
@@ -219,9 +215,9 @@ buffer ex_mem_buf
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
     .dest_data_in(16'b0),
-    .ctrl_in(id_ex_ctrl_data),
+    .ctrl_in(id_ex_ctrl),
 
-    .ctrl_out(ex_mem_ctrl_data), // outputting to zero?
+    .ctrl_out(ex_mem_ctrl),
     .src1_out(ex_mem_src1),
     .src2_out(ex_mem_src2),
     .dest_out(ex_mem_dest),
