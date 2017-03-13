@@ -233,15 +233,37 @@ buffer ex_mem_buf
     .dest_data_out(16'b0)
 );
 
+logic br_en;
+lc3b_word dest_data;
+
 mem_datapath mem
 (
     .clk(clk),
+    .ctrl(ex_mem_ctrl),
+    .alu_out(ex_mem_alu)
+    .pc_out(ex_mem_pc),
+    .br_add_out(ex_mem_pc_br),
+    .sr1_out(ex_mem_src1_data),
+    .instruction(ex_mem_instruction),
+    .br_en(br_en),
+    .regfilemux_out(dest_data),
+
+    /* Port B */
+    .read_b,
+    .write_b,
+    .wmask_b,
+    .address_b,
+    .wdata_b,
+    .resp_b,
+    .rdata_b
 );
 
 lc3b_control_word mem_wb_ctrl;
 lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
 lc3b_word mem_wb_src1_data, mem_wb_src2_data;
+logic mem_wb_br;
+lc3b_word mem_wb_dest_data;
 
 buffer mem_wb_buf
 (
@@ -252,14 +274,14 @@ buffer mem_wb_buf
     .dest_in(ex_mem_dest),
     .instruction_in(ex_mem_instruction),
     .alu_in(ex_mem_alu),
-    .br_in(16'b0),
+    .br_in(br_en),
     .pc_in(ex_mem_pc),
     .pc_br_in(ex_mem_pc_br),
-    .mar_in(16'b0),
-    .mdr_in(16'b0),
+    .mar_in(address_b),
+    .mdr_in(wdata_b),
     .src1_data_in(ex_mem_src1_data),
     .src2_data_in(ex_mem_src2_data),
-    .dest_data_in(16'b0),
+    .dest_data_in(dest_data),
     .ctrl_in(ex_mem_ctrl),
 
     .ctrl_out(mem_wb_ctrl),
@@ -268,14 +290,14 @@ buffer mem_wb_buf
     .dest_out(mem_wb_dest),
     .instruction_out(mem_wb_instruction),
     .alu_out(mem_wb_alu),
-    .br_out(16'b0),
+    .br_out(mem_wb_br),
     .pc_out(mem_wb_pc),
     .pc_br_out(mem_wb_pc_br),
     .mar_out(16'b0),
     .mdr_out(16'b0),
     .src1_data_out(mem_wb_src1_data),
     .src2_data_out(mem_wb_src2_data),
-    .dest_data_out(16'b0)
+    .dest_data_out(mem_wb_dest_data)
 );
 
 wb_datapath wb

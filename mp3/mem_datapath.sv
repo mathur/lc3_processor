@@ -1,16 +1,37 @@
 import lc3b_types::*;
 
 module mem_datapath (
-    input clk
+    input clk,
+    input lc3b_control_word ctrl,
+    input lc3b_word alu_out, pc_out, br_add_out, sr1_out, instruction
+
+    // memory
+    input logic resp_b,
+    input logic [15:0] rdata_b,
+    output read_b,
+    output write_b,
+    output [1:0] wmask_b,
+    output [15:0] address_b,
+    output [15:0] wdata_b,
+
+    output lc3b_word regfilemux_out,
+    output logic br_en
 );
+
+always_comb
+begin
+    read_b = ctrl.mem_read;
+    write_b = ctrl.mem_write;
+    wmask_b = ctrl.mem_byte_enable;
+end
 
 mux8 marmux
 (
-    .sel(marmux_sel),
+    .sel(ctrl.marmux_sel),
     .a(alu_out),
     .b(pc_out),
     .c(br_add_out),
-    .d(mdr_out),
+    .d(rdata_b),
     .e(trap_zext_out),
     .f(16'b0),
     .g(16'b0),
@@ -21,34 +42,42 @@ mux8 marmux
 register mar
 (
     .clk(clk),
-    .load(load_mar),
+    .load(ctrl.load_mar),
     .in(marmux_out),
-    .out(mem_address)
+    .out(address_b)
 );
 
+mux3 mdrmux
+(
+    .sel(ctrl.mdrmux_sel),
+    .a(alu_out),
+    .b(rdata_b),
+    .c(sr1_out << 8),
+    .f(mdrmux_out)
+);
 
 register mdr
 (
     .clk(clk),
-    .load(load_mdr),
+    .load(ctrl.load_mdr),
     .in(mdrmux_out),
-    .out(mdr_out)
+    .out(wdata_b)
 );
 
 mux2 #(.width(8)) ldbmux
 (
-    .sel(mem_address[0]),
-    .a(mdr_out[7:0]),
-    .b(mdr_out[15:8]),
+    .sel(address_b[0]),
+    .a(wdata_b[7:0]),
+    .b(wdata_b[15:8]),
     .f(ldbmux_out)
 );
 
-shiftunit sunit
+shiftunit sunit ////////////////////////////////////////////////////////////////////////////////////////////////
 (
     .a(shift_a),
     .d(shift_d),
     .sr(sr1_out),
-    .imm4(ir_imm4),
+    .imm4(instruction[3:0]),
     .f(shift_out)
 );
 
@@ -61,7 +90,7 @@ gencc gen_cc
 register #(.width(3)) cc
 (
     .clk(clk),
-    .load(load_cc),
+    .load(ctrl.load_cc),
     .in(gencc_out),
     .out(cc_out)
 );
@@ -79,13 +108,13 @@ benable cccomp
 
 udjns zext_8
 (
-    .in(ex_mdr_in[7:0]),
+    .in(wdata_b[7:0]),
     .out(zext_8_out)
 );
 
 udj trap_zext
 (
-    .in(trap_vector),
+    .in(instruction[7:0]),
     .out(trap_zext_out)
 );
 
@@ -93,6 +122,20 @@ udjns ldbzext
 (
     .in(ldbmux_out),
     .out(ldb_zext_out)
+);
+
+mux8 regfilemux
+(
+    .sel(ctrl.regfilemux_sel),
+    .a(alu_out),
+    .b(wdata_b),
+    .c(br_add_out),
+    .d(pc_out),
+    .e(zext_8_out),
+    .f(shift_out),
+    .g(ldb_zext_out),
+    .h(16'b0),
+    .i(regfilemux_out)
 );
 
 endmodule : mem_datapath

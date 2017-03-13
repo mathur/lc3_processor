@@ -3,9 +3,9 @@ import lc3b_types::*;
 module ex_datapath (
     input clk,
     input lc3b_word ex_src1_data_in, ex_src2_data_in, ex_dest_data_in,
-    input lc3b_word ex_instruction_in, 
-    input lc3b_word ex_pc_in, 
-    output lc3b_word ex_alu_out, ex_br_out 
+    input lc3b_word ex_instruction_in,
+    input lc3b_word ex_pc_in,
+    output lc3b_word ex_alu_out, ex_br_out
 );
 
 lc3b_control_word ex_ctrl;
