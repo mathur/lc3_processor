@@ -23,6 +23,12 @@ module cpu_datapath
     output [15:0] wdata_b
 );
 
+/*
+    tdubey3 - I think wire format should be FROM_TO_SIGNALNAME
+        If there is no from then just TO_SIGNALNAME
+        Will be easy to tell the path of the wire then.
+*/
+
 // hardcoded for cp1
 logic stall;
 assign stall = 1'b0;
@@ -84,6 +90,7 @@ buffer if_id_buf
     .src2_data_in(16'b0),
     .dest_data_in(16'b0),
     .ctrl_in($unsigned(1'b0)),
+
     .ctrl_out($unsigned(1'b0)), // outputting to zero?
     .src1_out(if_id_src1),
     .src2_out(if_id_src2),
@@ -100,14 +107,19 @@ buffer if_id_buf
     .dest_data_out(16'b0)
 );
 
+lc3b_control_word id_ctrl_data;
+lc3b_reg id_dest;
+lc3b_word id_src1_data, id_src2_data;
+
 id_datapath id
 (
     .clk(clk)
+
     /* Control Input */
     .inst(if_id_instruction),
 
     /* Control Output */
-    .ctrl(id_ex_ctrl_data),
+    .ctrl(id_ctrl_data),
 
     /* Data Inputs */
     .dest(if_id_dest),
@@ -119,49 +131,37 @@ id_datapath id
     .wb_dest_data,
 
     /* Data Outputs */
-    .destmux_out(id_ex_src1_data),
-    .sr1_out(id_ex_src2_data),
-    .sr2_out(id_ex_dest_data)
+    .destmux_out(id_dest),
+    .sr1_out(id_src1_data),
+    .sr2_out(id_src2_data)
 );
 
+lc3b_control_word id_ex_ctrl_data;
+lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
+lc3b_word id_ex_src1_data, id_ex_src2_data, id_ex_dest_data;
+lc3b_word id_ex_instruction, id_ex_pc;
+lc3b_control_word id_ex_ctrl;
 
 buffer id_ex_buf
 (
-    // .clk(clk),
-    // .load(~stall),
-    // .src1_in(if_id_src1),
-    // .src2_in(if_id_src2),
-    // .dest_in(if_id_dest),
-    // .instruction_in(if_id_instruction),
-    // .ctrl_in(id_ex_ctrl_data),
-    // .src1_data_in(id_ex_src1_data),
-    // .src2_data_in(id_ex_src2_data),
-    // .dest_data_in(id_ex_dest_data),
-    // .src1_out(id_ex_src1),
-    // .src2_out(id_ex_src2),
-    // .dest_out(id_ex_dest),
-    // .instruction_out(id_ex_instruction),
-    // .pc_out(id_ex_pc),
-    // .src1_data_out(id_ex_src1_data),
-    // .src2_data_out(id_ex_src2_data),
-    // .dest_data_out(id_ex_dest_data)
     .clk(clk),
     .load(~stall),
-    .src1_in(if_src1),
-    .src2_in(if_src2),
-    .dest_in(if_dest),
-    .instruction_in(if_instruction),
+    .src1_in(if_id_src1),
+    .src2_in(if_id_src2),
+    .dest_in(id_dest),
+    .instruction_in(if_id_instruction),
     .alu_in(16'b0),
     .br_in(16'b0),
     .pc_in(if_pc),
     .pc_br_in(16'b0),
     .mar_in(16'b0),
     .mdr_in(16'b0),
-    .src1_data_in(id_ex_src1_data),
-    .src2_data_in(id_ex_src2_data),
-    .dest_data_in(id_ex_dest_data),
-    .ctrl_in(id_ex_ctrl_data),
-    .ctrl_out($unsigned(1'b0)), // outputting to zero?
+    .src1_data_in(id_src1_data),
+    .src2_data_in(id_src2_data),
+    .dest_data_in(16'b0),
+    .ctrl_in(id_ctrl_data),
+
+    .ctrl_out(id_ex_ctrl),
     .src1_out(id_ex_src1),
     .src2_out(id_ex_src2),
     .dest_out(id_ex_dest),
@@ -174,35 +174,34 @@ buffer id_ex_buf
     .mdr_out(16'b0),
     .src1_data_out(id_ex_src1_data),
     .src2_data_out(id_ex_src2_data),
-    .dest_data_out(id_ex_dest_data)
+    .dest_data_out(16'b0)
 );
 
 
-
-lc3b_control_word id_ex_ctrl_data;
-lc3b_word id_ex_src1_data;
-lc3b_word id_ex_src2_data;
-lc3b_word id_ex_dest_data;
-
-lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
-lc3b_word id_ex_src1_data, id_ex_src2_data, id_ex_dest_data;
-lc3b_word id_ex_instruction, id_ex_pc;
 lc3b_word ex_alu_out, ex_br_out;
 
 ex_datapath ex
 (
     .clk(clk),
+
     //INPUTS: Data, Instruction, PC
     .ex_src1_data_in(id_ex_src1_data),
     .ex_src2_data_in(id_ex_src2_data),
     .ex_dest_data_in(id_ex_dest_data),
     .ex_instruction_in(id_ex_instruction),
     .ex_pc_in(id_ex_pc),
+
     //OUTPUTS: Alu, Branch adder
     .ex_alu_out(ex_alu_out),
     .ex_br_out(ex_br_out)
 );
-//Load buffer with relevant signals from previous buffer and new signals from EX
+
+lc3b_control_word ex_mem_ctrl_data;
+lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
+lc3b_word ex_mem_src1_data, ex_mem_src2_data, ex_mem_dest_data;
+lc3b_word ex_mem_instruction, ex_mem_pc, ex_mem_pc_br, ex_mem_alu;
+lc3b_control_word ex_mem_ctrl;
+
 buffer ex_mem_buf
 (
     .clk(clk),
@@ -212,11 +211,30 @@ buffer ex_mem_buf
     .dest_in(id_ex_dest),
     .instruction_in(id_ex_instruction),
     .alu_in(ex_alu_out),
-    .br_in(ex_br_out),
+    .br_in(16'b0),
     .pc_in(id_ex_pc),
+    .pc_br_in(ex_br_out),
+    .mar_in(16'b0),
+    .mdr_in(16'b0),
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
-    .dest_data_in(id_ex_dest_data)
+    .dest_data_in(16'b0),
+    .ctrl_in(id_ex_ctrl_data),
+
+    .ctrl_out(ex_mem_ctrl_data), // outputting to zero?
+    .src1_out(ex_mem_src1),
+    .src2_out(ex_mem_src2),
+    .dest_out(ex_mem_dest),
+    .instruction_out(ex_mem_instruction),
+    .alu_out(ex_mem_alu),
+    .br_out(16'b0),
+    .pc_out(ex_mem_pc),
+    .pc_br_out(ex_mem_pc_br),
+    .mar_out(16'b0),
+    .mdr_out(16'b0),
+    .src1_data_out(ex_mem_src1_data),
+    .src2_data_out(ex_mem_src2_data),
+    .dest_data_out(16'b0)
 );
 
 mem_datapath mem
