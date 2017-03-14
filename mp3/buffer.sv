@@ -83,7 +83,7 @@ register #(.width(16)) alu
     .out(alu_out)
 );
 
-register #(.width(16)) br
+register #(.width(1)) br
 (
     .clk(clk),
     .load(load),
