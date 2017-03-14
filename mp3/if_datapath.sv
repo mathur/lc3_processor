@@ -15,7 +15,7 @@ module if_datapath (
     // logic signals
     input  [1:0] pcmux_sel,
     output lc3b_word pc_out, instruction,
-    output lc3b_register src1, src2, dest
+    output lc3b_reg src1, src2, dest
 );
 
 lc3b_word pc_plus2_out, pcmux_out;
