@@ -8,7 +8,7 @@ module control_rom (
 always_comb
 begin
 	/* Default assignments */
-	ctrl.opcode = lc3b_opcode'(data[15:12]);
+	ctrl.opcode = lc3b_opcode'(inst[15:12]);
 	ctrl.load_cc = 1'b0;
 	ctrl.load_pc = 1'b0;
 	ctrl.load_ir = 1'b0;
@@ -34,10 +34,10 @@ begin
 		Workflow is: Go through state and next state for whole instruction: compile all states as one.
 	*/
 
-	case(lc3b_opcode'(data[15:12]))
+	case(lc3b_opcode'(inst[15:12]))
 		// ADD -> FETCH1
 		op_add: begin
-			ctrl.aluop = alu_add;
+			ctrl.alu_op = alu_add;
 			ctrl.load_regfile = 1;
 			ctrl.load_cc = 1;
 			if (inst[5] == 1)
@@ -46,7 +46,7 @@ begin
 
 		// AND -> FETCH1
 		op_and: begin
-			ctrl.aluop = alu_and;
+			ctrl.alu_op = alu_and;
 			ctrl.load_regfile = 1;
 			ctrl.load_cc = 1;
 			if (inst[5] == 1)

@@ -26,6 +26,7 @@ module id_datapath (
 // Only need this here because we are generating the control signal
 // at this stage
 lc3b_control_word internal_ctrl;
+lc3b_word storemux_out;
 
 mux2 #(.width(3)) destmux
 (

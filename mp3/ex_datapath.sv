@@ -38,7 +38,7 @@ mux4 alumux
 
 alu alu_unit
 (
-    .aluop(ex_ctrl_in.alu_op),
+    .alu_op(ex_ctrl_in.alu_op),
     .a(ex_src1_data_in),
     .b(alumux_out),
     .f(ex_alu_out)

@@ -45,11 +45,11 @@ typedef enum bit [3:0] {
     alu_sll,
     alu_srl,
     alu_sra
-} lc3b_aluop;
+} lc3b_alu_op;
 
 typedef struct packed {
     lc3b_opcode opcode;
-    lc3b_aluop alu_op;
+    lc3b_alu_op alu_op;
     logic load_cc;
     logic load_pc;
     logic load_ir;

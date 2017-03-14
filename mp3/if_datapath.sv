@@ -18,6 +18,8 @@ module if_datapath (
     output lc3b_register src1, src2, dest
 );
 
+lc3b_word pc_plus2_out, pcmux_out;
+
 always_comb
 begin
     read_a = ~stall;
@@ -30,8 +32,8 @@ ir ir_unit (
     .in(rdata_a),
     .instruction(instruction),
     .dest(dest),
-    .src1(sr1),
-    .src2(sr2)
+    .src1(src1),
+    .src2(src2)
 );
 
 mux4 pcmux
