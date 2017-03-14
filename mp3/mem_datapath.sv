@@ -4,6 +4,7 @@ module mem_datapath (
     input clk,
     input lc3b_control_word ctrl,
     input lc3b_word alu_out, pc_out, br_add_out, sr1_out, instruction,
+    input lc3b_reg dest,
 
     // memory
     input logic resp_b,
