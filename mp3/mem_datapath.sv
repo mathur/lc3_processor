@@ -18,11 +18,9 @@ module mem_datapath (
     output logic br_en
 );
 
-lc3b_word trap_zext_out, marmux_out, mdrmux_out, ldbmux_out, zext_8_out, shift_out;
+lc3b_word trap_zext_out, marmux_out, mdrmux_out, ldbmux_out, zext_8_out, shift_out, ldb_zext_out;
 lc3b_nzp gencc_out, cc_out;
 logic shift_a, shift_d;
-
-ldb_zext_out
 
 always_comb
 begin
