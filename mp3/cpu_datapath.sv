@@ -126,8 +126,9 @@ id_datapath id
     .sr2(if_id_src2),
 
     // TODO: From WB
-    .wb_dest_addr,
-    .wb_dest_data,
+    .wb_dest_addr(mem_wb_dest),
+    .wb_dest_data(mem_wb_dest_data),
+    .wb_load_dest(mem_wb_ctrl.load_regfile),
 
     /* Data Outputs */
     .destmux_out(id_dest),
@@ -298,11 +299,6 @@ buffer mem_wb_buf
     .src1_data_out(mem_wb_src1_data),
     .src2_data_out(mem_wb_src2_data),
     .dest_data_out(mem_wb_dest_data)
-);
-
-wb_datapath wb
-(
-    .clk(clk)
 );
 
 endmodule : cpu_datapath

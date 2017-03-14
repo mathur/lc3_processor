@@ -15,6 +15,7 @@ module id_datapath (
     input lc3b_reg sr2,
     input lc3b_reg wb_dest_addr,
     input lc3b_word wb_dest_data, 
+    input logic wb_load_dest,
 
     /* Data Outputs */
     output lc3b_reg destmux_out,
@@ -45,7 +46,7 @@ mux2 #(.width(3)) storemux
 regfile rfile
 (
     .clk(clk),
-    .load(internal_ctrl.load_regfile),
+    .load(wb_load_dest),
     .in(wb_dest_data),
     .src_a(storemux_out),
     .src_b(sr2),
