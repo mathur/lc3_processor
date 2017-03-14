@@ -184,8 +184,8 @@ ex_datapath ex
     //INPUTS: Data, Instruction, PC
     .ex_src1_data_in(id_ex_src1_data),
     .ex_src2_data_in(id_ex_src2_data),
-    .ex_dest_data_in(id_ex_dest_data), // TODO: TADAS FIX
     .ex_instruction_in(id_ex_instruction),
+    .ex_ctrl_in(id_ex_ctrl),
     .ex_pc_in(id_ex_pc),
 
     //OUTPUTS: Alu, Branch adder
