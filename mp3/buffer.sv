@@ -27,14 +27,6 @@ register #(.width(3)) src1
     .out(src1_out)
 );
 
-register #(.width(3)) src1
-(
-    .clk(clk),
-    .load(load),
-    .in(src1_in),
-    .out(src1_out)
-);
-
 register #(.width(3)) src2
 (
     .clk(clk),

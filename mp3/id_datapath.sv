@@ -57,7 +57,7 @@ regfile rfile
 
 control_rom controls
 (
-    .inst(inst)
+    .inst(inst),
     .ctrl(internal_ctrl)
 );
 

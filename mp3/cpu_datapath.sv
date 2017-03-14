@@ -46,7 +46,7 @@ assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
 
-if_datapath if
+if_datapath if_data
 (
     .clk(clk),
 
@@ -57,7 +57,7 @@ if_datapath if
 
     .stall(stall),
 
-    .pc(if_pc),
+    .pc_out(if_pc),
     .pcmux_sel(pcmux_sel),
     .src1(if_src1),
     .src2(if_src2),
@@ -112,7 +112,7 @@ lc3b_word id_src1_data, id_src2_data;
 
 id_datapath id
 (
-    .clk(clk)
+    .clk(clk),
 
     /* Control Input */
     .inst(if_id_instruction),
@@ -241,7 +241,7 @@ mem_datapath mem
 (
     .clk(clk),
     .ctrl(ex_mem_ctrl),
-    .alu_out(ex_mem_alu)
+    .alu_out(ex_mem_alu),
     .pc_out(ex_mem_pc),
     .br_add_out(ex_mem_pc_br),
     .sr1_out(ex_mem_src1_data),

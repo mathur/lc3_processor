@@ -36,8 +36,8 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Stratix V"
-set_global_assignment -name DEVICE 5SGXMBBR3H43C2
+set_global_assignment -name FAMILY "Stratix III"
+set_global_assignment -name DEVICE EP3SE50F780C2
 set_global_assignment -name TOP_LEVEL_ENTITY mp3
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:00:00  AUGUST 25, 2014"
@@ -65,12 +65,19 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_FILE mp3_tb.sv -section_id mp3_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE physical_memory.sv -section_id mp3_tb
+set_global_assignment -name SYSTEMVERILOG_FILE control_rom.sv
+set_global_assignment -name SYSTEMVERILOG_FILE buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mp3_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mem_datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE magic_memory_dp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE if_datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE id_datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ex_datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE wb_datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE byte_insert.sv
-set_global_assignment -name SDC_FILE mp3.out.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE lc3b_types.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cache_control.sv
 set_global_assignment -name SYSTEMVERILOG_FILE lru.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cpu_control.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cpu_datapath.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cpu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adj.sv
@@ -91,8 +98,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE mux8.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adjns.sv
 set_global_assignment -name SYSTEMVERILOG_FILE udjns.sv
 set_global_assignment -name SYSTEMVERILOG_FILE shiftunit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cache.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cache_datapath.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cache_set.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cache_block.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
