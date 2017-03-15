@@ -22,13 +22,22 @@ module mem_datapath (
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out;
 logic [7:0] ldbmux_out;
 lc3b_nzp gencc_out, cc_out;
-logic shift_a, shift_d;
+
+logic br_en_internal;
 
 always_comb
 begin
     read_b = ctrl.mem_read;
     write_b = ctrl.mem_write;
     wmask_b = ctrl.mem_byte_enable;
+	 if(br_en_internal && (ctrl.opcode == op_br))
+	 begin
+		br_en = 1'b1;
+	 end
+	 else
+	 begin
+		br_en = 1'b0;
+	 end
 end
 
 mux8 marmux
@@ -78,10 +87,10 @@ mux2 #(.width(8)) ldbmux
     .f(ldbmux_out)
 );
 
-shiftunit sunit ////////////////////////////////////////////////////////////////////////////////////////////////
+shiftunit sunit
 (
-    .a(shift_a),
-    .d(shift_d),
+    .a(instruction[5]),
+    .d(instruction[4]),
     .sr(sr1_out),
     .imm4(instruction[3:0]),
     .f(shift_out)
@@ -109,7 +118,7 @@ benable cccomp
     .zr(dest[1]),
     .p(cc_out[0]),
     .pr(dest[0]),
-    .enable(br_en)
+    .enable(br_en_internal)
 );
 
 udjns zext_8

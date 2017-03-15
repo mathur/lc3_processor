@@ -8,6 +8,9 @@ entity if_datapath is
         read_a          : out    vl_logic;
         address_a       : out    vl_logic_vector(15 downto 0);
         stall           : in     vl_logic;
+        br_en           : in     vl_logic;
+        pc_br_in        : in     vl_logic_vector(15 downto 0);
+        sr1_data_in     : in     vl_logic_vector(15 downto 0);
         pcmux_sel       : in     vl_logic_vector(1 downto 0);
         pc_out          : out    vl_logic_vector(15 downto 0);
         instruction     : out    vl_logic_vector(15 downto 0);

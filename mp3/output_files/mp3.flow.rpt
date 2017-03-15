@@ -1,5 +1,5 @@
 Flow report for mp3
-Wed Mar 15 14:25:14 2017
+Wed Mar 15 15:36:52 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Wed Mar 15 14:25:14 2017       ;
+; Flow Status                   ; Successful - Wed Mar 15 15:36:52 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
-; Logic utilization             ; < 1 %                                       ;
-;     Combinational ALUTs       ; 161 / 38,000 ( < 1 % )                      ;
+; Logic utilization             ; 1 %                                         ;
+;     Combinational ALUTs       ; 206 / 38,000 ( < 1 % )                      ;
 ;     Memory ALUTs              ; 0 / 19,000 ( 0 % )                          ;
-;     Dedicated logic registers ; 302 / 38,000 ( < 1 % )                      ;
-; Total registers               ; 302                                         ;
+;     Dedicated logic registers ; 346 / 38,000 ( < 1 % )                      ;
+; Total registers               ; 346                                         ;
 ; Total pins                    ; 107 / 488 ( 22 % )                          ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0 / 5,455,872 ( 0 % )                       ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/15/2017 14:24:10 ;
+; Start date & time ; 03/15/2017 15:35:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp3                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 233845176327142.148960584911630       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176831339118767.148961013304424       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -105,26 +105,26 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 477 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:27     ; 2.5                     ; 888 MB              ; 00:00:35                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 420 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 569 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 381 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:50     ; --                      ; --                  ; 00:00:54                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 442 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:22     ; 1.1                     ; 793 MB              ; 00:00:16                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 415 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 513 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:09     ; 1.0                     ; 379 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:49     ; --                      ; --                  ; 00:00:27                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                      ;
-+---------------------------+---------------------------+--------------+--------------+----------------+
-; Module Name               ; Machine Hostname          ; OS Name      ; OS Version   ; Processor type ;
-+---------------------------+---------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis      ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Fitter                    ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Assembler                 ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; TimeQuest Timing Analyzer ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; EDA Netlist Writer        ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-+---------------------------+---------------------------+--------------+--------------+----------------+
++---------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                         ;
++---------------------------+------------------------------+--------------+--------------+----------------+
+; Module Name               ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
++---------------------------+------------------------------+--------------+--------------+----------------+
+; Analysis & Synthesis      ; dcl-l520-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Fitter                    ; dcl-l520-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Assembler                 ; dcl-l520-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; dcl-l520-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; EDA Netlist Writer        ; dcl-l520-27.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
++---------------------------+------------------------------+--------------+--------------+----------------+
 
 
 ------------

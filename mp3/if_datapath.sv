@@ -11,6 +11,11 @@ module if_datapath (
 
     // stalling
     input logic stall,
+	 input logic br_en,
+
+	 
+	 input lc3b_word pc_br_in,
+	 input lc3b_word sr1_data_in,
 
     // logic signals
     input  logic [1:0] pcmux_sel,
@@ -19,11 +24,20 @@ module if_datapath (
 );
 
 lc3b_word pc_plus2_out, pcmux_out;
+logic [1:0] pcmux_sel_internal;
 
 always_comb
 begin
     read_a = ~stall;
     address_a = pc_out;
+	 if(br_en)
+	 begin
+		pcmux_sel_internal = 2'b01;
+	 end
+	 else
+	 begin
+		pcmux_sel_internal = pcmux_sel;
+	 end
 end
 
 ir ir_unit (
@@ -38,10 +52,10 @@ ir ir_unit (
 
 mux4 pcmux
 (
-    .sel(pcmux_sel),
+    .sel(pcmux_sel_internal),
     .a(pc_plus2_out),
-    .b(16'b0), // br add out
-    .c(16'b0), // sr1 out
+    .b(pc_br_in), // br add out
+    .c(sr1_data_in), // sr1 out
     .d(rdata_a),
     .f(pcmux_out)
 );

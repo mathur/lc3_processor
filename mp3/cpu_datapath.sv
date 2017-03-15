@@ -43,6 +43,13 @@ lc3b_reg if_dest;
 lc3b_word if_instruction;
 lc3b_control_word ex_mem_ctrl;
 
+lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
+lc3b_word ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br;
+lc3b_word ex_mem_src1_data, ex_mem_src2_data;
+
+logic br_en;
+lc3b_word dest_data;
+
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
@@ -55,9 +62,11 @@ if_datapath if_data
     .rdata_a(rdata_a),
     .read_a(read_a),
     .address_a(address_a),
+	 	 .pc_br_in(ex_mem_pc_br),
+		 .sr1_data_in(ex_mem_src1_data),
+		 .br_en(br_en),
 
     .stall(stall),
-
     .pc_out(if_pc),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
     .src1(if_src1),
@@ -199,9 +208,6 @@ ex_datapath ex
 );
 
 
-lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
-lc3b_word ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br;
-lc3b_word ex_mem_src1_data, ex_mem_src2_data;
 
 buffer ex_mem_buf
 (
@@ -237,9 +243,6 @@ buffer ex_mem_buf
     .src2_data_out(ex_mem_src2_data)
     //.dest_data_out(16'b0)
 );
-
-logic br_en;
-lc3b_word dest_data;
 
 mem_datapath mem
 (
