@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3
-Tue Mar 14 21:02:32 2017
+Wed Mar 15 14:04:11 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Mar 14 21:02:32 2017           ;
+; Analysis & Synthesis Status        ; Failed - Wed Mar 15 14:04:11 2017           ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                      ; mp3                                         ;
 ; Top-level Entity Name              ; mp3                                         ;
@@ -179,14 +179,14 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Tue Mar 14 21:02:30 2017
+    Info: Processing started: Wed Mar 15 14:04:09 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Error (12007): Top-level design entity "mp3" is undefined
 Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
     Error: Peak virtual memory: 382 megabytes
-    Error: Processing ended: Tue Mar 14 21:02:32 2017
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+    Error: Processing ended: Wed Mar 15 14:04:12 2017
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:02
 
 

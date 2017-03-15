@@ -1,4 +1,4 @@
-ORIGIN 0
+ORIGIN 4x0000
 SEGMENT CodeSegment:
 
 ADD R1, R1, 3
@@ -6,3 +6,6 @@ NOP
 NOP
 NOP
 NOP
+
+HALT:
+    BRnzp HALT
