@@ -41,6 +41,7 @@ lc3b_reg if_src1;
 lc3b_reg if_src2;
 lc3b_reg if_dest;
 lc3b_word if_instruction;
+lc3b_control_word ex_mem_ctrl;
 
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
@@ -58,7 +59,7 @@ if_datapath if_data
     .stall(stall),
 
     .pc_out(if_pc),
-    .pcmux_sel(pcmux_sel),
+    .pcmux_sel(ex_mem_ctrl.pcmux_sel),
     .src1(if_src1),
     .src2(if_src2),
     .dest(if_dest),
@@ -197,7 +198,7 @@ ex_datapath ex
     .ex_br_out(ex_br_out)
 );
 
-lc3b_control_word ex_mem_ctrl;
+
 lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
 lc3b_word ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br;
 lc3b_word ex_mem_src1_data, ex_mem_src2_data;

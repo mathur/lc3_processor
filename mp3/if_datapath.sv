@@ -6,14 +6,14 @@ module if_datapath (
     // memory
     input logic resp_a,
     input logic [15:0] rdata_a,
-    output read_a,
-    output [15:0] address_a,
+    output logic read_a,
+    output logic [15:0] address_a,
 
     // stalling
     input logic stall,
 
     // logic signals
-    input  [1:0] pcmux_sel,
+    input  logic [1:0] pcmux_sel,
     output lc3b_word pc_out, instruction,
     output lc3b_reg src1, src2, dest
 );

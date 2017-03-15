@@ -1,0 +1,8 @@
+ORIGIN 0
+SEGMENT CodeSegment:
+
+ADD R1, R1, 3
+NOP
+NOP
+NOP
+NOP

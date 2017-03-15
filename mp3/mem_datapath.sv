@@ -9,11 +9,11 @@ module mem_datapath (
     // memory
     input logic resp_b,
     input logic [15:0] rdata_b,
-    output read_b,
-    output write_b,
-    output [1:0] wmask_b,
-    output [15:0] address_b,
-    output [15:0] wdata_b,
+    output logic read_b,
+    output logic write_b,
+    output logic [1:0] wmask_b,
+    output logic [15:0] address_b,
+    output logic [15:0] wdata_b,
 
     output lc3b_word regfilemux_out,
     output logic br_en
