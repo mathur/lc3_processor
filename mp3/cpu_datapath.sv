@@ -209,14 +209,14 @@ buffer ex_mem_buf
     .dest_in(id_ex_dest),
     .instruction_in(id_ex_instruction),
     .alu_in(ex_alu_out),
-    .br_in(1'b0),
+    //.br_in(1'b0),
     .pc_in(id_ex_pc),
     .pc_br_in(ex_br_out),
-    .mar_in(16'b0),
-    .mdr_in(16'b0),
+    //.mar_in(16'b0),
+    //.mdr_in(16'b0),
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
-    .dest_data_in(16'b0),
+    //.dest_data_in(16'b0),
     .ctrl_in(id_ex_ctrl),
 
     .ctrl_out(ex_mem_ctrl),
@@ -225,14 +225,14 @@ buffer ex_mem_buf
     .dest_out(ex_mem_dest),
     .instruction_out(ex_mem_instruction),
     .alu_out(ex_mem_alu),
-    .br_out(1'b0),
+    //.br_out(1'b0),
     .pc_out(ex_mem_pc),
     .pc_br_out(ex_mem_pc_br),
-    .mar_out(16'b0),
-    .mdr_out(16'b0),
+    //.mar_out(16'b0),
+    //.mdr_out(16'b0),
     .src1_data_out(ex_mem_src1_data),
-    .src2_data_out(ex_mem_src2_data),
-    .dest_data_out(16'b0)
+    .src2_data_out(ex_mem_src2_data)
+    //.dest_data_out(16'b0)
 );
 
 logic br_en;
