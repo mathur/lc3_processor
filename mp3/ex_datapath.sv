@@ -64,13 +64,13 @@ adjns #(.width(6)) adj6ns
 
 adj #(.width(9)) adj9
 (
-    .in(ex_instruction_in[10:0]),
+    .in(ex_instruction_in[8:0]),
     .out(adj9_out)
 );
 
 adj #(.width(11)) adj11
 (
-    .in(ex_instruction_in[11:0]),
+    .in(ex_instruction_in[10:0]),
     .out(adj11_out)
 );
 
