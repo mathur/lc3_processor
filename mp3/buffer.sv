@@ -9,7 +9,8 @@ module buffer (
     input lc3b_control_word ctrl_in,
     output lc3b_control_word ctrl_out,
     output lc3b_reg src1_out, src2_out, dest_out,
-    output lc3b_word instruction_out, alu_out, br_out, pc_out, pc_br_out, mar_out, mdr_out, src1_data_out, src2_data_out, dest_data_out
+    output lc3b_word instruction_out, alu_out, pc_out, pc_br_out, mar_out, mdr_out, src1_data_out, src2_data_out, dest_data_out,
+    output logic br_out
 );
 
 register #(.width($bits(lc3b_control_word))) control_word
