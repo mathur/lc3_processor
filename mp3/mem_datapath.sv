@@ -70,20 +70,20 @@ mux3 mdrmux
     .c(sr1_out << 8),
     .f(mdrmux_out)
 );
-
+/*
 register mdr
 (
     .clk(clk),
     .load(ctrl.load_mdr),
     .in(mdrmux_out),
-    .out(wdata_b)
+    .out(rdata_b)
 );
-
+*/
 mux2 #(.width(8)) ldbmux
 (
     .sel(address_b[0]),
-    .a(wdata_b[7:0]),
-    .b(wdata_b[15:8]),
+    .a(rdata_b[7:0]),
+    .b(rdata_b[15:8]),
     .f(ldbmux_out)
 );
 
@@ -123,7 +123,7 @@ benable cccomp
 
 udjns zext_8
 (
-    .in(wdata_b[7:0]),
+    .in(rdata_b[7:0]),
     .out(zext_8_out)
 );
 
@@ -143,7 +143,7 @@ mux8 regfilemux
 (
     .sel(ctrl.regfilemux_sel),
     .a(alu_out),
-    .b(wdata_b),
+    .b(rdata_b),
     .c(br_add_out),
     .d(pc_out),
     .e(zext_8_out),

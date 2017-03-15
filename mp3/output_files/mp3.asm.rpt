@@ -1,5 +1,5 @@
 Assembler report for mp3
-Wed Mar 15 15:36:30 2017
+Wed Mar 15 18:15:15 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Mar 15 15:36:30 2017 ;
+; Assembler Status      ; Successful - Wed Mar 15 18:15:15 2017 ;
 ; Revision Name         ; mp3                                   ;
 ; Top-level Entity Name ; mp3                                   ;
 ; Family                ; Stratix III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting          ;
 +----------------+------------------+
 ; Device         ; EP3SE50F780C2    ;
-; JTAG usercode  ; 0x018C8090       ;
-; Checksum       ; 0x018C8090       ;
+; JTAG usercode  ; 0x018C194A       ;
+; Checksum       ; 0x018C194A       ;
 +----------------+------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Wed Mar 15 15:36:25 2017
+    Info: Processing started: Wed Mar 15 18:15:09 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off mp3 -c mp3
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 415 megabytes
-    Info: Processing ended: Wed Mar 15 15:36:30 2017
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 430 megabytes
+    Info: Processing ended: Wed Mar 15 18:15:16 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 
