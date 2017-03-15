@@ -263,7 +263,7 @@ mem_datapath mem
 
 lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
-lc3b_word mem_wb_src1_data, mem_wb_src2_data;
+lc3b_word mem_wb_src1_data, mem_wb_src2_data, mem_wb_mar, mem_wb_mdr;
 logic mem_wb_br;
 lc3b_word mem_wb_dest_data;
 
@@ -295,8 +295,8 @@ buffer mem_wb_buf
     .br_out(mem_wb_br),
     .pc_out(mem_wb_pc),
     .pc_br_out(mem_wb_pc_br),
-    .mar_out(mem_wb_mdr),
-    .mdr_out(mem_wb_address),
+    .mar_out(mem_wb_mar),
+    .mdr_out(mem_wb_mdr),
     .src1_data_out(mem_wb_src1_data),
     .src2_data_out(mem_wb_src2_data),
     .dest_data_out(mem_wb_dest_data)

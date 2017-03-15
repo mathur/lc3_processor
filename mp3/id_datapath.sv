@@ -51,7 +51,7 @@ regfile rfile
     .in(wb_dest_data),
     .src_a(storemux_out),
     .src_b(sr2),
-    .dest(wb_dest_mux),
+    .dest(wb_dest_addr),
     .reg_a(sr1_out),
     .reg_b(sr2_out)
 );
