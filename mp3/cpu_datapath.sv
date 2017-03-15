@@ -110,6 +110,8 @@ lc3b_control_word mem_wb_ctrl;
 lc3b_control_word id_ctrl_data;
 lc3b_reg id_dest;
 lc3b_word id_src1_data, id_src2_data;
+lc3b_reg mem_wb_dest;
+lc3b_word mem_wb_dest_data;
 
 id_datapath id
 (
@@ -261,11 +263,10 @@ mem_datapath mem
     .rdata_b
 );
 
-lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
+lc3b_reg mem_wb_src1, mem_wb_src2;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
 lc3b_word mem_wb_src1_data, mem_wb_src2_data, mem_wb_mar, mem_wb_mdr;
 logic mem_wb_br;
-lc3b_word mem_wb_dest_data;
 
 buffer mem_wb_buf
 (
