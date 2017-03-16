@@ -9,6 +9,7 @@ entity mem_datapath is
         pc_out          : in     vl_logic_vector(15 downto 0);
         br_add_out      : in     vl_logic_vector(15 downto 0);
         sr1_out         : in     vl_logic_vector(15 downto 0);
+        sr2_out         : in     vl_logic_vector(15 downto 0);
         instruction     : in     vl_logic_vector(15 downto 0);
         dest            : in     vl_logic_vector(2 downto 0);
         resp_b          : in     vl_logic;

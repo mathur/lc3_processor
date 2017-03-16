@@ -27,6 +27,7 @@ module id_datapath (
 // at this stage
 lc3b_control_word internal_ctrl;
 lc3b_reg storemux_out;
+lc3b_reg storemux_out_two;
 
 mux2 #(.width(3)) destmux
 (
@@ -44,13 +45,21 @@ mux2 #(.width(3)) storemux
     .f(storemux_out)
 );
 
+mux2 #(.width(3)) storemux_two
+(
+    .sel(internal_ctrl.storemux_sel_two),
+    .a(sr2),
+    .b(dest),
+    .f(storemux_out_two)
+);
+
 regfile rfile
 (
     .clk(clk),
     .load(wb_load_dest),
     .in(wb_dest_data),
     .src_a(storemux_out),
-    .src_b(sr2),
+    .src_b(storemux_out_two),
     .dest(wb_dest_addr),
     .reg_a(sr1_out),
     .reg_b(sr2_out)

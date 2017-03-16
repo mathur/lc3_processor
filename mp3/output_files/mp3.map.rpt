@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3
-Wed Mar 15 19:47:56 2017
+Wed Mar 15 21:03:06 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -36,83 +36,84 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  28. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:mdr
  29. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux
  30. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux
- 31. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word
- 32. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1
- 33. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2
- 34. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest
- 35. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data
- 36. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data
- 37. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest_data
- 38. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction
- 39. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:alu
- 40. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:br
- 41. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc
- 42. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc_br
- 43. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mar
- 44. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mdr
- 45. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux2:br_add_mux
- 46. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add
- 47. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux
- 48. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj5
- 49. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj6
- 50. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj6ns
- 51. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj9
- 52. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj11
- 53. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word
- 54. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1
- 55. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2
- 56. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest
- 57. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data
- 58. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data
- 59. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest_data
- 60. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction
- 61. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu
- 62. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:br
- 63. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc
- 64. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br
- 65. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mar
- 66. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mdr
- 67. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux
- 68. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_a
- 69. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_b
- 70. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux
- 71. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux
- 72. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc
- 73. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:ldbmux
- 74. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit
- 75. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:zext_8
- 76. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udj:trap_zext
- 77. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:ldbzext
- 78. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux
- 79. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a
- 80. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b
- 81. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux
- 82. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word
- 83. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1
- 84. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2
- 85. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest
- 86. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1_data
- 87. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2_data
- 88. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data
- 89. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:instruction
- 90. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:alu
- 91. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:br
- 92. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc
- 93. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc_br
- 94. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mar
- 95. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mdr
- 96. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"
- 97. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux"
- 98. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux"
- 99. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux"
-100. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf"
-101. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf"
-102. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux"
-103. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf"
-104. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux4:pcmux"
-105. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data"
-106. Elapsed Time Per Partition
-107. Analysis & Synthesis Messages
+ 31. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two
+ 32. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word
+ 33. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1
+ 34. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2
+ 35. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest
+ 36. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data
+ 37. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data
+ 38. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest_data
+ 39. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction
+ 40. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:alu
+ 41. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:br
+ 42. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc
+ 43. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc_br
+ 44. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mar
+ 45. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mdr
+ 46. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux2:br_add_mux
+ 47. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add
+ 48. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux
+ 49. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj5
+ 50. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj6
+ 51. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj6ns
+ 52. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj9
+ 53. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj11
+ 54. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word
+ 55. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1
+ 56. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2
+ 57. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest
+ 58. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data
+ 59. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data
+ 60. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest_data
+ 61. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction
+ 62. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu
+ 63. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:br
+ 64. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc
+ 65. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br
+ 66. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mar
+ 67. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mdr
+ 68. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux
+ 69. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_a
+ 70. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_b
+ 71. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux
+ 72. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux
+ 73. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc
+ 74. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:ldbmux
+ 75. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit
+ 76. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:zext_8
+ 77. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udj:trap_zext
+ 78. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:ldbzext
+ 79. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux
+ 80. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a
+ 81. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b
+ 82. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux
+ 83. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word
+ 84. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1
+ 85. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2
+ 86. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest
+ 87. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1_data
+ 88. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2_data
+ 89. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data
+ 90. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:instruction
+ 91. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:alu
+ 92. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:br
+ 93. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc
+ 94. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc_br
+ 95. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mar
+ 96. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mdr
+ 97. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"
+ 98. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux"
+ 99. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux"
+100. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux"
+101. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf"
+102. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf"
+103. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux"
+104. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf"
+105. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux4:pcmux"
+106. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data"
+107. Elapsed Time Per Partition
+108. Analysis & Synthesis Messages
 
 
 
@@ -138,16 +139,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed Mar 15 19:47:56 2017       ;
+; Analysis & Synthesis Status   ; Successful - Wed Mar 15 21:03:06 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 237                                         ;
+;     Combinational ALUTs       ; 228                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 311                                         ;
-; Total registers               ; 311                                         ;
+;     Dedicated logic registers ; 319                                         ;
+; Total registers               ; 319                                         ;
 ; Total pins                    ; 107                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -302,34 +303,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 237       ;
-;     -- Combinational ALUTs                    ; 237       ;
+; Estimated ALUTs Used                          ; 228       ;
+;     -- Combinational ALUTs                    ; 228       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 311       ;
+; Dedicated logic registers                     ; 319       ;
 ;                                               ;           ;
 ; Estimated ALUTs Unavailable                   ; 64        ;
 ;     -- Due to unpartnered combinational logic ; 64        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 237       ;
+; Total combinational functions                 ; 228       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
 ;     -- 7 input functions                      ; 64        ;
 ;     -- 6 input functions                      ; 13        ;
-;     -- 5 input functions                      ; 50        ;
-;     -- 4 input functions                      ; 32        ;
-;     -- <=3 input functions                    ; 78        ;
+;     -- 5 input functions                      ; 60        ;
+;     -- 4 input functions                      ; 23        ;
+;     -- <=3 input functions                    ; 68        ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 112       ;
+;     -- normal mode                            ; 103       ;
 ;     -- extended LUT mode                      ; 64        ;
 ;     -- arithmetic mode                        ; 61        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 470       ;
+; Estimated ALUT/register pairs used            ; 481       ;
 ;                                               ;           ;
-; Total registers                               ; 311       ;
-;     -- Dedicated logic registers              ; 311       ;
+; Total registers                               ; 319       ;
+;     -- Dedicated logic registers              ; 319       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -337,7 +338,7 @@ applicable agreement for further details.
 ; I/O pins                                      ; 107       ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 311       ;
+; Maximum fan-out                               ; 319       ;
 ; Total fan-out                                 ; 2055      ;
 ; Average fan-out                               ; 2.70      ;
 +-----------------------------------------------+-----------+
@@ -348,15 +349,16 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |mp3                                ; 237 (0)           ; 311 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 107  ; 0            ; |mp3                                                                                ; work         ;
-;    |cpu:mcpu|                       ; 237 (0)           ; 311 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                       ; work         ;
-;       |cpu_datapath:cpu_datapath|   ; 237 (0)           ; 311 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                             ; work         ;
-;          |buffer:ex_mem_buf|        ; 0 (0)             ; 62 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                           ; work         ;
+; |mp3                                ; 228 (0)           ; 319 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 107  ; 0            ; |mp3                                                                                ; work         ;
+;    |cpu:mcpu|                       ; 228 (0)           ; 319 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                       ; work         ;
+;       |cpu_datapath:cpu_datapath|   ; 228 (0)           ; 319 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                             ; work         ;
+;          |buffer:ex_mem_buf|        ; 0 (0)             ; 70 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                           ; work         ;
 ;             |register:alu|          ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu              ; work         ;
 ;             |register:control_word| ; 0 (0)             ; 12 (12)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word     ; work         ;
 ;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest             ; work         ;
 ;             |register:pc_br|        ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br            ; work         ;
-;             |register:src1_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data        ; work         ;
+;             |register:src1_data|    ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data        ; work         ;
+;             |register:src2_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data        ; work         ;
 ;          |buffer:id_ex_buf|         ; 0 (0)             ; 71 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf                            ; work         ;
 ;             |register:control_word| ; 0 (0)             ; 12 (12)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word      ; work         ;
 ;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest              ; work         ;
@@ -367,13 +369,13 @@ applicable agreement for further details.
 ;          |buffer:if_id_buf|         ; 0 (0)             ; 16 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf                            ; work         ;
 ;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest              ; work         ;
 ;             |register:instruction|  ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction       ; work         ;
-;          |ex_datapath:ex|           ; 78 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex                              ; work         ;
+;          |ex_datapath:ex|           ; 69 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex                              ; work         ;
 ;             |alu:alu_unit|          ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|alu:alu_unit                 ; work         ;
 ;             |badder:br_add|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add                ; work         ;
-;             |mux4:alumux|           ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux                  ; work         ;
+;             |mux4:alumux|           ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux                  ; work         ;
 ;          |id_datapath:id|           ; 87 (0)            ; 128 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id                              ; work         ;
 ;             |control_rom:controls|  ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|control_rom:controls         ; work         ;
-;             |mux2:storemux|         ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux                ; work         ;
+;             |mux2:storemux_two|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two            ; work         ;
 ;             |regfile:rfile|         ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile                ; work         ;
 ;          |if_datapath:if_data|      ; 30 (15)           ; 31 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data                         ; work         ;
 ;             |ir:ir_unit|            ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit              ; work         ;
@@ -395,31 +397,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 ; Register name                                                                                             ; Reason for Removal                                                                              ;
 +-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[1,8..10,12,13,17,18,27,28] ; Stuck at GND due to stuck port data_in                                                          ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[8..10,12,13,17,18]        ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[1,8..10,12,13,18,19,28,29] ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[8..10,12,13,18,19]        ; Stuck at GND due to stuck port data_in                                                          ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[10]                         ; Lost fanout                                                                                     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[10]                         ; Lost fanout                                                                                     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[9]                          ; Lost fanout                                                                                     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[9]                          ; Lost fanout                                                                                     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[8..15]                       ; Lost fanout                                                                                     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[0..7]                      ; Lost fanout                                                                                     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[0]                                  ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]         ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[4]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[7]   ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[11]                        ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[5]   ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[2]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[3]   ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[24]                        ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[21]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[25]                        ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[22]  ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[2]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[2]    ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[1]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[1]    ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[0]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[0]    ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[0]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[6]    ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[1]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[7]    ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[2]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[8]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[24]                       ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[21] ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[25]                       ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[22] ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[1..15]                              ; Lost fanout                                                                                     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[6]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[14]  ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc|data[0]                                   ; Stuck at GND due to stuck port data_in                                                          ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]                               ; Stuck at GND due to stuck port data_in                                                          ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]                                ; Stuck at GND due to stuck port data_in                                                          ;
-; Total Number of Removed Registers = 60                                                                    ;                                                                                                 ;
+; Total Number of Removed Registers = 68                                                                    ;                                                                                                 ;
 +-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
@@ -452,21 +455,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[3],            ;
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[2],            ;
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[1]             ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[18] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[18], ;
+;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[14],    ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[13],    ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[12],    ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[11],    ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[10],    ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[9],     ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[8],     ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]           ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[1]  ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[10],   ;
 ;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[10],   ;
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[9],    ;
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[9]     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[17] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[17], ;
-;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]           ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[10] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[10], ;
+;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[15]     ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[9]  ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[9]   ;
-;                                                                                    ; due to stuck port data_in ;                                                                                      ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[10] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[10]  ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[12] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[12]  ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[13] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[13]  ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[18] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[18]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[19] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[19]  ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc|data[0]            ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]          ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
@@ -478,7 +488,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 311   ;
+; Total registers                              ; 319   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -535,7 +545,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                          ;
 +----------------+-------+-----------------------------------------------------------------------------------------------+
-; width          ; 33    ; Signed Integer                                                                                ;
+; width          ; 34    ; Signed Integer                                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -690,12 +700,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; width          ; 3     ; Signed Integer                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word ;
 +----------------+-------+-----------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                          ;
 +----------------+-------+-----------------------------------------------------------------------------------------------+
-; width          ; 33    ; Signed Integer                                                                                ;
+; width          ; 34    ; Signed Integer                                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -915,7 +935,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                           ;
 +----------------+-------+------------------------------------------------------------------------------------------------+
-; width          ; 33    ; Signed Integer                                                                                 ;
+; width          ; 34    ; Signed Integer                                                                                 ;
 +----------------+-------+------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1205,7 +1225,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                                           ;
 +----------------+-------+------------------------------------------------------------------------------------------------+
-; width          ; 33    ; Signed Integer                                                                                 ;
+; width          ; 34    ; Signed Integer                                                                                 ;
 +----------------+-------+------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1496,7 +1516,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Wed Mar 15 19:47:51 2017
+    Info: Processing started: Wed Mar 15 21:03:01 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file control_rom.sv
@@ -1624,19 +1644,19 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "wdata_a[14]" is stuck at GND
     Warning (13410): Pin "wdata_a[15]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 27 registers lost all their fanouts during netlist optimizations.
+Info (17049): 35 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "resp_a"
     Warning (15610): No output dependent on input pin "resp_b"
-Info (21057): Implemented 565 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 564 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 458 logic cells
+    Info (21061): Implemented 457 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Wed Mar 15 19:47:56 2017
+    Info: Peak virtual memory: 445 megabytes
+    Info: Processing ended: Wed Mar 15 21:03:06 2017
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 

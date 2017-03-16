@@ -3,7 +3,7 @@ import lc3b_types::*;
 module mem_datapath (
     input clk,
     input lc3b_control_word ctrl,
-    input lc3b_word alu_out, pc_out, br_add_out, sr1_out, instruction,
+    input lc3b_word alu_out, pc_out, br_add_out, sr1_out, sr2_out, instruction,
     input lc3b_reg dest,
 
     // memory
@@ -70,7 +70,7 @@ mux4 mdrmux
     .a(alu_out),
     .b(rdata_b),
     .c(sr1_out << 8),
-	 .d(sr1_out),
+	 .d(sr2_out),
     .f(wdata_b)
 );
 

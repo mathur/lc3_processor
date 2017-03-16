@@ -12,36 +12,15 @@ add wave -noupdate -color Tan -radix decimal /mp3_tb/read_b
 add wave -noupdate -color Tan -radix decimal /mp3_tb/write_b
 add wave -noupdate -color Tan -radix decimal /mp3_tb/wmask_b
 add wave -noupdate -color Tan -radix decimal /mp3_tb/address_b
-add wave -noupdate -color Salmon -radix hexadecimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/sel
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf/alu_out
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/a
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/b
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/c
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/d
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/e
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/f
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/g
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/h
-add wave -noupdate -color Salmon -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/marmux/i
 add wave -noupdate -color Tan -radix decimal /mp3_tb/wdata_b
 add wave -noupdate -color Tan -radix decimal /mp3_tb/resp_b
 add wave -noupdate -color Tan -radix decimal /mp3_tb/rdata_b
 add wave -noupdate -radix hexadecimal -childformat {{{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[7]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[6]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[5]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[4]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[3]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[2]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[1]} -radix hexadecimal} {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[0]} -radix hexadecimal}} -expand -subitemconfig {{/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[7]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[6]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[5]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[4]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[3]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[2]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[1]} {-height 15 -radix hexadecimal} {/mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data[0]} {-height 15 -radix hexadecimal}} /mp3_tb/dut/mcpu/cpu_datapath/id/rfile/data
-add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf/dest_data_out
-add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf/dest_data_out
-add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf/dest_data_out
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf/dest_data_in
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf/dest_data_out
-add wave -noupdate -color {Slate Blue} -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/sel
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/a
-add wave -noupdate -color Magenta -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/b
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/c
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/d
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/e
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/f
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/g
-add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/h
-add wave -noupdate -color Cyan -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/i
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem/mdrmux/sel
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem/mdrmux/a
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem/mdrmux/b
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem/mdrmux/c
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem/mdrmux/d
 add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf/ctrl_in.opcode
 add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf/ctrl_out.opcode
 add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf/ctrl_in.opcode
@@ -67,4 +46,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {254374 ps} {352812 ps}
+WaveRestoreZoom {2906484 ps} {3004922 ps}

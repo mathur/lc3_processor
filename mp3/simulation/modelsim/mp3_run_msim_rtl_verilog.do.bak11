@@ -11,7 +11,6 @@ vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/m
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mux2.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/benable.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/badder.sv}
-vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mux3.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mux4.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mux8.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/shiftunit.sv}

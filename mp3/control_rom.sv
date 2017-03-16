@@ -17,6 +17,7 @@ begin
 	ctrl.load_mdr = 1'b0;
 	ctrl.pcmux_sel = 2'b00;
 	ctrl.storemux_sel = 1'b0;
+	ctrl.storemux_sel_two = 1'b0;
 	ctrl.alumux_sel = 2'b00;
 	ctrl.regfilemux_sel = 3'b000;
 	ctrl.marmux_sel = 3'b000;
@@ -82,14 +83,14 @@ begin
         op_str: begin
         	// MAR <= SRA + SEXT(IR[5:0] << 1) (CALC_ADDR)
             ctrl.alumux_sel = 2'b01;
-				ctrl.mdrmux_sel = 2'b11;
             ctrl.alu_op = alu_add;
             ctrl.load_mar = 1;
 
             // MDR<=SR (STR1)
-            ctrl.storemux_sel = 1;
+            //ctrl.storemux_sel = 1;
+				ctrl.mdrmux_sel = 2'b11;
+				ctrl.storemux_sel_two = 1'b1;
             //ctrl.alu_op = alu_pass;
-            ctrl.load_mdr = 1;
 
             // M[MAR] <= MDR (STR2)
             ctrl.mem_write = 1;
