@@ -3,6 +3,7 @@ SEGMENT  CodeSegment:
    LDR  R1, R0, NEGTWO  ; R1 <= -2
    LDR  R2, R0, TWO     ; R2 <= 2
    LDR  R4, R0, ONE     ; R4 <= 1
+   LDR  R6, R0, ONE     ; R4 <= 1
    NOP
    NOP
    NOP

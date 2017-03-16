@@ -31,8 +31,16 @@ add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/f
 add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/g
 add wave -noupdate -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/h
 add wave -noupdate -color Cyan -radix decimal /mp3_tb/dut/mcpu/cpu_datapath/mem/regfilemux/i
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf/ctrl_in.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf/ctrl_out.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf/ctrl_in.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf/ctrl_out.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf/ctrl_in.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf/ctrl_out.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf/ctrl_in.opcode
+add wave -noupdate /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf/ctrl_out.opcode
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {66889 ps} 0}
+WaveRestoreCursors {{Cursor 1} {65000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 303
 configure wave -valuecolwidth 204
@@ -48,4 +56,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {144697 ps}
+WaveRestoreZoom {27890 ps} {86802 ps}

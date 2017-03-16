@@ -47,6 +47,31 @@ lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
 lc3b_word ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br;
 lc3b_word ex_mem_src1_data, ex_mem_src2_data;
 
+lc3b_control_word id_ex_ctrl;
+lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
+lc3b_word id_ex_instruction, id_ex_pc;
+lc3b_word id_ex_src1_data, id_ex_src2_data;
+
+lc3b_reg mem_wb_src1, mem_wb_src2;
+lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
+lc3b_word mem_wb_src1_data, mem_wb_src2_data, mem_wb_mar, mem_wb_mdr;
+logic mem_wb_br;
+
+lc3b_reg if_id_src1;
+lc3b_reg if_id_src2;
+lc3b_reg if_id_dest;
+lc3b_word if_id_instruction;
+lc3b_word if_id_pc;
+
+lc3b_control_word mem_wb_ctrl;
+lc3b_control_word id_ctrl_data;
+lc3b_reg id_dest;
+lc3b_word id_src1_data, id_src2_data;
+lc3b_reg mem_wb_dest;
+lc3b_word mem_wb_dest_data;
+
+lc3b_word ex_alu_out, ex_br_out;
+
 logic br_en;
 lc3b_word dest_data;
 
@@ -75,11 +100,6 @@ if_datapath if_data
     .instruction(if_instruction)
 );
 
-lc3b_reg if_id_src1;
-lc3b_reg if_id_src2;
-lc3b_reg if_id_dest;
-lc3b_word if_id_instruction;
-lc3b_word if_id_pc;
 
 buffer if_id_buf
 (
@@ -116,12 +136,6 @@ buffer if_id_buf
     //.dest_data_out(16'b0)
 );
 
-lc3b_control_word mem_wb_ctrl;
-lc3b_control_word id_ctrl_data;
-lc3b_reg id_dest;
-lc3b_word id_src1_data, id_src2_data;
-lc3b_reg mem_wb_dest;
-lc3b_word mem_wb_dest_data;
 
 id_datapath id
 (
@@ -140,7 +154,7 @@ id_datapath id
 
     // TODO: From WB
     .wb_dest_addr(mem_wb_dest),
-    .wb_dest_data(mem_wb_dest_data),
+    .wb_dest_data(dest_data),
     .wb_load_dest(mem_wb_ctrl.load_regfile),
 
     /* Data Outputs */
@@ -149,10 +163,6 @@ id_datapath id
     .sr2_out(id_src2_data)
 );
 
-lc3b_control_word id_ex_ctrl;
-lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
-lc3b_word id_ex_instruction, id_ex_pc;
-lc3b_word id_ex_src1_data, id_ex_src2_data;
 
 buffer id_ex_buf
 (
@@ -189,7 +199,7 @@ buffer id_ex_buf
     //.dest_data_out(16'b0)
 );
 
-lc3b_word ex_alu_out, ex_br_out;
+
 
 ex_datapath ex
 (
@@ -267,10 +277,6 @@ mem_datapath mem
     .rdata_b
 );
 
-lc3b_reg mem_wb_src1, mem_wb_src2;
-lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
-lc3b_word mem_wb_src1_data, mem_wb_src2_data, mem_wb_mar, mem_wb_mdr;
-logic mem_wb_br;
 
 buffer mem_wb_buf
 (

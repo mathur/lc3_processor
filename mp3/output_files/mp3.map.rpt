@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3
-Wed Mar 15 18:14:37 2017
+Wed Mar 15 18:43:00 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -138,7 +138,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed Mar 15 18:14:37 2017       ;
+; Analysis & Synthesis Status   ; Successful - Wed Mar 15 18:43:00 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
@@ -146,8 +146,8 @@ applicable agreement for further details.
 ; Logic utilization             ; N/A                                         ;
 ;     Combinational ALUTs       ; 206                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 330                                         ;
-; Total registers               ; 330                                         ;
+;     Dedicated logic registers ; 314                                         ;
+; Total registers               ; 314                                         ;
 ; Total pins                    ; 107                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -307,7 +307,7 @@ applicable agreement for further details.
 ;     -- Combinational ALUTs                    ; 206       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 330       ;
+; Dedicated logic registers                     ; 314       ;
 ;                                               ;           ;
 ; Estimated ALUTs Unavailable                   ; 64        ;
 ;     -- Due to unpartnered combinational logic ; 64        ;
@@ -327,10 +327,10 @@ applicable agreement for further details.
 ;     -- arithmetic mode                        ; 46        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 468       ;
+; Estimated ALUT/register pairs used            ; 452       ;
 ;                                               ;           ;
-; Total registers                               ; 330       ;
-;     -- Dedicated logic registers              ; 330       ;
+; Total registers                               ; 314       ;
+;     -- Dedicated logic registers              ; 314       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -338,9 +338,9 @@ applicable agreement for further details.
 ; I/O pins                                      ; 107       ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 330       ;
-; Total fan-out                                 ; 1975      ;
-; Average fan-out                               ; 2.63      ;
+; Maximum fan-out                               ; 314       ;
+; Total fan-out                                 ; 1943      ;
+; Average fan-out                               ; 2.65      ;
 +-----------------------------------------------+-----------+
 
 
@@ -349,9 +349,9 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |mp3                                ; 206 (0)           ; 330 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 107  ; 0            ; |mp3                                                                                ; work         ;
-;    |cpu:mcpu|                       ; 206 (0)           ; 330 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                       ; work         ;
-;       |cpu_datapath:cpu_datapath|   ; 206 (0)           ; 330 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                             ; work         ;
+; |mp3                                ; 206 (0)           ; 314 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 107  ; 0            ; |mp3                                                                                ; work         ;
+;    |cpu:mcpu|                       ; 206 (0)           ; 314 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                       ; work         ;
+;       |cpu_datapath:cpu_datapath|   ; 206 (0)           ; 314 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                             ; work         ;
 ;          |buffer:ex_mem_buf|        ; 0 (0)             ; 45 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                           ; work         ;
 ;             |register:alu|          ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu              ; work         ;
 ;             |register:control_word| ; 0 (0)             ; 11 (11)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word     ; work         ;
@@ -367,9 +367,8 @@ applicable agreement for further details.
 ;          |buffer:if_id_buf|         ; 0 (0)             ; 16 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf                            ; work         ;
 ;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest              ; work         ;
 ;             |register:instruction|  ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction       ; work         ;
-;          |buffer:mem_wb_buf|        ; 0 (0)             ; 20 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf                           ; work         ;
+;          |buffer:mem_wb_buf|        ; 0 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf                           ; work         ;
 ;             |register:control_word| ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word     ; work         ;
-;             |register:dest_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data        ; work         ;
 ;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest             ; work         ;
 ;          |ex_datapath:ex|           ; 78 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex                              ; work         ;
 ;             |alu:alu_unit|          ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|alu:alu_unit                 ; work         ;
@@ -497,7 +496,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 330   ;
+; Total registers                              ; 314   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -1401,6 +1400,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; mdr_out                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; src1_data_out            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; src2_data_out            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; dest_data_out            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1530,7 +1530,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Wed Mar 15 18:14:30 2017
+    Info: Processing started: Wed Mar 15 18:42:53 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file control_rom.sv
@@ -1682,13 +1682,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "resp_a"
     Warning (15610): No output dependent on input pin "resp_b"
-Info (21057): Implemented 547 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 537 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 440 logic cells
+    Info (21061): Implemented 430 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 43 warnings
     Info: Peak virtual memory: 446 megabytes
-    Info: Processing ended: Wed Mar 15 18:14:37 2017
+    Info: Processing ended: Wed Mar 15 18:43:00 2017
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:02
 

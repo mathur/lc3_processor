@@ -1,4 +1,4 @@
-Fitter Status : Successful - Wed Mar 15 18:15:02 2017
+Fitter Status : Successful - Wed Mar 15 18:43:18 2017
 Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
 Revision Name : mp3
 Top-level Entity Name : mp3
@@ -8,8 +8,8 @@ Timing Models : Final
 Logic utilization : 1 %
     Combinational ALUTs : 206 / 38,000 ( < 1 % )
     Memory ALUTs : 0 / 19,000 ( 0 % )
-    Dedicated logic registers : 330 / 38,000 ( < 1 % )
-Total registers : 330
+    Dedicated logic registers : 314 / 38,000 ( < 1 % )
+Total registers : 314
 Total pins : 107 / 488 ( 22 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,455,872 ( 0 % )
