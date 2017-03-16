@@ -51,9 +51,10 @@ mux8 marmux
     .f(16'b0),
     .g(16'b0),
     .h(16'b0),
-    .i(marmux_out)
+    .i(address_b)
 );
 
+/*
 register mar
 (
     .clk(clk),
@@ -61,39 +62,16 @@ register mar
     .in(marmux_out),
     .out(address_b)
 );
+*/
 
-mux3 mdrmux
+mux4 mdrmux
 (
     .sel(ctrl.mdrmux_sel),
     .a(alu_out),
     .b(rdata_b),
     .c(sr1_out << 8),
-    .f(mdrmux_out)
-);
-/*
-register mdr
-(
-    .clk(clk),
-    .load(ctrl.load_mdr),
-    .in(mdrmux_out),
-    .out(rdata_b)
-);
-*/
-mux2 #(.width(8)) ldbmux
-(
-    .sel(address_b[0]),
-    .a(rdata_b[7:0]),
-    .b(rdata_b[15:8]),
-    .f(ldbmux_out)
-);
-
-shiftunit sunit
-(
-    .a(instruction[5]),
-    .d(instruction[4]),
-    .sr(sr1_out),
-    .imm4(instruction[3:0]),
-    .f(shift_out)
+	 .d(sr1_out),
+    .f(wdata_b)
 );
 
 gencc gen_cc
@@ -110,15 +88,21 @@ register #(.width(3)) cc
     .out(cc_out)
 );
 
-benable cccomp
+mux2 #(.width(8)) ldbmux
 (
-    .n(cc_out[2]),
-    .nr(dest[2]),
-    .z(cc_out[1]),
-    .zr(dest[1]),
-    .p(cc_out[0]),
-    .pr(dest[0]),
-    .enable(br_en_internal)
+    .sel(address_b[0]),
+    .a(rdata_b[7:0]),
+    .b(rdata_b[15:8]),
+    .f(ldbmux_out)
+);
+
+shiftunit sunit
+(
+    .a(instruction[5]),
+    .d(instruction[4]),
+    .sr(sr1_out),
+    .imm4(instruction[3:0]),
+    .f(shift_out)
 );
 
 udjns zext_8
@@ -138,6 +122,27 @@ udjns ldbzext
     .in(ldbmux_out),
     .out(ldb_zext_out)
 );
+
+benable cccomp
+(
+    .n(cc_out[2]),
+    .nr(dest[2]),
+    .z(cc_out[1]),
+    .zr(dest[1]),
+    .p(cc_out[0]),
+    .pr(dest[0]),
+    .enable(br_en_internal)
+);
+
+/*
+register mdr
+(
+    .clk(clk),
+    .load(ctrl.load_mdr),
+    .in(mdrmux_out),
+    .out(rdata_b)
+);
+*/
 
 mux8 regfilemux
 (

@@ -153,9 +153,9 @@ id_datapath id
     .sr2(if_id_src2),
 
     // TODO: From WB
-    .wb_dest_addr(mem_wb_dest),
+    .wb_dest_addr(ex_mem_dest),
     .wb_dest_data(dest_data),
-    .wb_load_dest(mem_wb_ctrl.load_regfile),
+    .wb_load_dest(ex_mem_ctrl.load_regfile),
 
     /* Data Outputs */
     .destmux_out(id_dest),

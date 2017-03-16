@@ -54,7 +54,7 @@ mux4 pcmux
 (
     .sel(pcmux_sel_internal),
     .a(pc_plus2_out),
-    .b(pc_br_in), // br add out
+    .b(pc_br_in - 2), // br add out
     .c(sr1_data_in), // sr1 out
     .d(rdata_a),
     .f(pcmux_out)

@@ -82,12 +82,13 @@ begin
         op_str: begin
         	// MAR <= SRA + SEXT(IR[5:0] << 1) (CALC_ADDR)
             ctrl.alumux_sel = 2'b01;
+				ctrl.mdrmux_sel = 2'b11;
             ctrl.alu_op = alu_add;
             ctrl.load_mar = 1;
 
             // MDR<=SR (STR1)
             ctrl.storemux_sel = 1;
-            ctrl.alu_op = alu_pass;
+            //ctrl.alu_op = alu_pass;
             ctrl.load_mdr = 1;
 
             // M[MAR] <= MDR (STR2)
