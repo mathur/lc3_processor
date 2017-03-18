@@ -33,47 +33,31 @@ module cpu_datapath
 logic stall;
 assign stall = 1'b0;
 
-// if
-logic [1:0] pcmux_sel; // LOGIC TO DRIVE THIS REQUIRED
+lc3b_word if_pc, if_instruction;
+lc3b_reg if_src1, if_src2, if_dest;
 
-lc3b_word if_pc;
-lc3b_reg if_src1;
-lc3b_reg if_src2;
-lc3b_reg if_dest;
-lc3b_word if_instruction;
-lc3b_control_word ex_mem_ctrl;
+lc3b_reg if_id_src1, if_id_src2, if_id_dest;
+lc3b_word if_id_pc, if_id_instruction;
 
-lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
-lc3b_word ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br;
-lc3b_word ex_mem_src1_data, ex_mem_src2_data;
-
-lc3b_control_word id_ex_ctrl;
-lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
-lc3b_word id_ex_instruction, id_ex_pc;
-lc3b_word id_ex_src1_data, id_ex_src2_data;
-
-lc3b_reg mem_wb_src1, mem_wb_src2;
-lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br;
-lc3b_word mem_wb_src1_data, mem_wb_src2_data, mem_wb_mar, mem_wb_mdr;
-logic mem_wb_br;
-
-lc3b_reg if_id_src1;
-lc3b_reg if_id_src2;
-lc3b_reg if_id_dest;
-lc3b_word if_id_instruction;
-lc3b_word if_id_pc;
-
-lc3b_control_word mem_wb_ctrl;
 lc3b_control_word id_ctrl_data;
 lc3b_reg id_dest;
 lc3b_word id_src1_data, id_src2_data;
-lc3b_reg mem_wb_dest;
-lc3b_word mem_wb_dest_data;
 
-lc3b_word ex_alu_out, ex_br_out;
+lc3b_control_word id_ex_ctrl;
+lc3b_reg id_ex_src1, id_ex_src2, id_ex_dest;
+lc3b_word id_ex_instruction, id_ex_pc, id_ex_src1_data, id_ex_src2_data;
 
-logic br_en;
+lc3b_control_word ex_mem_ctrl;
+lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
+lc3b_word ex_alu_out, ex_br_out, ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br, ex_mem_src1_data, ex_mem_src2_data;
+
+logic mem_br_en;
 lc3b_word dest_data;
+
+lc3b_control_word mem_wb_ctrl;
+lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
+lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_data, mem_wb_src2_data, mem_wb_dest_data, mem_wb_mar, mem_wb_mdr;
+logic mem_wb_br;
 
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
@@ -87,9 +71,9 @@ if_datapath if_data
     .rdata_a(rdata_a),
     .read_a(read_a),
     .address_a(address_a),
-	 .pc_br_in(ex_mem_pc_br),
-	 .sr1_data_in(ex_mem_src1_data),
-	 .br_en(br_en),
+	.pc_br_in(ex_mem_pc_br),
+	.sr1_data_in(ex_mem_src1_data),
+	.mem_br_en(mem_br_en),
 
     .stall(stall),
     .pc_out(if_pc),
@@ -100,7 +84,6 @@ if_datapath if_data
     .instruction(if_instruction)
 );
 
-
 buffer if_id_buf
 (
     .clk(clk),
@@ -109,33 +92,14 @@ buffer if_id_buf
     .src2_in(if_src2),
     .dest_in(if_dest),
     .instruction_in(if_instruction),
-    //.alu_in(16'b0),
-    //.br_in(1'b0),
     .pc_in(if_pc),
-    //.pc_br_in(16'b0),
-    //.mar_in(16'b0),
-    //.mdr_in(16'b0),
-    //.src1_data_in(16'b0),
-    //.src2_data_in(16'b0),
-    //.dest_data_in(16'b0),
-    //.ctrl_in($unsigned(1'b0)),
 
-    //.ctrl_out($unsigned(1'b0)),
     .src1_out(if_id_src1),
     .src2_out(if_id_src2),
     .dest_out(if_id_dest),
     .instruction_out(if_id_instruction),
-    //.alu_out(16'b0),
-    //.br_out(1'b0),
     .pc_out(if_id_pc)
-    //.pc_br_out(16'b0),
-    //.mar_out(16'b0),
-    //.mdr_out(16'b0),
-    //.src1_data_out(16'b0),
-    //.src2_data_out(16'b0),
-    //.dest_data_out(16'b0)
 );
-
 
 id_datapath id
 (
@@ -163,7 +127,6 @@ id_datapath id
     .sr2_out(id_src2_data)
 );
 
-
 buffer id_ex_buf
 (
     .clk(clk),
@@ -172,15 +135,9 @@ buffer id_ex_buf
     .src2_in(if_id_src2),
     .dest_in(id_dest),
     .instruction_in(if_id_instruction),
-    //.alu_in(16'b0),
-    //.br_in(1'b0),
     .pc_in(if_pc),
-    //.pc_br_in(16'b0),
-    //.mar_in(16'b0),
-    //.mdr_in(16'b0),
     .src1_data_in(id_src1_data),
     .src2_data_in(id_src2_data),
-    //.dest_data_in(16'b0),
     .ctrl_in(id_ctrl_data),
 
     .ctrl_out(id_ex_ctrl),
@@ -188,18 +145,10 @@ buffer id_ex_buf
     .src2_out(id_ex_src2),
     .dest_out(id_ex_dest),
     .instruction_out(id_ex_instruction),
-    //.alu_out(16'b0),
-    //.br_out(1'b0),
     .pc_out(id_ex_pc),
-    //.pc_br_out(16'b0),
-    //.mar_out(16'b0),
-    //.mdr_out(16'b0),
     .src1_data_out(id_ex_src1_data),
     .src2_data_out(id_ex_src2_data)
-    //.dest_data_out(16'b0)
 );
-
-
 
 ex_datapath ex
 (
@@ -217,8 +166,6 @@ ex_datapath ex
     .ex_br_out(ex_br_out)
 );
 
-
-
 buffer ex_mem_buf
 (
     .clk(clk),
@@ -228,14 +175,10 @@ buffer ex_mem_buf
     .dest_in(id_ex_dest),
     .instruction_in(id_ex_instruction),
     .alu_in(ex_alu_out),
-    //.br_in(1'b0),
     .pc_in(id_ex_pc),
     .pc_br_in(ex_br_out),
-    //.mar_in(16'b0),
-    //.mdr_in(16'b0),
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
-    //.dest_data_in(16'b0),
     .ctrl_in(id_ex_ctrl),
 
     .ctrl_out(ex_mem_ctrl),
@@ -244,14 +187,10 @@ buffer ex_mem_buf
     .dest_out(ex_mem_dest),
     .instruction_out(ex_mem_instruction),
     .alu_out(ex_mem_alu),
-    //.br_out(1'b0),
     .pc_out(ex_mem_pc),
     .pc_br_out(ex_mem_pc_br),
-    //.mar_out(16'b0),
-    //.mdr_out(16'b0),
     .src1_data_out(ex_mem_src1_data),
     .src2_data_out(ex_mem_src2_data)
-    //.dest_data_out(16'b0)
 );
 
 mem_datapath mem
@@ -264,20 +203,19 @@ mem_datapath mem
     .sr1_out(ex_mem_src1_data),
 	 .sr2_out(ex_mem_src2_data),
     .instruction(ex_mem_instruction),
-    .br_en(br_en),
+    .mem_br_en(mem_br_en),
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
 
     /* Port B */
-    .read_b,
-    .write_b,
-    .wmask_b,
-    .address_b,
-    .wdata_b,
-    .resp_b,
-    .rdata_b
+    .read_b(read_b),
+    .write_b(write_b),
+    .wmask_b(wmask_b),
+    .address_b(address_b),
+    .wdata_b(wdata_b),
+    .resp_b(resp_b),
+    .rdata_b(rdata_b)
 );
-
 
 buffer mem_wb_buf
 (
@@ -288,7 +226,7 @@ buffer mem_wb_buf
     .dest_in(ex_mem_dest),
     .instruction_in(ex_mem_instruction),
     .alu_in(ex_mem_alu),
-    .br_in(br_en),
+    .br_in(mem_br_en),
     .pc_in(ex_mem_pc),
     .pc_br_in(ex_mem_pc_br),
     .mar_in(address_b),

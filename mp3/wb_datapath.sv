@@ -4,8 +4,4 @@ module wb_datapath (
     input clk
 );
 
-
-
-
-
 endmodule : wb_datapath
