@@ -16,7 +16,7 @@ module mem_datapath (
     output logic [15:0] wdata_b,
 
     output lc3b_word regfilemux_out,
-    output logic br_en
+    output logic br_en, stall
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out;
@@ -30,14 +30,18 @@ begin
     read_b = ctrl.mem_read;
     write_b = ctrl.mem_write;
     wmask_b = ctrl.mem_byte_enable;
-	 if(br_en_internal && (ctrl.opcode == op_br))
-	 begin
-		br_en = 1'b1;
-	 end
-	 else
-	 begin
-		br_en = 1'b0;
-	 end
+
+    if((read_b == 1'b1 || write_b == 1'b1) && (resp_b == 1'b0)) begin
+        stall = 1'b1;
+    end else begin
+        stall = 1'b0;
+    end
+
+	if(br_en_internal && (ctrl.opcode == op_br)) begin
+	   br_en = 1'b1;
+	end else begin
+	   br_en = 1'b0;
+	end
 end
 
 mux8 marmux
@@ -53,16 +57,6 @@ mux8 marmux
     .h(16'b0),
     .i(address_b)
 );
-
-/*
-register mar
-(
-    .clk(clk),
-    .load(ctrl.load_mar),
-    .in(marmux_out),
-    .out(address_b)
-);
-*/
 
 mux4 mdrmux
 (
@@ -133,16 +127,6 @@ benable cccomp
     .pr(dest[0]),
     .enable(br_en_internal)
 );
-
-/*
-register mdr
-(
-    .clk(clk),
-    .load(ctrl.load_mdr),
-    .in(mdrmux_out),
-    .out(rdata_b)
-);
-*/
 
 mux8 regfilemux
 (

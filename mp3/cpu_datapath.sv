@@ -23,18 +23,9 @@ module cpu_datapath
     output [15:0] wdata_b
 );
 
-/*
-    tdubey3 - I think wire format should be FROM_TO_SIGNALNAME
-        If there is no from then just TO_SIGNALNAME
-        Will be easy to tell the path of the wire then.
-*/
-
-// hardcoded for cp1
-logic stall;
-assign stall = 1'b0;
-
 lc3b_word if_pc, if_instruction;
 lc3b_reg if_src1, if_src2, if_dest;
+logic stall_if;
 
 lc3b_reg if_id_src1, if_id_src2, if_id_dest;
 lc3b_word if_id_pc, if_id_instruction;
@@ -51,13 +42,24 @@ lc3b_control_word ex_mem_ctrl;
 lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
 lc3b_word ex_alu_out, ex_br_out, ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br, ex_mem_src1_data, ex_mem_src2_data;
 
-logic mem_br_en;
+logic mem_br_en, stall_mem;
 lc3b_word dest_data;
 
 lc3b_control_word mem_wb_ctrl;
 lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_data, mem_wb_src2_data, mem_wb_dest_data, mem_wb_mar, mem_wb_mdr;
 logic mem_wb_br;
+
+// stalling logic
+logic stall;
+always_comb
+begin
+    if(stall_if == 1'b1 || stall_mem == 1'b1) begin
+        stall = 1'b1;
+    end else begin
+        stall = 1'b0;
+    end
+end
 
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
@@ -75,13 +77,13 @@ if_datapath if_data
 	.sr1_data_in(ex_mem_src1_data),
 	.mem_br_en(mem_br_en),
 
-    .stall(stall),
     .pc_out(if_pc),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
     .src1(if_src1),
     .src2(if_src2),
     .dest(if_dest),
-    .instruction(if_instruction)
+    .instruction(if_instruction),
+    .stall(stall_if)
 );
 
 buffer if_id_buf
@@ -201,11 +203,12 @@ mem_datapath mem
     .pc_out(ex_mem_pc),
     .br_add_out(ex_mem_pc_br),
     .sr1_out(ex_mem_src1_data),
-	 .sr2_out(ex_mem_src2_data),
+	.sr2_out(ex_mem_src2_data),
     .instruction(ex_mem_instruction),
     .mem_br_en(mem_br_en),
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
+    .stall(stall_mem)
 
     /* Port B */
     .read_b(read_b),
@@ -214,7 +217,7 @@ mem_datapath mem
     .address_b(address_b),
     .wdata_b(wdata_b),
     .resp_b(resp_b),
-    .rdata_b(rdata_b)
+    .rdata_b(rdata_b),
 );
 
 buffer mem_wb_buf
