@@ -20,6 +20,7 @@ vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/m
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/if_datapath.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/id_datapath.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/ex_datapath.sv}
+vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/cpu_datapath.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/adj.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/alu.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/gencc.sv}
@@ -28,7 +29,6 @@ vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/m
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/udj.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/adjns.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/udjns.sv}
-vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/cpu_datapath.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/cpu.sv}
 vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mp3.sv}
 

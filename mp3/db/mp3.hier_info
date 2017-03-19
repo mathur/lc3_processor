@@ -330,7 +330,7 @@ wdata_b[15] <= mem_datapath:mem.wdata_b[15]
 
 |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data
 clk => clk.IN2
-resp_a => ~NO_FANOUT~
+resp_a => stall.DATAIN
 rdata_a[0] => rdata_a[0].IN2
 rdata_a[1] => rdata_a[1].IN2
 rdata_a[2] => rdata_a[2].IN2
@@ -347,24 +347,6 @@ rdata_a[12] => rdata_a[12].IN2
 rdata_a[13] => rdata_a[13].IN2
 rdata_a[14] => rdata_a[14].IN2
 rdata_a[15] => rdata_a[15].IN2
-read_a <= read_a.DB_MAX_OUTPUT_PORT_TYPE
-address_a[0] <= pc_out[0].DB_MAX_OUTPUT_PORT_TYPE
-address_a[1] <= pc_out[1].DB_MAX_OUTPUT_PORT_TYPE
-address_a[2] <= pc_out[2].DB_MAX_OUTPUT_PORT_TYPE
-address_a[3] <= pc_out[3].DB_MAX_OUTPUT_PORT_TYPE
-address_a[4] <= pc_out[4].DB_MAX_OUTPUT_PORT_TYPE
-address_a[5] <= pc_out[5].DB_MAX_OUTPUT_PORT_TYPE
-address_a[6] <= pc_out[6].DB_MAX_OUTPUT_PORT_TYPE
-address_a[7] <= pc_out[7].DB_MAX_OUTPUT_PORT_TYPE
-address_a[8] <= pc_out[8].DB_MAX_OUTPUT_PORT_TYPE
-address_a[9] <= pc_out[9].DB_MAX_OUTPUT_PORT_TYPE
-address_a[10] <= pc_out[10].DB_MAX_OUTPUT_PORT_TYPE
-address_a[11] <= pc_out[11].DB_MAX_OUTPUT_PORT_TYPE
-address_a[12] <= pc_out[12].DB_MAX_OUTPUT_PORT_TYPE
-address_a[13] <= pc_out[13].DB_MAX_OUTPUT_PORT_TYPE
-address_a[14] <= pc_out[14].DB_MAX_OUTPUT_PORT_TYPE
-address_a[15] <= pc_out[15].DB_MAX_OUTPUT_PORT_TYPE
-stall => read_a.IN2
 br_en => pcmux_sel_internal.OUTPUTSELECT
 br_en => pcmux_sel_internal.OUTPUTSELECT
 pc_br_in[0] => pc_br_in[0].IN1
@@ -442,6 +424,24 @@ src2[2] <= ir:ir_unit.src2
 dest[0] <= ir:ir_unit.dest
 dest[1] <= ir:ir_unit.dest
 dest[2] <= ir:ir_unit.dest
+read_a <= read_a.DB_MAX_OUTPUT_PORT_TYPE
+address_a[0] <= pc_out[0].DB_MAX_OUTPUT_PORT_TYPE
+address_a[1] <= pc_out[1].DB_MAX_OUTPUT_PORT_TYPE
+address_a[2] <= pc_out[2].DB_MAX_OUTPUT_PORT_TYPE
+address_a[3] <= pc_out[3].DB_MAX_OUTPUT_PORT_TYPE
+address_a[4] <= pc_out[4].DB_MAX_OUTPUT_PORT_TYPE
+address_a[5] <= pc_out[5].DB_MAX_OUTPUT_PORT_TYPE
+address_a[6] <= pc_out[6].DB_MAX_OUTPUT_PORT_TYPE
+address_a[7] <= pc_out[7].DB_MAX_OUTPUT_PORT_TYPE
+address_a[8] <= pc_out[8].DB_MAX_OUTPUT_PORT_TYPE
+address_a[9] <= pc_out[9].DB_MAX_OUTPUT_PORT_TYPE
+address_a[10] <= pc_out[10].DB_MAX_OUTPUT_PORT_TYPE
+address_a[11] <= pc_out[11].DB_MAX_OUTPUT_PORT_TYPE
+address_a[12] <= pc_out[12].DB_MAX_OUTPUT_PORT_TYPE
+address_a[13] <= pc_out[13].DB_MAX_OUTPUT_PORT_TYPE
+address_a[14] <= pc_out[14].DB_MAX_OUTPUT_PORT_TYPE
+address_a[15] <= pc_out[15].DB_MAX_OUTPUT_PORT_TYPE
+stall <= resp_a.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit
@@ -5325,7 +5325,9 @@ ctrl.destmux_sel => ~NO_FANOUT~
 ctrl.br_addmux_sel => ~NO_FANOUT~
 ctrl.mem_byte_enable[0] => wmask_b[0].DATAIN
 ctrl.mem_byte_enable[1] => wmask_b[1].DATAIN
+ctrl.mem_write => always0.IN0
 ctrl.mem_write => write_b.DATAIN
+ctrl.mem_read => always0.IN1
 ctrl.mem_read => read_b.DATAIN
 ctrl.mdrmux_sel[0] => ctrl.mdrmux_sel[0].IN1
 ctrl.mdrmux_sel[1] => ctrl.mdrmux_sel[1].IN1
@@ -5454,7 +5456,7 @@ instruction[15] => ~NO_FANOUT~
 dest[0] => dest[0].IN1
 dest[1] => dest[1].IN1
 dest[2] => dest[2].IN1
-resp_b => ~NO_FANOUT~
+resp_b => always0.IN1
 rdata_b[0] => rdata_b[0].IN5
 rdata_b[1] => rdata_b[1].IN5
 rdata_b[2] => rdata_b[2].IN5
@@ -5524,6 +5526,7 @@ regfilemux_out[13] <= regfilemux_out[13].DB_MAX_OUTPUT_PORT_TYPE
 regfilemux_out[14] <= regfilemux_out[14].DB_MAX_OUTPUT_PORT_TYPE
 regfilemux_out[15] <= regfilemux_out[15].DB_MAX_OUTPUT_PORT_TYPE
 br_en <= always0.DB_MAX_OUTPUT_PORT_TYPE
+stall <= always0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux

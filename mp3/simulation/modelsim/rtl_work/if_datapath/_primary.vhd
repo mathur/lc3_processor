@@ -5,9 +5,6 @@ entity if_datapath is
         clk             : in     vl_logic;
         resp_a          : in     vl_logic;
         rdata_a         : in     vl_logic_vector(15 downto 0);
-        read_a          : out    vl_logic;
-        address_a       : out    vl_logic_vector(15 downto 0);
-        stall           : in     vl_logic;
         br_en           : in     vl_logic;
         pc_br_in        : in     vl_logic_vector(15 downto 0);
         sr1_data_in     : in     vl_logic_vector(15 downto 0);
@@ -16,6 +13,9 @@ entity if_datapath is
         instruction     : out    vl_logic_vector(15 downto 0);
         src1            : out    vl_logic_vector(2 downto 0);
         src2            : out    vl_logic_vector(2 downto 0);
-        dest            : out    vl_logic_vector(2 downto 0)
+        dest            : out    vl_logic_vector(2 downto 0);
+        read_a          : out    vl_logic;
+        address_a       : out    vl_logic_vector(15 downto 0);
+        stall           : out    vl_logic
     );
 end if_datapath;
