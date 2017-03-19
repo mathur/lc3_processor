@@ -75,7 +75,7 @@ if_datapath if_data
     .address_a(address_a),
 	.pc_br_in(ex_mem_pc_br),
 	.sr1_data_in(ex_mem_src1_data),
-	.br_en(mem_br_en),
+	.mem_br_en(mem_br_en),
 
     .pc_out(if_pc),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
@@ -205,10 +205,10 @@ mem_datapath mem
     .sr1_out(ex_mem_src1_data),
 	.sr2_out(ex_mem_src2_data),
     .instruction(ex_mem_instruction),
-    .br_en(mem_br_en),
+    .mem_br_en(mem_br_en),
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
-    .stall(stall_mem),
+    .stall(stall_mem)
 
     /* Port B */
     .read_b(read_b),
