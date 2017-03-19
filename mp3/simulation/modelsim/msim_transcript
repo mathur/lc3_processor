@@ -407,3 +407,4 @@ do wave.do; restart -f; run 3000ns
 # ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(255): [TFMPC] - Missing connection for port 'mdr_out'.
 # ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(255): [TFMPC] - Missing connection for port 'dest_data_out'.
 # ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(255): [TFMPC] - Missing connection for port 'br_out'.
+# WARNING: No extended dataflow license exists
