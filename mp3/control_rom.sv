@@ -103,10 +103,22 @@ begin
         	// Does Nothing I guess
         end
 
+        // I would write the RTL but the shift unit
+        // 	takes care of it
         op_shf: begin
         	ctrl.regfilemux_sel = 3'b101;
             ctrl.load_regfile = 1;
+            ctrl.load_cc = 1;
         end
+
+        // LEA -> FETCH1
+        op_lea: begin
+        	// DR <= PC + (SEXT(PCoffset9) << 1)
+        	ctrl.regfilemux_sel = 3'b010;
+        	load_regfile = 1;
+        	load_cc = 1;
+        end
+
 
 		default: begin
 			ctrl = 0;
