@@ -2,12 +2,6 @@ ORIGIN 4x0000
 
 SEGMENT  CodeSegment:
 
-;; Clear Regs first
-AND R0, R0, 0
-AND R1, R1, 0
-AND R3, R3, 0
-AND R4, R4, 0
-
 ;; Load R3 with 1, when left shifted, should becoome 2
 ADD R3, R3, 1
 NOP
