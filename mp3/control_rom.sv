@@ -103,6 +103,11 @@ begin
         	// Does Nothing I guess
         end
 
+        op_shf: begin
+        	ctrl.regfilemux_sel = 3'b101;
+            ctrl.load_regfile = 1;
+        end
+
 		default: begin
 			ctrl = 0;
 		end
