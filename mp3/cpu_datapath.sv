@@ -136,7 +136,7 @@ buffer id_ex_buf
     .src2_in(if_id_src2),
     .dest_in(id_dest),
     .instruction_in(if_id_instruction),
-    .pc_in(if_pc),
+    .pc_in(if_id_pc),
     .src1_data_in(id_src1_data),
     .src2_data_in(id_src2_data),
     .ctrl_in(id_ctrl_data),
