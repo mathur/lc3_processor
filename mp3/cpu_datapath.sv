@@ -68,21 +68,21 @@ assign wdata_a = 16'b0;
 if_datapath if_data
 (
     .clk(clk),
-
     .resp_a(resp_a),
     .rdata_a(rdata_a),
-    .read_a(read_a),
-    .address_a(address_a),
-	.pc_br_in(ex_mem_pc_br),
-	.sr1_data_in(ex_mem_src1_data),
-	.br_en(mem_br_en),
+    .br_en(mem_br_en),
+    .pc_br_in(ex_mem_pc_br),
+    .sr1_data_in(ex_mem_src1_data),
+    .pc_in_buf(if_id_pc),
+    .pcmux_sel(ex_mem_ctrl.pcmux_sel),
 
     .pc_out(if_pc),
-    .pcmux_sel(ex_mem_ctrl.pcmux_sel),
+    .instruction(if_instruction),
     .src1(if_src1),
     .src2(if_src2),
     .dest(if_dest),
-    .instruction(if_instruction),
+    .read_a(read_a),
+    .address_a(address_a),
     .stall(stall_if)
 );
 

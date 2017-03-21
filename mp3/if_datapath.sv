@@ -9,9 +9,10 @@ module if_datapath (
 	input logic br_en,
 	input lc3b_word pc_br_in,
 	input lc3b_word sr1_data_in,
-
-    // logic signals
+    input lc3b_word pc_in_buf,
     input  logic [1:0] pcmux_sel,
+    
+    // logic signals
     output lc3b_word pc_out, instruction,
     output lc3b_reg src1, src2, dest,
     output logic read_a,
@@ -25,7 +26,7 @@ logic [1:0] pcmux_sel_internal;
 always_comb
 begin
     read_a = 1'b1;
-    address_a = pc_out;
+    address_a = pc_in_buf;
 
     if(resp_a == 1'b1) begin
         stall = 1'b0;
@@ -60,18 +61,20 @@ mux4 pcmux
     .f(pcmux_out)
 );
 
-register pc
-(
-    .clk(clk),
-    .load(read_a),
-    .in(pcmux_out),
-    .out(pc_out)
-);
+// register pc
+// (
+//     .clk(clk),
+//     .load(read_a),
+//     .in(pcmux_out),
+//     .out(pc_out)
+// );
 
 plus2 plus_2
 (
-    .in(pc_out),
+    .in(pc_in_buf),
     .out(pc_plus2_out)
 );
+
+assign pc_out = pcmux_out;
 
 endmodule : if_datapath
