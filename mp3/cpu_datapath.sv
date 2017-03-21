@@ -73,7 +73,6 @@ if_datapath if_data
     .br_en(mem_br_en),
     .pc_br_in(ex_mem_pc_br),
     .sr1_data_in(ex_mem_src1_data),
-    .pc_in_buf(if_id_pc),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
 
     .pc_out(if_pc),
