@@ -19,27 +19,38 @@ SEGMENT  CodeSegment:
 	nop
 	nop
 	nop
+	BRnzp HALT
+
+;; Loop forever
+HALT:
+    nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	BRnzp HALT
 ;MAR < 8 or 9
 ;MDR < (M[8] = 4x600D)
 ;R7 < 4x00 & 4x60
-    stb r6, r0, LowSByte      ;4
-    nop
-	nop
-	nop
-	nop
-	nop
-	nop
-;MAR < 10
-;MDR < 4xXX & (R6(7:0) = 4x0D)
-;*only* MWRITEL_L is active (=0).
-;M[10] < 4x0D
-    stb r7, r0, HighSByte    ;6
-    nop
-	nop
-	nop
-	nop
-	nop
-	nop
+;     stb r6, r0, LowSByte      ;4
+;     nop
+; 	nop
+; 	nop
+; 	nop
+; 	nop
+; 	nop
+; ;MAR < 10
+; ;MDR < 4xXX & (R6(7:0) = 4x0D)
+; ;*only* MWRITEL_L is active (=0).
+; ;M[10] < 4x0D
+;     stb r7, r0, HighSByte    ;6
+;     nop
+; 	nop
+; 	nop
+; 	nop
+; 	nop
+; 	nop
 
 ;MAR < 10 or 11
 ;MDR < (R7(7:0) = 4x60) & 4xXX

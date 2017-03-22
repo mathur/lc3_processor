@@ -119,6 +119,21 @@ begin
         	ctrl.load_cc = 1;
         end
 
+        op_ldb: begin
+		    // MAR <= BaseR + Offset6
+		    ctrl.load_mar = 1;
+		    ctrl.alumux_sel = 2'b11;
+		    ctrl.alu_op = alu_add;
+
+		    ctrl.mdrmux_sel = 2'b01;
+		    ctrl.load_mdr = 1;
+		    ctrl.mem_read = 1;
+
+		    ctrl.regfilemux_sel = 3'b110;
+		    ctrl.load_regfile = 1;
+		    ctrl.load_cc = 1;
+		end
+
 
 		default: begin
 			ctrl = 0;
