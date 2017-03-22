@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3
-Sun Mar 19 20:45:07 2017
+Wed Mar 22 13:35:58 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -110,9 +110,8 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 102. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf"
 103. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux"
 104. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf"
-105. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux4:pcmux"
-106. Elapsed Time Per Partition
-107. Analysis & Synthesis Messages
+105. Elapsed Time Per Partition
+106. Analysis & Synthesis Messages
 
 
 
@@ -138,16 +137,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sun Mar 19 20:45:07 2017       ;
+; Analysis & Synthesis Status   ; Successful - Wed Mar 22 13:35:58 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 229                                         ;
+;     Combinational ALUTs       ; 369                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 317                                         ;
-; Total registers               ; 317                                         ;
+;     Dedicated logic registers ; 387                                         ;
+; Total registers               ; 387                                         ;
 ; Total pins                    ; 107                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -254,12 +253,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ; < 0.1%      ;
-;     Processors 3-24        ;   0.0%      ;
+;     Processors 2-8         ; < 0.1%      ;
+;     Processors 9-24        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -302,34 +301,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 229       ;
-;     -- Combinational ALUTs                    ; 229       ;
+; Estimated ALUTs Used                          ; 369       ;
+;     -- Combinational ALUTs                    ; 369       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 317       ;
+; Dedicated logic registers                     ; 387       ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 64        ;
-;     -- Due to unpartnered combinational logic ; 64        ;
+; Estimated ALUTs Unavailable                   ; 68        ;
+;     -- Due to unpartnered combinational logic ; 68        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 229       ;
+; Total combinational functions                 ; 369       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 64        ;
-;     -- 6 input functions                      ; 13        ;
-;     -- 5 input functions                      ; 60        ;
-;     -- 4 input functions                      ; 24        ;
-;     -- <=3 input functions                    ; 68        ;
+;     -- 7 input functions                      ; 68        ;
+;     -- 6 input functions                      ; 76        ;
+;     -- 5 input functions                      ; 85        ;
+;     -- 4 input functions                      ; 67        ;
+;     -- <=3 input functions                    ; 73        ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 104       ;
-;     -- extended LUT mode                      ; 64        ;
-;     -- arithmetic mode                        ; 61        ;
+;     -- normal mode                            ; 255       ;
+;     -- extended LUT mode                      ; 68        ;
+;     -- arithmetic mode                        ; 46        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 480       ;
+; Estimated ALUT/register pairs used            ; 650       ;
 ;                                               ;           ;
-; Total registers                               ; 317       ;
-;     -- Dedicated logic registers              ; 317       ;
+; Total registers                               ; 387       ;
+;     -- Dedicated logic registers              ; 387       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -337,94 +336,101 @@ applicable agreement for further details.
 ; I/O pins                                      ; 107       ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 317       ;
-; Total fan-out                                 ; 2210      ;
-; Average fan-out                               ; 2.91      ;
+; Maximum fan-out                               ; 387       ;
+; Total fan-out                                 ; 3148      ;
+; Average fan-out                               ; 3.25      ;
 +-----------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Library Name ;
-+-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
-; |mp3                                ; 229 (0)           ; 317 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 107  ; 0            ; |mp3                                                                                ; work         ;
-;    |cpu:mcpu|                       ; 229 (0)           ; 317 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                       ; work         ;
-;       |cpu_datapath:cpu_datapath|   ; 229 (1)           ; 317 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                             ; work         ;
-;          |buffer:ex_mem_buf|        ; 0 (0)             ; 68 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                           ; work         ;
-;             |register:alu|          ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu              ; work         ;
-;             |register:control_word| ; 0 (0)             ; 10 (10)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word     ; work         ;
-;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest             ; work         ;
-;             |register:pc_br|        ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br            ; work         ;
-;             |register:src1_data|    ; 0 (0)             ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data        ; work         ;
-;             |register:src2_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data        ; work         ;
-;          |buffer:id_ex_buf|         ; 0 (0)             ; 71 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf                            ; work         ;
-;             |register:control_word| ; 0 (0)             ; 12 (12)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word      ; work         ;
-;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest              ; work         ;
-;             |register:instruction|  ; 0 (0)             ; 9 (9)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction       ; work         ;
-;             |register:pc|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc                ; work         ;
-;             |register:src1_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data         ; work         ;
-;             |register:src2_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data         ; work         ;
-;          |buffer:if_id_buf|         ; 0 (0)             ; 16 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf                            ; work         ;
-;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest              ; work         ;
-;             |register:instruction|  ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction       ; work         ;
-;          |ex_datapath:ex|           ; 69 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex                              ; work         ;
-;             |alu:alu_unit|          ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|alu:alu_unit                 ; work         ;
-;             |badder:br_add|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add                ; work         ;
-;             |mux4:alumux|           ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux                  ; work         ;
-;          |id_datapath:id|           ; 87 (0)            ; 128 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id                              ; work         ;
-;             |control_rom:controls|  ; 12 (12)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|control_rom:controls         ; work         ;
-;             |mux2:storemux_two|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two            ; work         ;
-;             |regfile:rfile|         ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile                ; work         ;
-;          |if_datapath:if_data|      ; 30 (15)           ; 31 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data                         ; work         ;
-;             |ir:ir_unit|            ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit              ; work         ;
-;             |plus2:plus_2|          ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|plus2:plus_2            ; work         ;
-;             |register:pc|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc             ; work         ;
-;          |mem_datapath:mem|         ; 42 (2)            ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem                            ; work         ;
-;             |benable:cccomp|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|benable:cccomp             ; work         ;
-;             |gencc:gen_cc|          ; 7 (7)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|gencc:gen_cc               ; work         ;
-;             |mux4:mdrmux|           ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux                ; work         ;
-;             |mux8:regfilemux|       ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux            ; work         ;
-;                |mux4:mux_a|         ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a ; work         ;
-;             |register:cc|           ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc                ; work         ;
-+-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
+; |mp3                                ; 369 (0)           ; 387 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 107  ; 0            ; |mp3                                                                                  ; work         ;
+;    |cpu:mcpu|                       ; 369 (0)           ; 387 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                         ; work         ;
+;       |cpu_datapath:cpu_datapath|   ; 369 (1)           ; 387 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                               ; work         ;
+;          |buffer:ex_mem_buf|        ; 0 (0)             ; 100 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                             ; work         ;
+;             |register:alu|          ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu                ; work         ;
+;             |register:control_word| ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word       ; work         ;
+;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest               ; work         ;
+;             |register:instruction|  ; 0 (0)             ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction        ; work         ;
+;             |register:pc_br|        ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br              ; work         ;
+;             |register:pc|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc                 ; work         ;
+;             |register:src1_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data          ; work         ;
+;             |register:src2_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data          ; work         ;
+;          |buffer:id_ex_buf|         ; 0 (0)             ; 74 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf                              ; work         ;
+;             |register:control_word| ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word        ; work         ;
+;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest                ; work         ;
+;             |register:instruction|  ; 0 (0)             ; 9 (9)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction         ; work         ;
+;             |register:pc|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc                  ; work         ;
+;             |register:src1_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data           ; work         ;
+;             |register:src2_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data           ; work         ;
+;          |buffer:if_id_buf|         ; 0 (0)             ; 31 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf                              ; work         ;
+;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest                ; work         ;
+;             |register:instruction|  ; 0 (0)             ; 13 (13)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction         ; work         ;
+;             |register:pc|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:pc                  ; work         ;
+;          |buffer:mem_wb_buf|        ; 0 (0)             ; 20 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf                             ; work         ;
+;             |register:control_word| ; 0 (0)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word       ; work         ;
+;             |register:dest_data|    ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data          ; work         ;
+;             |register:dest|         ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest               ; work         ;
+;          |ex_datapath:ex|           ; 69 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex                                ; work         ;
+;             |alu:alu_unit|          ; 48 (48)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|alu:alu_unit                   ; work         ;
+;             |badder:br_add|         ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add                  ; work         ;
+;             |mux4:alumux|           ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux                    ; work         ;
+;          |id_datapath:id|           ; 90 (0)            ; 128 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id                                ; work         ;
+;             |control_rom:controls|  ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|control_rom:controls           ; work         ;
+;             |mux2:storemux_two|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two              ; work         ;
+;             |regfile:rfile|         ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile                  ; work         ;
+;          |if_datapath:if_data|      ; 15 (0)            ; 31 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data                           ; work         ;
+;             |ir:ir_unit|            ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit                ; work         ;
+;             |plus2:plus_2|          ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|plus2:plus_2              ; work         ;
+;             |register:pc|           ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc               ; work         ;
+;          |mem_datapath:mem|         ; 194 (2)           ; 3 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem                              ; work         ;
+;             |benable:cccomp|        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|benable:cccomp               ; work         ;
+;             |gencc:gen_cc|          ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|gencc:gen_cc                 ; work         ;
+;             |mux4:mdrmux|           ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux                  ; work         ;
+;             |mux8:regfilemux|       ; 121 (0)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux              ; work         ;
+;                |mux2:out_mux|       ; 99 (99)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux ; work         ;
+;                |mux4:mux_a|         ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a   ; work         ;
+;                |mux4:mux_b|         ; 19 (19)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b   ; work         ;
+;             |register:cc|           ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc                  ; work         ;
+;             |shiftunit:sunit|       ; 46 (46)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit              ; work         ;
++-------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                          ;
-+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-; Register name                                                                                             ; Reason for Removal                                                                              ;
-+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[1,8..10,12,13,18,19,28,29] ; Stuck at GND due to stuck port data_in                                                          ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[8..10,12,13,18,19]        ; Stuck at GND due to stuck port data_in                                                          ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[10]                         ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[10]                         ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[9]                          ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[9]                          ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[8..15]                       ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[0..7]                      ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[0]                                  ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]         ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[4]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[7]   ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[11]                        ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[5]   ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[2]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[3]   ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[25]                        ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[22]  ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[2]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[2]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[1]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[1]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[0]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[0]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[0]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[6]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[1]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[7]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[2]                                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[8]    ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[4]                        ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[7]  ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[11]                       ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[5]  ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[25]                       ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[22] ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[1..15]                              ; Lost fanout                                                                                     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[6]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[14]  ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc|data[0]                                   ; Stuck at GND due to stuck port data_in                                                          ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]                               ; Stuck at GND due to stuck port data_in                                                          ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]                                ; Stuck at GND due to stuck port data_in                                                          ;
-; Total Number of Removed Registers = 70                                                                    ;                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+; Register name                                                                                       ; Reason for Removal                                                                              ;
++-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[1,8..10,18,19,28,29] ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[8..10,18,19]        ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[10]                   ; Lost fanout                                                                                     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[10]                   ; Lost fanout                                                                                     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[9]                    ; Lost fanout                                                                                     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[9]                    ; Lost fanout                                                                                     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[6,7]                 ; Lost fanout                                                                                     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[0]                            ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]         ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[4]                   ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[7]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[14]                  ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[6]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[2]                   ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[3]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[25]                  ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[22]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[2]                           ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[2]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[1]                           ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[1]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[0]                           ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[0]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[0]                           ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[6]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[1]                           ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[7]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[2]                           ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[8]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[4]                  ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[7]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[25]                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[22] ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:pc|data[0]                             ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc|data[0]                             ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]                         ; Stuck at GND due to stuck port data_in                                                          ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]                          ; Stuck at GND due to stuck port data_in                                                          ;
+; Total Number of Removed Registers = 36                                                              ;                                                                                                 ;
++-----------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -432,54 +438,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 ; Register name                                                                      ; Reason for Removal        ; Registers Removed due to This Register                                               ;
 +------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[8]  ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[8],  ;
-;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[7],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[6],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[5],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[4],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[3],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[2],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[1],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[0],   ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[15],           ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[14],           ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[13],           ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[12],           ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[11],           ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[10],           ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[9],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[8],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[7],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[6],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[5],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[4],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[3],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[2],            ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[1]             ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[18] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[18], ;
-;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[14],    ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[13],    ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[12],    ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[11],    ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[10],    ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[9],     ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[8],     ;
-;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]           ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[1]  ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[10],   ;
 ;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[10],   ;
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction|data[9],    ;
 ;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[9]     ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[10] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[10], ;
-;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[15]     ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[8]  ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[8],  ;
+;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[7],   ;
+;                                                                                    ;                           ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction|data[6]    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[18] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[18], ;
+;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[0]           ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:pc|data[0]            ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc|data[0],             ;
+;                                                                                    ; due to stuck port data_in ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]          ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[9]  ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[9]   ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[12] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[12]  ;
-;                                                                                    ; due to stuck port data_in ;                                                                                      ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[13] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[13]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[10] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[10]  ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
 ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[19] ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[19]  ;
-;                                                                                    ; due to stuck port data_in ;                                                                                      ;
-; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc|data[0]            ; Stuck at GND              ; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]          ;
 ;                                                                                    ; due to stuck port data_in ;                                                                                      ;
 +------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
@@ -489,26 +463,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 317   ;
+; Total registers                              ; 387   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 15    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 286   ;
+; Number of registers using Clock Enable       ; 356   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu|data[8] ;
-; 3:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux|f[1]        ;
-; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux|f[1]      ;
-; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux|f[11]     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu|data[12]             ;
+; 3:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux|f[5]                     ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftRight0        ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftLeft0         ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux|f[7]                   ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux4:mdrmux|f[13]                  ;
+; 12:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[9]  ;
+; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[13] ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[2]  ;
+; 17:1               ; 2 bits    ; 22 ALUTs      ; 20 ALUTs             ; 2 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[6]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -1361,26 +1341,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"                                          ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; ctrl_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; src1_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; src2_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dest_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; instruction_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; alu_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; br_out          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; pc_out          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; pc_br_out       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; mar_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; mdr_out         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; src1_data_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; src2_data_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dest_data_out   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"                                                    ;
++---------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                      ; Type   ; Severity ; Details                                                                             ;
++---------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ctrl_out.opcode           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.alu_op           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.load_cc          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.load_pc          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.load_ir          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.load_mar         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.load_mdr         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.pcmux_sel        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.storemux_sel     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.storemux_sel_two ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.alumux_sel       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.regfilemux_sel   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.marmux_sel       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.mdrmux_sel       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.mem_read         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.mem_write        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.mem_byte_enable  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.br_addmux_sel    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ctrl_out.destmux_sel      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; src1_out                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; src2_out                  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; instruction_out           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; alu_out                   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; br_out                    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc_out                    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc_br_out                 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mar_out                   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mdr_out                   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; src1_data_out             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; src2_data_out             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -1462,7 +1458,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port          ; Type   ; Severity ; Details                                                                                                                                      ;
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; pc_out        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
 ; br_in         ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; alu_in        ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; pc_br_in      ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
@@ -1484,21 +1479,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux4:pcmux"                                                                                                                 ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                             ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1508,7 +1494,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sun Mar 19 20:45:02 2017
+    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Wed Mar 22 13:35:50 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file control_rom.sv
@@ -1612,7 +1611,7 @@ Info (12128): Elaborating entity "udj" for hierarchy "cpu:mcpu|cpu_datapath:cpu_
 Info (12128): Elaborating entity "benable" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|benable:cccomp"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276006): RAM logic "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "read_a" is stuck at VCC
     Warning (13410): Pin "write_a" is stuck at GND
@@ -1636,17 +1635,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "wdata_a[14]" is stuck at GND
     Warning (13410): Pin "wdata_a[15]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 35 registers lost all their fanouts during netlist optimizations.
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 563 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 767 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 456 logic cells
+    Info (21061): Implemented 660 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 473 megabytes
-    Info: Processing ended: Sun Mar 19 20:45:07 2017
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 477 megabytes
+    Info: Processing ended: Wed Mar 22 13:35:58 2017
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
 
 
