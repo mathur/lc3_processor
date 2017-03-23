@@ -77,7 +77,7 @@ HALT:
 ;MDR < (R7(7:0) = 4x60) & 4xXX
 ;*only* MWRITEH_L is active (=0).
 ;M[11] < 4x60
-SEGMENT:
+SEGMENT
 DATA:
 	LowByte:      DATA1 4x0D ;8
 	HighByte:     DATA1 4x60 ;9
