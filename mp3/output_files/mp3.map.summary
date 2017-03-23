@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Mar 19 20:45:07 2017
+Analysis & Synthesis Status : Successful - Wed Mar 22 13:35:58 2017
 Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
 Revision Name : mp3
 Top-level Entity Name : mp3
 Family : Stratix III
 Logic utilization : N/A
-    Combinational ALUTs : 229
+    Combinational ALUTs : 369
     Memory ALUTs : 0
-    Dedicated logic registers : 317
-Total registers : 317
+    Dedicated logic registers : 387
+Total registers : 387
 Total pins : 107
 Total virtual pins : 0
 Total block memory bits : 0
