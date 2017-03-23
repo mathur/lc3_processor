@@ -21,7 +21,7 @@ begin
 	ctrl.alumux_sel = 2'b00;
 	ctrl.regfilemux_sel = 3'b000;
 	ctrl.marmux_sel = 3'b000;
-	ctrl.mdrmux_sel = 2'b00;
+	ctrl.mdrmux_sel = 3'b000;
 	ctrl.alu_op = alu_add;
 	ctrl.mem_read = 1'b0;
 	ctrl.mem_write = 1'b0;
@@ -69,7 +69,7 @@ begin
             ctrl.load_mar = 1;
 
         	// MDR <= M[MAR] (LDR1)
-        	ctrl.mdrmux_sel = 2'b01;
+        	ctrl.mdrmux_sel = 3'b001;
             ctrl.load_mdr = 1;
             ctrl.mem_read = 1;
 
@@ -88,7 +88,7 @@ begin
 
             // MDR<=SR (STR1)
             //ctrl.storemux_sel = 1;
-				ctrl.mdrmux_sel = 2'b11;
+				ctrl.mdrmux_sel = 3'b011;
 				ctrl.storemux_sel_two = 1'b1;
             //ctrl.alu_op = alu_pass;
 
@@ -125,13 +125,21 @@ begin
 		    ctrl.alumux_sel = 2'b11;
 		    ctrl.alu_op = alu_add;
 
-		    ctrl.mdrmux_sel = 2'b01;
+		    ctrl.mdrmux_sel = 3'b001;
 		    ctrl.load_mdr = 1;
 		    ctrl.mem_read = 1;
 
 		    ctrl.regfilemux_sel = 3'b110;
 		    ctrl.load_regfile = 1;
 		    ctrl.load_cc = 1;
+		end
+
+		op_stb: begin
+			ctrl.alumux_sel = 2'b11;
+			ctrl.alu_op = alu_add;
+			ctrl.storemux_sel_two = 1;
+			ctrl.mem_write = 1;
+			ctrl.mdrmux_sel = 3'b100;
 		end
 
 

@@ -19,7 +19,7 @@ module mem_datapath (
     output logic br_en, stall
 );
 
-lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out;
+lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out;
 logic [7:0] ldbmux_out;
 lc3b_nzp gencc_out, cc_out;
 
@@ -29,7 +29,7 @@ always_comb
 begin
     read_b = ctrl.mem_read;
     write_b = ctrl.mem_write;
-    wmask_b = ctrl.mem_byte_enable;
+    
 
     if((read_b == 1'b1 || write_b == 1'b1) && (resp_b == 1'b0)) begin
         stall = 1'b1;
@@ -42,6 +42,16 @@ begin
 	end else begin
 	   br_en = 1'b0;
 	end
+
+    if((ctrl.opcode == op_stb) && (address_b[0] == 1)) begin
+        wmask_b = 2'b10;
+    end
+    else if((ctrl.opcode == op_stb) && (address_b[0] == 0)) begin
+        wmask_b = 2'b01;
+    end
+    else begin
+        wmask_b = ctrl.mem_byte_enable;
+    end
 end
 
 mux8 marmux
@@ -58,14 +68,26 @@ mux8 marmux
     .i(address_b)
 );
 
-mux4 mdrmux
+mux2 #(.width(16)) stbmux
+(
+    .sel(address_b[0]),
+    .a(sr2_out),
+    .b(sr2_out << 8),
+    .f(stbmux_out)
+);
+
+mux8 mdrmux
 (
     .sel(ctrl.mdrmux_sel),
     .a(alu_out),
     .b(rdata_b),
     .c(sr1_out << 8),
-	 .d(sr2_out),
-    .f(wdata_b)
+	.d(sr2_out),
+    .e(stbmux_out),
+    .f(16'b0),
+    .g(16'b0),
+    .h(16'b0),
+    .i(wdata_b)
 );
 
 gencc gen_cc
