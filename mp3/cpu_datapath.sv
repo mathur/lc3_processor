@@ -25,7 +25,6 @@ module cpu_datapath
 
 lc3b_word if_pc, if_instruction;
 lc3b_reg if_src1, if_src2, if_dest;
-logic stall_if;
 
 lc3b_reg if_id_src1, if_id_src2, if_id_dest;
 lc3b_word if_id_pc, if_id_instruction;
@@ -50,17 +49,6 @@ lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_data, mem_wb_src2_data, mem_wb_dest_data, mem_wb_mar, mem_wb_mdr;
 logic mem_wb_br;
 
-// stalling logic
-logic stall;
-always_comb
-begin
-    if(stall_if == 1'b1 || stall_mem == 1'b1) begin
-        stall = 1'b1;
-    end else begin
-        stall = 1'b0;
-    end
-end
-
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
@@ -82,13 +70,13 @@ if_datapath if_data
     .dest(if_dest),
     .read_a(read_a),
     .address_a(address_a),
-    .stall(stall_if)
+	 .stall(stall_mem)
 );
 
 buffer if_id_buf
 (
     .clk(clk),
-    .load(~stall),
+    .load(~stall_mem),
     .src1_in(if_src1),
     .src2_in(if_src2),
     .dest_in(if_dest),
@@ -131,7 +119,7 @@ id_datapath id
 buffer id_ex_buf
 (
     .clk(clk),
-    .load(~stall),
+    .load(~stall_mem),
     .src1_in(if_id_src1),
     .src2_in(if_id_src2),
     .dest_in(id_dest),
@@ -170,7 +158,7 @@ ex_datapath ex
 buffer ex_mem_buf
 (
     .clk(clk),
-    .load(~stall),
+    .load(~stall_mem),
     .src1_in(id_ex_src1),
     .src2_in(id_ex_src2),
     .dest_in(id_ex_dest),
@@ -222,7 +210,7 @@ mem_datapath mem
 buffer mem_wb_buf
 (
     .clk(clk),
-    .load(~stall),
+    .load(~stall_mem),
     .src1_in(ex_mem_src1),
     .src2_in(ex_mem_src2),
     .dest_in(ex_mem_dest),

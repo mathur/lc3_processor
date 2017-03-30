@@ -1,5 +1,5 @@
 EDA Netlist Writer report for mp3
-Wed Mar 22 13:36:56 2017
+Thu Mar 30 18:50:38 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Mar 22 13:36:56 2017 ;
+; EDA Netlist Writer Status ; Successful - Thu Mar 30 18:50:38 2017 ;
 ; Revision Name             ; mp3                                   ;
 ; Top-level Entity Name     ; mp3                                   ;
 ; Family                    ; Stratix III                           ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Simulation Generated Files                                                  ;
-+-----------------------------------------------------------------------------+
-; Generated Files                                                             ;
-+-----------------------------------------------------------------------------+
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_85c_slow.svo    ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_0c_slow.svo     ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_min_1100mv_0c_fast.svo   ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3.svo                      ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_85c_v_slow.sdo  ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_0c_v_slow.sdo   ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_min_1100mv_0c_v_fast.sdo ;
-; /home/tdubey3/fmax_420/mp3/simulation/modelsim/mp3_v.sdo                    ;
-+-----------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                          ;
++-------------------------------------------------------------------------------------+
+; Generated Files                                                                     ;
++-------------------------------------------------------------------------------------+
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_85c_slow.svo    ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_0c_slow.svo     ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_min_1100mv_0c_fast.svo   ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3.svo                      ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_85c_v_slow.sdo  ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_2_1100mv_0c_v_slow.sdo   ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_min_1100mv_0c_v_fast.sdo ;
+; /home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/mp3_v.sdo                    ;
++-------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,33 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
-    Info: Your use of Altera Corporation's design tools, logic functions 
-    Info: and other software and tools, and its AMPP partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Altera Program License 
-    Info: Subscription Agreement, Altera MegaCore Function License 
-    Info: Agreement, or other applicable license agreement, including, 
-    Info: without limitation, that your use is for the sole purpose of 
-    Info: programming logic devices manufactured by Altera and sold by 
-    Info: Altera or its authorized distributors.  Please refer to the 
-    Info: applicable agreement for further details.
-    Info: Processing started: Wed Mar 22 13:36:50 2017
+    Info: Processing started: Thu Mar 30 18:50:29 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off mp3 -c mp3
-Info (204019): Generated file mp3_2_1100mv_85c_slow.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3_2_1100mv_0c_slow.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3_min_1100mv_0c_fast.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3_2_1100mv_85c_v_slow.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3_2_1100mv_0c_v_slow.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3_min_1100mv_0c_v_fast.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file mp3_v.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_85c_slow.svo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_0c_slow.svo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_min_1100mv_0c_fast.svo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3.svo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_85c_v_slow.sdo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_0c_v_slow.sdo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_min_1100mv_0c_v_fast.sdo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_v.sdo in folder "/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 393 megabytes
-    Info: Processing ended: Wed Mar 22 13:36:56 2017
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 418 megabytes
+    Info: Processing ended: Thu Mar 30 18:50:38 2017
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
 
 

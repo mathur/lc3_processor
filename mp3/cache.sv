@@ -17,7 +17,7 @@ module cache (
     input lc3b_pmem_line pmem_rdata,
     output pmem_read,
     output pmem_write,
-
+	 
     output lc3b_pmem_addr pmem_address,
     output lc3b_pmem_line pmem_wdata
 );
@@ -71,19 +71,19 @@ cache_datapath cdp(
 
     .set_one_valid(set_one_valid),
     .set_two_valid(set_two_valid),
-
+	 
 	 .set_one_dirty(set_one_dirty),
 	 .set_two_dirty(set_two_dirty),
-
+	 
 	 .hit(hit),
-
+	 
 	 .cache_in_mux_sel(cache_in_mux_sel),
 	 .write_type_set_one(write_type_set_one),
 	 .write_type_set_two(write_type_set_two),
-
+	 
 	 .insert_mux_sel(insert_mux_sel),
 	 .pmem_w_mux_sel(pmem_w_mux_sel),
-
+	 
 	 .set_one_tag(set_one_tag),
 	 .set_two_tag(set_two_tag),
      .mem_byte_enable(mem_byte_enable)
@@ -109,25 +109,25 @@ cache_control ccl(
     .set_two_hit(set_two_hit),
 
     .load_lru(load_lru),
-    .current_lru(current_lru),
+    .current_lru(current_lru), 
 
     .set_one_valid(set_one_valid),
     .set_two_valid(set_two_valid),
-
+	 
 	 .set_one_dirty(set_one_dirty),
 	 .set_two_dirty(set_two_dirty),
 
     .hit(hit),
-
+	 
 	 .cache_in_mux_sel(cache_in_mux_sel),
 	 .write_type_set_one(write_type_set_one),
 	 .write_type_set_two(write_type_set_two),
 	 .insert_mux_sel(insert_mux_sel),
 	 .pmem_w_mux_sel(pmem_w_mux_sel),
-
+	 
 	 .mem_address(mem_address),
 	 .pmem_address(pmem_address),
-
+	 
 	 .set_one_tag(set_one_tag),
 	 .set_two_tag(set_two_tag)
 );

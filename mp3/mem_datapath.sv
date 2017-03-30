@@ -30,7 +30,6 @@ begin
     read_b = ctrl.mem_read;
     write_b = ctrl.mem_write;
     
-
     if((read_b == 1'b1 || write_b == 1'b1) && (resp_b == 1'b0)) begin
         stall = 1'b1;
     end else begin

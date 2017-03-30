@@ -1,0 +1,28 @@
+
+State Machine - |mp3|arbiter:cache_arbiter|state
+Name state.s_ready state.s_write state.s_read 
+state.s_ready 0 0 0 
+state.s_read 1 0 1 
+state.s_write 1 1 0 
+
+State Machine - |mp3|arbiter:cache_arbiter|curr_operation
+Name curr_operation.b_write curr_operation.b_read curr_operation.a_write curr_operation.a_read curr_operation.none 
+curr_operation.a_read 0 0 0 0 0 
+curr_operation.a_write 0 0 1 1 0 
+curr_operation.b_read 0 1 0 1 0 
+curr_operation.b_write 1 0 0 1 0 
+curr_operation.none 0 0 0 1 1 
+
+State Machine - |mp3|cache:dcache|cache_control:ccl|state
+Name state.write_s state.write_back_s state.fetch_s state.hit_s 
+state.hit_s 0 0 0 0 
+state.fetch_s 0 0 1 1 
+state.write_back_s 0 1 0 1 
+state.write_s 1 0 0 1 
+
+State Machine - |mp3|cache:icache|cache_control:ccl|state
+Name state.write_s state.write_back_s state.fetch_s state.hit_s 
+state.hit_s 0 0 0 0 
+state.fetch_s 0 0 1 1 
+state.write_back_s 0 1 0 1 
+state.write_s 1 0 0 1 

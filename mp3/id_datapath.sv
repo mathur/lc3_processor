@@ -14,7 +14,7 @@ module id_datapath (
     input lc3b_reg sr1,
     input lc3b_reg sr2,
     input lc3b_reg wb_dest_addr,
-    input lc3b_word wb_dest_data, 
+    input lc3b_word wb_dest_data,
     input logic wb_load_dest,
 
     /* Data Outputs */
@@ -70,16 +70,6 @@ control_rom controls
     .inst(inst),
     .ctrl(internal_ctrl)
 );
-
-// NEEDED? 
-// tdubey3 - Not yet
-// mux2 #(.width(3)) bubble
-// (
-//     .sel(),
-//     .a(),
-//     .b(),
-//     .f()
-// );
 
 assign ctrl = internal_ctrl;
 

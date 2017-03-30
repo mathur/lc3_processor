@@ -1,5 +1,13 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="mp3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_0lo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:tag_rtl_0" CBX_FILE_NAME="altsyncram_reo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_0lo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0" CBX_FILE_NAME="altsyncram_reo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_0lo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:tag_rtl_0" CBX_FILE_NAME="altsyncram_reo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:data_rtl_0" CBX_FILE_NAME="altsyncram_0lo1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0" CBX_FILE_NAME="altsyncram_reo1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

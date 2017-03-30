@@ -20,20 +20,20 @@ module cache_datapath (
 
     input load_lru,
     output current_lru,
-
+	 
 	 output set_one_dirty,
 	 output set_two_dirty,
-
+	 
     output set_one_valid,
     output set_two_valid,
 
     input cache_in_mux_sel,
 	 input logic write_type_set_one,
 	 input logic write_type_set_two,
-
+	 
 	 input logic insert_mux_sel,
 	 input logic pmem_w_mux_sel,
-
+	 
 	 output lc3b_cache_tag set_one_tag,
 	 output lc3b_cache_tag set_two_tag,
 

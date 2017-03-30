@@ -2,12 +2,12 @@ import lc3b_types::*;
 
 module cache_set (
 	input clk,
-
+	
 	input lc3b_cache_index in_index,
-
+	
 	output logic out_valid,
 	output logic out_dirty,
-	output lc3b_cache_tag out_tag,
+	output lc3b_cache_tag out_tag, 
 	output lc3b_pmem_line out_data,
 
 	/* Write info */

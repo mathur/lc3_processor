@@ -9,13 +9,13 @@ entity if_datapath is
         pc_br_in        : in     vl_logic_vector(15 downto 0);
         sr1_data_in     : in     vl_logic_vector(15 downto 0);
         pcmux_sel       : in     vl_logic_vector(1 downto 0);
+        stall           : in     vl_logic;
         pc_out          : out    vl_logic_vector(15 downto 0);
         instruction     : out    vl_logic_vector(15 downto 0);
         src1            : out    vl_logic_vector(2 downto 0);
         src2            : out    vl_logic_vector(2 downto 0);
         dest            : out    vl_logic_vector(2 downto 0);
         read_a          : out    vl_logic;
-        address_a       : out    vl_logic_vector(15 downto 0);
-        stall           : out    vl_logic
+        address_a       : out    vl_logic_vector(15 downto 0)
     );
 end if_datapath;

@@ -9,45 +9,46 @@ module if_datapath (
 	input logic br_en,
 	input lc3b_word pc_br_in,
 	input lc3b_word sr1_data_in,
-    input  logic [1:0] pcmux_sel,
+    input logic [1:0] pcmux_sel,
+	 input logic stall,
 
     // logic signals
     output lc3b_word pc_out, instruction,
     output lc3b_reg src1, src2, dest,
     output logic read_a,
-    output logic [15:0] address_a,
-    output logic stall
+    output logic [15:0] address_a
 );
 
 lc3b_word pc_plus2_out, pcmux_out;
 logic [1:0] pcmux_sel_internal;
+logic load;
 
 always_comb
 begin
-    read_a = 1'b1;
     address_a = pc_out;
+    read_a = 1'b1;
+	 
+	 if(stall) begin
+		load = 1'b0;
+	 end else begin
+		load = resp_a || br_en;
+	 end
 
-    if(resp_a == 1'b1) begin
-        stall = 1'b0;
+    if (br_en) begin
+        pcmux_sel_internal = 2'b01;
     end else begin
-        stall = 1'b1;
+        pcmux_sel_internal = pcmux_sel;
     end
-
-	if(br_en) begin
-	   pcmux_sel_internal = 2'b01;
-	end else begin
-		pcmux_sel_internal = pcmux_sel;
-	end
 end
 
 ir ir_unit (
     .clk(clk),
-    .load(read_a),
+    .load(load),
     .in(rdata_a),
-    .instruction(instruction),
     .dest(dest),
     .src1(src1),
-    .src2(src2)
+    .src2(src2),
+	 .instruction(instruction)
 );
 
 mux4 pcmux
@@ -63,16 +64,15 @@ mux4 pcmux
 register pc
 (
     .clk(clk),
-    .load(read_a),
+    .load(load),
     .in(pcmux_out),
     .out(pc_out)
 );
 
-plus2 plus_2
+plus2 pc_plus2
 (
     .in(pc_out),
     .out(pc_plus2_out)
 );
-
 
 endmodule : if_datapath

@@ -12,7 +12,7 @@ module lru (
 
 	input load_lru,
 
-	/* If the output is 1, set 1 is MRU, so evict set 2 and vice versa
+	/* If the output is 1, set 1 is MRU, so evict set 2 and vice versa 
 		we NOT the output here so that other components can easily use them */
 	output logic lru_of_set
 );
@@ -49,4 +49,4 @@ begin
 	lru_of_set = !(data[lru_index]);
 end
 
-endmodule: lru
+endmodule: lru 

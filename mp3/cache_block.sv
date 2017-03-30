@@ -1,11 +1,11 @@
 import lc3b_types::*;
 
 /* Block might be a bad name, this basically represents
-	both cache sets for 2 way assoicativity
+	both cache sets for 2 way assoicativity  
 
 	hits and misses are also calculated here
-
-
+	
+	
 	Offset bits are [3:0]
 	Index bits are  [6:4]
 	Tag bits are    [15:7]
@@ -28,28 +28,28 @@ module cache_block (
 
 	output logic set_one_valid,
 	output logic set_two_valid,
-
+	
 	output logic set_one_dirty,
 	output logic set_two_dirty,
 
 	output lc3b_pmem_line out_data_full,
-
+	
 	output lc3b_pmem_line out_data_set_one_f,
 	output lc3b_pmem_line out_data_set_two_f,
-
+	
 	input logic write_type_set_one,
 	input logic write_type_set_two,
-
+	
 	output lc3b_cache_tag set_one_tag,
-	output lc3b_cache_tag set_two_tag
+	output lc3b_cache_tag set_two_tag 
 );
 
 logic out_valid_set_one;
-lc3b_cache_tag out_tag_set_one;
+lc3b_cache_tag out_tag_set_one; 
 lc3b_pmem_line out_data_set_one;
 
 logic out_valid_set_two;
-lc3b_cache_tag out_tag_set_two;
+lc3b_cache_tag out_tag_set_two; 
 lc3b_pmem_line out_data_set_two;
 
 cache_set set_one(
@@ -83,7 +83,7 @@ begin
 	hit = ((cache_addr[15:7] == out_tag_set_one) && out_valid_set_one) || ((cache_addr[15:7] == out_tag_set_two) && out_valid_set_two);
 	set_one_hit = (cache_addr[15:7] == out_tag_set_one) && out_valid_set_one;
 	set_two_hit = (cache_addr[15:7] == out_tag_set_two) && out_valid_set_two;
-	if((cache_addr[15:7] == out_tag_set_one)) begin
+	if(set_one_hit) begin
 		case(cache_addr[3:0])
 			4'b0000: begin
 				out_data_block = out_data_set_one[15:0];
@@ -199,3 +199,6 @@ assign set_one_tag = out_tag_set_one;
 assign set_two_tag = out_tag_set_two;
 
 endmodule : cache_block
+
+
+

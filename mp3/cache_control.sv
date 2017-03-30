@@ -59,7 +59,7 @@ begin : state_actions
     load_set_one = 0;
     load_set_two = 0;
 	 load_lru     = 0;
-    cache_in_mux_sel = 0;
+    cache_in_mux_sel = mem_write;
 	 write_type_set_one = 0;
 	 write_type_set_two = 0;
 	 pmem_write = 0;
@@ -95,116 +95,32 @@ begin : state_actions
 			end
 
 			write_back_s: begin
-				///if((set_one_dirty == 1) && (set_two_dirty == 1)) begin
-					if (current_lru == 0) begin
-					  /* TODO SET ADDRESS CORRECTLY */
-					  pmem_write = 1;
-					  pmem_w_mux_sel = 0;
-					  /* SET ADDRESS HERE */
-					  /* Address is Tag + Index  + 0000 */
-					  pmem_address = {set_one_tag, mem_address[6:4], 4'b0000};
-					end
-					else begin
-					  /* Set two is LRU, replace */
-					  pmem_write = 1;
-					  pmem_w_mux_sel = 1;
-					  pmem_address = {set_two_tag, mem_address[6:4], 4'b0000};
-					end
-				/*end else begin
-					if(set_one_dirty == 1) begin
-						pmem_write = 1;
-						pmem_w_mux_sel = 0;
-					  /* SET ADDRESS HERE */
-					  /* Address is Tag + Index  + 0000 */
-					 /* pmem_address = {set_one_tag, mem_address[6:4], 4'b0000};
-					end
-					else begin
-						pmem_write = 1;
-						pmem_w_mux_sel = 1;
-						pmem_address = {set_two_tag, mem_address[6:4], 4'b0000};
-					end
-				end*/
+				if (current_lru == 0) begin
+				  pmem_write = 1;
+				  pmem_w_mux_sel = 0;
+				  pmem_address = {set_one_tag, mem_address[6:4], 4'b0000};
+				end
+				else begin
+				  pmem_write = 1;
+				  pmem_w_mux_sel = 1;
+				  pmem_address = {set_two_tag, mem_address[6:4], 4'b0000};
+				end
 			end
 
         write_s: begin
-				/* I could (should) probably simplify this design by allowing some of the ifs to cascade down
-					but this keeps everything atomic */
-				if(mem_write == 1) begin
-					if((set_one_valid == 1) && (set_two_valid == 1)) begin
-						if((set_one_dirty == 1) && (set_two_dirty == 1)) begin
-							/* Since both sets are valid AND DIRTY, we need to check LRU */
-							if (current_lru == 0) begin
-							  /* Set one is LRU, replace */
-							  load_set_one = 1;
-							  cache_in_mux_sel = 1;
-							  write_type_set_one = 1;
-							  insert_mux_sel = 1;
-							end
-							else begin
-							  /* Set two is LRU, replace */
-							  load_set_two = 1;
-							  cache_in_mux_sel = 1;
-							  write_type_set_two = 1;
-							  insert_mux_sel = 1;
-							end
-						end
-						else begin /* only one is dirty, find it and replace */
-							if(set_one_dirty == 1) begin
-								load_set_one = 1;
-								cache_in_mux_sel = 1;
-								write_type_set_one = 1;
-								insert_mux_sel = 1;
-							end
-							else begin
-								load_set_two = 1;
-								cache_in_mux_sel = 1;
-								write_type_set_two = 1;
-								insert_mux_sel = 1;
-							end
-						end 
-					end
-					else begin
-						/* one is not valid, why not put data there? (why not zoidberg?) */
-						if (set_one_valid == 0) begin
-							  /* Set one is invalid, replace */
-								load_set_one = 1;
-								cache_in_mux_sel = 1;
-								write_type_set_one = 1;
-								insert_mux_sel = 1;
-						 end
-						 else begin
-							  /* Set two is invalid, replace */
-								load_set_two = 1;
-								cache_in_mux_sel = 1;
-								write_type_set_two = 1;
-								insert_mux_sel = 1;
-						 end
-					end
+				if (current_lru == 0) begin
+				  /* Set one is LRU, replace */
+				  load_set_one = 1;
+				  cache_in_mux_sel = mem_write;
+				  write_type_set_one = mem_write;
+				  insert_mux_sel = 1;
 				end
 				else begin
-					/* Check if we are replacing based on LRU or on validity  */
-					if((set_one_valid == 1) && (set_two_valid == 1)) begin
-						 /* Since both sets are valid, we need to check LRU */
-						 if (current_lru == 0) begin
-							  /* Set one is LRU, replace */
-							  load_set_one = 1;
-						 end
-						 else begin
-							  /* Set two is LRU, replace */
-							  load_set_two = 1;
-						 end
-					end
-					else begin
-						 /* If one isn't valid, just write there, no need to check LRU */
-						 if (set_one_valid == 0) begin
-							  /* Set one is invalid, replace */
-							  load_set_one = 1;
-						 end
-						 else begin
-							  /* Set two is invalid, replace */
-							  load_set_two = 1;
-						 end
-					end
+				  /* Set two is LRU, replace */
+				  load_set_two = 1;
+				  cache_in_mux_sel = mem_write;
+				  write_type_set_two = mem_write;
+				  insert_mux_sel = 1;
 				end
         end
     endcase
@@ -221,32 +137,37 @@ begin : next_state_logic
             if(hit)
                 next_state = hit_s;
             else
-                next_state = fetch_s;
-        end
-
-        fetch_s: begin
-            if(!pmem_resp) begin
-					next_state = fetch_s;
-            end else begin
-					if(mem_read == 1) begin
-						next_state = write_s;
-					end else begin
+					if(set_one_dirty && (current_lru == 0)) begin
 						next_state = write_back_s;
 					end
-				end
+					else if(set_two_dirty && (current_lru == 1)) begin
+						next_state = write_back_s;
+					end
+					else begin
+						next_state = fetch_s;
+					end
         end
 
 		  write_back_s: begin
-            if(pmem_resp || (set_one_dirty == 0 && set_two_dirty == 0))
-                next_state = write_s;
+            if(!pmem_resp)
+					next_state = write_back_s;
             else
-                next_state = write_back_s;
-        end
+					next_state = fetch_s;
 
-        write_s: begin
-            next_state = hit_s;
         end
-    endcase
+		  
+		fetch_s: begin
+			if(!pmem_resp) begin
+				next_state = fetch_s;
+			end else begin
+				next_state = write_s;
+			end
+		end
+
+		write_s: begin
+			next_state = hit_s;
+		end
+	endcase
 end : next_state_logic
 
 
