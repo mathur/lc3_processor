@@ -27,11 +27,13 @@ always_comb
 begin
     address_a = pc_out;
     read_a = 1'b1;
-	 
-	 if(stall) begin
+
+     if(br_en) begin
+        load = 1'b1;
+	 end else if(stall) begin
 		load = 1'b0;
 	 end else begin
-		load = resp_a || br_en;
+		load = resp_a;
 	 end
 
     if (br_en) begin
