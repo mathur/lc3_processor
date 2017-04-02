@@ -6,14 +6,10 @@ module if_datapath (
     // memory
     input logic resp_a,
     input logic [15:0] rdata_a,
-	 input logic [15:0] trap_mem,
-	 input logic br_en,
-	 input logic jmp_jsr_en,
-	 input logic trap_en,
-	 input logic b11,
-	 input lc3b_word pc_br_in,
-	 input lc3b_word sr1_data_in,
-    input logic [2:0] pcmux_sel,
+	input logic br_en,
+	input lc3b_word pc_br_in,
+	input lc3b_word sr1_data_in,
+    input logic [1:0] pcmux_sel,
 	 input logic stall,
 
     // logic signals
@@ -24,7 +20,7 @@ module if_datapath (
 );
 
 lc3b_word pc_plus2_out, pcmux_out;
-logic [2:0] pcmux_sel_internal;
+logic [1:0] pcmux_sel_internal;
 logic load;
 
 always_comb
@@ -32,7 +28,7 @@ begin
     address_a = pc_out;
     read_a = 1'b1;
 
-     if(br_en || trap_en || jmp_jsr_en) begin
+     if(br_en) begin
         load = 1'b1;
 	 end else if(stall) begin
 		load = 1'b0;
@@ -40,21 +36,11 @@ begin
 		load = resp_a;
 	 end
 
-    if(br_en) begin
-	   pcmux_sel_internal = 3'b001;
-	end 
-	else if(trap_en) begin
-		pcmux_sel_internal = 3'b100;
-	end
-	else if (jmp_jsr_en) begin
-		if(b11)
-			pcmux_sel_internal = 3'b001;	//JMP/RET always have a b11 of 0, so defaults to loading to registers
-		else
-			pcmux_sel_internal = 3'b010;
-	end
-	else begin
-		pcmux_sel_internal = pcmux_sel;
-	end
+    if (br_en) begin
+        pcmux_sel_internal = 2'b01;
+    end else begin
+        pcmux_sel_internal = pcmux_sel;
+    end
 end
 
 ir ir_unit (
@@ -67,18 +53,14 @@ ir ir_unit (
 	 .instruction(instruction)
 );
 
-mux8 pcmux
+mux4 pcmux
 (
     .sel(pcmux_sel_internal),
     .a(pc_plus2_out),
     .b(pc_br_in),
     .c(sr1_data_in),
     .d(rdata_a),
-    .e(trap_mem),
-	 .f(16'b0),
-	 .g(16'b0),
-	 .h(16'b0),
-	 .i(pcmux_out)
+    .f(pcmux_out)
 );
 
 register pc

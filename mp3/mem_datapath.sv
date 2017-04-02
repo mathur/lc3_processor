@@ -15,8 +15,8 @@ module mem_datapath (
     output logic [15:0] address_b,
     output logic [15:0] wdata_b,
 
-    output lc3b_word regfilemux_out, trap_mem,
-    output logic br_en, jmp_jsr_en, trap_en, b11, stall
+    output lc3b_word regfilemux_out,
+    output logic br_en, stall
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out;
@@ -36,27 +36,12 @@ begin
         stall = 1'b0;
     end
 
-	 if(br_en_internal && (ctrl.opcode == op_br)) begin
+	if(br_en_internal && (ctrl.opcode == op_br)) begin
 	   br_en = 1'b1;
-	 end else begin
+	end else begin
 	   br_en = 1'b0;
-	 end
+	end
 
-	 if(ctrl.opcode == op_jsr || ctrl.opcode == op_jmp)
-		jmp_jsr_en = 1;
-	 else
-		jmp_jsr_en = 0;
-	 b11 = instruction[11]; //JMP/RET: 1100 000 REG 000000 so B11 is always 0 for JMP/RET
-	 
-	 if(ctrl.opcode == op_trap && resp_b == 1) begin
-		trap_en = 1;
-		trap_mem = rdata_b;
-	 end
-	 else begin
-		trap_en = 0;
-		trap_mem = 16'b0;
-	 end
-	
     if((ctrl.opcode == op_stb) && (address_b[0] == 1)) begin
         wmask_b = 2'b10;
     end

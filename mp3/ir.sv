@@ -16,9 +16,6 @@ begin
     if (load == 1) begin
         data = in;
     end
-	 else begin
-		data = 16'b0;
-	 end
 end
 
 always_comb
