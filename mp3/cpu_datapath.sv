@@ -41,13 +41,14 @@ lc3b_control_word ex_mem_ctrl;
 lc3b_reg ex_mem_src1, ex_mem_src2, ex_mem_dest;
 lc3b_word ex_alu_out, ex_br_out, ex_mem_instruction, ex_mem_alu, ex_mem_pc, ex_mem_pc_br, ex_mem_src1_data, ex_mem_src2_data;
 
-logic mem_br_en, stall_mem;
+logic mem_br_en, mem_trap_en, mem_jmp_jsr_en, b11, stall_mem;
 lc3b_word dest_data;
 
 lc3b_control_word mem_wb_ctrl;
 lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_data, mem_wb_src2_data, mem_wb_dest_data, mem_wb_mar, mem_wb_mdr;
-logic mem_wb_br;
+logic mem_wb_br, mem_b11;
+lc3b_word trap_mem;
 
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
@@ -58,7 +59,11 @@ if_datapath if_data
     .clk(clk),
     .resp_a(resp_a),
     .rdata_a(rdata_a),
+	 .trap_mem(trap_mem),
     .br_en(mem_br_en),
+	 .jmp_jsr_en(mem_jmp_jsr_en),
+	 .trap_en(mem_trap_en),
+	 .b11(mem_b11),
     .pc_br_in(ex_mem_pc_br),
     .sr1_data_in(ex_mem_src1_data),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
@@ -193,6 +198,10 @@ mem_datapath mem
 	 .sr2_out(ex_mem_src2_data),
     .instruction(ex_mem_instruction),
     .br_en(mem_br_en),
+	 .jmp_jsr_en(mem_jmp_jsr_en),
+	 .b11(mem_b11),
+	 .trap_en(mem_trap_en),
+	 .trap_mem(trap_mem),
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
     .stall(stall_mem),

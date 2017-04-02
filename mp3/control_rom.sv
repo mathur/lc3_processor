@@ -15,7 +15,7 @@ begin
 	ctrl.load_regfile = 1'b0;
 	ctrl.load_mar = 1'b0;
 	ctrl.load_mdr = 1'b0;
-	ctrl.pcmux_sel = 2'b00;
+	ctrl.pcmux_sel = 3'b000;
 	ctrl.storemux_sel = 1'b0;
 	ctrl.storemux_sel_two = 1'b0;
 	ctrl.alumux_sel = 2'b00;
@@ -142,6 +142,24 @@ begin
 			ctrl.mdrmux_sel = 3'b100;
 		end
 
+		op_jsr: begin
+			ctrl.regfilemux_sel = 3'b011;
+			ctrl.load_regfile = 1;
+			ctrl.destmux_sel = 1;
+			ctrl.storemux_sel = 1;
+		end
+	
+		op_jmp: begin
+			//Does nothing... all relevant data is forwarded to IF from MEM
+		end
+		
+		op_trap: begin
+			ctrl.destmux_sel = 1;
+			ctrl.load_regfile = 1;
+			ctrl.regfilemux_sel = 3'b011;
+			ctrl.marmux_sel = 3'b100;
+			ctrl.mem_read = 1;
+		end
 
 		default: begin
 			ctrl = 0;
