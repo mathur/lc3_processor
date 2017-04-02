@@ -20,7 +20,11 @@ entity mem_datapath is
         address_b       : out    vl_logic_vector(15 downto 0);
         wdata_b         : out    vl_logic_vector(15 downto 0);
         regfilemux_out  : out    vl_logic_vector(15 downto 0);
+        trap_mem        : out    vl_logic_vector(15 downto 0);
         br_en           : out    vl_logic;
+        jmp_jsr_en      : out    vl_logic;
+        trap_en         : out    vl_logic;
+        b11             : out    vl_logic;
         stall           : out    vl_logic
     );
 end mem_datapath;

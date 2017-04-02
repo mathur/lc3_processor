@@ -56,7 +56,7 @@ typedef struct packed {
     logic load_regfile;
     logic load_mar;
     logic load_mdr;
-    logic [1:0] pcmux_sel;
+    logic [2:0] pcmux_sel;
     logic storemux_sel;
 	 logic storemux_sel_two;
     logic [1:0] alumux_sel;

@@ -1,5 +1,5 @@
 Flow report for mp3
-Thu Mar 30 18:50:38 2017
+Sat Apr  1 21:55:51 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,21 +40,21 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Thu Mar 30 18:50:38 2017       ;
+; Flow Status                   ; Successful - Sat Apr  1 21:55:51 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
-; Logic utilization             ; 10 %                                        ;
-;     Combinational ALUTs       ; 2,717 / 38,000 ( 7 % )                      ;
+; Logic utilization             ; 14 %                                        ;
+;     Combinational ALUTs       ; 2,678 / 38,000 ( 7 % )                      ;
 ;     Memory ALUTs              ; 0 / 19,000 ( 0 % )                          ;
-;     Dedicated logic registers ; 1,883 / 38,000 ( 5 % )                      ;
-; Total registers               ; 1883                                        ;
+;     Dedicated logic registers ; 3,504 / 38,000 ( 9 % )                      ;
+; Total registers               ; 3504                                        ;
 ; Total pins                    ; 276 / 488 ( 57 % )                          ;
 ; Total virtual pins            ; 0                                           ;
-; Total block memory bits       ; 4,384 / 5,455,872 ( < 1 % )                 ;
+; Total block memory bits       ; 2,192 / 5,455,872 ( < 1 % )                 ;
 ; DSP block 18-bit elements     ; 0 / 384 ( 0 % )                             ;
 ; Total PLLs                    ; 0 / 4 ( 0 % )                               ;
 ; Total DLLs                    ; 0 / 4 ( 0 % )                               ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/30/2017 18:49:13 ;
+; Start date & time ; 04/01/2017 21:53:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp3                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 176231578741700.149091775324375       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176831337766998.149110163728951       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -105,26 +105,26 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 473 MB              ; 00:00:11                           ;
-; Fitter                    ; 00:00:37     ; 1.9                     ; 840 MB              ; 00:00:47                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 432 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 550 MB              ; 00:00:05                           ;
-; EDA Netlist Writer        ; 00:00:09     ; 1.0                     ; 409 MB              ; 00:00:06                           ;
-; Total                     ; 00:01:11     ; --                      ; --                  ; 00:01:13                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 480 MB              ; 00:00:10                           ;
+; Fitter                    ; 00:00:54     ; 2.1                     ; 838 MB              ; 00:01:10                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 440 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.1                     ; 577 MB              ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:13     ; 1.0                     ; 423 MB              ; 00:00:08                           ;
+; Total                     ; 00:01:35     ; --                      ; --                  ; 00:01:40                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                         ;
-+---------------------------+------------------------------+--------------+--------------+----------------+
-; Module Name               ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
-+---------------------------+------------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis      ; dcl-l520-16.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Fitter                    ; dcl-l520-16.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; Assembler                 ; dcl-l520-16.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; TimeQuest Timing Analyzer ; dcl-l520-16.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-; EDA Netlist Writer        ; dcl-l520-16.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-+---------------------------+------------------------------+--------------+--------------+----------------+
++----------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                          ;
++---------------------------+-------------------------------+--------------+--------------+----------------+
+; Module Name               ; Machine Hostname              ; OS Name      ; OS Version   ; Processor type ;
++---------------------------+-------------------------------+--------------+--------------+----------------+
+; Analysis & Synthesis      ; eceb-2022-02.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Fitter                    ; eceb-2022-02.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Assembler                 ; eceb-2022-02.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; eceb-2022-02.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; EDA Netlist Writer        ; eceb-2022-02.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
++---------------------------+-------------------------------+--------------+--------------+----------------+
 
 
 ------------
