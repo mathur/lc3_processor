@@ -6,15 +6,15 @@ module if_datapath (
     // memory
     input logic resp_a,
     input logic [15:0] rdata_a,
-	input logic [15:0] trap_mem,
-	input logic br_en,
-	input logic jmp_jsr_en,
-	input logic trap_en,
-	input logic b11,
-	input lc3b_word pc_br_in,
-	input lc3b_word sr1_data_in,
+	 input logic [15:0] trap_mem,
+	 input logic br_en,
+	 input logic jmp_jsr_en,
+	 input logic trap_en,
+	 input logic b11,
+	 input lc3b_word pc_br_in,
+	 input lc3b_word sr1_data_in,
     input logic [2:0] pcmux_sel,
-	input logic stall,
+	 input logic stall,
 
     // logic signals
     output lc3b_word pc_out, instruction,
@@ -42,7 +42,7 @@ begin
 
     if(br_en) begin
 	   pcmux_sel_internal = 3'b001;
-	end
+	end 
 	else if(trap_en) begin
 		pcmux_sel_internal = 3'b100;
 	end
@@ -64,7 +64,7 @@ ir ir_unit (
     .dest(dest),
     .src1(src1),
     .src2(src2),
-	.instruction(instruction)
+	 .instruction(instruction)
 );
 
 mux8 pcmux
@@ -75,10 +75,10 @@ mux8 pcmux
     .c(sr1_data_in),
     .d(rdata_a),
     .e(trap_mem),
-	.f(16'b0),
-	.g(16'b0),
-	.h(16'b0),
-	.i(pcmux_out)
+	 .f(16'b0),
+	 .g(16'b0),
+	 .h(16'b0),
+	 .i(pcmux_out)
 );
 
 register pc
