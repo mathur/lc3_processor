@@ -5,7 +5,7 @@ cModel Technology
 Z0 d/home/rmathur2/ece411/fmax_420/mp3/simulation/modelsim
 vadj
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-Z2 DXx4 work 10 lc3b_types 0 22 IcbNJFh8ZlKO3iLY1:Y=@1
+Z2 DXx4 work 10 lc3b_types 0 22 @ozW`>K6=NE6B`=DUP_KH0
 DXx4 work 11 adj_sv_unit 0 22 @8We]N?d]PCST4ShEagh:0
 VE;zLPZ?c`8[LaP1M[Ui<V1
 r1
@@ -18,7 +18,7 @@ Z5 8/home/rmathur2/ece411/fmax_420/mp3/adj.sv
 Z6 F/home/rmathur2/ece411/fmax_420/mp3/adj.sv
 L0 6
 Z7 OV;L;10.1d;51
-Z8 !s108 1490917860.911066
+Z8 !s108 1491503013.822481
 Z9 !s107 /home/rmathur2/ece411/fmax_420/mp3/adj.sv|
 Z10 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/adj.sv|
 Z11 o-sv -work work -O0
@@ -67,7 +67,7 @@ Z13 8/home/rmathur2/ece411/fmax_420/mp3/adjns.sv
 Z14 F/home/rmathur2/ece411/fmax_420/mp3/adjns.sv
 L0 6
 R7
-Z15 !s108 1490917861.898790
+Z15 !s108 1491503015.730947
 Z16 !s107 /home/rmathur2/ece411/fmax_420/mp3/adjns.sv|
 Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/adjns.sv|
 R11
@@ -116,7 +116,7 @@ Z18 8/home/rmathur2/ece411/fmax_420/mp3/alu.sv
 Z19 F/home/rmathur2/ece411/fmax_420/mp3/alu.sv
 L0 3
 R7
-Z20 !s108 1490917861.120471
+Z20 !s108 1491503014.306434
 Z21 !s107 /home/rmathur2/ece411/fmax_420/mp3/alu.sv|
 Z22 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/alu.sv|
 R11
@@ -165,7 +165,7 @@ Z24 8/home/rmathur2/ece411/fmax_420/mp3/arbiter.sv
 Z25 F/home/rmathur2/ece411/fmax_420/mp3/arbiter.sv
 L0 3
 R7
-Z26 !s108 1490917859.581533
+Z26 !s108 1491503011.116098
 Z27 !s107 /home/rmathur2/ece411/fmax_420/mp3/arbiter.sv|
 Z28 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/arbiter.sv|
 R11
@@ -218,17 +218,17 @@ R12
 !s100 _ZCLeUD:E3YZmF8USBYXH1
 !s105 badder_sv_unit
 !s85 0
-!s108 1490917858.962718
+!s108 1491503009.449930
 !s107 /home/rmathur2/ece411/fmax_420/mp3/badder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/badder.sv|
 !s101 -O0
 vbenable
 R1
-IdF_d0LG<5zjKcf<bFbEI[3
+I4=@0=z]Nl?meW^:;4AR7`3
 Vz9BzEd;O68gLn^K?7cjG41
 S1
 R3
-R4
+w1491409136
 8/home/rmathur2/ece411/fmax_420/mp3/benable.sv
 F/home/rmathur2/ece411/fmax_420/mp3/benable.sv
 L0 1
@@ -238,10 +238,10 @@ r1
 R11
 R12
 !i10b 1
-!s100 gUNhE?=ZOH^Cn>XnjZFEV3
+!s100 25Vnl2LW1NFnhe_j2696g0
 !s105 benable_sv_unit
 !s85 0
-!s108 1490917858.887882
+!s108 1491503009.250626
 !s107 /home/rmathur2/ece411/fmax_420/mp3/benable.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/benable.sv|
 !s101 -O0
@@ -260,7 +260,7 @@ Z29 8/home/rmathur2/ece411/fmax_420/mp3/buffer.sv
 Z30 F/home/rmathur2/ece411/fmax_420/mp3/buffer.sv
 L0 3
 R7
-Z31 !s108 1490917859.825145
+Z31 !s108 1491503011.650572
 Z32 !s107 /home/rmathur2/ece411/fmax_420/mp3/buffer.sv|
 Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/buffer.sv|
 R11
@@ -309,7 +309,7 @@ Z35 8/home/rmathur2/ece411/fmax_420/mp3/byte_insert.sv
 Z36 F/home/rmathur2/ece411/fmax_420/mp3/byte_insert.sv
 L0 3
 R7
-Z37 !s108 1490917860.454941
+Z37 !s108 1491503012.956208
 Z38 !s107 /home/rmathur2/ece411/fmax_420/mp3/byte_insert.sv|
 Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/byte_insert.sv|
 R11
@@ -358,7 +358,7 @@ Z40 8/home/rmathur2/ece411/fmax_420/mp3/cache.sv
 Z41 F/home/rmathur2/ece411/fmax_420/mp3/cache.sv
 L0 3
 R7
-Z42 !s108 1490917859.443721
+Z42 !s108 1491503010.817737
 Z43 !s107 /home/rmathur2/ece411/fmax_420/mp3/cache.sv|
 Z44 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cache.sv|
 R11
@@ -383,7 +383,7 @@ Z45 8/home/rmathur2/ece411/fmax_420/mp3/cache_block.sv
 Z46 F/home/rmathur2/ece411/fmax_420/mp3/cache_block.sv
 L0 14
 R7
-Z47 !s108 1490917862.182881
+Z47 !s108 1491503016.440347
 Z48 !s107 /home/rmathur2/ece411/fmax_420/mp3/cache_block.sv|
 Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cache_block.sv|
 R11
@@ -432,7 +432,7 @@ Z50 8/home/rmathur2/ece411/fmax_420/mp3/cache_control.sv
 Z51 F/home/rmathur2/ece411/fmax_420/mp3/cache_control.sv
 L0 3
 R7
-Z52 !s108 1490917859.328538
+Z52 !s108 1491503010.551149
 Z53 !s107 /home/rmathur2/ece411/fmax_420/mp3/cache_control.sv|
 Z54 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cache_control.sv|
 R11
@@ -481,7 +481,7 @@ Z55 8/home/rmathur2/ece411/fmax_420/mp3/cache_datapath.sv
 Z56 F/home/rmathur2/ece411/fmax_420/mp3/cache_datapath.sv
 L0 3
 R7
-Z57 !s108 1490917859.221372
+Z57 !s108 1491503010.316037
 Z58 !s107 /home/rmathur2/ece411/fmax_420/mp3/cache_datapath.sv|
 Z59 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cache_datapath.sv|
 R11
@@ -530,7 +530,7 @@ Z60 8/home/rmathur2/ece411/fmax_420/mp3/cache_set.sv
 Z61 F/home/rmathur2/ece411/fmax_420/mp3/cache_set.sv
 L0 3
 R7
-Z62 !s108 1490917862.317706
+Z62 !s108 1491503016.739576
 Z63 !s107 /home/rmathur2/ece411/fmax_420/mp3/cache_set.sv|
 Z64 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cache_set.sv|
 R11
@@ -591,35 +591,35 @@ R12
 vcontrol_rom
 R1
 R2
-DXx4 work 19 control_rom_sv_unit 0 22 4F03EoZEM60Ug0GfP?Ifc3
+DXx4 work 19 control_rom_sv_unit 0 22 cjCjC34ef5iMYQbV_4g:13
 VEKoAgM<53o:Z>B?305z7R0
 r1
 31
-I:`^lG8XD9B1m`CK3eD7OD2
+Ig6MK=]zc>MM5IH`mzjCa_0
 S1
 R3
-Z65 w1490716720
+Z65 w1491151932
 Z66 8/home/rmathur2/ece411/fmax_420/mp3/control_rom.sv
 Z67 F/home/rmathur2/ece411/fmax_420/mp3/control_rom.sv
 L0 3
 R7
-Z68 !s108 1490917859.695206
+Z68 !s108 1491503011.384180
 Z69 !s107 /home/rmathur2/ece411/fmax_420/mp3/control_rom.sv|
 Z70 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/control_rom.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 PK9l8T4kIVCGAnPKl81bU1
+!s100 F[_T3;gPkz`k>DG@@?d1c2
 !s105 control_rom_sv_unit
 !s101 -O0
 Xcontrol_rom_sv_unit
 R1
 R2
-V4F03EoZEM60Ug0GfP?Ifc3
+VcjCjC34ef5iMYQbV_4g:13
 r1
 31
-I4F03EoZEM60Ug0GfP?Ifc3
+IcjCjC34ef5iMYQbV_4g:13
 S1
 R3
 R65
@@ -634,7 +634,7 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 EazQAWcT3<NKechHE:O3g0
+!s100 4HmDIAlmNz5]hBhQ=kAVI3
 !i103 1
 !s101 -O0
 vcpu
@@ -652,7 +652,7 @@ Z71 8/home/rmathur2/ece411/fmax_420/mp3/cpu.sv
 Z72 F/home/rmathur2/ece411/fmax_420/mp3/cpu.sv
 L0 3
 R7
-Z73 !s108 1490917862.428878
+Z73 !s108 1491503017.011309
 Z74 !s107 /home/rmathur2/ece411/fmax_420/mp3/cpu.sv|
 Z75 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cpu.sv|
 R11
@@ -665,35 +665,35 @@ R12
 vcpu_datapath
 R1
 R2
-DXx4 work 20 cpu_datapath_sv_unit 0 22 T]@@hKjYMST8>c=?ehXjV3
+DXx4 work 20 cpu_datapath_sv_unit 0 22 M4N>oJfZhCU`fJdIY:IcY3
 V;UAj3>`EV414@cC^=BU=@0
 r1
 31
-IeXin8:cdgfnSfzVi@IPHQ2
+IIN^HBjoJTf4cFZ9WX^:f^3
 S1
 R3
-Z76 w1490821342
+Z76 w1491497443
 Z77 8/home/rmathur2/ece411/fmax_420/mp3/cpu_datapath.sv
 Z78 F/home/rmathur2/ece411/fmax_420/mp3/cpu_datapath.sv
 L0 3
 R7
-Z79 !s108 1490917860.753134
+Z79 !s108 1491503013.513832
 Z80 !s107 /home/rmathur2/ece411/fmax_420/mp3/cpu_datapath.sv|
 Z81 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/cpu_datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 A1kHJIlAUfdan7P:Z:a331
+!s100 ]U7^bh2L4m0Z6c>bTOokD2
 !s105 cpu_datapath_sv_unit
 !s101 -O0
 Xcpu_datapath_sv_unit
 R1
 R2
-VT]@@hKjYMST8>c=?ehXjV3
+VM4N>oJfZhCU`fJdIY:IcY3
 r1
 31
-IT]@@hKjYMST8>c=?ehXjV3
+IM4N>oJfZhCU`fJdIY:IcY3
 S1
 R3
 R76
@@ -708,7 +708,7 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 i<VFfbB1DPjlY14TZcWj00
+!s100 U]m:H@nXBTd<=c63=7PQa0
 !i103 1
 !s101 -O0
 Xcpu_sv_unit
@@ -750,7 +750,7 @@ Z83 8/home/rmathur2/ece411/fmax_420/mp3/ex_datapath.sv
 Z84 F/home/rmathur2/ece411/fmax_420/mp3/ex_datapath.sv
 L0 3
 R7
-Z85 !s108 1490917860.309078
+Z85 !s108 1491503012.689892
 Z86 !s107 /home/rmathur2/ece411/fmax_420/mp3/ex_datapath.sv|
 Z87 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/ex_datapath.sv|
 R11
@@ -799,7 +799,7 @@ Z88 8/home/rmathur2/ece411/fmax_420/mp3/gencc.sv
 Z89 F/home/rmathur2/ece411/fmax_420/mp3/gencc.sv
 L0 3
 R7
-Z90 !s108 1490917861.238041
+Z90 !s108 1491503014.590393
 Z91 !s107 /home/rmathur2/ece411/fmax_420/mp3/gencc.sv|
 Z92 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/gencc.sv|
 R11
@@ -848,7 +848,7 @@ Z94 8/home/rmathur2/ece411/fmax_420/mp3/id_datapath.sv
 Z95 F/home/rmathur2/ece411/fmax_420/mp3/id_datapath.sv
 L0 3
 R7
-Z96 !s108 1490917860.170130
+Z96 !s108 1491503012.422335
 Z97 !s107 /home/rmathur2/ece411/fmax_420/mp3/id_datapath.sv|
 Z98 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/id_datapath.sv|
 R11
@@ -885,35 +885,35 @@ R12
 vif_datapath
 R1
 R2
-DXx4 work 19 if_datapath_sv_unit 0 22 SO;M@de`de;VQn6g_LA=m2
-V8:>7KTDQZ99??[[;f[S3L2
+DXx4 work 19 if_datapath_sv_unit 0 22 dbVKjGioTcnRzMi@S9JmY0
+VW8X1R5<BTR2B50oJ0LM=K2
 r1
 31
-IJEAN2z9UcA^PJST@a^eX^3
+IJo@Xc^z7D98LfE7eTKXY51
 S1
 R3
-Z99 w1490917743
+Z99 w1491501012
 Z100 8/home/rmathur2/ece411/fmax_420/mp3/if_datapath.sv
 Z101 F/home/rmathur2/ece411/fmax_420/mp3/if_datapath.sv
 L0 3
 R7
-Z102 !s108 1490917860.060447
+Z102 !s108 1491503012.163124
 Z103 !s107 /home/rmathur2/ece411/fmax_420/mp3/if_datapath.sv|
 Z104 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/if_datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 `S4Rah>NB]QzK7L5eh<@I1
+!s100 Z<bSX[KbB[XH5F^GSR2hY2
 !s105 if_datapath_sv_unit
 !s101 -O0
 Xif_datapath_sv_unit
 R1
 R2
-VSO;M@de`de;VQn6g_LA=m2
+VdbVKjGioTcnRzMi@S9JmY0
 r1
 31
-ISO;M@de`de;VQn6g_LA=m2
+IdbVKjGioTcnRzMi@S9JmY0
 S1
 R3
 R99
@@ -928,7 +928,7 @@ R11
 R12
 !s85 0
 !i10b 1
-!s100 `ddkNj?LgN<>4@8gh^06>2
+!s100 oS:4c1`3Y1MGd6F@Uifbn3
 !i103 1
 !s101 -O0
 vir
@@ -938,22 +938,22 @@ DXx4 work 10 ir_sv_unit 0 22 :1j8b82OF6K1[NEo1;56L1
 Va1@C84V`lcHaBdBgQL[ej1
 r1
 31
-IBhe<9naPCRhzM5^7We1Rd0
+IMHD>^2`N@dgg2WSY]3bhg3
 S1
 R3
-Z105 w1490824103
-Z106 8/home/rmathur2/ece411/fmax_420/mp3/ir.sv
-Z107 F/home/rmathur2/ece411/fmax_420/mp3/ir.sv
+R65
+Z105 8/home/rmathur2/ece411/fmax_420/mp3/ir.sv
+Z106 F/home/rmathur2/ece411/fmax_420/mp3/ir.sv
 L0 3
 R7
-Z108 !s108 1490917861.347640
-Z109 !s107 /home/rmathur2/ece411/fmax_420/mp3/ir.sv|
-Z110 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/ir.sv|
+Z107 !s108 1491503014.857263
+Z108 !s107 /home/rmathur2/ece411/fmax_420/mp3/ir.sv|
+Z109 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/ir.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 YH0jXg=fKX9UoVO?QHDg?2
+!s100 _QC>I7DS[`[j;Zl;Ql=mS2
 !s105 ir_sv_unit
 !s101 -O0
 Xir_sv_unit
@@ -965,14 +965,14 @@ r1
 I:1j8b82OF6K1[NEo1;56L1
 S1
 R3
+R65
 R105
 R106
-R107
 L0 1
 R7
+R107
 R108
 R109
-R110
 R11
 R12
 !s85 0
@@ -982,11 +982,11 @@ R12
 !s101 -O0
 Xlc3b_types
 R1
-IIcbNJFh8ZlKO3iLY1:Y=@1
-VIcbNJFh8ZlKO3iLY1:Y=@1
+I@ozW`>K6=NE6B`=DUP_KH0
+V@ozW`>K6=NE6B`=DUP_KH0
 S1
 R3
-Z111 w1490716721
+R65
 8/home/rmathur2/ece411/fmax_420/mp3/lc3b_types.sv
 F/home/rmathur2/ece411/fmax_420/mp3/lc3b_types.sv
 L0 1
@@ -996,9 +996,9 @@ r1
 R11
 R12
 !i10b 1
-!s100 eo7P;ej11RXj6zPbLHgbW3
+!s100 b^<<K8:14=b9XnaYz:XH21
 !s85 0
-!s108 1490917858.616456
+!s108 1491503008.462479
 !s107 /home/rmathur2/ece411/fmax_420/mp3/lc3b_types.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/lc3b_types.sv|
 !s101 -O0
@@ -1013,13 +1013,13 @@ IGjA:HX>V3eJNeOSHFH4760
 S1
 R3
 R34
-Z112 8/home/rmathur2/ece411/fmax_420/mp3/lru.sv
-Z113 F/home/rmathur2/ece411/fmax_420/mp3/lru.sv
+Z110 8/home/rmathur2/ece411/fmax_420/mp3/lru.sv
+Z111 F/home/rmathur2/ece411/fmax_420/mp3/lru.sv
 L0 3
 R7
-Z114 !s108 1490917860.618158
-Z115 !s107 /home/rmathur2/ece411/fmax_420/mp3/lru.sv|
-Z116 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/lru.sv|
+Z112 !s108 1491503013.238825
+Z113 !s107 /home/rmathur2/ece411/fmax_420/mp3/lru.sv|
+Z114 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/lru.sv|
 R11
 R12
 !s85 0
@@ -1037,13 +1037,13 @@ I8?W;;8fg6WQQ3G[0cF2EZ1
 S1
 R3
 R34
-R112
-R113
+R110
+R111
 L0 1
 R7
+R112
+R113
 R114
-R115
-R116
 R11
 R12
 !s85 0
@@ -1054,50 +1054,50 @@ R12
 vmem_datapath
 R1
 R2
-DXx4 work 20 mem_datapath_sv_unit 0 22 4i^:0[BQC=g<Ul@`>@neF1
-V?6Z4T_c2ZSa?8:J^_27iU3
+DXx4 work 20 mem_datapath_sv_unit 0 22 F@:MbNjTWPTa2YcG1Dn>U0
+V1[YeP_Q>>22RVk2>a1=Wk1
 r1
 31
-IF5]F2D8a<XgT6fU_Id:YH3
+I^W@oZK9Jb<Ka2__YYg7Bd2
 S1
 R3
-Z117 w1490818998
-Z118 8/home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv
-Z119 F/home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv
+R76
+Z115 8/home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv
+Z116 F/home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv
 L0 3
 R7
-Z120 !s108 1490917859.945830
-Z121 !s107 /home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv|
-Z122 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv|
+Z117 !s108 1491503011.907922
+Z118 !s107 /home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv|
+Z119 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mem_datapath.sv|
 R11
 R12
 !s85 0
 !i10b 1
-!s100 =@[YGXn8n>7>M2eDf3hfA2
+!s100 U6h5J3_Y:M1`YT9=XElWQ0
 !s105 mem_datapath_sv_unit
 !s101 -O0
 Xmem_datapath_sv_unit
 R1
 R2
-V4i^:0[BQC=g<Ul@`>@neF1
+VF@:MbNjTWPTa2YcG1Dn>U0
 r1
 31
-I4i^:0[BQC=g<Ul@`>@neF1
+IF@:MbNjTWPTa2YcG1Dn>U0
 S1
 R3
+R76
+R115
+R116
+L0 1
+R7
 R117
 R118
 R119
-L0 1
-R7
-R120
-R121
-R122
 R11
 R12
 !s85 0
 !i10b 1
-!s100 =VniV67k7fT00IdZ0ffRF3
+!s100 KWKQC@9P4l=coM;jWmo<T1
 !i103 1
 !s101 -O0
 vmp3
@@ -1110,14 +1110,14 @@ r1
 I:7Slbf^AoNWED`c`m=WDa0
 S1
 R3
-Z123 w1490793571
-Z124 8/home/rmathur2/ece411/fmax_420/mp3/mp3.sv
-Z125 F/home/rmathur2/ece411/fmax_420/mp3/mp3.sv
+Z120 w1490793571
+Z121 8/home/rmathur2/ece411/fmax_420/mp3/mp3.sv
+Z122 F/home/rmathur2/ece411/fmax_420/mp3/mp3.sv
 L0 3
 R7
-Z126 !s108 1490917862.554718
-Z127 !s107 /home/rmathur2/ece411/fmax_420/mp3/mp3.sv|
-Z128 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mp3.sv|
+Z123 !s108 1491503017.260425
+Z124 !s107 /home/rmathur2/ece411/fmax_420/mp3/mp3.sv|
+Z125 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mp3.sv|
 R11
 R12
 !s85 0
@@ -1134,14 +1134,14 @@ r1
 IOFZCVfNVI3I9[gClJQ@LD3
 S1
 R3
+R120
+R121
+R122
+L0 1
+R7
 R123
 R124
 R125
-L0 1
-R7
-R126
-R127
-R128
 R11
 R12
 !s85 0
@@ -1168,7 +1168,7 @@ R12
 !s100 JIfB?3l2H5CXlzmBWjk6e3
 !s105 mp3_tb_sv_unit
 !s85 0
-!s108 1490917862.714778
+!s108 1491503017.527057
 !s107 /home/rmathur2/ece411/fmax_420/mp3/mp3_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mp3_tb.sv|
 !s101 -O0
@@ -1178,7 +1178,7 @@ Id0em0hIAa45I`]L_lk?LB2
 V8m]l]_QnJ>bC;o8UdVIPk2
 S1
 R3
-Z129 w1490715755
+Z126 w1490715755
 8/home/rmathur2/ece411/fmax_420/mp3/mux2.sv
 F/home/rmathur2/ece411/fmax_420/mp3/mux2.sv
 L0 1
@@ -1191,7 +1191,7 @@ R12
 !s100 SooYM?44QSzXDWJ=`LJK01
 !s105 mux2_sv_unit
 !s85 0
-!s108 1490917858.823509
+!s108 1491503009.087452
 !s107 /home/rmathur2/ece411/fmax_420/mp3/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mux2.sv|
 !s101 -O0
@@ -1201,7 +1201,7 @@ Ig1D0;`I3c>8me6?3g?DR82
 VYCkK`QGYSnR6BP^DhRdne0
 S1
 R3
-R129
+R126
 8/home/rmathur2/ece411/fmax_420/mp3/mux4.sv
 F/home/rmathur2/ece411/fmax_420/mp3/mux4.sv
 L0 1
@@ -1214,7 +1214,7 @@ R12
 !s100 iA?_:3h=_PeGG9C29PG1I0
 !s105 mux4_sv_unit
 !s85 0
-!s108 1490917859.023461
+!s108 1491503009.651290
 !s107 /home/rmathur2/ece411/fmax_420/mp3/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mux4.sv|
 !s101 -O0
@@ -1224,7 +1224,7 @@ I[KNO6I8UlC8I<BUzPj2=F2
 VD:elXd4OKY_6T:D]zZXSS0
 S1
 R3
-R129
+R126
 8/home/rmathur2/ece411/fmax_420/mp3/mux8.sv
 F/home/rmathur2/ece411/fmax_420/mp3/mux8.sv
 L0 1
@@ -1237,7 +1237,7 @@ R12
 !s100 [l:iJb4J9V7Nj34BKLVJ60
 !s105 mux8_sv_unit
 !s85 0
-!s108 1490917859.090330
+!s108 1491503009.850333
 !s107 /home/rmathur2/ece411/fmax_420/mp3/mux8.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/mux8.sv|
 !s101 -O0
@@ -1250,7 +1250,7 @@ VbAHNzMUF]n2gJaIiKj0nn2
 !s105 physical_memory_sv_unit
 S1
 R3
-R129
+R126
 8/home/rmathur2/ece411/fmax_420/mp3/physical_memory.sv
 F/home/rmathur2/ece411/fmax_420/mp3/physical_memory.sv
 L0 1
@@ -1258,7 +1258,7 @@ R7
 r1
 !s85 0
 31
-!s108 1490917862.782157
+!s108 1491503017.728335
 !s107 /home/rmathur2/ece411/fmax_420/mp3/physical_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/physical_memory.sv|
 !s101 -O0
@@ -1270,7 +1270,7 @@ IH@DUgGo`Bbb3^77n6h0^X3
 V8Yjd6>kf[QVaNB:l@BLiW1
 S1
 R3
-R111
+w1490716721
 8/home/rmathur2/ece411/fmax_420/mp3/plus2.sv
 F/home/rmathur2/ece411/fmax_420/mp3/plus2.sv
 L0 1
@@ -1283,7 +1283,7 @@ R12
 !s100 WJK0OhWoSnA4]aRj=gRgK3
 !s105 plus2_sv_unit
 !s85 0
-!s108 1490917858.690242
+!s108 1491503008.710258
 !s107 /home/rmathur2/ece411/fmax_420/mp3/plus2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/plus2.sv|
 !s101 -O0
@@ -1297,14 +1297,14 @@ r1
 IBKN`Wd8I4M7P2GQJh6:Pm3
 S1
 R3
-R129
-Z130 8/home/rmathur2/ece411/fmax_420/mp3/regfile.sv
-Z131 F/home/rmathur2/ece411/fmax_420/mp3/regfile.sv
+R126
+Z127 8/home/rmathur2/ece411/fmax_420/mp3/regfile.sv
+Z128 F/home/rmathur2/ece411/fmax_420/mp3/regfile.sv
 L0 3
 R7
-Z132 !s108 1490917861.478266
-Z133 !s107 /home/rmathur2/ece411/fmax_420/mp3/regfile.sv|
-Z134 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/regfile.sv|
+Z129 !s108 1491503015.143436
+Z130 !s107 /home/rmathur2/ece411/fmax_420/mp3/regfile.sv|
+Z131 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/regfile.sv|
 R11
 R12
 !s85 0
@@ -1321,14 +1321,14 @@ r1
 IWY_=WFn^4IA5`JkzO;27M2
 S1
 R3
+R126
+R127
+R128
+L0 1
+R7
 R129
 R130
 R131
-L0 1
-R7
-R132
-R133
-R134
 R11
 R12
 !s85 0
@@ -1342,7 +1342,7 @@ IKkRWVHNaHZiPaGJn1z11k2
 VVWH2GIcWRQ29K?3;26c491
 S1
 R3
-R129
+R126
 8/home/rmathur2/ece411/fmax_420/mp3/register.sv
 F/home/rmathur2/ece411/fmax_420/mp3/register.sv
 L0 1
@@ -1355,7 +1355,7 @@ R12
 !s100 F4Qz5OfFd0mSjDfg1JV_R3
 !s105 register_sv_unit
 !s85 0
-!s108 1490917858.756401
+!s108 1491503008.929158
 !s107 /home/rmathur2/ece411/fmax_420/mp3/register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/register.sv|
 !s101 -O0
@@ -1365,7 +1365,7 @@ I0bL9QfPFD6z>W_NQkma]F0
 VM9_S3b81?[A8SAeA0R@6P1
 S1
 R3
-R129
+R126
 8/home/rmathur2/ece411/fmax_420/mp3/shiftunit.sv
 F/home/rmathur2/ece411/fmax_420/mp3/shiftunit.sv
 L0 1
@@ -1378,7 +1378,7 @@ R12
 !s100 a@BQ4hLG6[TIg=Y4PXV6T1
 !s105 shiftunit_sv_unit
 !s85 0
-!s108 1490917859.156296
+!s108 1491503010.056850
 !s107 /home/rmathur2/ece411/fmax_420/mp3/shiftunit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/shiftunit.sv|
 !s101 -O0
@@ -1392,14 +1392,14 @@ r1
 I5onBFOV;[LDekmEbMBAJ42
 S1
 R3
-Z135 w1490715758
-Z136 8/home/rmathur2/ece411/fmax_420/mp3/udj.sv
-Z137 F/home/rmathur2/ece411/fmax_420/mp3/udj.sv
+Z132 w1490715758
+Z133 8/home/rmathur2/ece411/fmax_420/mp3/udj.sv
+Z134 F/home/rmathur2/ece411/fmax_420/mp3/udj.sv
 L0 6
 R7
-Z138 !s108 1490917861.785309
-Z139 !s107 /home/rmathur2/ece411/fmax_420/mp3/udj.sv|
-Z140 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/udj.sv|
+Z135 !s108 1491503015.404901
+Z136 !s107 /home/rmathur2/ece411/fmax_420/mp3/udj.sv|
+Z137 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/udj.sv|
 R11
 R12
 !s85 0
@@ -1416,14 +1416,14 @@ r1
 IM?n0l0fziBZI7Sb5B98PH2
 S1
 R3
+R132
+R133
+R134
+L0 1
+R7
 R135
 R136
 R137
-L0 1
-R7
-R138
-R139
-R140
 R11
 R12
 !s85 0
@@ -1441,14 +1441,14 @@ r1
 IOVEbC=;KhEaEg<WMIDWlk2
 S1
 R3
-R135
-Z141 8/home/rmathur2/ece411/fmax_420/mp3/udjns.sv
-Z142 F/home/rmathur2/ece411/fmax_420/mp3/udjns.sv
+R132
+Z138 8/home/rmathur2/ece411/fmax_420/mp3/udjns.sv
+Z139 F/home/rmathur2/ece411/fmax_420/mp3/udjns.sv
 L0 6
 R7
-Z143 !s108 1490917862.027101
-Z144 !s107 /home/rmathur2/ece411/fmax_420/mp3/udjns.sv|
-Z145 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/udjns.sv|
+Z140 !s108 1491503016.190899
+Z141 !s107 /home/rmathur2/ece411/fmax_420/mp3/udjns.sv|
+Z142 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rmathur2/ece411/fmax_420/mp3|/home/rmathur2/ece411/fmax_420/mp3/udjns.sv|
 R11
 R12
 !s85 0
@@ -1465,14 +1465,14 @@ r1
 IZd6W8j3H5jjJRI]Z4:@?O1
 S1
 R3
-R135
-R141
-R142
+R132
+R138
+R139
 L0 1
 R7
-R143
-R144
-R145
+R140
+R141
+R142
 R11
 R12
 !s85 0
