@@ -21,7 +21,7 @@ module mem_datapath (
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out;
 logic [7:0] ldbmux_out;
-lc3b_nzp gencc_out, cc_out;
+lc3b_nzp gencc_out;
 
 logic br_en_internal;
 
@@ -29,34 +29,34 @@ always_comb
 begin
     read_b = ctrl.mem_read;
     write_b = ctrl.mem_write;
-    
+
     if((read_b == 1'b1 || write_b == 1'b1) && (resp_b == 1'b0)) begin
         stall = 1'b1;
     end else begin
         stall = 1'b0;
     end
 
-	 if(br_en_internal && (ctrl.opcode == op_br)) begin
-	   br_en = 1'b1;
-	 end else begin
-	   br_en = 1'b0;
-	 end
+     if(br_en_internal && (ctrl.opcode == op_br)) begin
+       br_en = 1'b1;
+     end else begin
+       br_en = 1'b0;
+     end
 
-	 if(ctrl.opcode == op_jsr || ctrl.opcode == op_jmp)
-		jmp_jsr_en = 1;
-	 else
-		jmp_jsr_en = 0;
-	 b11 = instruction[11]; //JMP/RET: 1100 000 REG 000000 so B11 is always 0 for JMP/RET
-	 
-	 if(ctrl.opcode == op_trap && resp_b == 1) begin
-		trap_en = 1;
-		trap_mem = rdata_b;
-	 end
-	 else begin
-		trap_en = 0;
-		trap_mem = 16'b0;
-	 end
-	
+     if(ctrl.opcode == op_jsr || ctrl.opcode == op_jmp)
+    	jmp_jsr_en = 1;
+     else
+    	jmp_jsr_en = 0;
+     b11 = instruction[11]; //JMP/RET: 1100 000 REG 000000 so B11 is always 0 for JMP/RET
+
+     if(ctrl.opcode == op_trap && resp_b == 1) begin
+    	trap_en = 1;
+    	trap_mem = rdata_b;
+     end
+     else begin
+    	trap_en = 0;
+    	trap_mem = 16'b0;
+     end
+
     if((ctrl.opcode == op_stb) && (address_b[0] == 1)) begin
         wmask_b = 2'b10;
     end
@@ -110,14 +110,6 @@ gencc gen_cc
     .out(gencc_out)
 );
 
-register #(.width(3)) cc
-(
-    .clk(clk),
-    .load(ctrl.load_cc),
-    .in(gencc_out),
-    .out(cc_out)
-);
-
 mux2 #(.width(8)) ldbmux
 (
     .sel(address_b[0]),
@@ -155,11 +147,11 @@ udjns ldbzext
 
 benable cccomp
 (
-    .n(cc_out[2]),
+    .n(gencc_out[2]),
     .nr(dest[2]),
-    .z(cc_out[1]),
+    .z(gencc_out[1]),
     .zr(dest[1]),
-    .p(cc_out[0]),
+    .p(gencc_out[0]),
     .pr(dest[0]),
     .enable(br_en_internal)
 );
