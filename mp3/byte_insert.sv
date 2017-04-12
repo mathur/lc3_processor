@@ -10,7 +10,7 @@ module byte_insert (
 
 always_comb begin
 	output_data = input_data;
-	case(sel_index)
+	case({sel_index[3:1], 1'b0})
 		4'b0000: begin
 			case(mem_byte_enable)
 				2'b00 : begin

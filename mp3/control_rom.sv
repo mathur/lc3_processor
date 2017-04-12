@@ -146,7 +146,8 @@ begin
 			ctrl.regfilemux_sel = 3'b011;
 			ctrl.load_regfile = 1;
 			ctrl.destmux_sel = 1;
-			ctrl.storemux_sel = 1;
+			//ctrl.storemux_sel = 1;
+			ctrl.br_addmux_sel = 1;
 		end
 	
 		op_jmp: begin
@@ -161,6 +162,20 @@ begin
 			ctrl.mem_read = 1;
 		end
 
+		op_ldi: begin
+			ctrl.load_regfile = 1;
+			ctrl.regfilemux_sel = 3'b001;
+			ctrl.alumux_sel = 2'b01;
+			ctrl.mem_read = 1;
+			ctrl.load_cc = 1;
+		end
+		
+		op_sti: begin
+			ctrl.alumux_sel = 2'b01;
+		//	ctrl.storemux_sel = 1;
+			ctrl.storemux_sel_two = 1;
+		end
+		
 		default: begin
 			ctrl = 0;
 		end

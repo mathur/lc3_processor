@@ -16,26 +16,25 @@ module mem_datapath (
     output logic [15:0] wdata_b,
 
     output lc3b_word regfilemux_out, trap_mem,
-    output logic br_en, jmp_jsr_en, trap_en, b11, stall
+    output logic br_en, jmp_jsr_en, trap_en, b11, 
+	 output logic stall
 );
 
-lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out;
+lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
 logic [7:0] ldbmux_out;
 lc3b_nzp gencc_out, cc_out;
-
-logic br_en_internal;
+logic a,b,c,d;
+logic br_en_internal, i_sig, ireg;
+logic [2:0] internal_marmux_sel, internal_mdrmux_sel;
+assign    i_sig = (ctrl.opcode == op_ldi || ctrl.opcode == op_sti);
+assign	 a = ((read_b|| write_b) && (~resp_b));
+assign	 b = (~ireg && i_sig);
+assign	 c = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
+assign	 d = read_b|| write_b;
+assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 
 always_comb
 begin
-    read_b = ctrl.mem_read;
-    write_b = ctrl.mem_write;
-    
-    if((read_b == 1'b1 || write_b == 1'b1) && (resp_b == 1'b0)) begin
-        stall = 1'b1;
-    end else begin
-        stall = 1'b0;
-    end
-
 	 if(br_en_internal && (ctrl.opcode == op_br)) begin
 	   br_en = 1'b1;
 	 end else begin
@@ -66,17 +65,44 @@ begin
     else begin
         wmask_b = ctrl.mem_byte_enable;
     end
+	 
+	 if(~ireg && (ctrl.opcode == op_ldi || ctrl.opcode == op_sti))
+		internal_marmux_sel = 3'b000;
+	 else if(ireg)
+		internal_marmux_sel = 3'b101;
+	 else
+		internal_marmux_sel = ctrl.marmux_sel;
+	 
+	 if(~ireg && (ctrl.opcode == op_sti)) begin
+		write_b = 0;
+		read_b = 1;
+	 end
+	 else if(ireg && (ctrl.opcode == op_sti)) begin
+		write_b = 1;
+		read_b = 0;
+	 end
+	 else begin
+		write_b = ctrl.mem_write;
+		read_b = ctrl.mem_read;
+	 end
+	
+	 if(~ireg && ctrl.opcode == op_sti)
+		internal_mdrmux_sel = 3'b000;
+	 else if(ireg && ctrl.opcode == op_sti)
+		internal_mdrmux_sel = 3'b011;
+	 else
+		internal_mdrmux_sel = ctrl.mdrmux_sel;
 end
 
 mux8 marmux
 (
-    .sel(ctrl.marmux_sel),
+    .sel(internal_marmux_sel),
     .a(alu_out),
     .b(pc_out),
     .c(br_add_out),
     .d(rdata_b),
     .e(trap_zext_out),
-    .f(16'b0),
+    .f(indirect_addr),
     .g(16'b0),
     .h(16'b0),
     .i(address_b)
@@ -92,11 +118,11 @@ mux2 #(.width(16)) stbmux
 
 mux8 mdrmux
 (
-    .sel(ctrl.mdrmux_sel),
+    .sel(internal_mdrmux_sel),
     .a(alu_out),
     .b(rdata_b),
     .c(sr1_out << 8),
-	.d(sr2_out),
+	 .d(sr2_out),
     .e(stbmux_out),
     .f(16'b0),
     .g(16'b0),
@@ -177,5 +203,23 @@ mux8 regfilemux
     .h(16'b0),
     .i(regfilemux_out)
 );
+
+
+register #(.width(1)) indirect_reg
+(
+    .clk(clk),
+    .load(resp_b),
+    .in(~ireg && i_sig),
+    .out(ireg)
+);
+
+register #(.width(16)) indirect_addr_reg
+(
+    .clk(clk),
+    .load(resp_b && i_sig),
+    .in(rdata_b),
+    .out(indirect_addr)
+);
+
 
 endmodule : mem_datapath

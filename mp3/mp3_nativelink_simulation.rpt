@@ -9,7 +9,7 @@ Quartus root          :  /software/altera/13.1/quartus/linux/
 Quartus sim root      :  /software/altera/13.1/quartus/eda/sim_lib
 Simulation Tool       :  modelsim-altera
 Simulation Language   :  verilog
-Simulation Mode       :  GUI
+Simulation Mode       :  Command Line
 Sim Output File       :  
 Sim SDF file          :  
 Sim dir               :  simulation/modelsim
@@ -19,4 +19,398 @@ Sim dir               :  simulation/modelsim
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script /software/altera/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
 Warning: File mp3_run_msim_rtl_verilog.do already exists - backing up current file as mp3_run_msim_rtl_verilog.do.bak11
-Info: Spawning ModelSim-Altera Simulation software 
+Probing transcript
+ModelSim-Altera Info: # do mp3_run_msim_rtl_verilog.do 
+ModelSim-Altera Info: # if {[file exists rtl_work]} {
+ModelSim-Altera Info: # 	vdel -lib rtl_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib rtl_work
+ModelSim-Altera Info: # vmap work rtl_work
+ModelSim-Altera Info: # Copying /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/lc3b_types.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package lc3b_types
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	--none--
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/plus2.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module plus2
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	plus2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/register.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module register
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	register
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux2.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux2
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux2
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/benable.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module benable
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	benable
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/badder.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module badder
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	badder
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux4.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux4
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux4
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux8.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mux8
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mux8
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/shiftunit.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module shiftunit
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	shiftunit
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_set.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_set_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_set
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_set
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_control.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_control_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_control
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_control
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_block.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_block_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache_block
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache_block
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cache_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cache
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cache
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/arbiter.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package arbiter_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module arbiter
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	arbiter
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/control_rom.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package control_rom_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module control_rom
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	control_rom
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/buffer.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package buffer_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module buffer
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	buffer
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mem_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module mem_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mem_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/if_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package if_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module if_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	if_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/id_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package id_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module id_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	id_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/ex_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package ex_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module ex_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	ex_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/byte_insert.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package byte_insert_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module byte_insert
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	byte_insert
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/lru.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package lru_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module lru
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	lru
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cpu_datapath_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cpu_datapath
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cpu_datapath
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/adj.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package adj_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module adj
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	adj
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/alu.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package alu_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module alu
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	alu
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/gencc.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package gencc_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module gencc
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	gencc
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/ir.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package ir_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module ir
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	ir
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/regfile.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package regfile_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module regfile
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	regfile
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/udj.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package udj_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module udj
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	udj
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/adjns.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package adjns_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module adjns
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	adjns
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/udjns.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package udjns_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module udjns
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	udjns
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cpu.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package cpu_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module cpu
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	cpu
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mp3.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling package mp3_sv_unit
+ModelSim-Altera Info: # -- Importing package lc3b_types
+ModelSim-Altera Info: # -- Compiling module mp3
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mp3
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mp3_tb.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module mp3_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	mp3_tb
+ModelSim-Altera Info: # vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/physical_memory.sv}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Compiling module physical_memory
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	physical_memory
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp3_tb
+ModelSim-Altera Info: # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp3_tb 
+ModelSim-Altera Info: # Loading sv_std.std
+ModelSim-Altera Info: # Loading work.mp3_tb
+ModelSim-Altera Info: # Loading work.lc3b_types
+ModelSim-Altera Info: # Loading work.mp3_sv_unit
+ModelSim-Altera Info: # Loading work.mp3
+ModelSim-Altera Info: # Loading work.cpu_sv_unit
+ModelSim-Altera Info: # Loading work.cpu
+ModelSim-Altera Info: # Loading work.cpu_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.cpu_datapath
+ModelSim-Altera Info: # Loading work.if_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.if_datapath
+ModelSim-Altera Info: # Loading work.ir_sv_unit
+ModelSim-Altera Info: # Loading work.ir
+ModelSim-Altera Info: # Loading work.mux8
+ModelSim-Altera Info: # Loading work.mux4
+ModelSim-Altera Info: # Loading work.mux2
+ModelSim-Altera Info: # Loading work.register
+ModelSim-Altera Info: # Loading work.plus2
+ModelSim-Altera Info: # Loading work.buffer_sv_unit
+ModelSim-Altera Info: # Loading work.buffer
+ModelSim-Altera Info: # Loading work.id_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.id_datapath
+ModelSim-Altera Info: # Loading work.regfile_sv_unit
+ModelSim-Altera Info: # Loading work.regfile
+ModelSim-Altera Info: # Loading work.control_rom_sv_unit
+ModelSim-Altera Info: # Loading work.control_rom
+ModelSim-Altera Info: # Loading work.ex_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.ex_datapath
+ModelSim-Altera Info: # Loading work.badder
+ModelSim-Altera Info: # Loading work.alu_sv_unit
+ModelSim-Altera Info: # Loading work.alu
+ModelSim-Altera Info: # Loading work.adjns_sv_unit
+ModelSim-Altera Info: # Loading work.adjns
+ModelSim-Altera Info: # Loading work.adj_sv_unit
+ModelSim-Altera Info: # Loading work.adj
+ModelSim-Altera Info: # Loading work.mem_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.mem_datapath
+ModelSim-Altera Info: # Loading work.gencc_sv_unit
+ModelSim-Altera Info: # Loading work.gencc
+ModelSim-Altera Info: # Loading work.shiftunit
+ModelSim-Altera Info: # Loading work.udjns_sv_unit
+ModelSim-Altera Info: # Loading work.udjns
+ModelSim-Altera Info: # Loading work.udj_sv_unit
+ModelSim-Altera Info: # Loading work.udj
+ModelSim-Altera Info: # Loading work.benable
+ModelSim-Altera Info: # Loading work.cache_sv_unit
+ModelSim-Altera Info: # Loading work.cache
+ModelSim-Altera Info: # Loading work.cache_datapath_sv_unit
+ModelSim-Altera Info: # Loading work.cache_datapath
+ModelSim-Altera Info: # Loading work.byte_insert_sv_unit
+ModelSim-Altera Info: # Loading work.byte_insert
+ModelSim-Altera Info: # Loading work.cache_block_sv_unit
+ModelSim-Altera Info: # Loading work.cache_block
+ModelSim-Altera Info: # Loading work.cache_set_sv_unit
+ModelSim-Altera Info: # Loading work.cache_set
+ModelSim-Altera Info: # Loading work.lru_sv_unit
+ModelSim-Altera Info: # Loading work.lru
+ModelSim-Altera Info: # Loading work.cache_control_sv_unit
+ModelSim-Altera Info: # Loading work.cache_control
+ModelSim-Altera Info: # Loading work.arbiter_sv_unit
+ModelSim-Altera Info: # Loading work.arbiter
+ModelSim-Altera Info: # Loading work.physical_memory
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Too few port connections. Expected 30, found 12.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'br_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'alu_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'pc_br_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'mar_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'mdr_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'src1_data_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'src2_data_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'dest_data_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'ctrl_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'ctrl_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'alu_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'pc_br_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'mar_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'mdr_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'src1_data_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'src2_data_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'dest_data_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(96): [TFMPC] - Missing connection for port 'br_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Too few port connections. Expected 30, found 18.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'br_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'alu_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'pc_br_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'mar_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'mdr_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'dest_data_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'alu_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'pc_br_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'mar_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'mdr_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'dest_data_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(145): [TFMPC] - Missing connection for port 'br_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Too few port connections. Expected 30, found 22.
+ModelSim-Altera Info: #         Region: /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'br_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'mar_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'mdr_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'dest_data_in'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'mar_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'mdr_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'dest_data_out'.
+ModelSim-Altera Warning: # ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(188): [TFMPC] - Missing connection for port 'br_out'.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: #add wave *
+ModelSim-Altera Info: #view structure
+ModelSim-Altera Info: #view signals
+ModelSim-Altera Info: # run 200 ns
+ModelSim-Altera Info: # quit -f
+Info: NativeLink simulation flow was successful
