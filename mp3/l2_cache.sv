@@ -26,7 +26,7 @@ logic set_two_valid, set_one_dirty, set_two_dirty, cache_in_mux_sel, hit, write_
 logic insert_mux_sel, pmem_w_mux_sel;
 lc3b_cache_tag set_one_tag, set_two_tag;
 
-cache_datapath cdp(
+l2_cache_datapath cdp(
     .clk(clk),
     .mem_rdata(mem_rdata),
     .mem_address(mem_address),
@@ -53,7 +53,7 @@ cache_datapath cdp(
     .set_two_tag(set_two_tag)
 );
 
-cache_control ccl(
+l2_cache_control ccl(
     .clk(clk),
     .mem_resp(mem_resp),
     .mem_read(mem_read),

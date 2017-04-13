@@ -5,8 +5,8 @@ module mp3 (
 
     input pmem_resp,
     input lc3b_pmem_line pmem_rdata,
-    output logic  pmem_read,
-    output logic  pmem_write,
+    output logic pmem_read,
+    output logic pmem_write,
     output lc3b_pmem_addr pmem_address,
     output lc3b_pmem_line pmem_wdata
 );
