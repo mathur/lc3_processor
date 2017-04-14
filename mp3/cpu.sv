@@ -19,7 +19,10 @@ module cpu
     output write_b,
     output [1:0] wmask_b,
     output [15:0] address_b,
-    output [15:0] wdata_b
+    output [15:0] wdata_b,
+
+    // counters
+    output lc3b_word br_count, br_mispredict_count
 );
 
 cpu_datapath cpu_datapath
@@ -42,7 +45,10 @@ cpu_datapath cpu_datapath
     .address_b,
     .wdata_b,
     .resp_b,
-    .rdata_b
+    .rdata_b,
+
+    .br_count,
+    .br_mispredict_count
 );
 
 endmodule : cpu

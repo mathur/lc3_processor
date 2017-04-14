@@ -20,7 +20,10 @@ module cpu_datapath
     output write_b,
     output [1:0] wmask_b,
     output [15:0] address_b,
-    output [15:0] wdata_b
+    output [15:0] wdata_b,
+
+    // counters
+    output lc3b_word br_count, br_mispredict_count
 );
 
 lc3b_word if_pc, if_instruction;
@@ -205,6 +208,8 @@ mem_datapath mem
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
     .stall(stall_mem),
+    .br_count(br_count),
+    .br_mispredict_count(br_mispredict_count),
 
     /* Port B */
     .read_b(read_b),

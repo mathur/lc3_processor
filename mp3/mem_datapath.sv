@@ -17,7 +17,10 @@ module mem_datapath (
 
     output lc3b_word regfilemux_out, trap_mem,
     output logic br_en, jmp_jsr_en, trap_en, b11,
-	output logic stall
+	output logic stall,
+
+    // counters
+    output lc3b_word br_count, br_mispredict_count
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
@@ -34,6 +37,8 @@ assign	 d = read_b|| write_b;
 assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 
 lc3b_word branch_counter, branch_mispredict_counter;
+assign br_count = branch_counter;
+assign br_mispredict_count = branch_mispredict_counter;
 
 initial
 begin

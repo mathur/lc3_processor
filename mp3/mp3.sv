@@ -41,7 +41,13 @@ logic pmem_resp_b, pmem_read_b, pmem_write_b;
 lc3b_pmem_line pmem_rdata_b, pmem_wdata_b;
 lc3b_pmem_addr pmem_address_b;
 
-/* Port B */
+/* mem_mapped_io */
+logic memio_read_pass, memio_resp_pass;
+lc3b_word memio_address_pass, memio_rdata_pass;
+
+lc3b_word br_count, br_mispredict_count;
+
+/* l2 */
 logic l2_resp, l2_read, l2_write;
 lc3b_pmem_line l2_rdata, l2_wdata;
 lc3b_pmem_addr l2_address;
@@ -65,7 +71,27 @@ cpu mcpu (
     .address_b,
     .wdata_b,
     .resp_b,
-    .rdata_b
+    .rdata_b,
+
+    // counters
+    .br_count,
+    .br_mispredict_count
+);
+
+mem_io mem_mapped_io (
+    .clk(clk),
+    .read(read_b),
+    .address(address_b),
+    .rdata(rdata_b),
+    .resp(resp_b),
+    .read_pass(memio_read_pass),
+    .address_pass(memio_address_pass),
+    .rdata_pass(memio_rdata_pass),
+    .resp_pass(memio_resp_pass),
+
+    //counters
+    .br_count(br_count),
+    .br_mispredict_count(br_mispredict_count)
 );
 
 cache icache (
@@ -93,12 +119,12 @@ cache dcache (
     .clk(clk),
 
     /* Memory signals from cpu */
-    .mem_resp(resp_b),
-    .mem_rdata(rdata_b),
-    .mem_read(read_b),
+    .mem_resp(memio_resp_pass),
+    .mem_rdata(memio_rdata_pass),
+    .mem_read(memio_read_pass),
     .mem_write(write_b),
     .mem_byte_enable(wmask_b),
-    .mem_address(address_b),
+    .mem_address(memio_address_pass),
     .mem_wdata(wdata_b),
 
     /* Memory signals from main memory */
