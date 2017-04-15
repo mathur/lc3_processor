@@ -19,7 +19,8 @@ module l2_cache (
 
     output lc3b_pmem_addr pmem_address,
     output lc3b_pmem_line pmem_wdata,
-    output lc3b_word hit_count, miss_count
+    output lc3b_word hit_count, miss_count,
+    input logic hit_count_reset, miss_count_reset
 );
 
 logic load_set_one, load_set_two, set_one_hit, set_two_hit, load_lru, current_lru, set_one_valid;
@@ -83,7 +84,9 @@ l2_cache_control ccl(
     .set_one_tag(set_one_tag),
     .set_two_tag(set_two_tag),
     .hit_count(hit_count),
-    .miss_count(miss_count)
+    .miss_count(miss_count),
+    .hit_count_reset(hit_count_reset),
+    .miss_count_reset(miss_count_reset)
 );
 
 endmodule : l2_cache

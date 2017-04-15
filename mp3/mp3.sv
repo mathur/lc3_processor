@@ -47,6 +47,7 @@ lc3b_word memio_address_pass, memio_rdata_pass;
 
 lc3b_word br_count, br_mispredict_count;
 lc3b_word icache_hit_count, icache_miss_count, dcache_hit_count, dcache_miss_count, l2_hit_count, l2_miss_count;
+logic br_count_reset, br_mispredict_count_reset, icache_hit_count_reset, icache_miss_count_reset, dcache_hit_count_reset, dcache_miss_count_reset, l2_hit_count_reset, l2_miss_count_reset;
 
 /* l2 */
 logic l2_resp, l2_read, l2_write;
@@ -76,7 +77,9 @@ cpu mcpu (
 
     // counters
     .br_count,
-    .br_mispredict_count
+    .br_mispredict_count,
+    .br_count_reset,
+    .br_mispredict_count_reset
 );
 
 mem_io mem_mapped_io (
@@ -100,7 +103,17 @@ mem_io mem_mapped_io (
     .dcache_hit_count(dcache_hit_count),
     .dcache_miss_count(dcache_miss_count),
     .l2_hit_count(l2_hit_count),
-    .l2_miss_count(l2_miss_count)
+    .l2_miss_count(l2_miss_count),
+
+    // counter reset
+    .br_count_reset(br_count_reset),
+    .br_mispredict_count_reset(br_mispredict_count_reset),
+    .icache_hit_count_reset(icache_hit_count_reset),
+    .icache_miss_count_reset(icache_miss_count_reset),
+    .dcache_hit_count_reset(dcache_hit_count_reset),
+    .dcache_miss_count_reset(dcache_miss_count_reset),
+    .l2_hit_count_reset(l2_hit_count_reset),
+    .l2_miss_count_reset(l2_miss_count_reset)
 );
 
 cache icache (
@@ -124,7 +137,9 @@ cache icache (
     .pmem_wdata(pmem_wdata_a),
 
     .hit_count(icache_hit_count),
-    .miss_count(icache_miss_count)
+    .miss_count(icache_miss_count),
+    .hit_count_reset(icache_hit_count_reset),
+    .miss_count_reset(icache_miss_count_reset)
 );
 
 cache dcache (
@@ -148,7 +163,9 @@ cache dcache (
     .pmem_wdata(pmem_wdata_b),
 
     .hit_count(dcache_hit_count),
-    .miss_count(dcache_miss_count)
+    .miss_count(dcache_miss_count),
+    .hit_count_reset(dcache_hit_count_reset),
+    .miss_count_reset(dcache_miss_count_reset)
 );
 
 arbiter cache_arbiter (
@@ -199,7 +216,9 @@ l2_cache l2cache (
     .pmem_wdata(pmem_wdata),
 
     .hit_count(l2_hit_count),
-    .miss_count(l2_miss_count)
+    .miss_count(l2_miss_count),
+    .hit_count_reset(l2_hit_count_reset),
+    .miss_count_reset(l2_miss_count_reset)
 );
 
 endmodule: mp3

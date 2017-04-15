@@ -43,7 +43,8 @@ module cache_control (
 	 input lc3b_cache_tag set_two_tag,
 
      // counter
-     output lc3b_word hit_count, miss_count
+     output lc3b_word hit_count, miss_count,
+     input logic hit_count_reset, miss_count_reset
 );
 
 enum int unsigned {
@@ -65,13 +66,17 @@ end
 
 always_ff @(posedge clk)
 begin: counter_update
-    if(counter_hit_sig == 1'b1) begin
+    if(hit_count_reset == 1'b1) begin
+        hit_count = 16'b0;
+    end else if(counter_hit_sig == 1'b1) begin
         hit_count = hit_count + 1;
     end else begin
         hit_count = hit_count;
     end
 
-    if(counter_miss_sig == 1'b1) begin
+    if(miss_count_reset == 1'b1) begin
+        miss_count = 16'b0;
+    end else if(counter_miss_sig == 1'b1) begin
         miss_count = miss_count + 1;
     end else begin
         miss_count = miss_count;
