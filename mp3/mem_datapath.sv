@@ -29,7 +29,7 @@ lc3b_nzp gencc_out, cc_out;
 logic a,b,c,d;
 logic br_en_internal, i_sig, ireg;
 logic [2:0] internal_marmux_sel, internal_mdrmux_sel;
-assign    i_sig = (ctrl.opcode == op_ldi || ctrl.opcode == op_sti);
+assign   i_sig = (ctrl.opcode == op_ldi || ctrl.opcode == op_sti);
 assign	 a = ((read_b|| write_b) && (~resp_b));
 assign	 b = (~ireg && i_sig);
 assign	 c = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));

@@ -46,6 +46,7 @@ logic memio_read_pass, memio_resp_pass;
 lc3b_word memio_address_pass, memio_rdata_pass;
 
 lc3b_word br_count, br_mispredict_count;
+lc3b_word icache_hit_count, icache_miss_count, dcache_hit_count, dcache_miss_count, l2_hit_count, l2_miss_count;
 
 /* l2 */
 logic l2_resp, l2_read, l2_write;
@@ -91,7 +92,13 @@ mem_io mem_mapped_io (
 
     //counters
     .br_count(br_count),
-    .br_mispredict_count(br_mispredict_count)
+    .br_mispredict_count(br_mispredict_count),
+    .icache_hit_count(icache_hit_count),
+    .icache_miss_count(icache_miss_count),
+    .dcache_hit_count(dcache_hit_count),
+    .dcache_miss_count(dcache_miss_count),
+    .l2_hit_count(l2_hit_count),
+    .l2_miss_count(l2_miss_count)
 );
 
 cache icache (
@@ -112,7 +119,10 @@ cache icache (
     .pmem_read(pmem_read_a),
     .pmem_write(pmem_write_a),
     .pmem_address(pmem_address_a),
-    .pmem_wdata(pmem_wdata_a)
+    .pmem_wdata(pmem_wdata_a),
+
+    .hit_count(icache_hit_count),
+    .miss_count(icache_miss_count)
 );
 
 cache dcache (
@@ -133,7 +143,10 @@ cache dcache (
     .pmem_read(pmem_read_b),
     .pmem_write(pmem_write_b),
     .pmem_address(pmem_address_b),
-    .pmem_wdata(pmem_wdata_b)
+    .pmem_wdata(pmem_wdata_b),
+
+    .hit_count(dcache_hit_count),
+    .miss_count(dcache_miss_count)
 );
 
 arbiter cache_arbiter (
@@ -181,7 +194,10 @@ l2_cache l2cache (
     .pmem_read(pmem_read),
     .pmem_write(pmem_write),
     .pmem_address(pmem_address),
-    .pmem_wdata(pmem_wdata)
+    .pmem_wdata(pmem_wdata),
+
+    .hit_count(l2_hit_count),
+    .miss_count(l2_miss_count)
 );
 
 endmodule: mp3
