@@ -42,7 +42,7 @@ lc3b_pmem_line pmem_rdata_b, pmem_wdata_b;
 lc3b_pmem_addr pmem_address_b;
 
 /* mem_mapped_io */
-logic memio_read_pass, memio_resp_pass;
+logic memio_read_pass, memio_write_pass, memio_resp_pass;
 lc3b_word memio_address_pass, memio_rdata_pass;
 
 lc3b_word br_count, br_mispredict_count;
@@ -82,10 +82,12 @@ cpu mcpu (
 mem_io mem_mapped_io (
     .clk(clk),
     .read(read_b),
+    .write(write_b),
     .address(address_b),
     .rdata(rdata_b),
     .resp(resp_b),
     .read_pass(memio_read_pass),
+    .write_pass(memio_write_pass),
     .address_pass(memio_address_pass),
     .rdata_pass(memio_rdata_pass),
     .resp_pass(memio_resp_pass),
@@ -132,7 +134,7 @@ cache dcache (
     .mem_resp(memio_resp_pass),
     .mem_rdata(memio_rdata_pass),
     .mem_read(memio_read_pass),
-    .mem_write(write_b),
+    .mem_write(memio_write_pass),
     .mem_byte_enable(wmask_b),
     .mem_address(memio_address_pass),
     .mem_wdata(wdata_b),
