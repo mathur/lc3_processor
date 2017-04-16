@@ -18,11 +18,14 @@ module mem_io
 
     // branch counters
     input lc3b_word br_count, br_mispredict_count,
-    input lc3b_word icache_hit_count, icache_miss_count, dcache_hit_count,
-    input lc3b_word dcache_miss_count, l2_hit_count, l2_miss_count,
+    input lc3b_word icache_hit_count, icache_miss_count,
+    input lc3b_word dcache_hit_count, dcache_miss_count,
+    input lc3b_word l2_hit_count, l2_miss_count,
+    input lc3b_word if_stall_count, mem_stall_count,
     output logic br_count_reset, br_mispredict_count_reset, icache_hit_count_reset,
     output logic icache_miss_count_reset, dcache_hit_count_reset, dcache_miss_count_reset,
-    output logic l2_hit_count_reset, l2_miss_count_reset
+    output logic l2_hit_count_reset, l2_miss_count_reset,
+    output logic if_stall_count_reset, mem_stall_count_reset
 );
 
 always_comb
@@ -43,9 +46,35 @@ begin : outputs
     dcache_miss_count_reset = 1'b0;
     l2_hit_count_reset = 1'b0;
     l2_miss_count_reset = 1'b0;
+    if_stall_count_reset = 1'b0;
+    mem_stall_count_reset = 1'b0;
 
     /* Actions for each state */
     case (address)
+        4'hFFF6: begin
+            if(read == 1'b1) begin
+                read_pass = 1'b0;
+                rdata = if_stall_count;
+                resp = 1'b1;
+            end else if (write == 1'b1) begin
+                write_pass = 1'b0;
+                if_stall_count_reset = 1'b1;
+                resp = 1'b1;
+            end
+        end
+
+        4'hFFF7: begin
+            if(read == 1'b1) begin
+                read_pass = 1'b0;
+                rdata = mem_stall_count;
+                resp = 1'b1;
+            end else if (write == 1'b1) begin
+                write_pass = 1'b0;
+                mem_stall_count_reset = 1'b1;
+                resp = 1'b1;
+            end
+        end
+
         4'hFFF8: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
@@ -54,6 +83,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 icache_hit_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
 
@@ -65,6 +95,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 icache_miss_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
 
@@ -76,6 +107,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 dcache_hit_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
 
@@ -87,6 +119,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 dcache_miss_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
 
@@ -98,6 +131,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 l2_hit_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
 
@@ -109,6 +143,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 l2_miss_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
 
@@ -120,6 +155,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 br_count_reset = 1'b0;
+                resp = 1'b1;
             end
         end
 
@@ -131,6 +167,7 @@ begin : outputs
             end else if (write == 1'b1) begin
                 write_pass = 1'b0;
                 br_mispredict_count_reset = 1'b1;
+                resp = 1'b1;
             end
         end
         default: /* do nothing */;

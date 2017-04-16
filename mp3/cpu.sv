@@ -22,7 +22,10 @@ module cpu
     output [15:0] wdata_b,
 
     // counters
-    output lc3b_word br_count, br_mispredict_count
+    input logic br_count_reset, br_mispredict_count_reset,
+    input logic if_stall_count_reset, mem_stall_count_reset,
+    output lc3b_word br_count, br_mispredict_count,
+    output lc3b_word if_stall_count, mem_stall_count
 );
 
 cpu_datapath cpu_datapath
@@ -48,7 +51,13 @@ cpu_datapath cpu_datapath
     .rdata_b,
 
     .br_count,
-    .br_mispredict_count
+    .br_mispredict_count,
+    .if_stall_count,
+    .mem_stall_count,
+    .br_count_reset,
+    .br_mispredict_count_reset,
+    .if_stall_count_reset,
+    .mem_stall_count_reset
 );
 
 endmodule : cpu

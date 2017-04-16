@@ -20,7 +20,10 @@ module mem_datapath (
 	output logic stall,
 
     // counters
-    output lc3b_word br_count, br_mispredict_count
+    input logic br_count_reset, br_mispredict_count_reset,
+    input logic mem_stall_count_reset,
+    output lc3b_word br_count, br_mispredict_count,
+    output lc3b_word mem_stall_count
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
@@ -36,28 +39,42 @@ assign	 c = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 assign	 d = read_b|| write_b;
 assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 
-lc3b_word branch_counter, branch_mispredict_counter;
+lc3b_word branch_counter, branch_mispredict_counter, mem_stall_counter;
 assign br_count = branch_counter;
 assign br_mispredict_count = branch_mispredict_counter;
+assign mem_stall_count = mem_stall_counter;
 
 initial
 begin
     branch_counter = 16'b0;
     branch_mispredict_counter = 16'b0;
+    mem_stall_counter = 16'b0;
 end
 
 always_ff @(posedge clk)
 begin
-    if(ctrl.opcode == op_br) begin
+    if(br_count_reset == 1'b1) begin
+        branch_counter = 16'b0;
+    end else if(ctrl.opcode == op_br) begin
         branch_counter = branch_counter + 1;
     end else begin
         branch_counter = branch_counter;
     end
 
-    if(br_en == 1'b1) begin
+    if(br_mispredict_count_reset == 1'b1) begin
+        branch_mispredict_counter = 16'b0;
+    end else if(br_en == 1'b1) begin
         branch_mispredict_counter = branch_mispredict_counter + 1;
     end else begin
         branch_mispredict_counter = branch_mispredict_counter;
+    end
+
+    if(mem_stall_count_reset == 1'b1) begin
+        mem_stall_counter = 16'b0;
+    end else if(stall == 1'b1) begin
+        mem_stall_counter = mem_stall_counter + 1;
+    end else begin
+        mem_stall_counter = mem_stall_counter;
     end
 end
 

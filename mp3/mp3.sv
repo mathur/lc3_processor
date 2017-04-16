@@ -46,8 +46,8 @@ logic memio_read_pass, memio_write_pass, memio_resp_pass;
 lc3b_word memio_address_pass, memio_rdata_pass;
 
 lc3b_word br_count, br_mispredict_count;
-lc3b_word icache_hit_count, icache_miss_count, dcache_hit_count, dcache_miss_count, l2_hit_count, l2_miss_count;
-logic br_count_reset, br_mispredict_count_reset, icache_hit_count_reset, icache_miss_count_reset, dcache_hit_count_reset, dcache_miss_count_reset, l2_hit_count_reset, l2_miss_count_reset;
+lc3b_word icache_hit_count, icache_miss_count, dcache_hit_count, dcache_miss_count, l2_hit_count, l2_miss_count, if_stall_count, mem_stall_count;
+logic br_count_reset, br_mispredict_count_reset, icache_hit_count_reset, icache_miss_count_reset, dcache_hit_count_reset, dcache_miss_count_reset, l2_hit_count_reset, l2_miss_count_reset, if_stall_count_reset, mem_stall_count_reset;
 
 /* l2 */
 logic l2_resp, l2_read, l2_write;
@@ -58,28 +58,32 @@ cpu mcpu (
 	.clk(clk),
 
     /* Port A */
-    .read_a,
-    .write_a,
-    .wmask_a,
-    .address_a,
-    .wdata_a,
-    .resp_a,
-    .rdata_a,
+    .read_a(read_a),
+    .write_a(write_a),
+    .wmask_a(wmask_a),
+    .address_a(address_a),
+    .wdata_a(wdata_a),
+    .resp_a(resp_a),
+    .rdata_a(rdata_a),
 
     /* Port B */
-    .read_b,
-    .write_b,
-    .wmask_b,
-    .address_b,
-    .wdata_b,
-    .resp_b,
-    .rdata_b,
+    .read_b(read_b),
+    .write_b(write_b),
+    .wmask_b(wmask_b),
+    .address_b(address_b),
+    .wdata_b(wdata_b),
+    .resp_b(resp_b),
+    .rdata_b(rdata_b),
 
     // counters
-    .br_count,
-    .br_mispredict_count,
-    .br_count_reset,
-    .br_mispredict_count_reset
+    .br_count(br_count),
+    .br_mispredict_count(br_mispredict_count),
+    .if_stall_count(if_stall_count),
+    .mem_stall_count(mem_stall_count),
+    .br_count_reset(br_count_reset),
+    .br_mispredict_count_reset(br_mispredict_count_reset),
+    .if_stall_count_reset(if_stall_count_reset),
+    .mem_stall_count_reset(mem_stall_count_reset)
 );
 
 mem_io mem_mapped_io (
@@ -104,6 +108,8 @@ mem_io mem_mapped_io (
     .dcache_miss_count(dcache_miss_count),
     .l2_hit_count(l2_hit_count),
     .l2_miss_count(l2_miss_count),
+    .if_stall_count(if_stall_count),
+    .mem_stall_count(mem_stall_count),
 
     // counter reset
     .br_count_reset(br_count_reset),
@@ -113,7 +119,9 @@ mem_io mem_mapped_io (
     .dcache_hit_count_reset(dcache_hit_count_reset),
     .dcache_miss_count_reset(dcache_miss_count_reset),
     .l2_hit_count_reset(l2_hit_count_reset),
-    .l2_miss_count_reset(l2_miss_count_reset)
+    .l2_miss_count_reset(l2_miss_count_reset),
+    .if_stall_count_reset(if_stall_count_reset),
+    .mem_stall_count_reset(mem_stall_count_reset)
 );
 
 cache icache (

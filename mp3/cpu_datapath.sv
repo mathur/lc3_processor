@@ -23,7 +23,10 @@ module cpu_datapath
     output [15:0] wdata_b,
 
     // counters
-    output lc3b_word br_count, br_mispredict_count
+    input logic br_count_reset, br_mispredict_count_reset,
+    input logic if_stall_count_reset, mem_stall_count_reset,
+    output lc3b_word br_count, br_mispredict_count,
+    output lc3b_word if_stall_count, mem_stall_count
 );
 
 lc3b_word if_pc, if_instruction;
@@ -62,11 +65,11 @@ if_datapath if_data
     .clk(clk),
     .resp_a(resp_a),
     .rdata_a(rdata_a),
-	 .trap_mem(trap_mem),
+	.trap_mem(trap_mem),
     .br_en(mem_br_en),
-	 .jmp_jsr_en(mem_jmp_jsr_en),
-	 .trap_en(mem_trap_en),
-	 .b11(mem_b11),
+	.jmp_jsr_en(mem_jmp_jsr_en),
+	.trap_en(mem_trap_en),
+	.b11(mem_b11),
     .pc_br_in(ex_mem_pc_br),
     .sr1_data_in(ex_mem_src1_data),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
@@ -78,7 +81,10 @@ if_datapath if_data
     .dest(if_dest),
     .read_a(read_a),
     .address_a(address_a),
-	 .stall(stall_mem)
+	.stall(stall_mem),
+
+    .if_stall_count(if_stall_count),
+    .if_stall_count_reset(if_stall_count_reset)
 );
 
 buffer if_id_buf
@@ -198,18 +204,22 @@ mem_datapath mem
     .pc_out(ex_mem_pc),
     .br_add_out(ex_mem_pc_br),
     .sr1_out(ex_mem_src1_data),
-	 .sr2_out(ex_mem_src2_data),
+	.sr2_out(ex_mem_src2_data),
     .instruction(ex_mem_instruction),
     .br_en(mem_br_en),
-	 .jmp_jsr_en(mem_jmp_jsr_en),
-	 .b11(mem_b11),
-	 .trap_en(mem_trap_en),
-	 .trap_mem(trap_mem),
+	.jmp_jsr_en(mem_jmp_jsr_en),
+	.b11(mem_b11),
+	.trap_en(mem_trap_en),
+	.trap_mem(trap_mem),
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
     .stall(stall_mem),
     .br_count(br_count),
     .br_mispredict_count(br_mispredict_count),
+    .mem_stall_count(mem_stall_count),
+    .br_count_reset(br_count_reset),
+    .br_mispredict_count_reset(br_mispredict_count_reset),
+    .mem_stall_count_reset(mem_stall_count_reset),
 
     /* Port B */
     .read_b(read_b),
