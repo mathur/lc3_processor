@@ -55,7 +55,6 @@ enum int unsigned {
     write_s
 } state, next_state;
 
-lc3b_word hit_count, miss_count;
 logic counter_hit_sig, counter_miss_sig;
 
 initial

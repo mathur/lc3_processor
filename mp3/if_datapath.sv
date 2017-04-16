@@ -56,25 +56,23 @@ begin
 
     if(br_en || trap_en || jmp_jsr_en) begin
         pc_load = 1'b1;
-	 end else if(stall) begin
+	end else if(stall) begin
 		pc_load = 1'b0;
-	 end else begin
+	end else begin
 		pc_load = resp_a;
-	 end
+	end
 
     if(br_en) begin
 	   pcmux_sel_internal = 3'b001;
-	end
-	else if(trap_en) begin
+	end else if(trap_en) begin
 		pcmux_sel_internal = 3'b100;
-	end
-	else if (jmp_jsr_en) begin
-		if(b11)
+	end else if (jmp_jsr_en) begin
+		if(b11) begin
 			pcmux_sel_internal = 3'b001;	//JMP/RET always have a b11 of 0, so defaults to loading to registers
-		else
+		end else begin
 			pcmux_sel_internal = 3'b010;
-	end
-	else begin
+        end
+	end else begin
 		pcmux_sel_internal = pcmux_sel;
 	end
 end
