@@ -23,14 +23,9 @@ module mem_datapath (
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
 logic [7:0] ldbmux_out;
 lc3b_nzp gencc_out, cc_out;
-logic a,b,c,d;
 logic br_en_internal, i_sig, ireg;
 logic [2:0] internal_marmux_sel, internal_mdrmux_sel;
 assign    i_sig = (ctrl.opcode == op_ldi || ctrl.opcode == op_sti);
-assign	 a = ((read_b|| write_b) && (~resp_b));
-assign	 b = (~ireg && i_sig);
-assign	 c = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
-assign	 d = read_b|| write_b;
 assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 
 always_comb

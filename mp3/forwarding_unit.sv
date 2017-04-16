@@ -8,8 +8,8 @@ module forwarding_unit
 	output logic [1:0] forward_a, forward_b
 );
 
-logic forward_a_int;
-logic forward_b_int;
+logic [1:0] forward_a_int;
+logic [1:0] forward_b_int;
 
 always_comb
 begin
@@ -19,20 +19,24 @@ begin
 
 	// EX Hazard
 	if (ex_mem_regfile_write && (ex_mem_r_dest != 0) && (ex_mem_r_dest == id_ex_r_one)) begin 
-		forward_a_int = 2'b10;
+		forward_a_int = 2'b01;
 	end
 	if (ex_mem_regfile_write && (ex_mem_r_dest != 0) && (ex_mem_r_dest == id_ex_r_two)) begin 
-		forward_b_int = 2'b10;
+		forward_b_int = 2'b01;
 	end
 
 	// MEM Hazard
-	if (mem_wb_regfile_write && (mem_wb_r_dest != 0) && (mem_wb_r_dest == id_ex_r_one)) begin 
-		forward_a_int = 2'b01;
+	if (mem_wb_regfile_write && (mem_wb_r_dest != 0) && !(ex_mem_regfile_write
+            && (ex_mem_r_dest != 0) && (ex_mem_r_dest == id_ex_r_one)) && (mem_wb_r_dest == id_ex_r_one)) begin 
+		forward_a_int = 2'b10;
 	end
-	if (mem_wb_regfile_write && (mem_wb_r_dest != 0) && (mem_wb_r_dest == id_ex_r_two)) begin 
-		forward_b_int = 2'b01;
+	if (mem_wb_regfile_write && (mem_wb_r_dest != 0) && !(ex_mem_regfile_write
+            && (ex_mem_r_dest != 0) && (ex_mem_r_dest == id_ex_r_two)) && (mem_wb_r_dest == id_ex_r_two)) begin 
+		forward_b_int = 2'b10;
 	end
 end
 
 assign forward_a = forward_a_int;
 assign forward_b = forward_b_int;
+
+endmodule

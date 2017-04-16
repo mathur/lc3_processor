@@ -6,10 +6,10 @@ module ex_datapath (
     input lc3b_word ex_instruction_in,
     input lc3b_word ex_pc_in,
     input lc3b_control_word ex_ctrl_in,
-    output lc3b_word ex_alu_out, ex_br_out.
+    output lc3b_word ex_alu_out, ex_br_out,
 
     // Forwarding stuff
-    input logic alu_input_one_mux_sel, alu_input_two_mux_sel,
+    input logic [1:0] alu_input_one_mux_sel, alu_input_two_mux_sel,
     input lc3b_word mem_input,
     input lc3b_word wb_input
 );
@@ -50,7 +50,7 @@ mux3 #(.width(16)) alu_input_one_mux
     .sel(alu_input_one_mux_sel),
     .a(ex_src1_data_in),
     .b(mem_input),
-    .c(wb_input)
+    .c(wb_input),
     .f(alu_input_one_mux_out)
 );
 
@@ -59,7 +59,7 @@ mux3 #(.width(16)) alu_input_two_mux
     .sel(alu_input_two_mux_sel),
     .a(alumux_out),
     .b(mem_input),
-    .c(wb_input)
+    .c(wb_input),
     .f(alu_input_two_mux_out)
 );
 

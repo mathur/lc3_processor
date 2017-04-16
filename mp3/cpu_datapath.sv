@@ -159,7 +159,7 @@ ex_datapath ex
 
     //OUTPUTS: Alu, Branch adder
     .ex_alu_out(ex_alu_out),
-    .ex_br_out(ex_br_out)
+    .ex_br_out(ex_br_out),
 
     // FORWARDING
     .alu_input_one_mux_sel(forward_a_mux_sel), 
