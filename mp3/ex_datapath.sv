@@ -6,10 +6,19 @@ module ex_datapath (
     input lc3b_word ex_instruction_in,
     input lc3b_word ex_pc_in,
     input lc3b_control_word ex_ctrl_in,
-    output lc3b_word ex_alu_out, ex_br_out
+    output lc3b_word ex_alu_out, ex_br_out,
+
+    // Forwarding stuff
+    input logic [1:0] alu_input_one_mux_sel, alu_input_two_mux_sel,
+    input lc3b_word mem_input,
+    input lc3b_word wb_input
 );
 
 lc3b_word adj5_out, adj6_out, adj6ns_out, adj9_out, adj11_out, br_addmux_out, alumux_out;
+
+
+// Forwarding stuff
+lc3b_word alu_input_one_mux_out, alu_input_two_mux_out;
 
 mux2 br_add_mux
 (
@@ -36,11 +45,29 @@ mux4 alumux
     .f(alumux_out)
 );
 
+mux3 #(.width(16)) alu_input_one_mux
+(
+    .sel(alu_input_one_mux_sel),
+    .a(ex_src1_data_in),
+    .b(mem_input),
+    .c(wb_input),
+    .f(alu_input_one_mux_out)
+);
+
+mux3 #(.width(16)) alu_input_two_mux
+(
+    .sel(alu_input_two_mux_sel),
+    .a(alumux_out),
+    .b(mem_input),
+    .c(wb_input),
+    .f(alu_input_two_mux_out)
+);
+
 alu alu_unit
 (
     .alu_op(ex_ctrl_in.alu_op),
-    .a(ex_src1_data_in),
-    .b(alumux_out),
+    .a(alu_input_one_mux_out),
+    .b(alu_input_two_mux_out),
     .f(ex_alu_out)
 );
 

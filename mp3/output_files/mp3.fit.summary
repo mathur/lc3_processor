@@ -1,4 +1,4 @@
-Fitter Status : Successful - Tue Apr 11 16:27:06 2017
+Fitter Status : Successful - Sun Apr 16 17:46:06 2017
 Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
 Revision Name : mp3
 Top-level Entity Name : mp3
@@ -6,7 +6,7 @@ Family : Stratix III
 Device : EP3SE50F780C2
 Timing Models : Final
 Logic utilization : 13 %
-    Combinational ALUTs : 2,592 / 38,000 ( 7 % )
+    Combinational ALUTs : 2,520 / 38,000 ( 7 % )
     Memory ALUTs : 0 / 19,000 ( 0 % )
     Dedicated logic registers : 3,524 / 38,000 ( 9 % )
 Total registers : 3524

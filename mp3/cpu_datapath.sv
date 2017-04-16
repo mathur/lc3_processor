@@ -54,6 +54,8 @@ assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
 
+logic [1:0] forward_a_mux_sel, forward_b_mux_sel;
+
 if_datapath if_data
 (
     .clk(clk),
@@ -157,7 +159,26 @@ ex_datapath ex
 
     //OUTPUTS: Alu, Branch adder
     .ex_alu_out(ex_alu_out),
-    .ex_br_out(ex_br_out)
+    .ex_br_out(ex_br_out),
+
+    // FORWARDING
+    .alu_input_one_mux_sel(forward_a_mux_sel), 
+    .alu_input_two_mux_sel(forward_b_mux_sel),
+    .mem_input(ex_mem_alu),
+    .wb_input(mem_wb_dest_data)
+);
+
+
+forwarding_unit hot_box
+(
+    .id_ex_r_one(id_ex_src1), 
+    .id_ex_r_two(id_ex_src2), 
+    .ex_mem_r_dest(ex_mem_dest), 
+    .mem_wb_r_dest(mem_wb_dest),
+    .ex_mem_regfile_write(ex_mem_ctrl.load_regfile),
+    .mem_wb_regfile_write(mem_wb_ctrl.load_regfile),
+    .forward_a(forward_a_mux_sel), 
+    .forward_b(forward_b_mux_sel)
 );
 
 buffer ex_mem_buf
