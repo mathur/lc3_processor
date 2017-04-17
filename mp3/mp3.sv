@@ -5,8 +5,8 @@ module mp3 (
 
     input pmem_resp,
     input lc3b_pmem_line pmem_rdata,
-    output logic  pmem_read,
-    output logic  pmem_write,
+    output logic pmem_read,
+    output logic pmem_write,
     output lc3b_pmem_addr pmem_address,
     output lc3b_pmem_line pmem_wdata
 );
@@ -40,6 +40,11 @@ lc3b_pmem_addr pmem_address_a;
 logic pmem_resp_b, pmem_read_b, pmem_write_b;
 lc3b_pmem_line pmem_rdata_b, pmem_wdata_b;
 lc3b_pmem_addr pmem_address_b;
+
+/* Port B */
+logic l2_resp, l2_read, l2_write;
+lc3b_pmem_line l2_rdata, l2_wdata;
+lc3b_pmem_addr l2_address;
 
 cpu mcpu (
 	.clk(clk),
@@ -125,12 +130,32 @@ arbiter cache_arbiter (
     .pmem_rdata_b(pmem_rdata_b),
 
     /* Pmem */
+    .pmem_resp(l2_resp),
+    .pmem_rdata(l2_rdata),
+    .pmem_read(l2_read),
+    .pmem_write(l2_write),
+    .pmem_wdata(l2_wdata),
+    .pmem_address(l2_address)
+);
+
+l2_cache l2cache (
+    .clk(clk),
+
+    /* Memory signals from cpu */
+    .mem_resp(l2_resp),
+    .mem_rdata(l2_rdata),
+    .mem_read(l2_read),
+    .mem_write(l2_write),
+    .mem_address(l2_address),
+    .mem_wdata(l2_wdata),
+
+    /* Memory signals from main memory */
     .pmem_resp(pmem_resp),
     .pmem_rdata(pmem_rdata),
     .pmem_read(pmem_read),
     .pmem_write(pmem_write),
-    .pmem_wdata(pmem_wdata),
-    .pmem_address(pmem_address)
+    .pmem_address(pmem_address),
+    .pmem_wdata(pmem_wdata)
 );
 
 endmodule: mp3
