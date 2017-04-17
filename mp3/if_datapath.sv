@@ -15,6 +15,7 @@ module if_datapath (
 	 input lc3b_word sr1_data_in,
     input logic [2:0] pcmux_sel,
 	 input logic stall,
+	 input logic flush,
 
     // logic signals
     output lc3b_word pc_out, instruction,
@@ -60,7 +61,8 @@ end
 ir ir_unit (
     .clk(clk),
 	 .resp(resp_a),
-    .load(pc_load && resp_a && ~stall),
+    .load(pc_load && resp_a && ~stall && ~flush),
+	 .flush(flush),
     .in(rdata_a),
     .dest(dest),
     .src1(src1),

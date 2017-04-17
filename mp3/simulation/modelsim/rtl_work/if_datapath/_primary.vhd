@@ -14,6 +14,7 @@ entity if_datapath is
         sr1_data_in     : in     vl_logic_vector(15 downto 0);
         pcmux_sel       : in     vl_logic_vector(2 downto 0);
         stall           : in     vl_logic;
+        flush           : in     vl_logic;
         pc_out          : out    vl_logic_vector(15 downto 0);
         instruction     : out    vl_logic_vector(15 downto 0);
         src1            : out    vl_logic_vector(2 downto 0);

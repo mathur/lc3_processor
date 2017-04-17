@@ -5,6 +5,7 @@ entity \buffer\ is
     port(
         clk             : in     vl_logic;
         load            : in     vl_logic;
+        flush           : in     vl_logic;
         src1_in         : in     vl_logic_vector(2 downto 0);
         src2_in         : in     vl_logic_vector(2 downto 0);
         dest_in         : in     vl_logic_vector(2 downto 0);

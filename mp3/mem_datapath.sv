@@ -17,7 +17,7 @@ module mem_datapath (
 
     output lc3b_word regfilemux_out, trap_mem,
     output logic br_en, jmp_jsr_en, trap_en, b11, 
-	 output logic stall
+	 output logic stall, flush
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
@@ -31,8 +31,10 @@ assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 always_comb
 begin
 	 if(br_en_internal && (ctrl.opcode == op_br)) begin
+		flush = 1'b1;
 	   br_en = 1'b1;
 	 end else begin
+		flush = 1'b0;
 	   br_en = 1'b0;
 	 end
 

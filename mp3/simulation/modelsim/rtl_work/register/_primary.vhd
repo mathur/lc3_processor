@@ -7,6 +7,7 @@ entity \register\ is
     port(
         clk             : in     vl_logic;
         load            : in     vl_logic;
+        flush           : in     vl_logic;
         \in\            : in     vl_logic_vector;
         \out\           : out    vl_logic_vector
     );

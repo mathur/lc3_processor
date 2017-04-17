@@ -47,7 +47,7 @@ lc3b_word dest_data;
 lc3b_control_word mem_wb_ctrl;
 lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_data, mem_wb_src2_data, mem_wb_dest_data, mem_wb_mar, mem_wb_mdr;
-logic mem_wb_br, mem_b11;
+logic mem_wb_br, mem_b11, flush_mem;
 lc3b_word trap_mem;
 
 assign wmask_a = 2'b11;
@@ -77,13 +77,15 @@ if_datapath if_data
     .dest(if_dest),
     .read_a(read_a),
     .address_a(address_a),
-	 .stall(stall_mem)
+	 .stall(stall_mem),
+	 .flush(flush_mem)
 );
 
 buffer if_id_buf
 (
     .clk(clk),
     .load(~stall_mem),
+	 .flush(flush_mem),
     .src1_in(if_src1),
     .src2_in(if_src2),
     .dest_in(if_dest),
@@ -127,6 +129,7 @@ buffer id_ex_buf
 (
     .clk(clk),
     .load(~stall_mem),
+	 .flush(flush_mem),
     .src1_in(if_id_src1),
     .src2_in(if_id_src2),
     .dest_in(id_dest),
@@ -185,6 +188,7 @@ buffer ex_mem_buf
 (
     .clk(clk),
     .load(~stall_mem),
+	 .flush(flush_mem),
     .src1_in(id_ex_src1),
     .src2_in(id_ex_src2),
     .dest_in(id_ex_dest),
@@ -226,6 +230,7 @@ mem_datapath mem
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
     .stall(stall_mem),
+	 .flush(flush_mem),
 
     /* Port B */
     .read_b(read_b),
