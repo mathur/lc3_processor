@@ -60,6 +60,7 @@ typedef struct packed {
     logic storemux_sel;
 	 logic storemux_sel_two;
     logic [1:0] alumux_sel;
+	 logic [1:0] alumux_sel_two;
     logic [2:0] regfilemux_sel;
     logic [2:0] marmux_sel;
     logic [2:0] mdrmux_sel;
@@ -68,6 +69,8 @@ typedef struct packed {
     logic [1:0] mem_byte_enable;
     logic br_addmux_sel;
     logic destmux_sel;
+	 logic uses_sr1;
+	 logic uses_sr2;
 } lc3b_control_word;
 
 endpackage : lc3b_types

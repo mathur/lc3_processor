@@ -8,7 +8,15 @@ entity forwarding_unit is
         mem_wb_r_dest   : in     vl_logic_vector(2 downto 0);
         ex_mem_regfile_write: in     vl_logic;
         mem_wb_regfile_write: in     vl_logic;
+        uses_sr1        : in     vl_logic;
+        uses_sr2        : in     vl_logic;
+        uses_sr1_mem    : in     vl_logic;
+        uses_sr2_mem    : in     vl_logic;
+        mem_read        : in     vl_logic;
+        mem_write       : in     vl_logic;
         forward_a       : out    vl_logic_vector(1 downto 0);
-        forward_b       : out    vl_logic_vector(1 downto 0)
+        forward_b       : out    vl_logic_vector(1 downto 0);
+        stall_forwarding: out    vl_logic;
+        flush_forwarding: out    vl_logic
     );
 end forwarding_unit;

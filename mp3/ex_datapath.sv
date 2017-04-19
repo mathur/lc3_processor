@@ -14,7 +14,7 @@ module ex_datapath (
     input lc3b_word wb_input
 );
 
-lc3b_word adj5_out, adj6_out, adj6ns_out, adj9_out, adj11_out, br_addmux_out, alumux_out;
+lc3b_word adj5_out, adj6_out, adj6ns_out, adj9_out, adj11_out, br_addmux_out, alumux_out, alumux_out_two;
 
 
 // Forwarding stuff
@@ -45,10 +45,20 @@ mux4 alumux
     .f(alumux_out)
 );
 
+mux4 alumux_two
+(
+    .sel(ex_ctrl_in.alumux_sel_two),
+    .a(ex_src1_data_in),
+    .b(ex_br_out),
+    .c(16'b0),
+    .d(16'b0),
+    .f(alumux_out_two)
+);
+
 mux3 #(.width(16)) alu_input_one_mux
 (
     .sel(alu_input_one_mux_sel),
-    .a(ex_src1_data_in),
+    .a(alumux_out_two),
     .b(mem_input),
     .c(wb_input),
     .f(alu_input_one_mux_out)

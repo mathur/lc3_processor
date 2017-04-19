@@ -19,6 +19,7 @@ begin
 	ctrl.storemux_sel = 1'b0;
 	ctrl.storemux_sel_two = 1'b0;
 	ctrl.alumux_sel = 2'b00;
+	ctrl.alumux_sel_two = 2'b00;
 	ctrl.regfilemux_sel = 3'b000;
 	ctrl.marmux_sel = 3'b000;
 	ctrl.mdrmux_sel = 3'b000;
@@ -28,6 +29,8 @@ begin
 	ctrl.mem_byte_enable = 2'b11;
 	ctrl.br_addmux_sel = 0;
 	ctrl.destmux_sel = 0;
+	ctrl.uses_sr1 = 0;
+	ctrl.uses_sr2 = 0;
 
 	/*
 	tdubey3 - Personal reminder: fetch1/2/3 are all handled in IF pipeline, this is the decode stage,
@@ -41,8 +44,11 @@ begin
 			ctrl.alu_op = alu_add;
 			ctrl.load_regfile = 1;
 			ctrl.load_cc = 1;
+			ctrl.uses_sr1 = 1;
 			if (inst[5] == 1)
 				ctrl.alumux_sel = 2'b10;
+			else
+				ctrl.uses_sr2 = 1;
 		end
 
 		// AND -> FETCH1
@@ -50,8 +56,11 @@ begin
 			ctrl.alu_op = alu_and;
 			ctrl.load_regfile = 1;
 			ctrl.load_cc = 1;
+			ctrl.uses_sr1 = 1;
 			if (inst[5] == 1)
 				ctrl.alumux_sel = 2'b10;
+			else
+				ctrl.uses_sr2 = 1;
 		end
 
 		// NOT -> FETCH1
@@ -59,6 +68,7 @@ begin
 			ctrl.alu_op = alu_not;
             ctrl.load_regfile = 1;
             ctrl.load_cc = 1;
+				ctrl.uses_sr1 = 1;
         end
 
         // CALC_ADDR -> LDR1 (MEM WAIT) -> LDR2 -> FETCH1
@@ -77,6 +87,7 @@ begin
             ctrl.regfilemux_sel = 3'b001;
             ctrl.load_regfile = 1;
             ctrl.load_cc = 1;
+				ctrl.uses_sr1 = 1;
         end
 
         // CALC_ADDR -> STR1 -> STR2 (MEM WAIT) -> FETCH1
@@ -94,6 +105,7 @@ begin
 
             // M[MAR] <= MDR (STR2)
             ctrl.mem_write = 1;
+				ctrl.uses_sr1 = 1;
         end
 
         // BR -> IF(BR_EN) BR_TAKEN -> FETCH1
@@ -109,14 +121,16 @@ begin
         	ctrl.regfilemux_sel = 3'b101;
             ctrl.load_regfile = 1;
             ctrl.load_cc = 1;
+				ctrl.uses_sr1 = 1;
         end
 
         // LEA -> FETCH1
         op_lea: begin
         	// DR <= PC + (SEXT(PCoffset9) << 1)
-        	ctrl.regfilemux_sel = 3'b010;
         	ctrl.load_regfile = 1;
         	ctrl.load_cc = 1;
+			ctrl.alumux_sel_two = 2'b01;
+			ctrl.alu_op = alu_pass;
         end
 
         op_ldb: begin
@@ -132,6 +146,7 @@ begin
 		    ctrl.regfilemux_sel = 3'b110;
 		    ctrl.load_regfile = 1;
 		    ctrl.load_cc = 1;
+			 ctrl.uses_sr1 = 1;
 		end
 
 		op_stb: begin
@@ -140,6 +155,7 @@ begin
 			ctrl.storemux_sel_two = 1;
 			ctrl.mem_write = 1;
 			ctrl.mdrmux_sel = 3'b100;
+			ctrl.uses_sr1 = 1;
 		end
 
 		op_jsr: begin
@@ -168,12 +184,14 @@ begin
 			ctrl.alumux_sel = 2'b01;
 			ctrl.mem_read = 1;
 			ctrl.load_cc = 1;
+			ctrl.uses_sr1 = 1;
 		end
 		
 		op_sti: begin
 			ctrl.alumux_sel = 2'b01;
 		//	ctrl.storemux_sel = 1;
 			ctrl.storemux_sel_two = 1;
+			ctrl.uses_sr1 = 1;
 		end
 		
 		default: begin

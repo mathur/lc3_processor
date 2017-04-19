@@ -50,6 +50,8 @@ lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_d
 logic mem_wb_br, mem_b11, flush_mem;
 lc3b_word trap_mem;
 
+logic stall_forwarding, flush_forwarding;
+
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
@@ -77,14 +79,14 @@ if_datapath if_data
     .dest(if_dest),
     .read_a(read_a),
     .address_a(address_a),
-	 .stall(stall_mem),
+	 .stall(stall_mem || stall_forwarding),
 	 .flush(flush_mem)
 );
 
 buffer if_id_buf
 (
     .clk(clk),
-    .load(~stall_mem),
+    .load(~stall_mem && ~stall_forwarding),
 	 .flush(flush_mem),
     .src1_in(if_src1),
     .src2_in(if_src2),
@@ -128,7 +130,7 @@ id_datapath id
 buffer id_ex_buf
 (
     .clk(clk),
-    .load(~stall_mem),
+    .load(~stall_mem && ~stall_forwarding),
 	 .flush(flush_mem),
     .src1_in(if_id_src1),
     .src2_in(if_id_src2),
@@ -180,8 +182,16 @@ forwarding_unit hot_box
     .mem_wb_r_dest(mem_wb_dest),
     .ex_mem_regfile_write(ex_mem_ctrl.load_regfile),
     .mem_wb_regfile_write(mem_wb_ctrl.load_regfile),
+	 .uses_sr1(id_ex_ctrl.uses_sr1),
+	 .uses_sr2(id_ex_ctrl.uses_sr2),
+	 .uses_sr1_mem(ex_mem_ctrl.uses_sr1),
+	 .uses_sr2_mem(ex_mem_ctrl.uses_sr2),
+	 .mem_read(ex_mem_ctrl.mem_read),
+	 .mem_write(ex_mem_ctrl.mem_write),
     .forward_a(forward_a_mux_sel), 
-    .forward_b(forward_b_mux_sel)
+    .forward_b(forward_b_mux_sel),
+	 .stall_forwarding(stall_forwarding),
+	 .flush_forwarding(flush_forwarding)
 );
 
 buffer ex_mem_buf
