@@ -199,7 +199,7 @@ mux2 #(.width($bits(lc3b_control_word))) nopmux
 (
     .sel(flush_forwarding),
     .a(id_ex_ctrl),
-    .b({$bits(lc3b_control_word) - 1{1'b0}}),
+    .b({$bits(lc3b_control_word){1'b0}}),
     .f(nopforward)
 );
 

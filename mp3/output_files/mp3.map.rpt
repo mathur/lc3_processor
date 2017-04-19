@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3
-Wed Apr 19 11:45:39 2017
+Wed Apr 19 12:35:50 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -190,7 +190,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Wed Apr 19 11:45:39 2017       ;
+; Analysis & Synthesis Status   ; Successful - Wed Apr 19 12:35:49 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
@@ -320,47 +320,47 @@ applicable agreement for further details.
 +----------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                ; Library ;
 +----------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------+---------+
-; forwarding_unit.sv                     ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/forwarding_unit.sv                              ;         ;
-; cache_set.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_set.sv                                    ;         ;
-; cache_datapath.sv                      ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_datapath.sv                               ;         ;
-; cache_control.sv                       ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_control.sv                                ;         ;
-; cache_block.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_block.sv                                  ;         ;
-; cache.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache.sv                                        ;         ;
-; arbiter.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/arbiter.sv                                      ;         ;
-; control_rom.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/control_rom.sv                                  ;         ;
-; buffer.sv                              ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/buffer.sv                                       ;         ;
-; mem_datapath.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mem_datapath.sv                                 ;         ;
-; if_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/if_datapath.sv                                  ;         ;
-; id_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/id_datapath.sv                                  ;         ;
-; ex_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/ex_datapath.sv                                  ;         ;
-; byte_insert.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/byte_insert.sv                                  ;         ;
-; lc3b_types.sv                          ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/lc3b_types.sv                                   ;         ;
-; lru.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/lru.sv                                          ;         ;
-; cpu_datapath.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cpu_datapath.sv                                 ;         ;
-; cpu.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cpu.sv                                          ;         ;
-; adj.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/adj.sv                                          ;         ;
-; alu.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/alu.sv                                          ;         ;
-; gencc.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/gencc.sv                                        ;         ;
-; ir.sv                                  ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/ir.sv                                           ;         ;
-; mp3.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mp3.sv                                          ;         ;
-; plus2.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/plus2.sv                                        ;         ;
-; regfile.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/regfile.sv                                      ;         ;
-; register.sv                            ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/register.sv                                     ;         ;
-; mux2.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux2.sv                                         ;         ;
-; benable.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/benable.sv                                      ;         ;
-; badder.sv                              ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/badder.sv                                       ;         ;
-; mux3.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux3.sv                                         ;         ;
-; mux4.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux4.sv                                         ;         ;
-; udj.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/udj.sv                                          ;         ;
-; mux8.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux8.sv                                         ;         ;
-; adjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/adjns.sv                                        ;         ;
-; udjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/udjns.sv                                        ;         ;
-; shiftunit.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/shiftunit.sv                                    ;         ;
-; l2_cache.sv                            ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache.sv                                     ;         ;
-; l2_cache_datapath.sv                   ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv                            ;         ;
-; l2_cache_block.sv                      ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_block.sv                               ;         ;
-; l2_cache_set.sv                        ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_set.sv                                 ;         ;
-; l2_cache_control.sv                    ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_control.sv                             ;         ;
+; l2_cache_set.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_set.sv                                  ;         ;
+; l2_cache_datapath.sv                   ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_datapath.sv                             ;         ;
+; l2_cache_control.sv                    ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_control.sv                              ;         ;
+; l2_cache_block.sv                      ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_block.sv                                ;         ;
+; l2_cache.sv                            ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache.sv                                      ;         ;
+; forwarding_unit.sv                     ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/forwarding_unit.sv                               ;         ;
+; cache_set.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cache_set.sv                                     ;         ;
+; cache_datapath.sv                      ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cache_datapath.sv                                ;         ;
+; cache_control.sv                       ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cache_control.sv                                 ;         ;
+; cache_block.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cache_block.sv                                   ;         ;
+; cache.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cache.sv                                         ;         ;
+; arbiter.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/arbiter.sv                                       ;         ;
+; control_rom.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/control_rom.sv                                   ;         ;
+; buffer.sv                              ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/buffer.sv                                        ;         ;
+; mem_datapath.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/mem_datapath.sv                                  ;         ;
+; if_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/if_datapath.sv                                   ;         ;
+; id_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/id_datapath.sv                                   ;         ;
+; ex_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/ex_datapath.sv                                   ;         ;
+; byte_insert.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/byte_insert.sv                                   ;         ;
+; lc3b_types.sv                          ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/lc3b_types.sv                                    ;         ;
+; lru.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/lru.sv                                           ;         ;
+; cpu_datapath.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cpu_datapath.sv                                  ;         ;
+; cpu.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/cpu.sv                                           ;         ;
+; adj.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/adj.sv                                           ;         ;
+; alu.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/alu.sv                                           ;         ;
+; gencc.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/gencc.sv                                         ;         ;
+; ir.sv                                  ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/ir.sv                                            ;         ;
+; mp3.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/mp3.sv                                           ;         ;
+; plus2.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/plus2.sv                                         ;         ;
+; regfile.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/regfile.sv                                       ;         ;
+; register.sv                            ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/register.sv                                      ;         ;
+; mux2.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/mux2.sv                                          ;         ;
+; benable.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/benable.sv                                       ;         ;
+; badder.sv                              ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/badder.sv                                        ;         ;
+; mux3.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/mux3.sv                                          ;         ;
+; mux4.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/mux4.sv                                          ;         ;
+; udj.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/udj.sv                                           ;         ;
+; mux8.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/mux8.sv                                          ;         ;
+; adjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/adjns.sv                                         ;         ;
+; udjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/udjns.sv                                         ;         ;
+; shiftunit.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/shiftunit.sv                                     ;         ;
 ; altsyncram.tdf                         ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc                  ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                            ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -370,10 +370,10 @@ applicable agreement for further details.
 ; altrom.inc                             ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                             ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                           ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_reo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/rmathur2/fmax_420/mp3/db/altsyncram_reo1.tdf                          ;         ;
-; db/mp3.ram2_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/rmathur2/fmax_420/mp3/db/mp3.ram2_cache_set_708bd3f9.hdl.mif          ;         ;
-; db/altsyncram_0lo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/rmathur2/fmax_420/mp3/db/altsyncram_0lo1.tdf                          ;         ;
-; db/mp3.ram3_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/rmathur2/fmax_420/mp3/db/mp3.ram3_cache_set_708bd3f9.hdl.mif          ;         ;
+; db/altsyncram_reo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/tdubey3/fmax_420/mp3/db/altsyncram_reo1.tdf                           ;         ;
+; db/mp3.ram2_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/tdubey3/fmax_420/mp3/db/mp3.ram2_cache_set_708bd3f9.hdl.mif           ;         ;
+; db/altsyncram_0lo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/tdubey3/fmax_420/mp3/db/altsyncram_0lo1.tdf                           ;         ;
+; db/mp3.ram3_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/tdubey3/fmax_420/mp3/db/mp3.ram3_cache_set_708bd3f9.hdl.mif           ;         ;
 +----------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------+---------+
 
 
@@ -3185,14 +3185,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux"                                                                                              ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                       ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; b    ; Input ; Warning  ; Input port expression (39 bits) is smaller than the input port (40 bits) it drives.  Extra input bit(s) "b[39..39]" will be connected to GND. ;
-; b    ; Input ; Info     ; Stuck at GND                                                                                                                                  ;
-+------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -3285,7 +3284,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:15     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -3308,9 +3307,19 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Wed Apr 19 11:45:14 2017
+    Info: Processing started: Wed Apr 19 12:35:26 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file l2_cache_set.sv
+    Info (12023): Found entity 1: l2_cache_set
+Info (12021): Found 1 design units, including 1 entities, in source file l2_cache_datapath.sv
+    Info (12023): Found entity 1: l2_cache_datapath
+Info (12021): Found 1 design units, including 1 entities, in source file l2_cache_control.sv
+    Info (12023): Found entity 1: l2_cache_control
+Info (12021): Found 1 design units, including 1 entities, in source file l2_cache_block.sv
+    Info (12023): Found entity 1: l2_cache_block
+Info (12021): Found 1 design units, including 1 entities, in source file l2_cache.sv
+    Info (12023): Found entity 1: l2_cache
 Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit.sv
     Info (12023): Found entity 1: forwarding_unit
 Info (12021): Found 1 design units, including 1 entities, in source file cache_set.sv
@@ -3463,20 +3472,10 @@ Info (12128): Elaborating entity "lru" for hierarchy "cache:icache|cache_datapat
 Info (12128): Elaborating entity "cache_control" for hierarchy "cache:icache|cache_control:ccl"
 Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:cache_arbiter"
 Info (12128): Elaborating entity "register" for hierarchy "arbiter:cache_arbiter|register:rdata_a"
-Warning (12125): Using design file l2_cache.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: l2_cache
 Info (12128): Elaborating entity "l2_cache" for hierarchy "l2_cache:l2cache"
-Warning (12125): Using design file l2_cache_datapath.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: l2_cache_datapath
 Info (12128): Elaborating entity "l2_cache_datapath" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp"
-Warning (12125): Using design file l2_cache_block.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: l2_cache_block
 Info (12128): Elaborating entity "l2_cache_block" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block"
-Warning (12125): Using design file l2_cache_set.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: l2_cache_set
 Info (12128): Elaborating entity "l2_cache_set" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_one"
-Warning (12125): Using design file l2_cache_control.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: l2_cache_control
 Info (12128): Elaborating entity "l2_cache_control" for hierarchy "l2_cache:l2cache|l2_cache_control:ccl"
 Warning (276020): Inferred RAM node "cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -3610,7 +3609,7 @@ Info (12133): Instantiated megafunction "cache:icache|cache_datapath:cdp|cache_b
     Info (12134): Parameter "INIT_FILE" = "db/mp3.ram3_cache_set_708bd3f9.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0lo1.tdf
     Info (12023): Found entity 1: altsyncram_0lo1
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pmem_address[0]" is stuck at GND
     Warning (13410): Pin "pmem_address[1]" is stuck at GND
@@ -3618,7 +3617,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pmem_address[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 158 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /home/rmathur2/fmax_420/mp3/output_files/mp3.map.smsg
+Info (144001): Generated suppressed messages file /home/tdubey3/fmax_420/mp3/output_files/mp3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 9112 device resources after synthesis - the final resource count might be different
@@ -3626,16 +3625,16 @@ Info (21057): Implemented 9112 device resources after synthesis - the final reso
     Info (21059): Implemented 146 output pins
     Info (21061): Implemented 8562 logic cells
     Info (21064): Implemented 274 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 533 megabytes
-    Info: Processing ended: Wed Apr 19 11:45:39 2017
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 530 megabytes
+    Info: Processing ended: Wed Apr 19 12:35:50 2017
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /home/rmathur2/fmax_420/mp3/output_files/mp3.map.smsg.
+The suppressed messages can be found in /home/tdubey3/fmax_420/mp3/output_files/mp3.map.smsg.
 
 
