@@ -57,17 +57,18 @@ assign write_a = 1'b0;
 assign wdata_a = 16'b0;
 
 logic [1:0] forward_a_mux_sel, forward_b_mux_sel;
+lc3b_control_word nopforward;
 
 if_datapath if_data
 (
     .clk(clk),
     .resp_a(resp_a),
     .rdata_a(rdata_a),
-	 .trap_mem(trap_mem),
+    .trap_mem(trap_mem),
     .br_en(mem_br_en),
-	 .jmp_jsr_en(mem_jmp_jsr_en),
-	 .trap_en(mem_trap_en),
-	 .b11(mem_b11),
+    .jmp_jsr_en(mem_jmp_jsr_en),
+    .trap_en(mem_trap_en),
+    .b11(mem_b11),
     .pc_br_in(ex_mem_pc_br),
     .sr1_data_in(ex_mem_src1_data),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
@@ -79,15 +80,15 @@ if_datapath if_data
     .dest(if_dest),
     .read_a(read_a),
     .address_a(address_a),
-	 .stall(stall_mem || stall_forwarding),
-	 .flush(flush_mem)
+    .stall(stall_mem || stall_forwarding),
+    .flush(flush_mem)
 );
 
 buffer if_id_buf
 (
     .clk(clk),
     .load(~stall_mem && ~stall_forwarding),
-	 .flush(flush_mem),
+    .flush(flush_mem),
     .src1_in(if_src1),
     .src2_in(if_src2),
     .dest_in(if_dest),
@@ -131,7 +132,7 @@ buffer id_ex_buf
 (
     .clk(clk),
     .load(~stall_mem && ~stall_forwarding),
-	 .flush(flush_mem),
+    .flush(flush_mem),
     .src1_in(if_id_src1),
     .src2_in(if_id_src2),
     .dest_in(id_dest),
@@ -182,23 +183,31 @@ forwarding_unit hot_box
     .mem_wb_r_dest(mem_wb_dest),
     .ex_mem_regfile_write(ex_mem_ctrl.load_regfile),
     .mem_wb_regfile_write(mem_wb_ctrl.load_regfile),
-	 .uses_sr1(id_ex_ctrl.uses_sr1),
-	 .uses_sr2(id_ex_ctrl.uses_sr2),
-	 .uses_sr1_mem(ex_mem_ctrl.uses_sr1),
-	 .uses_sr2_mem(ex_mem_ctrl.uses_sr2),
-	 .mem_read(ex_mem_ctrl.mem_read),
-	 .mem_write(ex_mem_ctrl.mem_write),
+    .uses_sr1(id_ex_ctrl.uses_sr1),
+    .uses_sr2(id_ex_ctrl.uses_sr2),
+    .uses_sr1_mem(ex_mem_ctrl.uses_sr1),
+    .uses_sr2_mem(ex_mem_ctrl.uses_sr2),
+    .mem_read(ex_mem_ctrl.mem_read),
+    .mem_write(ex_mem_ctrl.mem_write),
     .forward_a(forward_a_mux_sel), 
     .forward_b(forward_b_mux_sel),
-	 .stall_forwarding(stall_forwarding),
-	 .flush_forwarding(flush_forwarding)
+    .stall_forwarding(stall_forwarding),
+    .flush_forwarding(flush_forwarding)
+);
+
+mux2 #(.width($bits(lc3b_control_word))) nopmux
+(
+    .sel(flush_forwarding),
+    .a(id_ex_ctrl),
+    .b({$bits(lc3b_control_word) - 1{1'b0}}),
+    .f(nopforward)
 );
 
 buffer ex_mem_buf
 (
     .clk(clk),
     .load(~stall_mem),
-	 .flush(flush_mem),
+    .flush(flush_mem),
     .src1_in(id_ex_src1),
     .src2_in(id_ex_src2),
     .dest_in(id_ex_dest),
@@ -208,7 +217,7 @@ buffer ex_mem_buf
     .pc_br_in(ex_br_out),
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
-    .ctrl_in(id_ex_ctrl),
+    .ctrl_in(nopforward),
 
     .ctrl_out(ex_mem_ctrl),
     .src1_out(ex_mem_src1),
@@ -230,17 +239,17 @@ mem_datapath mem
     .pc_out(ex_mem_pc),
     .br_add_out(ex_mem_pc_br),
     .sr1_out(ex_mem_src1_data),
-	 .sr2_out(ex_mem_src2_data),
+    .sr2_out(ex_mem_src2_data),
     .instruction(ex_mem_instruction),
     .br_en(mem_br_en),
-	 .jmp_jsr_en(mem_jmp_jsr_en),
-	 .b11(mem_b11),
-	 .trap_en(mem_trap_en),
-	 .trap_mem(trap_mem),
+    .jmp_jsr_en(mem_jmp_jsr_en),
+    .b11(mem_b11),
+    .trap_en(mem_trap_en),
+    .trap_mem(trap_mem),
     .regfilemux_out(dest_data),
     .dest(ex_mem_dest),
     .stall(stall_mem),
-	 .flush(flush_mem),
+    .flush(flush_mem),
 
     /* Port B */
     .read_b(read_b),
