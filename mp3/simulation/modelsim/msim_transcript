@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do mp3_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -408,9 +409,6 @@
 # Loading work.l2_cache_control_sv_unit
 # Loading work.l2_cache_control
 # Loading work.physical_memory
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_data/pc
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Missing connection for port 'flush'.
 # ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Too few port connections. Expected 31, found 13.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_in'.
@@ -457,24 +455,6 @@
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_out'.
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_out'.
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/cc
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_reg
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_addr_reg
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(297): [TFMPC] - Too few port connections. Expected 31, found 30.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(297): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_a
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_b
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Missing connection for port 'flush'.
 # 
 # add wave *
 # view structure
@@ -558,9 +538,6 @@ restart -f; run 50000ns
 # Loading work.l2_cache_control_sv_unit
 # Loading work.l2_cache_control
 # Loading work.physical_memory
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_data/pc
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Missing connection for port 'flush'.
 # ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Too few port connections. Expected 31, found 13.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_in'.
@@ -607,24 +584,6 @@ restart -f; run 50000ns
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_out'.
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_out'.
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/cc
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_reg
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_addr_reg
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(297): [TFMPC] - Too few port connections. Expected 31, found 30.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(297): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_a
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_b
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Missing connection for port 'flush'.
 do rm_wave.do
 restart -f; run 50000ns
 # Loading sv_std.std
@@ -702,9 +661,6 @@ restart -f; run 50000ns
 # Loading work.l2_cache_control_sv_unit
 # Loading work.l2_cache_control
 # Loading work.physical_memory
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_data/pc
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Missing connection for port 'flush'.
 # ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Too few port connections. Expected 31, found 13.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_in'.
@@ -751,21 +707,3 @@ restart -f; run 50000ns
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_out'.
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_out'.
 # ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/cc
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_reg
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_addr_reg
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(297): [TFMPC] - Too few port connections. Expected 31, found 30.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(297): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_a
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_b
-# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Missing connection for port 'flush'.

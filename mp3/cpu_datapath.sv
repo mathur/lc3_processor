@@ -265,6 +265,7 @@ buffer mem_wb_buf
 (
     .clk(clk),
     .load(~stall_mem),
+    .flush(1'b0),
     .src1_in(ex_mem_src1),
     .src2_in(ex_mem_src2),
     .dest_in(ex_mem_dest),
