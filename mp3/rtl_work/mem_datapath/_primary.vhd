@@ -25,6 +25,7 @@ entity mem_datapath is
         jmp_jsr_en      : out    vl_logic;
         trap_en         : out    vl_logic;
         b11             : out    vl_logic;
-        stall           : out    vl_logic
+        stall           : out    vl_logic;
+        flush           : out    vl_logic
     );
 end mem_datapath;
