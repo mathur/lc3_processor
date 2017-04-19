@@ -138,7 +138,8 @@ register #(.width(3)) cc
     .clk(clk),
     .load(ctrl.load_cc),
     .in(gencc_out),
-    .out(cc_out)
+    .out(cc_out),
+    .flush(1'b0)
 );
 
 mux2 #(.width(8)) ldbmux
@@ -207,7 +208,8 @@ register #(.width(1)) indirect_reg
     .clk(clk),
     .load(resp_b),
     .in(~ireg && i_sig),
-    .out(ireg)
+    .out(ireg),
+    .flush(1'b0)
 );
 
 register #(.width(16)) indirect_addr_reg
@@ -215,7 +217,8 @@ register #(.width(16)) indirect_addr_reg
     .clk(clk),
     .load(resp_b && i_sig),
     .in(rdata_b),
-    .out(indirect_addr)
+    .out(indirect_addr),
+    .flush(1'b0)
 );
 
 

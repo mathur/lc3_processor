@@ -1,3 +1,4 @@
+# ERROR: No extended dataflow license exists
 # do mp3_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -9,67 +10,67 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/plus2.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/plus2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module plus2
 # 
 # Top level modules:
 # 	plus2
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/register.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux2.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/benable.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/benable.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module benable
 # 
 # Top level modules:
 # 	benable
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/badder.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/badder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module badder
 # 
 # Top level modules:
 # 	badder
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux3.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mux3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux3
 # 
 # Top level modules:
 # 	mux3
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux4.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mux4.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mux8.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mux8.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux8
 # 
 # Top level modules:
 # 	mux8
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/shiftunit.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/shiftunit.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shiftunit
 # 
 # Top level modules:
 # 	shiftunit
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/forwarding_unit.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/forwarding_unit.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package forwarding_unit_sv_unit
 # -- Importing package lc3b_types
@@ -77,7 +78,7 @@
 # 
 # Top level modules:
 # 	forwarding_unit
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_set.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cache_set.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_set_sv_unit
 # -- Importing package lc3b_types
@@ -85,7 +86,7 @@
 # 
 # Top level modules:
 # 	cache_set
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -93,7 +94,7 @@
 # 
 # Top level modules:
 # 	cache_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_control.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cache_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_control_sv_unit
 # -- Importing package lc3b_types
@@ -101,7 +102,7 @@
 # 
 # Top level modules:
 # 	cache_control
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache_block.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cache_block.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_block_sv_unit
 # -- Importing package lc3b_types
@@ -109,7 +110,7 @@
 # 
 # Top level modules:
 # 	cache_block
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cache.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cache_sv_unit
 # -- Importing package lc3b_types
@@ -117,7 +118,7 @@
 # 
 # Top level modules:
 # 	cache
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/arbiter.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/arbiter.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package arbiter_sv_unit
 # -- Importing package lc3b_types
@@ -125,7 +126,7 @@
 # 
 # Top level modules:
 # 	arbiter
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/control_rom.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/control_rom.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package control_rom_sv_unit
 # -- Importing package lc3b_types
@@ -133,7 +134,7 @@
 # 
 # Top level modules:
 # 	control_rom
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/buffer.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/buffer.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package buffer_sv_unit
 # -- Importing package lc3b_types
@@ -141,7 +142,7 @@
 # 
 # Top level modules:
 # 	buffer
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mem_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mem_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -149,7 +150,7 @@
 # 
 # Top level modules:
 # 	mem_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/if_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/if_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package if_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -157,7 +158,7 @@
 # 
 # Top level modules:
 # 	if_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/id_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/id_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package id_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -165,7 +166,7 @@
 # 
 # Top level modules:
 # 	id_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/ex_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/ex_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ex_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -173,7 +174,7 @@
 # 
 # Top level modules:
 # 	ex_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/byte_insert.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/byte_insert.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package byte_insert_sv_unit
 # -- Importing package lc3b_types
@@ -181,7 +182,7 @@
 # 
 # Top level modules:
 # 	byte_insert
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/lru.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/lru.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lru_sv_unit
 # -- Importing package lc3b_types
@@ -189,7 +190,7 @@
 # 
 # Top level modules:
 # 	lru
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cpu_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -197,7 +198,7 @@
 # 
 # Top level modules:
 # 	cpu_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/adj.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
 # -- Importing package lc3b_types
@@ -205,7 +206,7 @@
 # 
 # Top level modules:
 # 	adj
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/alu.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package lc3b_types
@@ -213,7 +214,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/gencc.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
 # -- Importing package lc3b_types
@@ -221,7 +222,7 @@
 # 
 # Top level modules:
 # 	gencc
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/ir.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/ir.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ir_sv_unit
 # -- Importing package lc3b_types
@@ -229,7 +230,7 @@
 # 
 # Top level modules:
 # 	ir
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/regfile.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package regfile_sv_unit
 # -- Importing package lc3b_types
@@ -237,7 +238,7 @@
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/udj.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/udj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package udj_sv_unit
 # -- Importing package lc3b_types
@@ -245,7 +246,7 @@
 # 
 # Top level modules:
 # 	udj
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/adjns.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/adjns.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adjns_sv_unit
 # -- Importing package lc3b_types
@@ -253,7 +254,7 @@
 # 
 # Top level modules:
 # 	adjns
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/udjns.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/udjns.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package udjns_sv_unit
 # -- Importing package lc3b_types
@@ -261,7 +262,7 @@
 # 
 # Top level modules:
 # 	udjns
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/l2_cache.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/l2_cache.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l2_cache_sv_unit
 # -- Importing package lc3b_types
@@ -269,7 +270,7 @@
 # 
 # Top level modules:
 # 	l2_cache
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/l2_cache_datapath.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l2_cache_datapath_sv_unit
 # -- Importing package lc3b_types
@@ -277,7 +278,7 @@
 # 
 # Top level modules:
 # 	l2_cache_datapath
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/l2_cache_block.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/l2_cache_block.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l2_cache_block_sv_unit
 # -- Importing package lc3b_types
@@ -285,7 +286,7 @@
 # 
 # Top level modules:
 # 	l2_cache_block
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/l2_cache_set.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/l2_cache_set.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l2_cache_set_sv_unit
 # -- Importing package lc3b_types
@@ -293,7 +294,7 @@
 # 
 # Top level modules:
 # 	l2_cache_set
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/l2_cache_control.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/l2_cache_control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package l2_cache_control_sv_unit
 # -- Importing package lc3b_types
@@ -301,7 +302,7 @@
 # 
 # Top level modules:
 # 	l2_cache_control
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/cpu.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/cpu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cpu_sv_unit
 # -- Importing package lc3b_types
@@ -309,7 +310,7 @@
 # 
 # Top level modules:
 # 	cpu
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mp3.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mp3.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp3_sv_unit
 # -- Importing package lc3b_types
@@ -318,13 +319,13 @@
 # Top level modules:
 # 	mp3
 # 
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/mp3_tb.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/mp3_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mp3_tb
 # 
 # Top level modules:
 # 	mp3_tb
-# vlog -sv -work work +incdir+/home/alekson2/ece411/fmax_420/mp3 {/home/alekson2/ece411/fmax_420/mp3/physical_memory.sv}
+# vlog -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 {/home/rmathur2/fmax_420/mp3/physical_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module physical_memory
 # 
@@ -408,71 +409,52 @@
 # Loading work.l2_cache_control_sv_unit
 # Loading work.l2_cache_control
 # Loading work.physical_memory
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_data/pc
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Too few port connections. Expected 31, found 13.
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Too few port connections. Expected 31, found 13.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src1_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src2_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'ctrl_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'ctrl_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src1_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src2_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Too few port connections. Expected 31, found 19.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src1_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src2_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'ctrl_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'ctrl_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src1_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src2_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Too few port connections. Expected 31, found 19.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Too few port connections. Expected 31, found 23.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3015) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(204): [PCDPC] - Port size (40 or 40) does not match connection size (39) for port 'b'. The port definition is at: /home/rmathur2/fmax_420/mp3/mux2.sv(4).
+#         Region: /mp3_tb/dut/mcpu/cpu_datapath/nopmux
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Too few port connections. Expected 31, found 23.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/cc
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_reg
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_addr_reg
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(278): [TFMPC] - Too few port connections. Expected 31, found 30.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(278): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_a
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_b
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Missing connection for port 'flush'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_out'.
 # 
 # add wave *
 # view structure
@@ -480,8 +462,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-do wave.do
-restart -f; run 800ns
+restart -f; run 50000ns
 # Loading sv_std.std
 # Loading work.mp3_tb
 # Loading work.lc3b_types
@@ -557,72 +538,54 @@ restart -f; run 800ns
 # Loading work.l2_cache_control_sv_unit
 # Loading work.l2_cache_control
 # Loading work.physical_memory
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_data/pc
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Too few port connections. Expected 31, found 13.
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Too few port connections. Expected 31, found 13.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src1_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src2_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'ctrl_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'ctrl_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src1_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src2_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Too few port connections. Expected 31, found 19.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src1_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src2_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'ctrl_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'ctrl_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src1_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src2_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Too few port connections. Expected 31, found 19.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Too few port connections. Expected 31, found 23.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3015) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(204): [PCDPC] - Port size (40 or 40) does not match connection size (39) for port 'b'. The port definition is at: /home/rmathur2/fmax_420/mp3/mux2.sv(4).
+#         Region: /mp3_tb/dut/mcpu/cpu_datapath/nopmux
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Too few port connections. Expected 31, found 23.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/cc
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_reg
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_addr_reg
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(278): [TFMPC] - Too few port connections. Expected 31, found 30.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(278): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_a
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_b
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Missing connection for port 'flush'.
-restart -f; run 8000000ns
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_out'.
+do rm_wave.do
+restart -f; run 50000ns
 # Loading sv_std.std
 # Loading work.mp3_tb
 # Loading work.lc3b_types
@@ -698,68 +661,49 @@ restart -f; run 8000000ns
 # Loading work.l2_cache_control_sv_unit
 # Loading work.l2_cache_control
 # Loading work.physical_memory
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_data/pc
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/if_datapath.sv(93): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Too few port connections. Expected 31, found 13.
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Too few port connections. Expected 31, found 13.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/if_id_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src1_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src2_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'ctrl_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'ctrl_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src1_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'src2_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(100): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Too few port connections. Expected 31, found 19.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src1_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src2_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'ctrl_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'ctrl_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src1_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'src2_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(103): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Too few port connections. Expected 31, found 19.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(150): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Too few port connections. Expected 31, found 23.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(153): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3015) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(204): [PCDPC] - Port size (40 or 40) does not match connection size (39) for port 'b'. The port definition is at: /home/rmathur2/fmax_420/mp3/mux2.sv(4).
+#         Region: /mp3_tb/dut/mcpu/cpu_datapath/nopmux
+# ** Warning: (vsim-3017) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Too few port connections. Expected 31, found 23.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(213): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/cc
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(142): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_reg
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(211): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem/indirect_addr_reg
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/mem_datapath.sv(219): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(278): [TFMPC] - Too few port connections. Expected 31, found 30.
-#         Region: /mp3_tb/dut/mcpu/cpu_datapath/mem_wb_buf
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/cpu_datapath.sv(278): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_a
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(57): [TFMPC] - Missing connection for port 'flush'.
-# ** Warning: (vsim-3017) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Too few port connections. Expected 5, found 4.
-#         Region: /mp3_tb/dut/cache_arbiter/rdata_b
-# ** Warning: (vsim-3722) /home/alekson2/ece411/fmax_420/mp3/arbiter.sv(65): [TFMPC] - Missing connection for port 'flush'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/rmathur2/fmax_420/mp3/cpu_datapath.sv(232): [TFMPC] - Missing connection for port 'br_out'.

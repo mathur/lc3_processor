@@ -53,7 +53,8 @@ register #(.width(128)) rdata_a
     .clk(clk),
     .load(rdata_a_load),
     .in(pmem_rdata),
-    .out(pmem_rdata_a)
+    .out(pmem_rdata_a),
+    .flush(1'b0)
 );
 
 register #(.width(128)) rdata_b
@@ -61,7 +62,8 @@ register #(.width(128)) rdata_b
     .clk(clk),
     .load(rdata_b_load),
     .in(pmem_rdata),
-    .out(pmem_rdata_b)
+    .out(pmem_rdata_b),
+    .flush(1'b0)
 );
 
 always_ff @(posedge clk)

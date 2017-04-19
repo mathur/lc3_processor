@@ -89,7 +89,8 @@ register pc
     .clk(clk),
     .load(pc_load),
     .in(pcmux_out),
-    .out(pc_out)
+    .out(pc_out),
+    .flush(1'b0)
 );
 
 plus2 pc_plus2
