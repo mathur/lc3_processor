@@ -129,25 +129,6 @@ id_datapath id
     .sr2_out(id_src2_data)
 );
 
-mux2 #(.width($bits(lc3b_word))) sr1_wb_reg_mux
-(
-	.sel((mem_wb_dest == id_ex_src1) && mem_wb_ctrl.load_regfile),
-	.a(id_src1_data),
-	.b(mem_wb_dest_data),
-	.f(sr1_fwd_out)
-);
-
-mux2 #(.width($bits(lc3b_word))) sr2_wb_reg_mux
-(
-	.sel((mem_wb_dest == id_ex_src2) && mem_wb_ctrl.load_regfile),
-	.a(id_src2_data),
-	.b(mem_wb_dest_data),
-	.f(sr2_fwd_out)
-);
-
-assign test_mem = (((mem_wb_dest == id_ex_src2) && mem_wb_ctrl.load_regfile) ||
-((mem_wb_dest == id_ex_src1) && mem_wb_ctrl.load_regfile));
-
 buffer id_ex_buf
 (
     .clk(clk),
@@ -203,6 +184,8 @@ forwarding_unit hot_box
     .mem_wb_r_dest(mem_wb_dest),
     .ex_mem_regfile_write(ex_mem_ctrl.load_regfile),
     .mem_wb_regfile_write(mem_wb_ctrl.load_regfile),
+    .if_id_r_one(if_id_src1),
+    .if_id_r_two(if_id_src2),
     .uses_sr1(id_ex_ctrl.uses_sr1),
     .uses_sr2(id_ex_ctrl.uses_sr2),
     .uses_sr1_mem(ex_mem_ctrl.uses_sr1),

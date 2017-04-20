@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp3
-Thu Apr 20 11:32:21 2017
+Thu Apr 20 12:12:03 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -53,124 +53,120 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  45. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux
  46. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux
  47. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two
- 48. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr1_wb_reg_mux
- 49. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr2_wb_reg_mux
- 50. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word
- 51. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1
- 52. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2
- 53. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest
- 54. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data
- 55. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data
- 56. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest_data
- 57. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction
- 58. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:alu
- 59. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:br
- 60. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc
- 61. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc_br
- 62. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mar
- 63. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mdr
- 64. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux2:br_add_mux
- 65. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add
- 66. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux
- 67. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux_two
- 68. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_one_mux
- 69. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_two_mux
- 70. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj5
- 71. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj6
- 72. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj6ns
- 73. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj9
- 74. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj11
- 75. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux
- 76. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux_inst
- 77. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word
- 78. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1
- 79. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2
- 80. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest
- 81. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data
- 82. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data
- 83. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest_data
- 84. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction
- 85. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu
- 86. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:br
- 87. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc
- 88. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br
- 89. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mar
- 90. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mdr
- 91. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux
- 92. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_a
- 93. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_b
- 94. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux
- 95. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:stbmux
- 96. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux
- 97. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_a
- 98. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_b
- 99. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux
-100. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc
-101. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:ldbmux
-102. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit
-103. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:zext_8
-104. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udj:trap_zext
-105. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:ldbzext
-106. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux
-107. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a
-108. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b
-109. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux
-110. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_reg
-111. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_addr_reg
-112. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word
-113. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1
-114. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2
-115. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest
-116. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1_data
-117. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2_data
-118. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data
-119. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:instruction
-120. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:alu
-121. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:br
-122. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc
-123. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc_br
-124. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mar
-125. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mdr
-126. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:cache_in_mux
-127. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:pmem_write_mux
-128. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:insert_mux
-129. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:cache_in_mux
-130. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:pmem_write_mux
-131. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:insert_mux
-132. Parameter Settings for User Entity Instance: arbiter:cache_arbiter|register:rdata_a
-133. Parameter Settings for User Entity Instance: arbiter:cache_arbiter|register:rdata_b
-134. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux
-135. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:pmem_write_mux
-136. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:insert_mux
-137. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0
-138. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:tag_rtl_0
-139. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:data_rtl_0
-140. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0
-141. altsyncram Parameter Settings by Entity Instance
-142. Port Connectivity Checks: "arbiter:cache_arbiter|register:rdata_b"
-143. Port Connectivity Checks: "arbiter:cache_arbiter|register:rdata_a"
-144. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"
-145. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_addr_reg"
-146. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_reg"
-147. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux"
-148. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc"
-149. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux"
-150. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:stbmux"
-151. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux"
-152. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf"
-153. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux_inst"
-154. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux"
-155. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux_two"
-156. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf"
-157. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr2_wb_reg_mux"
-158. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr1_wb_reg_mux"
-159. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux"
-160. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf"
-161. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc"
-162. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux"
-163. Elapsed Time Per Partition
-164. Analysis & Synthesis Messages
-165. Analysis & Synthesis Suppressed Messages
+ 48. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word
+ 49. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1
+ 50. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2
+ 51. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest
+ 52. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data
+ 53. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data
+ 54. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest_data
+ 55. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction
+ 56. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:alu
+ 57. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:br
+ 58. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc
+ 59. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc_br
+ 60. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mar
+ 61. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mdr
+ 62. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux2:br_add_mux
+ 63. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add
+ 64. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux
+ 65. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux_two
+ 66. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_one_mux
+ 67. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_two_mux
+ 68. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj5
+ 69. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj6
+ 70. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj6ns
+ 71. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj9
+ 72. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj11
+ 73. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux
+ 74. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux_inst
+ 75. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word
+ 76. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1
+ 77. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2
+ 78. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest
+ 79. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data
+ 80. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data
+ 81. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest_data
+ 82. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction
+ 83. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu
+ 84. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:br
+ 85. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc
+ 86. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br
+ 87. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mar
+ 88. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mdr
+ 89. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux
+ 90. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_a
+ 91. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_b
+ 92. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux
+ 93. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:stbmux
+ 94. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux
+ 95. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_a
+ 96. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_b
+ 97. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux
+ 98. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc
+ 99. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:ldbmux
+100. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit
+101. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:zext_8
+102. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udj:trap_zext
+103. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:ldbzext
+104. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux
+105. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a
+106. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b
+107. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux
+108. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_reg
+109. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_addr_reg
+110. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word
+111. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1
+112. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2
+113. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest
+114. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1_data
+115. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2_data
+116. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data
+117. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:instruction
+118. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:alu
+119. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:br
+120. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc
+121. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc_br
+122. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mar
+123. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mdr
+124. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:cache_in_mux
+125. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:pmem_write_mux
+126. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:insert_mux
+127. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:cache_in_mux
+128. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:pmem_write_mux
+129. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:insert_mux
+130. Parameter Settings for User Entity Instance: arbiter:cache_arbiter|register:rdata_a
+131. Parameter Settings for User Entity Instance: arbiter:cache_arbiter|register:rdata_b
+132. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux
+133. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:pmem_write_mux
+134. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:insert_mux
+135. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0
+136. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:tag_rtl_0
+137. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:data_rtl_0
+138. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0
+139. altsyncram Parameter Settings by Entity Instance
+140. Port Connectivity Checks: "arbiter:cache_arbiter|register:rdata_b"
+141. Port Connectivity Checks: "arbiter:cache_arbiter|register:rdata_a"
+142. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"
+143. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_addr_reg"
+144. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_reg"
+145. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux"
+146. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc"
+147. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux"
+148. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:stbmux"
+149. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux"
+150. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf"
+151. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux_inst"
+152. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux"
+153. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux_two"
+154. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf"
+155. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux"
+156. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf"
+157. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc"
+158. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux"
+159. Elapsed Time Per Partition
+160. Analysis & Synthesis Messages
+161. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -196,13 +192,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Thu Apr 20 11:32:20 2017       ;
+; Analysis & Synthesis Status   ; Successful - Thu Apr 20 12:12:03 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 2,969                                       ;
+;     Combinational ALUTs       ; 2,973                                       ;
 ;     Memory ALUTs              ; 0                                           ;
 ;     Dedicated logic registers ; 5,774                                       ;
 ; Total registers               ; 5774                                        ;
@@ -388,8 +384,8 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 2969      ;
-;     -- Combinational ALUTs                    ; 2969      ;
+; Estimated ALUTs Used                          ; 2973      ;
+;     -- Combinational ALUTs                    ; 2973      ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ; Dedicated logic registers                     ; 5774      ;
@@ -398,21 +394,21 @@ applicable agreement for further details.
 ;     -- Due to unpartnered combinational logic ; 1227      ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 2969      ;
+; Total combinational functions                 ; 2973      ;
 ; Combinational ALUT usage by number of inputs  ;           ;
 ;     -- 7 input functions                      ; 1227      ;
 ;     -- 6 input functions                      ; 606       ;
-;     -- 5 input functions                      ; 403       ;
-;     -- 4 input functions                      ; 526       ;
-;     -- <=3 input functions                    ; 207       ;
+;     -- 5 input functions                      ; 404       ;
+;     -- 4 input functions                      ; 528       ;
+;     -- <=3 input functions                    ; 208       ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 1696      ;
+;     -- normal mode                            ; 1700      ;
 ;     -- extended LUT mode                      ; 1227      ;
 ;     -- arithmetic mode                        ; 46        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 8912      ;
+; Estimated ALUT/register pairs used            ; 8914      ;
 ;                                               ;           ;
 ; Total registers                               ; 5774      ;
 ;     -- Dedicated logic registers              ; 5774      ;
@@ -426,7 +422,7 @@ applicable agreement for further details.
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
 ; Maximum fan-out                               ; 6048      ;
-; Total fan-out                                 ; 36772     ;
+; Total fan-out                                 ; 36788     ;
 ; Average fan-out                               ; 3.84      ;
 +-----------------------------------------------+-----------+
 
@@ -436,7 +432,7 @@ applicable agreement for further details.
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |mp3                                               ; 2969 (0)          ; 5774 (0)     ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp3                                                                                                                               ; work         ;
+; |mp3                                               ; 2973 (0)          ; 5774 (0)     ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp3                                                                                                                               ; work         ;
 ;    |arbiter:cache_arbiter|                         ; 40 (40)           ; 262 (6)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter                                                                                                         ; work         ;
 ;       |register:rdata_a|                           ; 0 (0)             ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter|register:rdata_a                                                                                        ; work         ;
 ;       |register:rdata_b|                           ; 0 (0)             ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter|register:rdata_b                                                                                        ; work         ;
@@ -465,13 +461,13 @@ applicable agreement for further details.
 ;                |altsyncram:tag_rtl_0|              ; 0 (0)             ; 0 (0)        ; 72                ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0                                 ; work         ;
 ;                   |altsyncram_reo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 72                ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0|altsyncram_reo1:auto_generated  ; work         ;
 ;          |lru:main_lru|                            ; 12 (12)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|lru:main_lru                                                                                  ; work         ;
-;    |cpu:mcpu|                                      ; 508 (0)           ; 437 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                                                                      ; work         ;
-;       |cpu_datapath:cpu_datapath|                  ; 508 (1)           ; 437 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                                                                            ; work         ;
-;          |buffer:ex_mem_buf|                       ; 19 (0)            ; 114 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                                                                          ; work         ;
+;    |cpu:mcpu|                                      ; 512 (0)           ; 437 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                                                                      ; work         ;
+;       |cpu_datapath:cpu_datapath|                  ; 512 (1)           ; 437 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                                                                            ; work         ;
+;          |buffer:ex_mem_buf|                       ; 18 (0)            ; 114 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                                                                          ; work         ;
 ;             |register:alu|                         ; 16 (16)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu                                                             ; work         ;
 ;             |register:control_word|                ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word                                                    ; work         ;
 ;             |register:dest|                        ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest                                                            ; work         ;
-;             |register:instruction|                 ; 3 (3)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction                                                     ; work         ;
+;             |register:instruction|                 ; 2 (2)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction                                                     ; work         ;
 ;             |register:pc_br|                       ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br                                                           ; work         ;
 ;             |register:pc|                          ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc                                                              ; work         ;
 ;             |register:src1_data|                   ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data                                                       ; work         ;
@@ -497,7 +493,7 @@ applicable agreement for further details.
 ;             |mux3:alu_input_one_mux|               ; 18 (18)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_one_mux                                                      ; work         ;
 ;             |mux3:alu_input_two_mux|               ; 25 (25)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_two_mux                                                      ; work         ;
 ;             |mux4:alumux|                          ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux                                                                 ; work         ;
-;          |forwarding_unit:hot_box|                 ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|forwarding_unit:hot_box                                                                    ; work         ;
+;          |forwarding_unit:hot_box|                 ; 11 (11)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|forwarding_unit:hot_box                                                                    ; work         ;
 ;          |id_datapath:id|                          ; 100 (0)           ; 128 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id                                                                             ; work         ;
 ;             |control_rom:controls|                 ; 23 (23)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|control_rom:controls                                                        ; work         ;
 ;             |mux2:storemux_two|                    ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two                                                           ; work         ;
@@ -942,39 +938,39 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[244] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[244] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[24]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[24]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[88]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[88]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[152] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[152] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[216] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[216] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[56]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[56]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[120] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[120] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[152] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[184] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[24]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[56]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[152] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[184] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[88]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[120] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[216] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[248] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[88]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[120] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[216] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[248] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[12]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[44]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[140] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[172] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[12]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[44]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[140] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[172] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[76]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[108] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[204] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[236] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[76]  ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[108] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[204] ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[236] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[22]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[54]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[150] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[182] ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[22]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[54]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[150] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[182] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[86]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[118] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[214] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[246] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[86]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[118] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[214] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[246] ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[32]  ; 1       ;
-; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[64]  ; 1       ;
 ; Total number of inverted registers = 274*                                                       ;         ;
 +-------------------------------------------------------------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
@@ -1569,8 +1565,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit|data[9]              ;
-; 3:1                ; 66 bits   ; 132 ALUTs     ; 0 ALUTs              ; 132 ALUTs              ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data|data[15]       ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit|data[11]             ;
+; 3:1                ; 66 bits   ; 132 ALUTs     ; 0 ALUTs              ; 132 ALUTs              ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data|data[8]        ;
 ; 3:1                ; 81 bits   ; 162 ALUTs     ; 0 ALUTs              ; 162 ALUTs              ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[15]      ;
 ; 4:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[36]     ;
 ; 4:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data|data[1]         ;
@@ -1579,49 +1575,49 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; 5:1                ; 16 bits   ; 48 ALUTs      ; 0 ALUTs              ; 48 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data|data[0]         ;
 ; 8:1                ; 12 bits   ; 60 ALUTs      ; 24 ALUTs             ; 36 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[1]             ;
 ; 6:1                ; 16 bits   ; 64 ALUTs      ; 32 ALUTs             ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu|data[9]              ;
-; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[15]     ;
-; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[8]      ;
-; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:icache|cache_control:ccl|pmem_address[15]                                        ;
-; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_control:ccl|pmem_address[11]                                        ;
-; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|l2_cache:l2cache|l2_cache_control:ccl|pmem_address[15]                                 ;
-; 3:1                ; 88 bits   ; 176 ALUTs     ; 176 ALUTs            ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:insert_mux|f[114]                                 ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[9]      ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[2]      ;
+; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:icache|cache_control:ccl|pmem_address[14]                                        ;
+; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_control:ccl|pmem_address[13]                                        ;
+; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|l2_cache:l2cache|l2_cache_control:ccl|pmem_address[12]                                 ;
+; 3:1                ; 88 bits   ; 176 ALUTs     ; 176 ALUTs            ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:insert_mux|f[78]                                  ;
 ; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|read_b                             ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftLeft0         ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftRight0        ;
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftLeft0         ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|wmask_b[0]                         ;
-; 3:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|internal_mdrmux_sel[1]             ;
-; 3:1                ; 128 bits  ; 256 ALUTs     ; 128 ALUTs            ; 128 ALUTs              ; No         ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux|f[90]                         ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|pcmux_sel_internal[1]           ;
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_one_mux|f[7]          ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|wmask_b[1]                         ;
+; 3:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|internal_mdrmux_sel[2]             ;
+; 3:1                ; 128 bits  ; 256 ALUTs     ; 128 ALUTs            ; 128 ALUTs              ; No         ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux|f[112]                        ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|pcmux_sel_internal[0]           ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_one_mux|f[5]          ;
 ; 4:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_two_mux|f[13]         ;
 ; 5:1                ; 12 bits   ; 36 ALUTs      ; 24 ALUTs             ; 12 ALUTs               ; No         ; |mp3|arbiter:cache_arbiter|pmem_address                                                     ;
 ; 5:1                ; 12 bits   ; 36 ALUTs      ; 24 ALUTs             ; 12 ALUTs               ; No         ; |mp3|arbiter:cache_arbiter|pmem_address                                                     ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|arbiter:cache_arbiter|curr_operation                                                   ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[40]                                ;
-; 5:1                ; 5 bits    ; 15 ALUTs      ; 15 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_two_mux|f[5]          ;
-; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[22]                                ;
-; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[1]                                 ;
-; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[9]                                 ;
-; 7:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux|f[4]      ;
-; 7:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux|f[8]      ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[47]                                ;
+; 5:1                ; 5 bits    ; 15 ALUTs      ; 15 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux3:alu_input_two_mux|f[3]          ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[21]                                ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[5]                                 ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[13]                                ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux|f[7]      ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux|f[12]     ;
 ; 7:1                ; 3 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |mp3|arbiter:cache_arbiter|Selector20                                                       ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[32]                                ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[33]                                ;
 ; 8:1                ; 3 bits    ; 15 ALUTs      ; 15 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux2:out_mux|f[4]    ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[51]                                ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[68]                                ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[85]                                ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[102]                               ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[114]                               ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[122]                               ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[56]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[54]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[69]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[86]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[103]                               ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[118]                               ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[124]                               ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[62]                                ;
 ; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[75]                                ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[88]                                ;
-; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[106]                               ;
-; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[25]                                ;
-; 17:1               ; 8 bits    ; 88 ALUTs      ; 88 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|out_data_block[0]               ;
-; 17:1               ; 8 bits    ; 88 ALUTs      ; 88 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|out_data_block[11]              ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[89]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[110]                               ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[31]                                ;
+; 17:1               ; 8 bits    ; 88 ALUTs      ; 88 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|out_data_block[5]               ;
+; 17:1               ; 8 bits    ; 88 ALUTs      ; 88 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|out_data_block[12]              ;
 ; 12:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[9]  ;
-; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[13] ;
+; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[14] ;
 ; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[2]  ;
 ; 17:1               ; 2 bits    ; 22 ALUTs      ; 20 ALUTs             ; 2 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[6]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
@@ -1890,26 +1886,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------------------+
 ; width          ; 3     ; Signed Integer                                                                          ;
 +----------------+-------+-----------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr1_wb_reg_mux ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr2_wb_reg_mux ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -3271,24 +3247,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr2_wb_reg_mux"                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; f    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:sr1_wb_reg_mux"                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; f    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux" ;
 +------+-------+----------+------------------------------------------------------------------+
@@ -3349,7 +3307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:15     ;
 +----------------+--------------+
 
 
@@ -3359,8 +3317,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Thu Apr 20 11:31:53 2017
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
+    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Thu Apr 20 12:11:38 2017
+Info: Command: quartus_map mp3 -c mp3
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file l2_cache_set.sv
     Info (12023): Found entity 1: l2_cache_set
@@ -3452,11 +3423,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file udjns.s
     Info (12023): Found entity 1: udjns
 Info (12021): Found 1 design units, including 1 entities, in source file shiftunit.sv
     Info (12023): Found entity 1: shiftunit
-Warning (10236): Verilog HDL Implicit Net warning at cpu_datapath.sv(148): created implicit net for "test_mem"
 Info (12127): Elaborating entity "mp3" for the top level hierarchy
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:mcpu"
 Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath"
-Warning (10036): Verilog HDL or VHDL warning at cpu_datapath.sv(148): object "test_mem" assigned a value but never read
 Info (12128): Elaborating entity "if_datapath" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data"
 Info (12128): Elaborating entity "ir" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit"
 Info (12128): Elaborating entity "mux8" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux"
@@ -3484,6 +3453,9 @@ Info (12128): Elaborating entity "adjns" for hierarchy "cpu:mcpu|cpu_datapath:cp
 Info (12128): Elaborating entity "adj" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj9"
 Info (12128): Elaborating entity "adj" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj11"
 Info (12128): Elaborating entity "forwarding_unit" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|forwarding_unit:hot_box"
+Warning (10036): Verilog HDL or VHDL warning at forwarding_unit.sv(22): object "ex_forward_condition_a" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at forwarding_unit.sv(23): object "ex_forward_condition_b" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at forwarding_unit.sv(24): object "mem_forward_condition_a" assigned a value but never read
 Info (12128): Elaborating entity "mux2" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mux2:nopmux"
 Info (12128): Elaborating entity "mem_datapath" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem"
 Info (12128): Elaborating entity "gencc" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|gencc:gen_cc"
@@ -3674,16 +3646,16 @@ Info (17049): 158 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/tdubey3/fmax_420/mp3/output_files/mp3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 9134 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9138 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 130 input pins
     Info (21059): Implemented 146 output pins
-    Info (21061): Implemented 8584 logic cells
+    Info (21061): Implemented 8588 logic cells
     Info (21064): Implemented 274 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 528 megabytes
-    Info: Processing ended: Thu Apr 20 11:32:21 2017
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 527 megabytes
+    Info: Processing ended: Thu Apr 20 12:12:03 2017
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+

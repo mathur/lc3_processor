@@ -6,6 +6,8 @@ entity forwarding_unit is
         id_ex_r_two     : in     vl_logic_vector(2 downto 0);
         ex_mem_r_dest   : in     vl_logic_vector(2 downto 0);
         mem_wb_r_dest   : in     vl_logic_vector(2 downto 0);
+        if_id_r_one     : in     vl_logic_vector(2 downto 0);
+        if_id_r_two     : in     vl_logic_vector(2 downto 0);
         ex_mem_regfile_write: in     vl_logic;
         mem_wb_regfile_write: in     vl_logic;
         uses_sr1        : in     vl_logic;
