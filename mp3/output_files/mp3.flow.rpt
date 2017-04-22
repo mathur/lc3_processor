@@ -1,5 +1,5 @@
 Flow report for mp3
-Thu Apr 20 12:12:03 2017
+Sat Apr 22 15:36:10 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Thu Apr 20 12:12:03 2017       ;
+; Flow Status                   ; Successful - Sat Apr 22 15:36:10 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
@@ -48,10 +48,10 @@ applicable agreement for further details.
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 2,973                                       ;
+;     Combinational ALUTs       ; 3,261                                       ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 5,774                                       ;
-; Total registers               ; 5774                                        ;
+;     Dedicated logic registers ; 5,763                                       ;
+; Total registers               ; 5763                                        ;
 ; Total pins                    ; 276                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 2,192                                       ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/20/2017 12:11:39 ;
+; Start date & time ; 04/22/2017 15:35:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp3                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 233845176327142.149270829914425       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176831338227607.149289334927135       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -105,24 +105,24 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 527 MB              ; 00:00:19                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 493 MB              ; 00:00:13                           ;
+; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:13                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                 ;
-+----------------------+---------------------------+--------------+--------------+----------------+
-; Module Name          ; Machine Hostname          ; OS Name      ; OS Version   ; Processor type ;
-+----------------------+---------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-+----------------------+---------------------------+--------------+--------------+----------------+
++----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                    ;
++----------------------+------------------------------+--------------+--------------+----------------+
+; Module Name          ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
++----------------------+------------------------------+--------------+--------------+----------------+
+; Analysis & Synthesis ; dcl-l520-26.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
++----------------------+------------------------------+--------------+--------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map mp3 -c mp3
+quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 
 
 

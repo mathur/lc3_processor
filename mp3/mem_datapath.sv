@@ -30,7 +30,7 @@ assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 
 always_comb
 begin
-	 if(br_en_internal && (ctrl.opcode == op_br) && (instruction != 16'b0)) begin
+	 if(br_en_internal && (ctrl.opcode == op_br)) begin
 		flush = 1'b1;
 	   br_en = 1'b1;
 	 end else begin

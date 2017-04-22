@@ -57,11 +57,12 @@ begin
 		pcmux_sel_internal = pcmux_sel;
 	end
 end
-
+logic ir_load;
+assign ir_load = pc_load && resp_a && ~stall && ~flush;
 ir ir_unit (
     .clk(clk),
 	 .resp(resp_a),
-    .load(pc_load && resp_a && ~stall && ~flush),
+    .load(ir_load),
 	 .flush(flush),
     .in(rdata_a),
     .dest(dest),
@@ -92,11 +93,12 @@ register pc
     .out(pc_out),
     .flush(1'b0)
 );
-
+logic plus2_load;
+assign plus2_load = pc_load && resp_a && ~stall;
 plus2 pc_plus2
 (
     .in(pc_out),
-    .enable(pc_load && resp_a && ~stall),
+    .enable(plus2_load),
     .out(pc_plus2_out)
 );
 
