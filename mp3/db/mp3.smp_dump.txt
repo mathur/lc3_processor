@@ -1,4 +1,11 @@
 
+State Machine - |mp3|l2_cache:l2cache|l2_cache_control:ccl|state
+Name state.write_s state.write_back_s state.fetch_s state.hit_s 
+state.hit_s 0 0 0 0 
+state.fetch_s 0 0 1 1 
+state.write_back_s 0 1 0 1 
+state.write_s 1 0 0 1 
+
 State Machine - |mp3|arbiter:cache_arbiter|state
 Name state.s_ready state.s_write state.s_read 
 state.s_ready 0 0 0 

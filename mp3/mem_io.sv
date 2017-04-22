@@ -14,7 +14,7 @@ module mem_io
     input logic resp_pass,
     output logic read_pass,
     output logic write_pass,
-    output logic address_pass,
+    output lc3b_word address_pass,
 
     // branch counters
     input lc3b_word br_count, br_mispredict_count,

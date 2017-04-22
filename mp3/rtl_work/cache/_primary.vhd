@@ -15,6 +15,10 @@ entity cache is
         pmem_read       : out    vl_logic;
         pmem_write      : out    vl_logic;
         pmem_address    : out    vl_logic_vector(15 downto 0);
-        pmem_wdata      : out    vl_logic_vector(127 downto 0)
+        pmem_wdata      : out    vl_logic_vector(127 downto 0);
+        hit_count       : out    vl_logic_vector(15 downto 0);
+        miss_count      : out    vl_logic_vector(15 downto 0);
+        hit_count_reset : in     vl_logic;
+        miss_count_reset: in     vl_logic
     );
 end cache;
