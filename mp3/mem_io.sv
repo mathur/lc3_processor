@@ -50,8 +50,8 @@ begin : outputs
     mem_stall_count_reset = 1'b0;
 
     /* Actions for each state */
-    case (address)
-        4'hFFF6: begin
+    unique case (address)
+        16'b1111111111110110: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = if_stall_count;
@@ -63,7 +63,7 @@ begin : outputs
             end
         end
 
-        4'hFFF7: begin
+        16'b1111111111110111: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = mem_stall_count;
@@ -75,7 +75,7 @@ begin : outputs
             end
         end
 
-        4'hFFF8: begin
+        16'b1111111111111000: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = icache_hit_count;
@@ -87,7 +87,7 @@ begin : outputs
             end
         end
 
-        4'hFFF9: begin
+        16'b1111111111111001: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = icache_miss_count;
@@ -99,7 +99,7 @@ begin : outputs
             end
         end
 
-        4'hFFFA: begin
+        16'b1111111111111010: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = dcache_hit_count;
@@ -111,7 +111,7 @@ begin : outputs
             end
         end
 
-        4'hFFFB: begin
+        16'b1111111111111011: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = dcache_miss_count;
@@ -123,7 +123,7 @@ begin : outputs
             end
         end
 
-        4'hFFFC: begin
+        16'b1111111111111100: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = l2_hit_count;
@@ -135,7 +135,7 @@ begin : outputs
             end
         end
 
-        4'hFFFD: begin
+        16'b1111111111111101: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = l2_miss_count;
@@ -147,7 +147,7 @@ begin : outputs
             end
         end
 
-        4'hFFFE: begin
+        16'b1111111111111110: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = br_count;
@@ -159,7 +159,7 @@ begin : outputs
             end
         end
 
-        4'hFFFF: begin
+        16'b1111111111111111: begin
             if(read == 1'b1) begin
                 read_pass = 1'b0;
                 rdata = br_mispredict_count;

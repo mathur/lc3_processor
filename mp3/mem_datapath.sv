@@ -33,10 +33,6 @@ logic a,b,c,d;
 logic br_en_internal, i_sig, ireg;
 logic [2:0] internal_marmux_sel, internal_mdrmux_sel;
 assign   i_sig = (ctrl.opcode == op_ldi || ctrl.opcode == op_sti);
-assign	 a = ((read_b|| write_b) && (~resp_b));
-assign	 b = (~ireg && i_sig);
-assign	 c = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
-assign	 d = read_b|| write_b;
 assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
 
 lc3b_word branch_counter, branch_mispredict_counter, mem_stall_counter;
@@ -56,7 +52,7 @@ begin
     if(br_count_reset == 1'b1) begin
         branch_counter = 16'b0;
     end else if(ctrl.opcode == op_br) begin
-        branch_counter = branch_counter + 1;
+        branch_counter = branch_counter + 1'b1;
     end else begin
         branch_counter = branch_counter;
     end
@@ -64,7 +60,7 @@ begin
     if(br_mispredict_count_reset == 1'b1) begin
         branch_mispredict_counter = 16'b0;
     end else if(br_en == 1'b1) begin
-        branch_mispredict_counter = branch_mispredict_counter + 1;
+        branch_mispredict_counter = branch_mispredict_counter + 1'b1;
     end else begin
         branch_mispredict_counter = branch_mispredict_counter;
     end
@@ -72,7 +68,7 @@ begin
     if(mem_stall_count_reset == 1'b1) begin
         mem_stall_counter = 16'b0;
     end else if(stall == 1'b1) begin
-        mem_stall_counter = mem_stall_counter + 1;
+        mem_stall_counter = mem_stall_counter + 1'b1;
     end else begin
         mem_stall_counter = mem_stall_counter;
     end

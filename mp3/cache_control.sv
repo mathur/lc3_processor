@@ -68,7 +68,7 @@ begin: counter_update
     if(hit_count_reset == 1'b1) begin
         hit_count = 16'b0;
     end else if(counter_hit_sig == 1'b1) begin
-        hit_count = hit_count + 1;
+        hit_count = hit_count + 1'b1;
     end else begin
         hit_count = hit_count;
     end
@@ -76,7 +76,7 @@ begin: counter_update
     if(miss_count_reset == 1'b1) begin
         miss_count = 16'b0;
     end else if(counter_miss_sig == 1'b1) begin
-        miss_count = miss_count + 1;
+        miss_count = miss_count + 1'b1;
     end else begin
         miss_count = miss_count;
     end
