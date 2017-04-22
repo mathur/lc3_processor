@@ -39,7 +39,7 @@ begin
     if(if_stall_count_reset == 1'b1) begin
         if_stall_count = 16'b0;
     end else if(ir_stall == 1'b1) begin
-        if_stall_count = if_stall_count + 1;
+        if_stall_count = if_stall_count + 1'b1;
     end else begin
         if_stall_count = if_stall_count;
     end
