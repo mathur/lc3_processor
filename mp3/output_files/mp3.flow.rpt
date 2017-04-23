@@ -1,9 +1,5 @@
 Flow report for mp3
-<<<<<<< HEAD
-Sun Apr 23 11:54:16 2017
-=======
-Sat Apr 22 14:31:25 2017
->>>>>>> counters
+Sun Apr 23 17:33:03 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -44,11 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-<<<<<<< HEAD
-; Flow Status                   ; Successful - Sun Apr 23 11:54:15 2017       ;
-=======
-; Flow Status                   ; Successful - Sat Apr 22 14:31:24 2017       ;
->>>>>>> counters
+; Flow Status                   ; Successful - Sun Apr 23 17:33:02 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
@@ -56,17 +48,10 @@ applicable agreement for further details.
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
 ; Logic utilization             ; N/A                                         ;
-<<<<<<< HEAD
-;     Combinational ALUTs       ; 3,260                                       ;
+;     Combinational ALUTs       ; 3,362                                       ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 5,763                                       ;
-; Total registers               ; 5763                                        ;
-=======
-;     Combinational ALUTs       ; 3,238                                       ;
-;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 5,921                                       ;
-; Total registers               ; 5921                                        ;
->>>>>>> counters
+;     Dedicated logic registers ; 5,924                                       ;
+; Total registers               ; 5924                                        ;
 ; Total pins                    ; 276                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 2,192                                       ;
@@ -81,11 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-<<<<<<< HEAD
-; Start date & time ; 04/23/2017 11:53:58 ;
-=======
-; Start date & time ; 04/22/2017 14:30:56 ;
->>>>>>> counters
+; Start date & time ; 04/23/2017 17:32:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp3                 ;
 +-------------------+---------------------+
@@ -96,11 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-<<<<<<< HEAD
-; COMPILER_SIGNATURE_ID                ; 176831338227260.149296643831382       ; --            ; --          ; --             ;
-=======
-; COMPILER_SIGNATURE_ID                ; 233845176327142.149288945627746       ; --            ; --          ; --             ;
->>>>>>> counters
+; COMPILER_SIGNATURE_ID                ; 233845176327142.149298674929656       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mp3_tb         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp3_tb                                ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -128,22 +105,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-<<<<<<< HEAD
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 496 MB              ; 00:00:14                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:14                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                    ;
-+----------------------+------------------------------+--------------+--------------+----------------+
-; Module Name          ; Machine Hostname             ; OS Name      ; OS Version   ; Processor type ;
-+----------------------+------------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis ; dcl-l520-07.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-+----------------------+------------------------------+--------------+--------------+----------------+
-=======
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 529 MB              ; 00:00:21                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 537 MB              ; 00:00:25                           ;
+; Total                ; 00:00:30     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -154,13 +117,12 @@ applicable agreement for further details.
 +----------------------+---------------------------+--------------+--------------+----------------+
 ; Analysis & Synthesis ; linux-a2.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
 +----------------------+---------------------------+--------------+--------------+----------------+
->>>>>>> counters
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map mp3 -c mp3
+quartus_map --read_settings_files=on --write_settings_files=off mp3 -c mp3
 
 
 
