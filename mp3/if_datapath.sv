@@ -6,23 +6,49 @@ module if_datapath (
     // memory
     input logic resp_a,
     input logic [15:0] rdata_a,
-	 input logic [15:0] trap_mem,
-	 input logic br_en,
-	 input logic jmp_jsr_en,
-	 input logic trap_en,
-	 input logic b11,
-	 input lc3b_word pc_br_in,
-	 input lc3b_word sr1_data_in,
+	input logic [15:0] trap_mem,
+	input logic br_en,
+	input logic jmp_jsr_en,
+	input logic trap_en,
+	input logic b11,
+	input lc3b_word pc_br_in,
+	input lc3b_word sr1_data_in,
     input logic [2:0] pcmux_sel,
+<<<<<<< HEAD
 	 input logic stall,
 	 input logic flush,
+=======
+	input logic stall,
+>>>>>>> counters
 
     // logic signals
     output lc3b_word pc_out, instruction,
     output lc3b_reg src1, src2, dest,
     output logic read_a,
-    output logic [15:0] address_a
+    output logic [15:0] address_a,
+
+    // counters
+    input logic if_stall_count_reset,
+    output lc3b_word if_stall_count
 );
+
+logic ir_stall;
+
+initial
+begin
+    if_stall_count = 16'b0;
+end
+
+always_ff @(posedge clk)
+begin
+    if(if_stall_count_reset == 1'b1) begin
+        if_stall_count = 16'b0;
+    end else if(ir_stall == 1'b1) begin
+        if_stall_count = if_stall_count + 1'b1;
+    end else begin
+        if_stall_count = if_stall_count;
+    end
+end
 
 lc3b_word pc_plus2_out, pcmux_out;
 logic [2:0] pcmux_sel_internal;
@@ -34,26 +60,24 @@ begin
     read_a = 1'b1;
 
     if(br_en || trap_en || jmp_jsr_en) begin
-      pc_load = 1'b1;
-	 end else if(stall) begin
+        pc_load = 1'b1;
+	end else if(stall) begin
 		pc_load = 1'b0;
-	 end else begin
+	end else begin
 		pc_load = resp_a;
-	 end
+	end
 
     if(br_en) begin
 	   pcmux_sel_internal = 3'b001;
-	end
-	else if(trap_en) begin
+	end else if(trap_en) begin
 		pcmux_sel_internal = 3'b100;
-	end
-	else if (jmp_jsr_en) begin
-		if(b11)
+	end else if (jmp_jsr_en) begin
+		if(b11) begin
 			pcmux_sel_internal = 3'b001;	//JMP/RET always have a b11 of 0, so defaults to loading to registers
-		else
+		end else begin
 			pcmux_sel_internal = 3'b010;
-	end
-	else begin
+        end
+	end else begin
 		pcmux_sel_internal = pcmux_sel;
 	end
 end
@@ -61,14 +85,20 @@ logic ir_load;
 assign ir_load = pc_load && resp_a && ~stall && ~flush;
 ir ir_unit (
     .clk(clk),
+<<<<<<< HEAD
 	 .resp(resp_a),
     .load(ir_load),
 	 .flush(flush),
+=======
+	.resp(resp_a),
+    .load(pc_load && resp_a && ~stall),
+>>>>>>> counters
     .in(rdata_a),
     .dest(dest),
     .src1(src1),
     .src2(src2),
-	 .instruction(instruction)
+	.instruction(instruction),
+    .ir_stall(ir_stall)
 );
 
 mux8 pcmux
@@ -79,10 +109,10 @@ mux8 pcmux
     .c(sr1_data_in),
     .d(rdata_a),
     .e(trap_mem),
-	 .f(16'b0),
-	 .g(16'b0),
-	 .h(16'b0),
-	 .i(pcmux_out)
+	.f(16'b0),
+	.g(16'b0),
+	.h(16'b0),
+	.i(pcmux_out)
 );
 
 register pc

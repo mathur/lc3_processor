@@ -20,7 +20,13 @@ module cpu_datapath
     output write_b,
     output [1:0] wmask_b,
     output [15:0] address_b,
-    output [15:0] wdata_b
+    output [15:0] wdata_b,
+
+    // counters
+    input logic br_count_reset, br_mispredict_count_reset,
+    input logic if_stall_count_reset, mem_stall_count_reset,
+    output lc3b_word br_count, br_mispredict_count,
+    output lc3b_word if_stall_count, mem_stall_count
 );
 
 lc3b_word if_pc, if_instruction;
@@ -65,11 +71,11 @@ if_datapath if_data
     .clk(clk),
     .resp_a(resp_a),
     .rdata_a(rdata_a),
-    .trap_mem(trap_mem),
+	.trap_mem(trap_mem),
     .br_en(mem_br_en),
-    .jmp_jsr_en(mem_jmp_jsr_en),
-    .trap_en(mem_trap_en),
-    .b11(mem_b11),
+	.jmp_jsr_en(mem_jmp_jsr_en),
+	.trap_en(mem_trap_en),
+	.b11(mem_b11),
     .pc_br_in(ex_mem_pc_br),
     .sr1_data_in(ex_mem_src1_data),
     .pcmux_sel(ex_mem_ctrl.pcmux_sel),
@@ -82,7 +88,9 @@ if_datapath if_data
     .read_a(read_a),
     .address_a(address_a),
     .stall(stall_mem),
-    .flush(flush_mem)
+    .flush(flush_mem),
+    .if_stall_count(if_stall_count),
+    .if_stall_count_reset(if_stall_count_reset)
 );
 
 buffer if_id_buf
@@ -183,7 +191,7 @@ ex_datapath ex
     .ex_br_out(ex_br_out),
 
     // FORWARDING
-    .alu_input_one_mux_sel(forward_a_mux_sel), 
+    .alu_input_one_mux_sel(forward_a_mux_sel),
     .alu_input_two_mux_sel(forward_b_mux_sel),
     .mem_input(ex_mem_alu),
     .wb_input(mem_wb_dest_data),
@@ -197,7 +205,7 @@ forwarding_unit hot_box
     .mem_wb_out_regfile_write(mem_wb_ctrl.load_regfile),
     .mem_load_inst((ex_mem_ctrl.opcode == op_ldb) || (ex_mem_ctrl.opcode == op_ldi) || (ex_mem_ctrl.opcode == op_ldr)),
 	 .mem_str_inst((id_ctrl_data.opcode == op_str) || (id_ctrl_data.opcode == op_stb) || (id_ctrl_data.opcode == op_sti)),
-    .uses_sr1(id_ex_ctrl.uses_sr1), 
+    .uses_sr1(id_ex_ctrl.uses_sr1),
     .uses_sr2(id_ex_ctrl.uses_sr2),
     .uses_sr1_mem(ex_mem_ctrl.uses_sr1),
     .uses_sr2_mem(ex_mem_ctrl.uses_sr2),
@@ -268,6 +276,12 @@ mem_datapath mem
     .dest(ex_mem_dest),
     .stall(stall_mem),
     .flush(flush_mem),
+    .br_count(br_count),
+    .br_mispredict_count(br_mispredict_count),
+    .mem_stall_count(mem_stall_count),
+    .br_count_reset(br_count_reset),
+    .br_mispredict_count_reset(br_mispredict_count_reset),
+    .mem_stall_count_reset(mem_stall_count_reset),
 
     /* Port B */
     .read_b(read_b),

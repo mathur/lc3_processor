@@ -40,17 +40,47 @@ module cache_control (
 	 output lc3b_pmem_addr pmem_address,
 
 	 input lc3b_cache_tag set_one_tag,
-	 input lc3b_cache_tag set_two_tag
+	 input lc3b_cache_tag set_two_tag,
+
+     // counter
+     output lc3b_word hit_count, miss_count,
+     input logic hit_count_reset, miss_count_reset
 );
 
 enum int unsigned {
     /* List of states */
     hit_s,
     fetch_s,
-	 write_back_s,
+	write_back_s,
     write_s
 } state, next_state;
 
+logic counter_hit_sig, counter_miss_sig;
+
+initial
+begin
+    hit_count = 16'b0;
+    miss_count = 16'b0;
+end
+
+always_ff @(posedge clk)
+begin: counter_update
+    if(hit_count_reset == 1'b1) begin
+        hit_count = 16'b0;
+    end else if(counter_hit_sig == 1'b1) begin
+        hit_count = hit_count + 1'b1;
+    end else begin
+        hit_count = hit_count;
+    end
+
+    if(miss_count_reset == 1'b1) begin
+        miss_count = 16'b0;
+    end else if(counter_miss_sig == 1'b1) begin
+        miss_count = miss_count + 1'b1;
+    end else begin
+        miss_count = miss_count;
+    end
+end : counter_update
 
 always_comb
 begin : state_actions
@@ -66,6 +96,8 @@ begin : state_actions
 	 pmem_w_mux_sel = 0;
 	 insert_mux_sel = 0;
 	 pmem_address = (mem_address & 16'b1111111111110000);
+     counter_hit_sig = 0;
+     counter_miss_sig = 0;
 
 		case(state)
         hit_s: begin
@@ -73,52 +105,55 @@ begin : state_actions
                 mem_resp = 1;
                 /* Update LRU as well */
                 load_lru = 1;
+                counter_hit_sig = 1'b1;
             end
-				if((mem_write) && (hit)) begin
-					mem_resp = 1;
-					load_lru = 1;
-					if(set_one_hit) begin
-						load_set_one = 1;
-						write_type_set_one = 1;
-						cache_in_mux_sel = 1;
-					end else if(set_two_hit) begin
-						load_set_two = 1;
-						write_type_set_two = 1;
-						cache_in_mux_sel = 1;
-					end
+			if((mem_write) && (hit)) begin
+				mem_resp = 1;
+				load_lru = 1;
+				if(set_one_hit) begin
+					load_set_one = 1;
+					write_type_set_one = 1;
+					cache_in_mux_sel = 1;
+				end else if(set_two_hit) begin
+					load_set_two = 1;
+					write_type_set_two = 1;
+					cache_in_mux_sel = 1;
 				end
+                counter_hit_sig = 1'b1;
 			end
+		end
 
-			fetch_s: begin
-				pmem_read = 1;
-			end
+		fetch_s: begin
+			pmem_read = 1;
+		end
 
-			write_back_s: begin
-				if (current_lru == 0) begin
-				  pmem_write = 1;
-				  pmem_w_mux_sel = 0;
-				  pmem_address = {set_one_tag, mem_address[6:4], 4'b0000};
-				end else if(current_lru == 1) begin
-				  pmem_write = 1;
-				  pmem_w_mux_sel = 1;
-				  pmem_address = {set_two_tag, mem_address[6:4], 4'b0000};
-				end
+		write_back_s: begin
+			if (current_lru == 0) begin
+			  pmem_write = 1;
+			  pmem_w_mux_sel = 0;
+			  pmem_address = {set_one_tag, mem_address[6:4], 4'b0000};
+			end else if(current_lru == 1) begin
+			  pmem_write = 1;
+			  pmem_w_mux_sel = 1;
+			  pmem_address = {set_two_tag, mem_address[6:4], 4'b0000};
 			end
+		end
 
         write_s: begin
-				if (current_lru == 0) begin
-				  /* Set one is LRU, replace */
-				  load_set_one = 1;
-				  cache_in_mux_sel = mem_write;
-				  write_type_set_one = mem_write;
-				  insert_mux_sel = 1;
-				end else if (current_lru == 1) begin
-				  /* Set two is LRU, replace */
-				  load_set_two = 1;
-				  cache_in_mux_sel = mem_write;
-				  write_type_set_two = mem_write;
-				  insert_mux_sel = 1;
-				end
+			if (current_lru == 0) begin
+			    /* Set one is LRU, replace */
+			    load_set_one = 1;
+			    cache_in_mux_sel = mem_write;
+			    write_type_set_one = mem_write;
+			    insert_mux_sel = 1;
+			end else if (current_lru == 1) begin
+			    /* Set two is LRU, replace */
+			    load_set_two = 1;
+			    cache_in_mux_sel = mem_write;
+			    write_type_set_two = mem_write;
+			    insert_mux_sel = 1;
+			end
+            counter_miss_sig = 1'b1;
         end
     endcase
 end : state_actions
@@ -163,12 +198,10 @@ begin : next_state_logic
 	endcase
 end : next_state_logic
 
-
 always_ff @(posedge clk)
 begin: next_state_assignment
     /* Assignment of next state on clock edge */
      state <= next_state;
 end : next_state_assignment
-
 
 endmodule : cache_control

@@ -1,5 +1,9 @@
 Analysis & Synthesis report for mp3
+<<<<<<< HEAD
 Sun Apr 23 11:54:16 2017
+=======
+Sat Apr 22 14:31:25 2017
+>>>>>>> counters
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -53,6 +57,7 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
  45. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux
  46. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux
  47. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two
+<<<<<<< HEAD
  48. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:mem_to_id_sr1
  49. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mux2:mem_to_id_sr2
  50. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word
@@ -166,6 +171,108 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 158. Elapsed Time Per Partition
 159. Analysis & Synthesis Messages
 160. Analysis & Synthesis Suppressed Messages
+=======
+ 48. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word
+ 49. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1
+ 50. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2
+ 51. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest
+ 52. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src1_data
+ 53. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:src2_data
+ 54. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:dest_data
+ 55. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:instruction
+ 56. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:alu
+ 57. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:br
+ 58. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc
+ 59. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:pc_br
+ 60. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mar
+ 61. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:mdr
+ 62. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux2:br_add_mux
+ 63. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|badder:br_add
+ 64. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux
+ 65. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj5
+ 66. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj6
+ 67. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adjns:adj6ns
+ 68. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj9
+ 69. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|adj:adj11
+ 70. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word
+ 71. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1
+ 72. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2
+ 73. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest
+ 74. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src1_data
+ 75. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:src2_data
+ 76. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest_data
+ 77. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction
+ 78. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu
+ 79. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:br
+ 80. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc
+ 81. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br
+ 82. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mar
+ 83. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:mdr
+ 84. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux
+ 85. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_a
+ 86. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux4:mux_b
+ 87. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux
+ 88. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:stbmux
+ 89. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux
+ 90. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_a
+ 91. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_b
+ 92. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux
+ 93. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc
+ 94. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:ldbmux
+ 95. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit
+ 96. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:zext_8
+ 97. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udj:trap_zext
+ 98. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:ldbzext
+ 99. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux
+100. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a
+101. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b
+102. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux
+103. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_reg
+104. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_addr_reg
+105. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:control_word
+106. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1
+107. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2
+108. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest
+109. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src1_data
+110. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:src2_data
+111. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:dest_data
+112. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:instruction
+113. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:alu
+114. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:br
+115. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc
+116. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:pc_br
+117. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mar
+118. Parameter Settings for User Entity Instance: cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf|register:mdr
+119. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:cache_in_mux
+120. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:pmem_write_mux
+121. Parameter Settings for User Entity Instance: cache:icache|cache_datapath:cdp|mux2:insert_mux
+122. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:cache_in_mux
+123. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:pmem_write_mux
+124. Parameter Settings for User Entity Instance: cache:dcache|cache_datapath:cdp|mux2:insert_mux
+125. Parameter Settings for User Entity Instance: arbiter:cache_arbiter|register:rdata_a
+126. Parameter Settings for User Entity Instance: arbiter:cache_arbiter|register:rdata_b
+127. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux
+128. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:pmem_write_mux
+129. Parameter Settings for User Entity Instance: l2_cache:l2cache|l2_cache_datapath:cdp|mux2:insert_mux
+130. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0
+131. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:tag_rtl_0
+132. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:data_rtl_0
+133. Parameter Settings for Inferred Entity Instance: cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0
+134. altsyncram Parameter Settings by Entity Instance
+135. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:mem_wb_buf"
+136. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux"
+137. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux"
+138. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux2:stbmux"
+139. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux"
+140. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf"
+141. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf"
+142. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:destmux"
+143. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf"
+144. Port Connectivity Checks: "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux"
+145. Elapsed Time Per Partition
+146. Analysis & Synthesis Messages
+147. Analysis & Synthesis Suppressed Messages
+>>>>>>> counters
 
 
 
@@ -191,16 +298,27 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis Status   ; Successful - Sun Apr 23 11:54:15 2017       ;
+=======
+; Analysis & Synthesis Status   ; Successful - Sat Apr 22 14:31:24 2017       ;
+>>>>>>> counters
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp3                                         ;
 ; Top-level Entity Name         ; mp3                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
+<<<<<<< HEAD
 ;     Combinational ALUTs       ; 3,260                                       ;
 ;     Memory ALUTs              ; 0                                           ;
 ;     Dedicated logic registers ; 5,763                                       ;
 ; Total registers               ; 5763                                        ;
+=======
+;     Combinational ALUTs       ; 3,238                                       ;
+;     Memory ALUTs              ; 0                                           ;
+;     Dedicated logic registers ; 5,921                                       ;
+; Total registers               ; 5921                                        ;
+>>>>>>> counters
 ; Total pins                    ; 276                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 2,192                                       ;
@@ -303,16 +421,16 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 9           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
-;     Processors 5-8         ;   0.0%      ;
+;     Processors 2-9         ; < 0.1%      ;
+;     Processors 10-24       ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -321,6 +439,7 @@ applicable agreement for further details.
 +----------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                ; Library ;
 +----------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------+---------+
+<<<<<<< HEAD
 ; l2_cache_set.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_set.sv                                  ;         ;
 ; l2_cache_datapath.sv                   ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_datapath.sv                             ;         ;
 ; l2_cache_control.sv                    ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/l2_cache_control.sv                              ;         ;
@@ -361,6 +480,48 @@ applicable agreement for further details.
 ; adjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/adjns.sv                                         ;         ;
 ; udjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/udjns.sv                                         ;         ;
 ; shiftunit.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/tdubey3/fmax_420/mp3/shiftunit.sv                                     ;         ;
+=======
+; cache_set.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_set.sv                                    ;         ;
+; cache_datapath.sv                      ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_datapath.sv                               ;         ;
+; cache_control.sv                       ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_control.sv                                ;         ;
+; cache_block.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache_block.sv                                  ;         ;
+; cache.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cache.sv                                        ;         ;
+; arbiter.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/arbiter.sv                                      ;         ;
+; control_rom.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/control_rom.sv                                  ;         ;
+; buffer.sv                              ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/buffer.sv                                       ;         ;
+; mem_datapath.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mem_datapath.sv                                 ;         ;
+; if_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/if_datapath.sv                                  ;         ;
+; id_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/id_datapath.sv                                  ;         ;
+; ex_datapath.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/ex_datapath.sv                                  ;         ;
+; byte_insert.sv                         ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/byte_insert.sv                                  ;         ;
+; lc3b_types.sv                          ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/lc3b_types.sv                                   ;         ;
+; lru.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/lru.sv                                          ;         ;
+; cpu_datapath.sv                        ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cpu_datapath.sv                                 ;         ;
+; cpu.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/cpu.sv                                          ;         ;
+; adj.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/adj.sv                                          ;         ;
+; alu.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/alu.sv                                          ;         ;
+; gencc.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/gencc.sv                                        ;         ;
+; ir.sv                                  ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/ir.sv                                           ;         ;
+; mp3.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mp3.sv                                          ;         ;
+; plus2.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/plus2.sv                                        ;         ;
+; regfile.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/regfile.sv                                      ;         ;
+; register.sv                            ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/register.sv                                     ;         ;
+; mux2.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux2.sv                                         ;         ;
+; benable.sv                             ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/benable.sv                                      ;         ;
+; badder.sv                              ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/badder.sv                                       ;         ;
+; mux4.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux4.sv                                         ;         ;
+; udj.sv                                 ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/udj.sv                                          ;         ;
+; mux8.sv                                ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/mux8.sv                                         ;         ;
+; adjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/adjns.sv                                        ;         ;
+; udjns.sv                               ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/udjns.sv                                        ;         ;
+; shiftunit.sv                           ; yes             ; User SystemVerilog HDL File                           ; /home/rmathur2/fmax_420/mp3/shiftunit.sv                                    ;         ;
+; mem_io.sv                              ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/mem_io.sv                                       ;         ;
+; l2_cache.sv                            ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache.sv                                     ;         ;
+; l2_cache_datapath.sv                   ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv                            ;         ;
+; l2_cache_block.sv                      ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_block.sv                               ;         ;
+; l2_cache_set.sv                        ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_set.sv                                 ;         ;
+; l2_cache_control.sv                    ; yes             ; Auto-Found SystemVerilog HDL File                     ; /home/rmathur2/fmax_420/mp3/l2_cache_control.sv                             ;         ;
+>>>>>>> counters
 ; altsyncram.tdf                         ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc                  ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                            ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -370,10 +531,17 @@ applicable agreement for further details.
 ; altrom.inc                             ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                             ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                           ; yes             ; Megafunction                                          ; /software/altera/13.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+<<<<<<< HEAD
 ; db/altsyncram_reo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/tdubey3/fmax_420/mp3/db/altsyncram_reo1.tdf                           ;         ;
 ; db/mp3.ram2_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/tdubey3/fmax_420/mp3/db/mp3.ram2_cache_set_708bd3f9.hdl.mif           ;         ;
 ; db/altsyncram_0lo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/tdubey3/fmax_420/mp3/db/altsyncram_0lo1.tdf                           ;         ;
 ; db/mp3.ram3_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/tdubey3/fmax_420/mp3/db/mp3.ram3_cache_set_708bd3f9.hdl.mif           ;         ;
+=======
+; db/altsyncram_reo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/rmathur2/fmax_420/mp3/db/altsyncram_reo1.tdf                          ;         ;
+; db/mp3.ram2_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/rmathur2/fmax_420/mp3/db/mp3.ram2_cache_set_708bd3f9.hdl.mif          ;         ;
+; db/altsyncram_0lo1.tdf                 ; yes             ; Auto-Generated Megafunction                           ; /home/rmathur2/fmax_420/mp3/db/altsyncram_0lo1.tdf                          ;         ;
+; db/mp3.ram3_cache_set_708bd3f9.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/rmathur2/fmax_420/mp3/db/mp3.ram3_cache_set_708bd3f9.hdl.mif          ;         ;
+>>>>>>> counters
 +----------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------+---------+
 
 
@@ -382,6 +550,7 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
+<<<<<<< HEAD
 ; Estimated ALUTs Used                          ; 3260      ;
 ;     -- Combinational ALUTs                    ; 3260      ;
 ;     -- Memory ALUTs                           ; 0         ;
@@ -410,6 +579,36 @@ applicable agreement for further details.
 ;                                               ;           ;
 ; Total registers                               ; 5763      ;
 ;     -- Dedicated logic registers              ; 5763      ;
+=======
+; Estimated ALUTs Used                          ; 3238      ;
+;     -- Combinational ALUTs                    ; 3238      ;
+;     -- Memory ALUTs                           ; 0         ;
+;     -- LUT_REGs                               ; 0         ;
+; Dedicated logic registers                     ; 5921      ;
+;                                               ;           ;
+; Estimated ALUTs Unavailable                   ; 1196      ;
+;     -- Due to unpartnered combinational logic ; 1196      ;
+;     -- Due to Memory ALUTs                    ; 0         ;
+;                                               ;           ;
+; Total combinational functions                 ; 3238      ;
+; Combinational ALUT usage by number of inputs  ;           ;
+;     -- 7 input functions                      ; 1196      ;
+;     -- 6 input functions                      ; 617       ;
+;     -- 5 input functions                      ; 363       ;
+;     -- 4 input functions                      ; 531       ;
+;     -- <=3 input functions                    ; 531       ;
+;                                               ;           ;
+; Combinational ALUTs by mode                   ;           ;
+;     -- normal mode                            ; 1837      ;
+;     -- extended LUT mode                      ; 1196      ;
+;     -- arithmetic mode                        ; 205       ;
+;     -- shared arithmetic mode                 ; 0         ;
+;                                               ;           ;
+; Estimated ALUT/register pairs used            ; 9132      ;
+;                                               ;           ;
+; Total registers                               ; 5921      ;
+;     -- Dedicated logic registers              ; 5921      ;
+>>>>>>> counters
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -419,9 +618,15 @@ applicable agreement for further details.
 ; Total block memory bits                       ; 2192      ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
+<<<<<<< HEAD
 ; Maximum fan-out                               ; 6037      ;
 ; Total fan-out                                 ; 38096     ;
 ; Average fan-out                               ; 3.87      ;
+=======
+; Maximum fan-out                               ; 6195      ;
+; Total fan-out                                 ; 37491     ;
+; Average fan-out                               ; 3.75      ;
+>>>>>>> counters
 +-----------------------------------------------+-----------+
 
 
@@ -430,6 +635,7 @@ applicable agreement for further details.
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Library Name ;
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+--------------+
+<<<<<<< HEAD
 ; |mp3                                               ; 3260 (0)          ; 5763 (0)     ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp3                                                                                                                               ; work         ;
 ;    |arbiter:cache_arbiter|                         ; 40 (40)           ; 262 (6)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter                                                                                                         ; work         ;
 ;       |register:rdata_a|                           ; 0 (0)             ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter|register:rdata_a                                                                                        ; work         ;
@@ -449,6 +655,27 @@ applicable agreement for further details.
 ;       |cache_datapath:cdp|                         ; 398 (0)           ; 600 (0)      ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp                                                                                               ; work         ;
 ;          |cache_block:main_block|                  ; 388 (98)          ; 592 (0)      ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block                                                                        ; work         ;
 ;             |cache_set:set_one|                    ; 147 (147)         ; 296 (296)    ; 1096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one                                                      ; work         ;
+=======
+; |mp3                                               ; 3238 (0)          ; 5921 (0)     ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp3                                                                                                                               ; work         ;
+;    |arbiter:cache_arbiter|                         ; 41 (41)           ; 262 (6)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter                                                                                                         ; work         ;
+;       |register:rdata_a|                           ; 0 (0)             ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter|register:rdata_a                                                                                        ; work         ;
+;       |register:rdata_b|                           ; 0 (0)             ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|arbiter:cache_arbiter|register:rdata_b                                                                                        ; work         ;
+;    |cache:dcache|                                  ; 944 (0)           ; 2268 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache                                                                                                                  ; work         ;
+;       |cache_control:ccl|                          ; 47 (47)           ; 36 (36)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_control:ccl                                                                                                ; work         ;
+;       |cache_datapath:cdp|                         ; 897 (0)           ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp                                                                                               ; work         ;
+;          |byte_insert:binsert|                     ; 2 (2)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|byte_insert:binsert                                                                           ; work         ;
+;          |cache_block:main_block|                  ; 591 (9)           ; 2224 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block                                                                        ; work         ;
+;             |cache_set:set_one|                    ; 286 (286)         ; 1112 (1112)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one                                                      ; work         ;
+;             |cache_set:set_two|                    ; 296 (296)         ; 1112 (1112)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two                                                      ; work         ;
+;          |lru:main_lru|                            ; 11 (11)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|lru:main_lru                                                                                  ; work         ;
+;          |mux2:cache_in_mux|                       ; 205 (205)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux                                                                             ; work         ;
+;          |mux2:insert_mux|                         ; 88 (88)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:dcache|cache_datapath:cdp|mux2:insert_mux                                                                               ; work         ;
+;    |cache:icache|                                  ; 443 (0)           ; 635 (0)      ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache                                                                                                                  ; work         ;
+;       |cache_control:ccl|                          ; 40 (40)           ; 35 (35)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_control:ccl                                                                                                ; work         ;
+;       |cache_datapath:cdp|                         ; 403 (0)           ; 600 (0)      ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp                                                                                               ; work         ;
+;          |cache_block:main_block|                  ; 389 (99)          ; 592 (0)      ; 2192              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block                                                                        ; work         ;
+;             |cache_set:set_one|                    ; 144 (144)         ; 296 (296)    ; 1096              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one                                                      ; work         ;
+>>>>>>> counters
 ;                |altsyncram:data_rtl_0|             ; 0 (0)             ; 0 (0)        ; 1024              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0                                ; work         ;
 ;                   |altsyncram_0lo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:data_rtl_0|altsyncram_0lo1:auto_generated ; work         ;
 ;                |altsyncram:tag_rtl_0|              ; 0 (0)             ; 0 (0)        ; 72                ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|altsyncram:tag_rtl_0                                 ; work         ;
@@ -458,11 +685,19 @@ applicable agreement for further details.
 ;                   |altsyncram_0lo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024              ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:data_rtl_0|altsyncram_0lo1:auto_generated ; work         ;
 ;                |altsyncram:tag_rtl_0|              ; 0 (0)             ; 0 (0)        ; 72                ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0                                 ; work         ;
 ;                   |altsyncram_reo1:auto_generated| ; 0 (0)             ; 0 (0)        ; 72                ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|altsyncram:tag_rtl_0|altsyncram_reo1:auto_generated  ; work         ;
+<<<<<<< HEAD
 ;          |lru:main_lru|                            ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|lru:main_lru                                                                                  ; work         ;
 ;    |cpu:mcpu|                                      ; 574 (0)           ; 426 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                                                                      ; work         ;
 ;       |cpu_datapath:cpu_datapath|                  ; 574 (1)           ; 426 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                                                                            ; work         ;
 ;          |buffer:ex_mem_buf|                       ; 16 (0)            ; 107 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                                                                          ; work         ;
 ;             |register:alu|                         ; 16 (16)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu                                                             ; work         ;
+=======
+;          |lru:main_lru|                            ; 14 (14)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cache:icache|cache_datapath:cdp|lru:main_lru                                                                                  ; work         ;
+;    |cpu:mcpu|                                      ; 538 (0)           ; 488 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu                                                                                                                      ; work         ;
+;       |cpu_datapath:cpu_datapath|                  ; 538 (0)           ; 488 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath                                                                                            ; work         ;
+;          |buffer:ex_mem_buf|                       ; 0 (0)             ; 107 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf                                                                          ; work         ;
+;             |register:alu|                         ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu                                                             ; work         ;
+>>>>>>> counters
 ;             |register:control_word|                ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word                                                    ; work         ;
 ;             |register:dest|                        ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:dest                                                            ; work         ;
 ;             |register:instruction|                 ; 0 (0)             ; 9 (9)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:instruction                                                     ; work         ;
@@ -494,15 +729,24 @@ applicable agreement for further details.
 ;          |id_datapath:id|                          ; 101 (0)           ; 128 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id                                                                             ; work         ;
 ;             |control_rom:controls|                 ; 24 (24)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|control_rom:controls                                                        ; work         ;
 ;             |mux2:storemux_two|                    ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|mux2:storemux_two                                                           ; work         ;
+<<<<<<< HEAD
 ;             |regfile:rfile|                        ; 74 (74)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile                                                               ; work         ;
 ;          |if_datapath:if_data|                     ; 47 (4)            ; 32 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data                                                                        ; work         ;
 ;             |ir:ir_unit|                           ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit                                                             ; work         ;
 ;             |mux8:pcmux|                           ; 27 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux                                                             ; work         ;
 ;                |mux2:out_mux|                      ; 25 (25)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux2:out_mux                                                ; work         ;
+=======
+;             |regfile:rfile|                        ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile                                                               ; work         ;
+;          |if_datapath:if_data|                     ; 66 (20)           ; 49 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data                                                                        ; work         ;
+;             |ir:ir_unit|                           ; 1 (1)             ; 17 (17)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit                                                             ; work         ;
+;             |mux8:pcmux|                           ; 30 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux                                                             ; work         ;
+;                |mux2:out_mux|                      ; 28 (28)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux2:out_mux                                                ; work         ;
+>>>>>>> counters
 ;                |mux4:mux_a|                        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux4:mux_a                                                  ; work         ;
 ;                |mux4:mux_b|                        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux4:mux_b                                                  ; work         ;
 ;             |plus2:pc_plus2|                       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|plus2:pc_plus2                                                         ; work         ;
 ;             |register:pc|                          ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc                                                            ; work         ;
+<<<<<<< HEAD
 ;          |mem_datapath:mem|                        ; 241 (11)          ; 20 (0)       ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem                                                                           ; work         ;
 ;             |benable:cccomp|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|benable:cccomp                                                            ; work         ;
 ;             |gencc:gen_cc|                         ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|gencc:gen_cc                                                              ; work         ;
@@ -526,6 +770,34 @@ applicable agreement for further details.
 ;          |lru:main_lru|                            ; 10 (10)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|lru:main_lru                                                                           ; work         ;
 ;          |mux2:cache_in_mux|                       ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux                                                                      ; work         ;
 ;          |mux2:pmem_write_mux|                     ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:pmem_write_mux                                                                    ; work         ;
+=======
+;          |mem_datapath:mem|                        ; 304 (63)          ; 68 (48)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem                                                                           ; work         ;
+;             |benable:cccomp|                       ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|benable:cccomp                                                            ; work         ;
+;             |gencc:gen_cc|                         ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|gencc:gen_cc                                                              ; work         ;
+;             |mux8:marmux|                          ; 41 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux                                                               ; work         ;
+;                |mux2:out_mux|                      ; 41 (41)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux                                                  ; work         ;
+;             |mux8:mdrmux|                          ; 40 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux                                                               ; work         ;
+;                |mux2:out_mux|                      ; 39 (39)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux                                                  ; work         ;
+;                |mux4:mux_b|                        ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux4:mux_b                                                    ; work         ;
+;             |mux8:regfilemux|                      ; 94 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux                                                           ; work         ;
+;                |mux2:out_mux|                      ; 73 (73)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux                                              ; work         ;
+;                |mux4:mux_a|                        ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_a                                                ; work         ;
+;                |mux4:mux_b|                        ; 17 (17)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux4:mux_b                                                ; work         ;
+;             |register:cc|                          ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:cc                                                               ; work         ;
+;             |register:indirect_addr_reg|           ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_addr_reg                                                ; work         ;
+;             |register:indirect_reg|                ; 1 (1)             ; 1 (1)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|register:indirect_reg                                                     ; work         ;
+;             |shiftunit:sunit|                      ; 58 (58)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit                                                           ; work         ;
+;    |l2_cache:l2cache|                              ; 1059 (0)          ; 2268 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache                                                                                                              ; work         ;
+;       |l2_cache_control:ccl|                       ; 60 (60)           ; 36 (36)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_control:ccl                                                                                         ; work         ;
+;       |l2_cache_datapath:cdp|                      ; 999 (0)           ; 2232 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp                                                                                        ; work         ;
+;          |l2_cache_block:main_block|               ; 725 (141)         ; 2224 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block                                                              ; work         ;
+;             |l2_cache_set:set_one|                 ; 288 (288)         ; 1112 (1112)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_one                                         ; work         ;
+;             |l2_cache_set:set_two|                 ; 296 (296)         ; 1112 (1112)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_two                                         ; work         ;
+;          |lru:main_lru|                            ; 18 (18)           ; 8 (8)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|lru:main_lru                                                                           ; work         ;
+;          |mux2:cache_in_mux|                       ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux                                                                      ; work         ;
+;          |mux2:pmem_write_mux|                     ; 128 (128)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:pmem_write_mux                                                                    ; work         ;
+;    |mem_io:mem_mapped_io|                          ; 213 (213)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp3|mem_io:mem_mapped_io                                                                                                          ; work         ;
+>>>>>>> counters
 +----------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -607,6 +879,7 @@ Encoding Type:  One-Hot
 +--------------------+---------------+--------------------+---------------+-------------+
 
 
+<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------+
 ; Logic Cells Representing Combinational Loops                                            ;
 +-------------------------------------------------------------------------------------+---+
@@ -832,6 +1105,239 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; arbiter:cache_arbiter|curr_operation.a_write                                             ; Stuck at GND due to stuck port data_in                                                          ;
 ; Total Number of Removed Registers = 207                                                  ;                                                                                                 ;
 +------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+
+=======
++-------------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                              ;
++--------------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                      ;    ;
++--------------------------------------------------------------------------------------+----+
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[7]~12 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[8]~11 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[9]~10 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[10]~9 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[11]~8 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[12]~7 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[13]~6 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[14]~5 ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[15]~4 ;    ;
+; l2_cache:l2cache|l2_cache_control:ccl|mem_resp~1                                     ;    ;
+; rtl~9                                                                                ;    ;
+; rtl~8                                                                                ;    ;
+; rtl~7                                                                                ;    ;
+; rtl~6                                                                                ;    ;
+; rtl~5                                                                                ;    ;
+; rtl~4                                                                                ;    ;
+; rtl~3                                                                                ;    ;
+; rtl~2                                                                                ;    ;
+; rtl~1                                                                                ;    ;
+; rtl~0                                                                                ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[2]~1  ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[1]~2  ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[3]~0  ;    ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[0]~3  ;    ;
+; Number of logic cells representing combinational loops                               ; 24 ;
++--------------------------------------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+; Register name                                                                                     ; Reason for Removal                                                                             ;
++---------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[9,10,19..21,30,31] ; Stuck at GND due to stuck port data_in                                                         ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[9,10,19..21]      ; Stuck at GND due to stuck port data_in                                                         ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc|data[0]                          ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:pc_br|data[0]        ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[2]                 ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:id_ex_buf|register:control_word|data[3]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[2]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[2]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[1]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[1]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src2|data[0]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[0]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[0]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[6]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[1]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[7]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:src1|data[2]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[8]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest|data[0]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[9]   ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest|data[1]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[10]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest|data[2]                         ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:instruction|data[11]  ;
+; cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[2]                ; Merged with cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:control_word|data[3] ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~2                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~3                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~4                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~5                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~6                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~7                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~8                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~9                                                     ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~10                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~11                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~12                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~13                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~14                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~15                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~16                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~17                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~18                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~19                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~20                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~21                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~22                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~23                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~24                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~25                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~26                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~27                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~28                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~29                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~30                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~31                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~32                                                    ; Lost fanout                                                                                    ;
+; l2_cache:l2cache|l2_cache_control:ccl|state~33                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~4                                                                     ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~5                                                                     ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~6                                                                     ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~7                                                                     ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~8                                                                     ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~9                                                                     ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~10                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~11                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~12                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~13                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~14                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~15                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~16                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~17                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~18                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~19                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~20                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~21                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~22                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~23                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~24                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~25                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~26                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~27                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~28                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~29                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~30                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~31                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~32                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|state~33                                                                    ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~7                                                            ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~8                                                            ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~10                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~11                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~12                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~13                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~14                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~15                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~16                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~17                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~18                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~19                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~20                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~21                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~22                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~23                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~24                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~25                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~26                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~27                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~28                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~29                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~30                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~31                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~32                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~33                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~34                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~35                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~36                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~37                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation~38                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~2                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~3                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~4                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~5                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~6                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~7                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~8                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~9                                                            ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~10                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~11                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~12                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~13                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~14                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~15                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~16                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~17                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~18                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~19                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~20                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~21                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~22                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~23                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~24                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~25                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~26                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~27                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~28                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~29                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~30                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~31                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~32                                                           ; Lost fanout                                                                                    ;
+; cache:dcache|cache_control:ccl|state~33                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~2                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~3                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~4                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~5                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~6                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~7                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~8                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~9                                                            ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~10                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~11                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~12                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~13                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~14                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~15                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~16                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~17                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~18                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~19                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~20                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~21                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~22                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~23                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~24                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~25                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~26                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~27                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~28                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~29                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~30                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~31                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~32                                                           ; Lost fanout                                                                                    ;
+; cache:icache|cache_control:ccl|state~33                                                           ; Lost fanout                                                                                    ;
+; arbiter:cache_arbiter|curr_operation.none                                                         ; Lost fanout                                                                                    ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~0                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~1                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~2                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~3                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~4                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~5                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~6                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty~7                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~0                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~1                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~2                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~3                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~4                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~5                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~6                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty~7                  ; Stuck at GND due to stuck port data_in                                                         ;
+; cache:icache|cache_control:ccl|state.write_back_s                                                 ; Stuck at GND due to stuck port data_in                                                         ;
+; arbiter:cache_arbiter|curr_operation.a_write                                                      ; Stuck at GND due to stuck port data_in                                                         ;
+; Total Number of Removed Registers = 200                                                           ;                                                                                                ;
++---------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+>>>>>>> counters
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -851,12 +1357,21 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
+<<<<<<< HEAD
 ; Total registers                              ; 5763  ;
 ; Number of registers using Synchronous Clear  ; 239   ;
 ; Number of registers using Synchronous Load   ; 12    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5146  ;
+=======
+; Total registers                              ; 5921  ;
+; Number of registers using Synchronous Clear  ; 161   ;
+; Number of registers using Synchronous Load   ; 13    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5287  ;
+>>>>>>> counters
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -869,12 +1384,16 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[12]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[14]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[16]   ; 1       ;
+<<<<<<< HEAD
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[24]   ; 1       ;
+=======
+>>>>>>> counters
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[8]    ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[10]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[18]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[20]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[22]   ; 1       ;
+<<<<<<< HEAD
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[16]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[8]    ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[10]   ; 1       ;
@@ -884,6 +1403,18 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[20]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[22]   ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[24]   ; 1       ;
+=======
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0_bypass[24]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[12]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[14]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[16]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[24]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[8]    ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[10]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[18]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[20]   ; 1       ;
+; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0_bypass[22]   ; 1       ;
+>>>>>>> counters
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[16]  ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data_rtl_0_bypass[16]  ; 1       ;
 ; cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data_rtl_0_bypass[80]  ; 1       ;
@@ -1560,6 +2091,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+<<<<<<< HEAD
 ; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit|data[8]              ;
 ; 3:1                ; 156 bits  ; 312 ALUTs     ; 0 ALUTs              ; 312 ALUTs              ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:pc|data[10]               ;
 ; 4:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:if_id_buf|register:dest|data[0]              ;
@@ -1580,10 +2112,37 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftLeft0         ;
 ; 3:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|internal_mdrmux_sel[0]             ;
 ; 3:1                ; 128 bits  ; 256 ALUTs     ; 128 ALUTs            ; 128 ALUTs              ; No         ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux|f[31]                         ;
+=======
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|l2_cache:l2cache|l2_cache_control:ccl|miss_count[9]                                    ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cache:dcache|cache_control:ccl|miss_count[13]                                          ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cache:icache|cache_control:ccl|miss_count[14]                                          ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cache:dcache|cache_control:ccl|hit_count[9]                                            ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|branch_mispredict_counter[11]      ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cache:icache|cache_control:ccl|hit_count[1]                                            ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mem_stall_counter[8]               ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|l2_cache:l2cache|l2_cache_control:ccl|hit_count[7]                                     ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 0 ALUTs              ; 32 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit|data[0]              ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|buffer:ex_mem_buf|register:alu|data[5]              ;
+; 8:1                ; 12 bits   ; 60 ALUTs      ; 24 ALUTs             ; 36 ALUTs               ; Yes        ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|register:pc|data[3]             ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[12]     ;
+; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:marmux|mux2:out_mux|f[7]      ;
+; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:icache|cache_control:ccl|pmem_address[8]                                         ;
+; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_control:ccl|pmem_address[12]                                        ;
+; 3:1                ; 9 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|l2_cache:l2cache|l2_cache_control:ccl|pmem_address[11]                                 ;
+; 3:1                ; 88 bits   ; 176 ALUTs     ; 176 ALUTs            ; 0 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:insert_mux|f[92]                                  ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|write_b                            ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|wmask_b[1]                         ;
+; 3:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alumux|f[4]                     ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftRight0        ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|shiftunit:sunit|ShiftLeft0         ;
+; 3:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|internal_mdrmux_sel[0]             ;
+; 3:1                ; 128 bits  ; 256 ALUTs     ; 128 ALUTs            ; 128 ALUTs              ; No         ; |mp3|l2_cache:l2cache|l2_cache_datapath:cdp|mux2:cache_in_mux|f[32]                         ;
+>>>>>>> counters
 ; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|pcmux_sel_internal[0]           ;
 ; 5:1                ; 12 bits   ; 36 ALUTs      ; 24 ALUTs             ; 12 ALUTs               ; No         ; |mp3|arbiter:cache_arbiter|pmem_address                                                     ;
 ; 5:1                ; 12 bits   ; 36 ALUTs      ; 24 ALUTs             ; 12 ALUTs               ; No         ; |mp3|arbiter:cache_arbiter|pmem_address                                                     ;
 ; 5:1                ; 2 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp3|arbiter:cache_arbiter|curr_operation                                                   ;
+<<<<<<< HEAD
 ; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[40]                                ;
 ; 5:1                ; 16 bits   ; 48 ALUTs      ; 48 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alu_input_one_mux|f[1]          ;
 ; 5:1                ; 10 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|ex_datapath:ex|mux4:alu_input_two_mux|f[7]          ;
@@ -1612,7 +2171,34 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; 12:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[9]  ;
 ; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[14] ;
 ; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[2]  ;
+=======
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 16 ALUTs             ; 16 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[41]                                ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[22]                                ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[5]                                 ;
+; 5:1                ; 8 bits    ; 24 ALUTs      ; 16 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[11]                                ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux|f[0]      ;
+; 7:1                ; 8 bits    ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:mdrmux|mux2:out_mux|f[10]     ;
+; 7:1                ; 3 bits    ; 12 ALUTs      ; 12 ALUTs             ; 0 ALUTs                ; No         ; |mp3|arbiter:cache_arbiter|Selector19                                                       ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[34]                                ;
+; 8:1                ; 3 bits    ; 15 ALUTs      ; 15 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux2:out_mux|f[4]    ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[50]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[64]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[86]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[103]                               ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[113]                               ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[121]                               ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[61]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[74]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[89]                                ;
+; 11:1               ; 8 bits    ; 56 ALUTs      ; 16 ALUTs             ; 40 ALUTs               ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[108]                               ;
+; 6:1                ; 8 bits    ; 32 ALUTs      ; 24 ALUTs             ; 8 ALUTs                ; No         ; |mp3|cache:dcache|cache_datapath:cdp|mux2:cache_in_mux|f[28]                                ;
+; 12:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[10] ;
+; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[14] ;
+; 15:1               ; 2 bits    ; 20 ALUTs      ; 16 ALUTs             ; 4 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[1]  ;
+>>>>>>> counters
 ; 17:1               ; 2 bits    ; 22 ALUTs      ; 20 ALUTs             ; 2 ALUTs                ; No         ; |mp3|cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|mux8:regfilemux|mux2:out_mux|f[6]  ;
+; 27:1               ; 8 bits    ; 144 ALUTs     ; 144 ALUTs            ; 0 ALUTs                ; No         ; |mp3|mem_io:mem_mapped_io|Selector9                                                         ;
+; 27:1               ; 8 bits    ; 144 ALUTs     ; 144 ALUTs            ; 0 ALUTs                ; No         ; |mp3|mem_io:mem_mapped_io|Selector8                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
 
 
@@ -3290,7 +3876,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
+<<<<<<< HEAD
 ; Top            ; 00:00:12     ;
+=======
+; Top            ; 00:00:17     ;
+>>>>>>> counters
 +----------------+--------------+
 
 
@@ -3313,6 +3903,7 @@ Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
+<<<<<<< HEAD
     Info: Processing started: Sun Apr 23 11:53:57 2017
 Info: Command: quartus_map mp3 -c mp3
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
@@ -3328,6 +3919,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file l2_cach
     Info (12023): Found entity 1: l2_cache
 Info (12021): Found 1 design units, including 1 entities, in source file forwarding_unit.sv
     Info (12023): Found entity 1: forwarding_unit
+=======
+    Info: Processing started: Sat Apr 22 14:30:55 2017
+Info: Command: quartus_map mp3 -c mp3
+Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
+>>>>>>> counters
 Info (12021): Found 1 design units, including 1 entities, in source file cache_set.sv
     Info (12023): Found entity 1: cache_set
 Info (12021): Found 1 design units, including 1 entities, in source file cache_datapath.sv
@@ -3410,6 +4006,7 @@ Info (12127): Elaborating entity "mp3" for the top level hierarchy
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:mcpu"
 Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath"
 Info (12128): Elaborating entity "if_datapath" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data"
+Warning (10230): Verilog HDL assignment warning at if_datapath.sv(42): truncated value with size 32 to match size of target (16)
 Info (12128): Elaborating entity "ir" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|ir:ir_unit"
 Info (12128): Elaborating entity "mux8" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux"
 Info (12128): Elaborating entity "mux4" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|if_datapath:if_data|mux8:pcmux|mux4:mux_a"
@@ -3443,6 +4040,9 @@ Info (12128): Elaborating entity "shiftunit" for hierarchy "cpu:mcpu|cpu_datapat
 Info (12128): Elaborating entity "udjns" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udjns:zext_8"
 Info (12128): Elaborating entity "udj" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|udj:trap_zext"
 Info (12128): Elaborating entity "benable" for hierarchy "cpu:mcpu|cpu_datapath:cpu_datapath|mem_datapath:mem|benable:cccomp"
+Warning (12125): Using design file mem_io.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mem_io
+Info (12128): Elaborating entity "mem_io" for hierarchy "mem_io:mem_mapped_io"
 Info (12128): Elaborating entity "cache" for hierarchy "cache:icache"
 Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:icache|cache_datapath:cdp"
 Info (12128): Elaborating entity "mux2" for hierarchy "cache:icache|cache_datapath:cdp|mux2:cache_in_mux"
@@ -3477,10 +4077,27 @@ Info (12128): Elaborating entity "lru" for hierarchy "cache:icache|cache_datapat
 Info (12128): Elaborating entity "cache_control" for hierarchy "cache:icache|cache_control:ccl"
 Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:cache_arbiter"
 Info (12128): Elaborating entity "register" for hierarchy "arbiter:cache_arbiter|register:rdata_a"
+<<<<<<< HEAD
 Info (12128): Elaborating entity "l2_cache" for hierarchy "l2_cache:l2cache"
 Info (12128): Elaborating entity "l2_cache_datapath" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp"
 Info (12128): Elaborating entity "l2_cache_block" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block"
 Info (12128): Elaborating entity "l2_cache_set" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_one"
+=======
+Warning (12125): Using design file l2_cache.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: l2_cache
+Info (12128): Elaborating entity "l2_cache" for hierarchy "l2_cache:l2cache"
+Warning (12125): Using design file l2_cache_datapath.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: l2_cache_datapath
+Info (12128): Elaborating entity "l2_cache_datapath" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp"
+Warning (12125): Using design file l2_cache_block.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: l2_cache_block
+Info (12128): Elaborating entity "l2_cache_block" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block"
+Warning (12125): Using design file l2_cache_set.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: l2_cache_set
+Info (12128): Elaborating entity "l2_cache_set" for hierarchy "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_one"
+Warning (12125): Using design file l2_cache_control.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: l2_cache_control
+>>>>>>> counters
 Info (12128): Elaborating entity "l2_cache_control" for hierarchy "l2_cache:l2cache|l2_cache_control:ccl"
 Warning (276020): Inferred RAM node "cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|tag_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -3500,6 +4117,10 @@ Info (276014): Found 24 instances of uninferred RAM logic
     Info (276004): RAM logic "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_two|valid" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_two|dirty" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "l2_cache:l2cache|l2_cache_datapath:cdp|l2_cache_block:main_block|l2_cache_set:set_one|dirty" is uninferred due to inappropriate RAM size
+<<<<<<< HEAD
+=======
+    Info (276004): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|valid" is uninferred due to inappropriate RAM size
+>>>>>>> counters
     Info (276004): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|valid" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|dirty" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty" is uninferred due to inappropriate RAM size
@@ -3509,7 +4130,10 @@ Info (276014): Found 24 instances of uninferred RAM logic
     Info (276004): RAM logic "cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|dirty" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|data" is uninferred due to asynchronous read logic
     Info (276007): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|data" is uninferred due to asynchronous read logic
+<<<<<<< HEAD
     Info (276004): RAM logic "cache:dcache|cache_datapath:cdp|cache_block:main_block|cache_set:set_one|valid" is uninferred due to inappropriate RAM size
+=======
+>>>>>>> counters
     Info (276006): RAM logic "cpu:mcpu|cpu_datapath:cpu_datapath|id_datapath:id|regfile:rfile|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
 Info (19000): Inferred 4 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "cache:icache|cache_datapath:cdp|cache_block:main_block|cache_set:set_two|tag_rtl_0" 
@@ -3622,6 +4246,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pmem_address[3]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 158 registers lost all their fanouts during netlist optimizations.
+<<<<<<< HEAD
 Info (144001): Generated suppressed messages file /home/tdubey3/fmax_420/mp3/output_files/mp3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -3635,11 +4260,30 @@ Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 35 warnin
     Info: Processing ended: Sun Apr 23 11:54:16 2017
     Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:16
+=======
+Info (144001): Generated suppressed messages file /home/rmathur2/fmax_420/mp3/output_files/mp3.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 9384 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 130 input pins
+    Info (21059): Implemented 146 output pins
+    Info (21061): Implemented 8834 logic cells
+    Info (21064): Implemented 274 RAM segments
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 529 megabytes
+    Info: Processing ended: Sat Apr 22 14:31:25 2017
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:24
+>>>>>>> counters
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
+<<<<<<< HEAD
 The suppressed messages can be found in /home/tdubey3/fmax_420/mp3/output_files/mp3.map.smsg.
+=======
+The suppressed messages can be found in /home/rmathur2/fmax_420/mp3/output_files/mp3.map.smsg.
+>>>>>>> counters
 
 

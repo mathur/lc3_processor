@@ -5,8 +5,9 @@ module ir
     input clk,
     input load, resp, flush,
     input lc3b_word in,
-	 output lc3b_word instruction,
-    output lc3b_reg dest, src1, src2
+	output lc3b_word instruction,
+    output lc3b_reg dest, src1, src2,
+    output logic ir_stall
 );
 
 lc3b_word data;
@@ -15,10 +16,16 @@ always_ff @(posedge clk)
 begin
     if (load == 1) begin
         data <= in;
+        ir_stall = 1'b0;
     end else if (flush) begin
 		  data <= 16'b0;
+        ir_stall = 1'b0;
+    end else if (resp == 0) begin
+		data <= 16'b0;
+        ir_stall = 1'b1;
 	 end else begin
 	     data <= data;
+         ir_stall = 1'b0;
 	 end
 end
 

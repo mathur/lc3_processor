@@ -28,6 +28,14 @@ entity l2_cache_control is
         mem_address     : in     vl_logic_vector(15 downto 0);
         pmem_address    : out    vl_logic_vector(15 downto 0);
         set_one_tag     : in     vl_logic_vector(8 downto 0);
+<<<<<<< HEAD
         set_two_tag     : in     vl_logic_vector(8 downto 0)
+=======
+        set_two_tag     : in     vl_logic_vector(8 downto 0);
+        hit_count       : out    vl_logic_vector(15 downto 0);
+        miss_count      : out    vl_logic_vector(15 downto 0);
+        hit_count_reset : in     vl_logic;
+        miss_count_reset: in     vl_logic
+>>>>>>> counters
     );
 end l2_cache_control;

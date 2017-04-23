@@ -17,7 +17,13 @@ module mem_datapath (
 
     output lc3b_word regfilemux_out, trap_mem,
     output logic br_en, jmp_jsr_en, trap_en, b11, 
-	 output logic stall, flush
+	 output logic stall, flush,
+
+    // counters
+    input logic br_count_reset, br_mispredict_count_reset,
+    input logic mem_stall_count_reset,
+    output lc3b_word br_count, br_mispredict_count,
+    output lc3b_word mem_stall_count
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
@@ -27,6 +33,45 @@ logic br_en_internal, i_sig, ireg;
 logic [2:0] internal_marmux_sel, internal_mdrmux_sel;
 assign    i_sig = (ctrl.opcode == op_ldi || ctrl.opcode == op_sti);
 assign stall = (((read_b|| write_b) && (~resp_b)) || (~ireg && i_sig));
+
+lc3b_word branch_counter, branch_mispredict_counter, mem_stall_counter;
+assign br_count = branch_counter;
+assign br_mispredict_count = branch_mispredict_counter;
+assign mem_stall_count = mem_stall_counter;
+
+initial
+begin
+    branch_counter = 16'b0;
+    branch_mispredict_counter = 16'b0;
+    mem_stall_counter = 16'b0;
+end
+
+always_ff @(posedge clk)
+begin
+    if(br_count_reset == 1'b1) begin
+        branch_counter = 16'b0;
+    end else if(ctrl.opcode == op_br) begin
+        branch_counter = branch_counter + 1'b1;
+    end else begin
+        branch_counter = branch_counter;
+    end
+
+    if(br_mispredict_count_reset == 1'b1) begin
+        branch_mispredict_counter = 16'b0;
+    end else if(br_en == 1'b1) begin
+        branch_mispredict_counter = branch_mispredict_counter + 1'b1;
+    end else begin
+        branch_mispredict_counter = branch_mispredict_counter;
+    end
+
+    if(mem_stall_count_reset == 1'b1) begin
+        mem_stall_counter = 16'b0;
+    end else if(stall == 1'b1) begin
+        mem_stall_counter = mem_stall_counter + 1'b1;
+    end else begin
+        mem_stall_counter = mem_stall_counter;
+    end
+end
 
 always_comb
 begin
@@ -43,7 +88,7 @@ begin
 	 else
 		jmp_jsr_en = 0;
 	 b11 = instruction[11]; //JMP/RET: 1100 000 REG 000000 so B11 is always 0 for JMP/RET
-	 
+
 	 if(ctrl.opcode == op_trap && resp_b == 1) begin
 		trap_en = 1;
 		trap_mem = rdata_b;
@@ -52,7 +97,7 @@ begin
 		trap_en = 0;
 		trap_mem = 16'b0;
 	 end
-	
+
     if((ctrl.opcode == op_stb) && (address_b[0] == 1)) begin
         wmask_b = 2'b10;
     end
@@ -62,14 +107,14 @@ begin
     else begin
         wmask_b = ctrl.mem_byte_enable;
     end
-	 
+
 	 if(~ireg && (ctrl.opcode == op_ldi || ctrl.opcode == op_sti))
 		internal_marmux_sel = 3'b000;
 	 else if(ireg)
 		internal_marmux_sel = 3'b101;
 	 else
 		internal_marmux_sel = ctrl.marmux_sel;
-	 
+
 	 if(~ireg && (ctrl.opcode == op_sti)) begin
 		write_b = 0;
 		read_b = 1;
@@ -82,7 +127,7 @@ begin
 		write_b = ctrl.mem_write;
 		read_b = ctrl.mem_read;
 	 end
-	
+
 	 if(~ireg && ctrl.opcode == op_sti)
 		internal_mdrmux_sel = 3'b000;
 	 else if(ireg && ctrl.opcode == op_sti)
@@ -119,7 +164,7 @@ mux8 mdrmux
     .a(alu_out),
     .b(rdata_b),
     .c(sr1_out << 8),
-	 .d(sr2_out),
+	.d(sr2_out),
     .e(stbmux_out),
     .f(16'b0),
     .g(16'b0),
@@ -202,7 +247,6 @@ mux8 regfilemux
     .i(regfilemux_out)
 );
 
-
 register #(.width(1)) indirect_reg
 (
     .clk(clk),
@@ -220,6 +264,5 @@ register #(.width(16)) indirect_addr_reg
     .out(indirect_addr),
     .flush(1'b0)
 );
-
 
 endmodule : mem_datapath

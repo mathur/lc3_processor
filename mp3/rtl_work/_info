@@ -2,6 +2,7 @@ m255
 K3
 13
 cModel Technology
+<<<<<<< HEAD
 Z0 d/home/tdubey3/fmax_420/mp3
 vadj
 Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
@@ -26,15 +27,48 @@ Z12 !s92 -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 -O0
 !s85 0
 !i10b 1
 !s100 ]?VDiPgdEe8fa1RPPLWQ]1
+=======
+Z0 d/home/rmathur2/fmax_420/mp3
+vadj
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 DXx4 work 10 lc3b_types 0 22 TDV0EkUTTdSfG;X]A>@0Z1
+DXx4 work 11 adj_sv_unit 0 22 o4[77Imc;5N5OOnZQK_2F1
+VE;zLPZ?c`8[LaP1M[Ui<V1
+r1
+31
+IMK4?A`D@k7=0bUdNi1=ed3
+S1
+Z3 d/home/rmathur2/fmax_420/mp3
+Z4 w1492618538
+Z5 8/home/rmathur2/fmax_420/mp3/adj.sv
+Z6 F/home/rmathur2/fmax_420/mp3/adj.sv
+L0 6
+Z7 OV;L;10.1d;51
+Z8 !s108 1492889508.146835
+Z9 !s107 /home/rmathur2/fmax_420/mp3/adj.sv|
+Z10 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/adj.sv|
+Z11 o-sv -work work -O0
+Z12 !s92 -sv -work work +incdir+/home/rmathur2/fmax_420/mp3 -O0
+!s85 0
+!i10b 1
+!s100 J?[@DEEe`dQi`l1Y7Z_zB0
+>>>>>>> counters
 !s105 adj_sv_unit
 !s101 -O0
 Xadj_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V0L7hQHKVb@X@5Om6[9CDK2
 r1
 31
 I0L7hQHKVb@X@5Om6[9CDK2
+=======
+Vo4[77Imc;5N5OOnZQK_2F1
+r1
+31
+Io4[77Imc;5N5OOnZQK_2F1
+>>>>>>> counters
 S1
 R3
 R4
@@ -49,12 +83,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 ]Yk?hdi>[kBze^?]e>m7<3
+=======
+!s100 Md?M=hA3fCRg[P;2zO:@63
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vadjns
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 13 adjns_sv_unit 0 22 4DgNNI4`0O4nb<1`][18e1
 VzZ=en`PPBG_m8d?OgiAo@2
 r1
@@ -70,20 +109,48 @@ R7
 Z15 !s108 1492966472.828307
 Z16 !s107 /home/tdubey3/fmax_420/mp3/adjns.sv|
 Z17 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/adjns.sv|
+=======
+DXx4 work 13 adjns_sv_unit 0 22 AAdUJm;;]476DCgWCUW]=2
+VzZ=en`PPBG_m8d?OgiAo@2
+r1
+31
+I@U4<j>ZF<kdKk?J4VF<MP3
+S1
+R3
+R4
+Z13 8/home/rmathur2/fmax_420/mp3/adjns.sv
+Z14 F/home/rmathur2/fmax_420/mp3/adjns.sv
+L0 6
+R7
+Z15 !s108 1492889509.724204
+Z16 !s107 /home/rmathur2/fmax_420/mp3/adjns.sv|
+Z17 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/adjns.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 D4zl@5^NmlTdi=PNlSmC?0
+=======
+!s100 g9:_CBiMaQPkFf]0`@B593
+>>>>>>> counters
 !s105 adjns_sv_unit
 !s101 -O0
 Xadjns_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V4DgNNI4`0O4nb<1`][18e1
 r1
 31
 I4DgNNI4`0O4nb<1`][18e1
+=======
+VAAdUJm;;]476DCgWCUW]=2
+r1
+31
+IAAdUJm;;]476DCgWCUW]=2
+>>>>>>> counters
 S1
 R3
 R4
@@ -98,12 +165,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 [V2a0H1=L@2WEm04JZ2]S2
+=======
+!s100 Z>7@Tiz?WliN_4=7WPAbH2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 valu
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 11 alu_sv_unit 0 22 f[2Kgm3V3Q;DP6eIl1a851
 VPD3CE[Q6Z7l[j_QMZo<aD3
 r1
@@ -119,20 +191,48 @@ R7
 Z20 !s108 1492966472.155730
 Z21 !s107 /home/tdubey3/fmax_420/mp3/alu.sv|
 Z22 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/alu.sv|
+=======
+DXx4 work 11 alu_sv_unit 0 22 Fon^h]U39e=bI^LFnBMZl0
+VPD3CE[Q6Z7l[j_QMZo<aD3
+r1
+31
+I1n1C<U7E;HoZhSm?JnzmM3
+S1
+R3
+R4
+Z18 8/home/rmathur2/fmax_420/mp3/alu.sv
+Z19 F/home/rmathur2/fmax_420/mp3/alu.sv
+L0 3
+R7
+Z20 !s108 1492889508.300411
+Z21 !s107 /home/rmathur2/fmax_420/mp3/alu.sv|
+Z22 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/alu.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 TFVg_MSh@?^lg=bC9Z6L?1
+=======
+!s100 :?MS][PB`bThJmMCHJ7a>3
+>>>>>>> counters
 !s105 alu_sv_unit
 !s101 -O0
 Xalu_sv_unit
 R1
 R2
+<<<<<<< HEAD
 Vf[2Kgm3V3Q;DP6eIl1a851
 r1
 31
 If[2Kgm3V3Q;DP6eIl1a851
+=======
+VFon^h]U39e=bI^LFnBMZl0
+r1
+31
+IFon^h]U39e=bI^LFnBMZl0
+>>>>>>> counters
 S1
 R3
 R4
@@ -147,12 +247,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 o]1kQG5f@J?5om?9A_R_C3
+=======
+!s100 STLhO6?lnaNzl^U5N<a`m1
+>>>>>>> counters
 !i103 1
 !s101 -O0
 varbiter
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 15 arbiter_sv_unit 0 22 LGCXT1KOCniRIPUFT^^8_2
 VHPXGjiGI^AMW5m01TUBmU0
 r1
@@ -168,20 +273,48 @@ R7
 Z26 !s108 1492966470.714038
 Z27 !s107 /home/tdubey3/fmax_420/mp3/arbiter.sv|
 Z28 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/arbiter.sv|
+=======
+DXx4 work 15 arbiter_sv_unit 0 22 A3e6WK_3]_?lO5OXH8D[c3
+VHPXGjiGI^AMW5m01TUBmU0
+r1
+31
+I_k;ZlNi_A0;XL;EHVn_O@2
+S1
+R3
+Z23 w1492884469
+Z24 8/home/rmathur2/fmax_420/mp3/arbiter.sv
+Z25 F/home/rmathur2/fmax_420/mp3/arbiter.sv
+L0 3
+R7
+Z26 !s108 1492889506.407728
+Z27 !s107 /home/rmathur2/fmax_420/mp3/arbiter.sv|
+Z28 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/arbiter.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 ZWjL[9<Gid1Nfm98c3Lzl1
+=======
+!s100 ^lbohlI>TVVPNROBk78Q23
+>>>>>>> counters
 !s105 arbiter_sv_unit
 !s101 -O0
 Xarbiter_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VLGCXT1KOCniRIPUFT^^8_2
 r1
 31
 ILGCXT1KOCniRIPUFT^^8_2
+=======
+VA3e6WK_3]_?lO5OXH8D[c3
+r1
+31
+IA3e6WK_3]_?lO5OXH8D[c3
+>>>>>>> counters
 S1
 R3
 R23
@@ -196,18 +329,31 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 LV@2iHdB3Y<llhaE^Y6eg0
+=======
+!s100 G>=e=SmF01K7XLQ:0a2SP2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vbadder
 R1
+<<<<<<< HEAD
 ILlYK_LJn1XOY>cAf8R?H02
+=======
+I^AoG^@fj]SUk@<Y56hhY^2
+>>>>>>> counters
 VRC]2CcIYM1j5aW95>VMM62
 S1
 R3
 R4
+<<<<<<< HEAD
 8/home/tdubey3/fmax_420/mp3/badder.sv
 F/home/tdubey3/fmax_420/mp3/badder.sv
+=======
+8/home/rmathur2/fmax_420/mp3/badder.sv
+F/home/rmathur2/fmax_420/mp3/badder.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -215,6 +361,7 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 NEUDS5ID@FC`JXQWoEHgM3
 !s105 badder_sv_unit
 !s85 0
@@ -225,12 +372,29 @@ R12
 vbenable
 R1
 IezDLIahg_<Qnc43of`;812
+=======
+!s100 Y`aZBC@d8zoiYTTD3^=H80
+!s105 badder_sv_unit
+!s85 0
+!s108 1492889505.255882
+!s107 /home/rmathur2/fmax_420/mp3/badder.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/badder.sv|
+!s101 -O0
+vbenable
+R1
+I]lG]9H_8]j7Y64>U3WgOS0
+>>>>>>> counters
 Vz9BzEd;O68gLn^K?7cjG41
 S1
 R3
 R4
+<<<<<<< HEAD
 8/home/tdubey3/fmax_420/mp3/benable.sv
 F/home/tdubey3/fmax_420/mp3/benable.sv
+=======
+8/home/rmathur2/fmax_420/mp3/benable.sv
+F/home/rmathur2/fmax_420/mp3/benable.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -238,16 +402,26 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 bd<QO<GPI_DGW0l6MCIM21
 !s105 benable_sv_unit
 !s85 0
 !s108 1492966468.649109
 !s107 /home/tdubey3/fmax_420/mp3/benable.sv|
 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/benable.sv|
+=======
+!s100 [M7kARhbnILVbQeFjLW0M0
+!s105 benable_sv_unit
+!s85 0
+!s108 1492889505.161356
+!s107 /home/rmathur2/fmax_420/mp3/benable.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/benable.sv|
+>>>>>>> counters
 !s101 -O0
 vbuffer
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 14 buffer_sv_unit 0 22 HKkk]G3O8aUjX:czgHbm72
 VN[XIzORPdO8gjX:F2n[PF3
 r1
@@ -263,16 +437,38 @@ R7
 Z31 !s108 1492966470.975300
 Z32 !s107 /home/tdubey3/fmax_420/mp3/buffer.sv|
 Z33 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/buffer.sv|
+=======
+DXx4 work 14 buffer_sv_unit 0 22 k4lQ?I;SoO8REf1S5?lZ;3
+V0BE=nlMM^L9oS4T32;FeQ2
+r1
+31
+I1n;Dk>1blX1LLdn[ne``^2
+S1
+R3
+R23
+Z29 8/home/rmathur2/fmax_420/mp3/buffer.sv
+Z30 F/home/rmathur2/fmax_420/mp3/buffer.sv
+L0 3
+R7
+Z31 !s108 1492889506.681473
+Z32 !s107 /home/rmathur2/fmax_420/mp3/buffer.sv|
+Z33 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/buffer.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 9BZJ1AYa]231=<boOzS:_0
+=======
+!s100 QQ6PL6hYM9Rb[92Lf9ngk0
+>>>>>>> counters
 !s105 buffer_sv_unit
 !s101 -O0
 Xbuffer_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VHKkk]G3O8aUjX:czgHbm72
 r1
 31
@@ -280,6 +476,15 @@ IHKkk]G3O8aUjX:czgHbm72
 S1
 R3
 R4
+=======
+Vk4lQ?I;SoO8REf1S5?lZ;3
+r1
+31
+Ik4lQ?I;SoO8REf1S5?lZ;3
+S1
+R3
+R23
+>>>>>>> counters
 R29
 R30
 L0 1
@@ -291,12 +496,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 ZXK;LM[maPd8klk[je>3T3
+=======
+!s100 `_gN4P=>O6kLaUT7>=j_n2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vbyte_insert
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 19 byte_insert_sv_unit 0 22 zNK3VlaSoJe;V^1I>5<TM2
 VDDkG>INYI:ZMO90]=QZEb0
 r1
@@ -312,20 +522,48 @@ R7
 Z36 !s108 1492966471.594134
 Z37 !s107 /home/tdubey3/fmax_420/mp3/byte_insert.sv|
 Z38 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/byte_insert.sv|
+=======
+DXx4 work 19 byte_insert_sv_unit 0 22 [zG0J8z?bH>DLg]>2P3^D2
+VDDkG>INYI:ZMO90]=QZEb0
+r1
+31
+IPFBOI2RV>^?mBVGPmLkCX3
+S1
+R3
+R4
+Z34 8/home/rmathur2/fmax_420/mp3/byte_insert.sv
+Z35 F/home/rmathur2/fmax_420/mp3/byte_insert.sv
+L0 3
+R7
+Z36 !s108 1492889507.476171
+Z37 !s107 /home/rmathur2/fmax_420/mp3/byte_insert.sv|
+Z38 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/byte_insert.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 B7g>Ud`i:SlFMI^4ko6LV3
+=======
+!s100 9zQnmP0QTTe_M8K;FmUoG2
+>>>>>>> counters
 !s105 byte_insert_sv_unit
 !s101 -O0
 Xbyte_insert_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VzNK3VlaSoJe;V^1I>5<TM2
 r1
 31
 IzNK3VlaSoJe;V^1I>5<TM2
+=======
+V[zG0J8z?bH>DLg]>2P3^D2
+r1
+31
+I[zG0J8z?bH>DLg]>2P3^D2
+>>>>>>> counters
 S1
 R3
 R4
@@ -340,12 +578,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 QHUIjRgChOojCXgd;V91i1
+=======
+!s100 ElCR>YeVKmK`2?ojoPkXj1
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vcache
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 13 cache_sv_unit 0 22 2zRO;gg]GXAQl=0Q`Uan43
 VU?L_4F7hHof9Oc200k1<H3
 r1
@@ -361,16 +604,38 @@ R7
 Z41 !s108 1492966470.600025
 Z42 !s107 /home/tdubey3/fmax_420/mp3/cache.sv|
 Z43 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cache.sv|
+=======
+DXx4 work 13 cache_sv_unit 0 22 7;CaHf:2E]I5LL4QDlMnG0
+VVLmB1Y:OIzI2PCNCcS?gf0
+r1
+31
+I2ATfc1A;Si]iEM2<ahn^m2
+S1
+R3
+R23
+Z39 8/home/rmathur2/fmax_420/mp3/cache.sv
+Z40 F/home/rmathur2/fmax_420/mp3/cache.sv
+L0 3
+R7
+Z41 !s108 1492889506.258342
+Z42 !s107 /home/rmathur2/fmax_420/mp3/cache.sv|
+Z43 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cache.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 PPKFW1@GhJ=UYnU[fD>l41
+=======
+!s100 MUUA`NIe2Q;ee`OLCjaIJ1
+>>>>>>> counters
 !s105 cache_sv_unit
 !s101 -O0
 vcache_block
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 19 cache_block_sv_unit 0 22 9:o7N`:]A1R_3oNn]LB[53
 VliFE:z5VPS@^E`Okz4>B70
 r1
@@ -386,20 +651,48 @@ R7
 Z46 !s108 1492966470.476467
 Z47 !s107 /home/tdubey3/fmax_420/mp3/cache_block.sv|
 Z48 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cache_block.sv|
+=======
+DXx4 work 19 cache_block_sv_unit 0 22 BFoTHPngE_Cl4g>P_]Iz60
+VliFE:z5VPS@^E`Okz4>B70
+r1
+31
+I894[ECk5XN0>4G;a1gM9d3
+S1
+R3
+R4
+Z44 8/home/rmathur2/fmax_420/mp3/cache_block.sv
+Z45 F/home/rmathur2/fmax_420/mp3/cache_block.sv
+L0 14
+R7
+Z46 !s108 1492889506.086472
+Z47 !s107 /home/rmathur2/fmax_420/mp3/cache_block.sv|
+Z48 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cache_block.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 eW=8NRe=E@4AM4=3O^X=20
+=======
+!s100 >:l9=h1kdMk72o;=oozXO0
+>>>>>>> counters
 !s105 cache_block_sv_unit
 !s101 -O0
 Xcache_block_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V9:o7N`:]A1R_3oNn]LB[53
 r1
 31
 I9:o7N`:]A1R_3oNn]LB[53
+=======
+VBFoTHPngE_Cl4g>P_]Iz60
+r1
+31
+IBFoTHPngE_Cl4g>P_]Iz60
+>>>>>>> counters
 S1
 R3
 R4
@@ -414,12 +707,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 caKjR?Q2<FDTQ;hc3PPaP3
+=======
+!s100 NzQ7ULEST6G0Ni>_8A5Fo2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vcache_control
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 21 cache_control_sv_unit 0 22 lL?U^3Ta;_FCT>^>83_Db1
 V[`VazmzoHWA^:j?URil;i1
 r1
@@ -435,16 +733,38 @@ R7
 Z51 !s108 1492966470.352228
 Z52 !s107 /home/tdubey3/fmax_420/mp3/cache_control.sv|
 Z53 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cache_control.sv|
+=======
+DXx4 work 21 cache_control_sv_unit 0 22 nW9FT[cLA6ZL0d<<hfLo53
+VLV5hCCiN78@B<dWOS03Df1
+r1
+31
+Ij2[aDHb^VF9Po7NYbOH:M2
+S1
+R3
+Z49 w1492887466
+Z50 8/home/rmathur2/fmax_420/mp3/cache_control.sv
+Z51 F/home/rmathur2/fmax_420/mp3/cache_control.sv
+L0 3
+R7
+Z52 !s108 1492889505.914214
+Z53 !s107 /home/rmathur2/fmax_420/mp3/cache_control.sv|
+Z54 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cache_control.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 1jY8=40?3Yfe6AnT?2JIH0
+=======
+!s100 _O14?THYfCoJfL=9A@U?10
+>>>>>>> counters
 !s105 cache_control_sv_unit
 !s101 -O0
 Xcache_control_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VlL?U^3Ta;_FCT>^>83_Db1
 r1
 31
@@ -452,6 +772,14 @@ IlL?U^3Ta;_FCT>^>83_Db1
 S1
 R3
 R4
+=======
+VnW9FT[cLA6ZL0d<<hfLo53
+r1
+31
+InW9FT[cLA6ZL0d<<hfLo53
+S1
+R3
+>>>>>>> counters
 R49
 R50
 L0 1
@@ -463,12 +791,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 HbK@?n>Bei5>RnI=hE:WE3
+=======
+!s100 Yn?8;f5M6Y<;@fM>ceYI53
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vcache_datapath
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 22 cache_datapath_sv_unit 0 22 ]o<>B8eA@bdc>4>5a;=3=0
 V4@3TINnYXYn57kKLh;^GG0
 r1
@@ -484,16 +817,38 @@ R7
 Z56 !s108 1492966470.230219
 Z57 !s107 /home/tdubey3/fmax_420/mp3/cache_datapath.sv|
 Z58 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cache_datapath.sv|
+=======
+DXx4 work 22 cache_datapath_sv_unit 0 22 ^4UF9TMkJD>KFEG8]DUFE1
+V4@3TINnYXYn57kKLh;^GG0
+r1
+31
+I@fb6fAQo=RnZ^mb6[;YjA3
+S1
+R3
+R4
+Z55 8/home/rmathur2/fmax_420/mp3/cache_datapath.sv
+Z56 F/home/rmathur2/fmax_420/mp3/cache_datapath.sv
+L0 3
+R7
+Z57 !s108 1492889505.772772
+Z58 !s107 /home/rmathur2/fmax_420/mp3/cache_datapath.sv|
+Z59 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cache_datapath.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 D^NfE67_XW=b`K^PaPjJc1
+=======
+!s100 U[<?`><TL6Ni]>U>@U6he0
+>>>>>>> counters
 !s105 cache_datapath_sv_unit
 !s101 -O0
 Xcache_datapath_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V]o<>B8eA@bdc>4>5a;=3=0
 r1
 31
@@ -502,6 +857,15 @@ S1
 R3
 R4
 R54
+=======
+V^4UF9TMkJD>KFEG8]DUFE1
+r1
+31
+I^4UF9TMkJD>KFEG8]DUFE1
+S1
+R3
+R4
+>>>>>>> counters
 R55
 L0 1
 R7
@@ -512,12 +876,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 nDIC??R<VTPb^Y3jG2^0n3
+=======
+!s100 >LV8M=F4UghS9B9S3mZh93
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vcache_set
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 17 cache_set_sv_unit 0 22 ZW?OCmNceO5GOWmNf:?Ph1
 V2IHM=[^Rmb>7MC_O7mmM10
 r1
@@ -533,20 +902,48 @@ R7
 Z61 !s108 1492966470.063807
 Z62 !s107 /home/tdubey3/fmax_420/mp3/cache_set.sv|
 Z63 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cache_set.sv|
+=======
+DXx4 work 17 cache_set_sv_unit 0 22 SD;0[meJCPIcEYcN6F@IL2
+V2IHM=[^Rmb>7MC_O7mmM10
+r1
+31
+I6P4Lj0Qa`LA=@gJPX@c?@1
+S1
+R3
+R4
+Z60 8/home/rmathur2/fmax_420/mp3/cache_set.sv
+Z61 F/home/rmathur2/fmax_420/mp3/cache_set.sv
+L0 3
+R7
+Z62 !s108 1492889505.625080
+Z63 !s107 /home/rmathur2/fmax_420/mp3/cache_set.sv|
+Z64 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cache_set.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 GRdW4P^:8P;zVh0PYHX:z1
+=======
+!s100 mT7>9Q?]<zzdLKa;iUR]03
+>>>>>>> counters
 !s105 cache_set_sv_unit
 !s101 -O0
 Xcache_set_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VZW?OCmNceO5GOWmNf:?Ph1
 r1
 31
 IZW?OCmNceO5GOWmNf:?Ph1
+=======
+VSD;0[meJCPIcEYcN6F@IL2
+r1
+31
+ISD;0[meJCPIcEYcN6F@IL2
+>>>>>>> counters
 S1
 R3
 R4
@@ -561,19 +958,30 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 `RG27<]V@93TmA@LkG4Y:3
+=======
+!s100 kgW7S?20?<]XkgcRKfMdG2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 Xcache_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V2zRO;gg]GXAQl=0Q`Uan43
 r1
 31
 I2zRO;gg]GXAQl=0Q`Uan43
+=======
+V7;CaHf:2E]I5LL4QDlMnG0
+r1
+31
+I7;CaHf:2E]I5LL4QDlMnG0
+>>>>>>> counters
 S1
 R3
-R4
+R23
 R39
 R40
 L0 1
@@ -585,12 +993,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 H27WaUVVe@ij05kcT:;ZE0
+=======
+!s100 834@H@4M_;l0kJ1zUzd5E0
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vcontrol_rom
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 19 control_rom_sv_unit 0 22 lCSf9f6>0IIOP4iJ6TDAH3
 VEKoAgM<53o:Z>B?305z7R0
 r1
@@ -606,16 +1019,38 @@ R7
 Z67 !s108 1492966470.830543
 Z68 !s107 /home/tdubey3/fmax_420/mp3/control_rom.sv|
 Z69 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/control_rom.sv|
+=======
+DXx4 work 19 control_rom_sv_unit 0 22 5W;R62Egc1SWjFEOkb_m[2
+VEKoAgM<53o:Z>B?305z7R0
+r1
+31
+I@of_i=3cbD3Ld]SY49QoY1
+S1
+R3
+R23
+Z65 8/home/rmathur2/fmax_420/mp3/control_rom.sv
+Z66 F/home/rmathur2/fmax_420/mp3/control_rom.sv
+L0 3
+R7
+Z67 !s108 1492889506.546754
+Z68 !s107 /home/rmathur2/fmax_420/mp3/control_rom.sv|
+Z69 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/control_rom.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 Z>iRz:TFm?WD:bzzl@Jn;2
+=======
+!s100 f1;ZjZjd6NL^I=U>E34g]1
+>>>>>>> counters
 !s105 control_rom_sv_unit
 !s101 -O0
 Xcontrol_rom_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VlCSf9f6>0IIOP4iJ6TDAH3
 r1
 31
@@ -623,6 +1058,15 @@ IlCSf9f6>0IIOP4iJ6TDAH3
 S1
 R3
 R64
+=======
+V5W;R62Egc1SWjFEOkb_m[2
+r1
+31
+I5W;R62Egc1SWjFEOkb_m[2
+S1
+R3
+R23
+>>>>>>> counters
 R65
 R66
 L0 1
@@ -634,12 +1078,17 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 3hB6]fD70Un:F:09nBc_B3
+=======
+!s100 Qo0>V8C7JQn3>EMUCXhoe2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vcpu
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 11 cpu_sv_unit 0 22 _79GWXjUa9k:6^f><:>gf3
 VWD7Uk67la9b>dW?2K`dRo2
 r1
@@ -655,16 +1104,38 @@ R7
 Z72 !s108 1492966473.135106
 Z73 !s107 /home/tdubey3/fmax_420/mp3/cpu.sv|
 Z74 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cpu.sv|
+=======
+DXx4 work 11 cpu_sv_unit 0 22 K=cB^@El^eck72NQnS9SG0
+VRU`LEj>BoGDC5IN`<?Eb^3
+r1
+31
+ID3>KFM_mzef:j;bl`2hoU3
+S1
+R3
+Z70 w1492884470
+Z71 8/home/rmathur2/fmax_420/mp3/cpu.sv
+Z72 F/home/rmathur2/fmax_420/mp3/cpu.sv
+L0 3
+R7
+Z73 !s108 1492889511.247712
+Z74 !s107 /home/rmathur2/fmax_420/mp3/cpu.sv|
+Z75 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cpu.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 U`MTz74]1CXojCb8^i;l=2
+=======
+!s100 cPdW^NoZZCRCBPMmhPjhh1
+>>>>>>> counters
 !s105 cpu_sv_unit
 !s101 -O0
 vcpu_datapath
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 20 cpu_datapath_sv_unit 0 22 USj]XdX`RZW2^b;TPhB=:2
 V;UAj3>`EV414@cC^=BU=@0
 r1
@@ -680,23 +1151,51 @@ R7
 Z78 !s108 1492966471.839070
 Z79 !s107 /home/tdubey3/fmax_420/mp3/cpu_datapath.sv|
 Z80 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/cpu_datapath.sv|
+=======
+DXx4 work 20 cpu_datapath_sv_unit 0 22 D=29alUhK1`fFdk;VJ;Jh0
+VSOIMfTY^HNd1QJ@WY@<Mo3
+r1
+31
+IU;9@>m2<H59o>dZE<Qbej1
+S1
+R3
+R70
+Z76 8/home/rmathur2/fmax_420/mp3/cpu_datapath.sv
+Z77 F/home/rmathur2/fmax_420/mp3/cpu_datapath.sv
+L0 3
+R7
+Z78 !s108 1492889507.957094
+Z79 !s107 /home/rmathur2/fmax_420/mp3/cpu_datapath.sv|
+Z80 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/cpu_datapath.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 2M>YRROb^a:C^V8o3JBzm1
+=======
+!s100 c21Pffm4AM?Uabh1U3LKS0
+>>>>>>> counters
 !s105 cpu_datapath_sv_unit
 !s101 -O0
 Xcpu_datapath_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VUSj]XdX`RZW2^b;TPhB=:2
 r1
 31
 IUSj]XdX`RZW2^b;TPhB=:2
+=======
+VD=29alUhK1`fFdk;VJ;Jh0
+r1
+31
+ID=29alUhK1`fFdk;VJ;Jh0
+>>>>>>> counters
 S1
 R3
-R75
+R70
 R76
 R77
 L0 1
@@ -708,36 +1207,52 @@ R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 IE:>C7>X>R4eR;Li0M_je1
+=======
+!s100 <kJS`K9`8WGgb0^:0Z4]k1
+>>>>>>> counters
 !i103 1
 !s101 -O0
 Xcpu_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V_79GWXjUa9k:6^f><:>gf3
 r1
 31
 I_79GWXjUa9k:6^f><:>gf3
+=======
+VK=cB^@El^eck72NQnS9SG0
+r1
+31
+IK=cB^@El^eck72NQnS9SG0
+>>>>>>> counters
 S1
 R3
-R4
 R70
 R71
+R72
 L0 1
 R7
-R72
 R73
 R74
+R75
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 YGXko=zGj_bNB<C71[ai<2
+=======
+!s100 6@3W7XTf9`RfLiGN=BheG2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vex_datapath
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 19 ex_datapath_sv_unit 0 22 TNj]Q[ibdU`ZieVLDU9TD2
 V822SIJB80:eY>HaaBR5B:1
 r1
@@ -753,20 +1268,48 @@ R7
 Z84 !s108 1492966471.455521
 Z85 !s107 /home/tdubey3/fmax_420/mp3/ex_datapath.sv|
 Z86 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/ex_datapath.sv|
+=======
+DXx4 work 19 ex_datapath_sv_unit 0 22 ]mHCNW;>n@J7d0RD;@;YL2
+VHW@fKVN3[iN=m;EhWPEC^0
+r1
+31
+I7leV<f=_OLKzdAG58;RjI1
+S1
+R3
+Z81 w1492884474
+Z82 8/home/rmathur2/fmax_420/mp3/ex_datapath.sv
+Z83 F/home/rmathur2/fmax_420/mp3/ex_datapath.sv
+L0 3
+R7
+Z84 !s108 1492889507.316073
+Z85 !s107 /home/rmathur2/fmax_420/mp3/ex_datapath.sv|
+Z86 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/ex_datapath.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 5YUPB0`0BFCRzK=GWMU@j2
+=======
+!s100 a<[FAaaCgDzAHi:34m_L70
+>>>>>>> counters
 !s105 ex_datapath_sv_unit
 !s101 -O0
 Xex_datapath_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VTNj]Q[ibdU`ZieVLDU9TD2
 r1
 31
 ITNj]Q[ibdU`ZieVLDU9TD2
+=======
+V]mHCNW;>n@J7d0RD;@;YL2
+r1
+31
+I]mHCNW;>n@J7d0RD;@;YL2
+>>>>>>> counters
 S1
 R3
 R81
@@ -777,6 +1320,7 @@ R7
 R84
 R85
 R86
+<<<<<<< HEAD
 R11
 R12
 !s85 0
@@ -826,16 +1370,23 @@ R7
 R90
 R91
 R92
+=======
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 NJYH]Q=1E7BlU=@Bc>mfL0
+=======
+!s100 B]CQ[Td8RZAkmVOGIHJGg2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vgencc
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 13 gencc_sv_unit 0 22 JI;[P8ZmIHRH[aNW1PF@h1
 VWC`9gVLYW_h075<FQmcHc2
 r1
@@ -851,16 +1402,38 @@ R7
 Z96 !s108 1492966472.272134
 Z97 !s107 /home/tdubey3/fmax_420/mp3/gencc.sv|
 Z98 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/gencc.sv|
+=======
+DXx4 work 13 gencc_sv_unit 0 22 @33?zn[MDch`Tcm81[Y@Z1
+VWC`9gVLYW_h075<FQmcHc2
+r1
+31
+IX1]`D@E6I16g6m[JSh9ZR3
+S1
+R3
+Z87 w1492618542
+Z88 8/home/rmathur2/fmax_420/mp3/gencc.sv
+Z89 F/home/rmathur2/fmax_420/mp3/gencc.sv
+L0 3
+R7
+Z90 !s108 1492889508.446982
+Z91 !s107 /home/rmathur2/fmax_420/mp3/gencc.sv|
+Z92 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/gencc.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 E4MRYb3Yn5HiN4A4oV_]c0
+=======
+!s100 RHe]^CecO]Oa2M4FjTSVz0
+>>>>>>> counters
 !s105 gencc_sv_unit
 !s101 -O0
 Xgencc_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VJI;[P8ZmIHRH[aNW1PF@h1
 r1
 31
@@ -875,16 +1448,37 @@ R7
 R96
 R97
 R98
+=======
+V@33?zn[MDch`Tcm81[Y@Z1
+r1
+31
+I@33?zn[MDch`Tcm81[Y@Z1
+S1
+R3
+R87
+R88
+R89
+L0 1
+R7
+R90
+R91
+R92
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 VJ[e4<dd]oUP2gg]5PziD1
+=======
+!s100 N]2QbzjT?iTQV=`jI0D`]3
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vid_datapath
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 19 id_datapath_sv_unit 0 22 GY8J:mK`A?N8BW6Va_7]C1
 V6EY=d_Tnd;:d?lC;ED=_33
 r1
@@ -900,16 +1494,38 @@ R7
 Z101 !s108 1492966471.334817
 Z102 !s107 /home/tdubey3/fmax_420/mp3/id_datapath.sv|
 Z103 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/id_datapath.sv|
+=======
+DXx4 work 19 id_datapath_sv_unit 0 22 ]=ifRN]mYkULm=GJZ@7zj1
+V6EY=d_Tnd;:d?lC;ED=_33
+r1
+31
+I[^4nnlThP=DD@?04HEKUd2
+S1
+R3
+R87
+Z93 8/home/rmathur2/fmax_420/mp3/id_datapath.sv
+Z94 F/home/rmathur2/fmax_420/mp3/id_datapath.sv
+L0 3
+R7
+Z95 !s108 1492889507.160553
+Z96 !s107 /home/rmathur2/fmax_420/mp3/id_datapath.sv|
+Z97 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/id_datapath.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 ]J`8j86n];dbdX^<k3>`_3
+=======
+!s100 z@9>KRX1^a;Sd:3AhXKGS2
+>>>>>>> counters
 !s105 id_datapath_sv_unit
 !s101 -O0
 Xid_datapath_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VGY8J:mK`A?N8BW6Va_7]C1
 r1
 31
@@ -924,16 +1540,37 @@ R7
 R101
 R102
 R103
+=======
+V]=ifRN]mYkULm=GJZ@7zj1
+r1
+31
+I]=ifRN]mYkULm=GJZ@7zj1
+S1
+R3
+R87
+R93
+R94
+L0 1
+R7
+R95
+R96
+R97
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 6EMh<e903<THhL2^n^TB62
+=======
+!s100 5_k2m;0CYA2iDD0CJi6cO3
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vif_datapath
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 19 if_datapath_sv_unit 0 22 [W2o[V4DB8dL8RP8MCRec2
 Vb8Bm4N^glMWU9N40Bljd21
 r1
@@ -949,16 +1586,38 @@ R7
 Z107 !s108 1492966471.209574
 Z108 !s107 /home/tdubey3/fmax_420/mp3/if_datapath.sv|
 Z109 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/if_datapath.sv|
+=======
+DXx4 work 19 if_datapath_sv_unit 0 22 Nc4EdX=knm`F=Kz5WYlKN1
+VHLn58a@nT4<lg5WDgD]JB1
+r1
+31
+ILY2^6Qh>P]LSoh5A?ZX`C3
+S1
+R3
+R81
+Z98 8/home/rmathur2/fmax_420/mp3/if_datapath.sv
+Z99 F/home/rmathur2/fmax_420/mp3/if_datapath.sv
+L0 3
+R7
+Z100 !s108 1492889507.013872
+Z101 !s107 /home/rmathur2/fmax_420/mp3/if_datapath.sv|
+Z102 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/if_datapath.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 QmKOK<TSi8P9;0@@LB>O30
+=======
+!s100 AQ7z_6HcK188;Q<ld^ajo2
+>>>>>>> counters
 !s105 if_datapath_sv_unit
 !s101 -O0
 Xif_datapath_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V[W2o[V4DB8dL8RP8MCRec2
 r1
 31
@@ -973,16 +1632,37 @@ R7
 R107
 R108
 R109
+=======
+VNc4EdX=knm`F=Kz5WYlKN1
+r1
+31
+INc4EdX=knm`F=Kz5WYlKN1
+S1
+R3
+R81
+R98
+R99
+L0 1
+R7
+R100
+R101
+R102
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 ncQWIom<kUiK8Pf7chU_]2
+=======
+!s100 J8klFZY;O_EBdS=1<LgYa2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vir
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 10 ir_sv_unit 0 22 MYSF9iPYJoW_bcMXMY<I;3
 VQN6I;I>f?TP<3=j@bK5]o1
 r1
@@ -998,16 +1678,38 @@ R7
 Z113 !s108 1492966472.391217
 Z114 !s107 /home/tdubey3/fmax_420/mp3/ir.sv|
 Z115 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/ir.sv|
+=======
+DXx4 work 10 ir_sv_unit 0 22 f;dKY]N3kc@IMJkN_XBnW2
+VPi84V<NgFKBJ^B^;SHXig2
+r1
+31
+I3698]WWaTOiV<B<]cm?2_1
+S1
+R3
+Z103 w1492884476
+Z104 8/home/rmathur2/fmax_420/mp3/ir.sv
+Z105 F/home/rmathur2/fmax_420/mp3/ir.sv
+L0 3
+R7
+Z106 !s108 1492889508.589408
+Z107 !s107 /home/rmathur2/fmax_420/mp3/ir.sv|
+Z108 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/ir.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 HFn;6mMIOZnAKS61DVGWG2
+=======
+!s100 <^X_TD5bgCbCT249<?e7<0
+>>>>>>> counters
 !s105 ir_sv_unit
 !s101 -O0
 Xir_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VMYSF9iPYJoW_bcMXMY<I;3
 r1
 31
@@ -1022,10 +1724,248 @@ R7
 R113
 R114
 R115
+=======
+Vf;dKY]N3kc@IMJkN_XBnW2
+r1
+31
+If;dKY]N3kc@IMJkN_XBnW2
+S1
+R3
+R103
+R104
+R105
+L0 1
+R7
+R106
+R107
+R108
 R11
 R12
 !s85 0
 !i10b 1
+!s100 @:1WM2EcS:9^LIj5TFgRB3
+!i103 1
+!s101 -O0
+vl2_cache
+R1
+R2
+DXx4 work 16 l2_cache_sv_unit 0 22 GYRKcGn7PzB=N7W`Db8ZA1
+VLG5neOSjK8nR7Z6W[I5ba3
+r1
+31
+IK4k=L=P87JYoXCX1z[M9Y0
+S1
+R3
+R103
+Z109 8/home/rmathur2/fmax_420/mp3/l2_cache.sv
+Z110 F/home/rmathur2/fmax_420/mp3/l2_cache.sv
+L0 3
+R7
+Z111 !s108 1492889510.171005
+Z112 !s107 /home/rmathur2/fmax_420/mp3/l2_cache.sv|
+Z113 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/l2_cache.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 =>VEd;W^cKYK:0oH:>f;]1
+!s105 l2_cache_sv_unit
+!s101 -O0
+vl2_cache_block
+R1
+R2
+DXx4 work 22 l2_cache_block_sv_unit 0 22 glE=Il`V34QNa?QH94^;@0
+VZcQYGOg6SODh4AE>VJ[7]0
+r1
+31
+IYBQelgVj@_DPilnfNaQIE3
+S1
+R3
+Z114 w1492618543
+Z115 8/home/rmathur2/fmax_420/mp3/l2_cache_block.sv
+Z116 F/home/rmathur2/fmax_420/mp3/l2_cache_block.sv
+L0 3
+R7
+Z117 !s108 1492889510.589628
+Z118 !s107 /home/rmathur2/fmax_420/mp3/l2_cache_block.sv|
+Z119 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/l2_cache_block.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 UOEd6XEG_]04ZE5:H9;nZ0
+!s105 l2_cache_block_sv_unit
+!s101 -O0
+Xl2_cache_block_sv_unit
+R1
+R2
+VglE=Il`V34QNa?QH94^;@0
+r1
+31
+IglE=Il`V34QNa?QH94^;@0
+S1
+R3
+R114
+R115
+R116
+L0 1
+R7
+R117
+R118
+R119
+R11
+R12
+!s85 0
+!i10b 1
+!s100 Jm626=c2Ldhz_4GVNo68<1
+!i103 1
+!s101 -O0
+vl2_cache_control
+R1
+R2
+DXx4 work 24 l2_cache_control_sv_unit 0 22 Y^T<VHoZLT4>J`T7fkZbi0
+V1dl:CMnOMV1R1[AWH31S43
+r1
+31
+Inlea5?bln1m6gA9^Kmh_11
+S1
+R3
+R49
+Z120 8/home/rmathur2/fmax_420/mp3/l2_cache_control.sv
+Z121 F/home/rmathur2/fmax_420/mp3/l2_cache_control.sv
+L0 3
+R7
+Z122 !s108 1492889511.083953
+Z123 !s107 /home/rmathur2/fmax_420/mp3/l2_cache_control.sv|
+Z124 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/l2_cache_control.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 lF0Mkb4O[Ub2;L7T32JV<2
+!s105 l2_cache_control_sv_unit
+!s101 -O0
+Xl2_cache_control_sv_unit
+R1
+R2
+VY^T<VHoZLT4>J`T7fkZbi0
+r1
+31
+IY^T<VHoZLT4>J`T7fkZbi0
+S1
+R3
+R49
+R120
+R121
+L0 1
+R7
+R122
+R123
+R124
+R11
+R12
+!s85 0
+!i10b 1
+!s100 R4QdOgBmQBP10gg[QbOf@3
+!i103 1
+!s101 -O0
+vl2_cache_datapath
+R1
+R2
+DXx4 work 25 l2_cache_datapath_sv_unit 0 22 zWYU@O@437cAGQUFh46LC2
+VcSj5zkcJW9^J9TFfNUnoZ3
+r1
+31
+Ib[0oQN_PFnTFLi6mPZ8Rm1
+S1
+R3
+R114
+Z125 8/home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv
+Z126 F/home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv
+L0 3
+R7
+Z127 !s108 1492889510.382313
+Z128 !s107 /home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv|
+Z129 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/l2_cache_datapath.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 3LDn]G?Bi`WgPSPDm5D?[2
+!s105 l2_cache_datapath_sv_unit
+!s101 -O0
+Xl2_cache_datapath_sv_unit
+R1
+R2
+VzWYU@O@437cAGQUFh46LC2
+r1
+31
+IzWYU@O@437cAGQUFh46LC2
+S1
+R3
+R114
+R125
+R126
+L0 1
+R7
+R127
+R128
+R129
+R11
+R12
+!s85 0
+!i10b 1
+!s100 AabZOU5aAVN2M>jW=fD=I1
+!i103 1
+!s101 -O0
+vl2_cache_set
+R1
+R2
+DXx4 work 20 l2_cache_set_sv_unit 0 22 1fS=S6gl`E[oQcga@:oBX2
+VUz4meK9XRah_zeMK<o6@40
+r1
+31
+IHXEdY1B>TT4`V[lGO@=Zd0
+S1
+R3
+R114
+Z130 8/home/rmathur2/fmax_420/mp3/l2_cache_set.sv
+Z131 F/home/rmathur2/fmax_420/mp3/l2_cache_set.sv
+L0 3
+R7
+Z132 !s108 1492889510.866169
+Z133 !s107 /home/rmathur2/fmax_420/mp3/l2_cache_set.sv|
+Z134 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/l2_cache_set.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 <U`gdiK6GO>H1>Uc6A`3G0
+!s105 l2_cache_set_sv_unit
+!s101 -O0
+Xl2_cache_set_sv_unit
+R1
+R2
+V1fS=S6gl`E[oQcga@:oBX2
+r1
+31
+I1fS=S6gl`E[oQcga@:oBX2
+S1
+R3
+R114
+R130
+R131
+L0 1
+R7
+R132
+R133
+R134
+>>>>>>> counters
+R11
+R12
+!s85 0
+!i10b 1
+<<<<<<< HEAD
 !s100 21O72d3mh`imcQohNS8nX0
 !i103 1
 !s101 -O0
@@ -1248,11 +2188,15 @@ R12
 !s85 0
 !i10b 1
 !s100 >J[6I]Fjc`T[O1dN0;WNz2
+=======
+!s100 ]Fn??3?1aVJVF9D910Yn>2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 Xl2_cache_sv_unit
 R1
 R2
+<<<<<<< HEAD
 Vk=[>]F^ejib`[VIh:b[2]1
 r1
 31
@@ -1267,15 +2211,36 @@ R7
 R118
 R119
 R120
+=======
+VGYRKcGn7PzB=N7W`Db8ZA1
+r1
+31
+IGYRKcGn7PzB=N7W`Db8ZA1
+S1
+R3
+R103
+R109
+R110
+L0 1
+R7
+R111
+R112
+R113
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 gdK4MWf2SkR9kjBl^_[5C3
+=======
+!s100 8_F3mZe@7^b_PgRhloaIX3
+>>>>>>> counters
 !i103 1
 !s101 -O0
 Xlc3b_types
 R1
+<<<<<<< HEAD
 IWCUU]Y;NbVmU4=eSDCGaP1
 VWCUU]Y;NbVmU4=eSDCGaP1
 S1
@@ -1283,6 +2248,15 @@ R3
 w1492556351
 8/home/tdubey3/fmax_420/mp3/lc3b_types.sv
 F/home/tdubey3/fmax_420/mp3/lc3b_types.sv
+=======
+ITDV0EkUTTdSfG;X]A>@0Z1
+VTDV0EkUTTdSfG;X]A>@0Z1
+S1
+R3
+R103
+8/home/rmathur2/fmax_420/mp3/lc3b_types.sv
+F/home/rmathur2/fmax_420/mp3/lc3b_types.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1290,15 +2264,24 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 UcJa4ELfMhU[;U<ETOC8>0
 !s85 0
 !s108 1492966468.165092
 !s107 /home/tdubey3/fmax_420/mp3/lc3b_types.sv|
 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/lc3b_types.sv|
+=======
+!s100 HMB<QQ@O5NQ@PHH3b;Z@?1
+!s85 0
+!s108 1492889504.622167
+!s107 /home/rmathur2/fmax_420/mp3/lc3b_types.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/lc3b_types.sv|
+>>>>>>> counters
 !s101 -O0
 vlru
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 11 lru_sv_unit 0 22 9^MTI_7UM`Ugid192R?Bz0
 VZ[2NXPmg<ZVi[Jbi8:VLE1
 r1
@@ -1314,16 +2297,38 @@ R7
 Z143 !s108 1492966471.714115
 Z144 !s107 /home/tdubey3/fmax_420/mp3/lru.sv|
 Z145 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/lru.sv|
+=======
+DXx4 work 11 lru_sv_unit 0 22 XI2OBjEgFQT<h`^ji1Z;Z3
+VZ[2NXPmg<ZVi[Jbi8:VLE1
+r1
+31
+I=JWQWi?4D1i2I4b>gTh2J1
+S1
+R3
+R114
+Z135 8/home/rmathur2/fmax_420/mp3/lru.sv
+Z136 F/home/rmathur2/fmax_420/mp3/lru.sv
+L0 3
+R7
+Z137 !s108 1492889507.822006
+Z138 !s107 /home/rmathur2/fmax_420/mp3/lru.sv|
+Z139 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/lru.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 gWX5X_mL?flUk3[=bOjGV2
+=======
+!s100 :j3ka]c4hnGk1;D2PP1>:3
+>>>>>>> counters
 !s105 lru_sv_unit
 !s101 -O0
 Xlru_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V9^MTI_7UM`Ugid192R?Bz0
 r1
 31
@@ -1338,16 +2343,37 @@ R7
 R143
 R144
 R145
+=======
+VXI2OBjEgFQT<h`^ji1Z;Z3
+r1
+31
+IXI2OBjEgFQT<h`^ji1Z;Z3
+S1
+R3
+R114
+R135
+R136
+L0 1
+R7
+R137
+R138
+R139
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 INEM``=_R57hRekORF_9j1
+=======
+!s100 hUhZSB5AefPgX]joNa0OQ1
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vmem_datapath
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 20 mem_datapath_sv_unit 0 22 L=iHCY=E15SAfO_iJPHIF0
 V4HH2:X:h>P<lYRiMT@1]M0
 r1
@@ -1363,16 +2389,38 @@ R7
 Z149 !s108 1492966471.087818
 Z150 !s107 /home/tdubey3/fmax_420/mp3/mem_datapath.sv|
 Z151 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/mem_datapath.sv|
+=======
+DXx4 work 20 mem_datapath_sv_unit 0 22 0kl60U8T[GUP32Rf_52^K2
+Vgj?_d9GGb1Fm1;L0_dVCk0
+r1
+31
+IMQ07C3izLAZRK0c4?NA450
+S1
+R3
+R49
+Z140 8/home/rmathur2/fmax_420/mp3/mem_datapath.sv
+Z141 F/home/rmathur2/fmax_420/mp3/mem_datapath.sv
+L0 3
+R7
+Z142 !s108 1492889506.860966
+Z143 !s107 /home/rmathur2/fmax_420/mp3/mem_datapath.sv|
+Z144 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mem_datapath.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 gZ5>:<K=Fb=M?3WM1QgjD2
+=======
+!s100 kRAGVI`PbTWVdXdg]HIlz2
+>>>>>>> counters
 !s105 mem_datapath_sv_unit
 !s101 -O0
 Xmem_datapath_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VL=iHCY=E15SAfO_iJPHIF0
 r1
 31
@@ -1387,16 +2435,86 @@ R7
 R149
 R150
 R151
+=======
+V0kl60U8T[GUP32Rf_52^K2
+r1
+31
+I0kl60U8T[GUP32Rf_52^K2
+S1
+R3
+R49
+R140
+R141
+L0 1
+R7
+R142
+R143
+R144
 R11
 R12
 !s85 0
 !i10b 1
+!s100 h8emJ`lzmoQkJo51nhKSY0
+!i103 1
+!s101 -O0
+vmem_io
+R1
+R2
+DXx4 work 14 mem_io_sv_unit 0 22 _EZFWfzih53jf`ma`K75G1
+VhaBl8X5ILS4i2znOldAQF2
+r1
+31
+ICLKnkLYlTe=WJT6l]?h492
+S1
+R3
+Z145 w1492888692
+Z146 8/home/rmathur2/fmax_420/mp3/mem_io.sv
+Z147 F/home/rmathur2/fmax_420/mp3/mem_io.sv
+L0 3
+R7
+Z148 !s108 1492889510.032939
+Z149 !s107 /home/rmathur2/fmax_420/mp3/mem_io.sv|
+Z150 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mem_io.sv|
+R11
+R12
+!s85 0
+!i10b 1
+!s100 EFfEb4ncej[3Cl?Zi?4im1
+!s105 mem_io_sv_unit
+!s101 -O0
+Xmem_io_sv_unit
+R1
+R2
+V_EZFWfzih53jf`ma`K75G1
+r1
+31
+I_EZFWfzih53jf`ma`K75G1
+S1
+R3
+R145
+R146
+R147
+L0 1
+R7
+R148
+R149
+R150
+>>>>>>> counters
+R11
+R12
+!s85 0
+!i10b 1
+<<<<<<< HEAD
 !s100 6?z0N7;l`jQ[@OD012Gzo1
+=======
+!s100 nO3d2]kCQ:``8E;z?_ogM2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vmp3
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 11 mp3_sv_unit 0 22 B=^h;f7o>i3deTR=:WQF;3
 V=T76C9NLdVcj6d@;_no@_2
 r1
@@ -1412,16 +2530,38 @@ R7
 Z154 !s108 1492966473.250041
 Z155 !s107 /home/tdubey3/fmax_420/mp3/mp3.sv|
 Z156 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/mp3.sv|
+=======
+DXx4 work 11 mp3_sv_unit 0 22 Aa1@eUUh:52dDZZF0M?Y?3
+V=T76C9NLdVcj6d@;_no@_2
+r1
+31
+IH0@7VWTWHmFKOBi5]N:fR3
+S1
+R3
+R103
+Z151 8/home/rmathur2/fmax_420/mp3/mp3.sv
+Z152 F/home/rmathur2/fmax_420/mp3/mp3.sv
+L0 3
+R7
+Z153 !s108 1492889508.710398
+Z154 !s107 /home/rmathur2/fmax_420/mp3/mp3.sv|
+Z155 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mp3.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 Q<dEi[Q`;ghfeG0XZC=jl2
+=======
+!s100 WNLYdlcCMYSTGn0?g:E^n1
+>>>>>>> counters
 !s105 mp3_sv_unit
 !s101 -O0
 Xmp3_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VB=^h;f7o>i3deTR=:WQF;3
 r1
 31
@@ -1436,15 +2576,36 @@ R7
 R154
 R155
 R156
+=======
+VAa1@eUUh:52dDZZF0M?Y?3
+r1
+31
+IAa1@eUUh:52dDZZF0M?Y?3
+S1
+R3
+R103
+R151
+R152
+L0 1
+R7
+R153
+R154
+R155
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 el]X`21Qe8M3ohJ??;:jQ3
+=======
+!s100 m_A??`4MW]VmfTb9T9QVM0
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vmp3_tb
 R1
+<<<<<<< HEAD
 IKo7Z:74I>NkIn7j2WGMLK3
 VGRaNXc@:Z3jVCaTT0F9jW2
 S1
@@ -1452,6 +2613,15 @@ R3
 R93
 8/home/tdubey3/fmax_420/mp3/mp3_tb.sv
 F/home/tdubey3/fmax_420/mp3/mp3_tb.sv
+=======
+Ij00PZ^EJR:HdPQa[gg5Kg3
+VGRaNXc@:Z3jVCaTT0F9jW2
+S1
+R3
+R114
+8/home/rmathur2/fmax_420/mp3/mp3_tb.sv
+F/home/rmathur2/fmax_420/mp3/mp3_tb.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1459,6 +2629,7 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 zY_LX?_doedNAA=g9hY<[3
 !s105 mp3_tb_sv_unit
 !s85 0
@@ -1475,6 +2646,24 @@ R3
 R93
 8/home/tdubey3/fmax_420/mp3/mux2.sv
 F/home/tdubey3/fmax_420/mp3/mux2.sv
+=======
+!s100 DheCLgl@_m3Kzm@H8nNPc2
+!s105 mp3_tb_sv_unit
+!s85 0
+!s108 1492889511.406551
+!s107 /home/rmathur2/fmax_420/mp3/mp3_tb.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mp3_tb.sv|
+!s101 -O0
+vmux2
+R1
+I@JgfIPGb`ME3aieYc79YS2
+V8m]l]_QnJ>bC;o8UdVIPk2
+S1
+R3
+R114
+8/home/rmathur2/fmax_420/mp3/mux2.sv
+F/home/rmathur2/fmax_420/mp3/mux2.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1482,6 +2671,7 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 Z@jKDzWg[li[ne7WWF=JN0
 !s105 mux2_sv_unit
 !s85 0
@@ -1498,6 +2688,24 @@ R3
 R93
 8/home/tdubey3/fmax_420/mp3/mux4.sv
 F/home/tdubey3/fmax_420/mp3/mux4.sv
+=======
+!s100 ]@K<>za66A3g[UVbQe3ha3
+!s105 mux2_sv_unit
+!s85 0
+!s108 1492889505.067525
+!s107 /home/rmathur2/fmax_420/mp3/mux2.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mux2.sv|
+!s101 -O0
+vmux4
+R1
+Ib2=B>7F604m]=0j8T0KJm2
+VYCkK`QGYSnR6BP^DhRdne0
+S1
+R3
+R114
+8/home/rmathur2/fmax_420/mp3/mux4.sv
+F/home/rmathur2/fmax_420/mp3/mux4.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1505,6 +2713,7 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 UV7QWi7SbZXPBahjH9>lc3
 !s105 mux4_sv_unit
 !s85 0
@@ -1521,6 +2730,24 @@ R3
 R93
 8/home/tdubey3/fmax_420/mp3/mux8.sv
 F/home/tdubey3/fmax_420/mp3/mux8.sv
+=======
+!s100 W<C6W@Z1gZPWAC9WF_fP[3
+!s105 mux4_sv_unit
+!s85 0
+!s108 1492889505.351039
+!s107 /home/rmathur2/fmax_420/mp3/mux4.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mux4.sv|
+!s101 -O0
+vmux8
+R1
+I[BjmAQT8R6801aM5_E?mo3
+VD:elXd4OKY_6T:D]zZXSS0
+S1
+R3
+R114
+8/home/rmathur2/fmax_420/mp3/mux8.sv
+F/home/rmathur2/fmax_420/mp3/mux8.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1528,38 +2755,65 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 >BD_dO[_f=a:N27_CAB=S2
 !s105 mux8_sv_unit
 !s85 0
 !s108 1492966469.004053
 !s107 /home/tdubey3/fmax_420/mp3/mux8.sv|
 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/mux8.sv|
+=======
+!s100 c?Po?=4`@I3E<LdRGG0R>1
+!s105 mux8_sv_unit
+!s85 0
+!s108 1492889505.434726
+!s107 /home/rmathur2/fmax_420/mp3/mux8.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/mux8.sv|
+>>>>>>> counters
 !s101 -O0
 vphysical_memory
 R1
 !i10b 1
+<<<<<<< HEAD
 !s100 0hhKU@Kl>kTWH6a[_g8^63
 IOd6W?Z4akRhHfUgnIV`jO2
+=======
+!s100 gB^61;2kJ1aCnDI;<>WY>0
+I6]PTJQHz9?C?cW`?Zk]]N1
+>>>>>>> counters
 VbAHNzMUF]n2gJaIiKj0nn2
 !s105 physical_memory_sv_unit
 S1
 R3
+<<<<<<< HEAD
 Z157 w1492555902
 8/home/tdubey3/fmax_420/mp3/physical_memory.sv
 F/home/tdubey3/fmax_420/mp3/physical_memory.sv
+=======
+Z156 w1492618544
+8/home/rmathur2/fmax_420/mp3/physical_memory.sv
+F/home/rmathur2/fmax_420/mp3/physical_memory.sv
+>>>>>>> counters
 L0 1
 R7
 r1
 !s85 0
 31
+<<<<<<< HEAD
 !s108 1492966473.442837
 !s107 /home/tdubey3/fmax_420/mp3/physical_memory.sv|
 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/physical_memory.sv|
+=======
+!s108 1492889511.533001
+!s107 /home/rmathur2/fmax_420/mp3/physical_memory.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/physical_memory.sv|
+>>>>>>> counters
 !s101 -O0
 R11
 R12
 vplus2
 R1
+<<<<<<< HEAD
 IzX=Lz>5J^fDYKmM7f7XFB0
 V<9>P[_A[ngRjcQF[>XEa`1
 S1
@@ -1567,6 +2821,15 @@ R3
 R157
 8/home/tdubey3/fmax_420/mp3/plus2.sv
 F/home/tdubey3/fmax_420/mp3/plus2.sv
+=======
+I5<agkUNY_fHKV?XhTkPb?3
+V<9>P[_A[ngRjcQF[>XEa`1
+S1
+R3
+R156
+8/home/rmathur2/fmax_420/mp3/plus2.sv
+F/home/rmathur2/fmax_420/mp3/plus2.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1574,16 +2837,26 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 OIUPVU>^W@JFCaR0Jhl]N3
 !s105 plus2_sv_unit
 !s85 0
 !s108 1492966468.327640
 !s107 /home/tdubey3/fmax_420/mp3/plus2.sv|
 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/plus2.sv|
+=======
+!s100 >EkR6jOERe;V=hh^_VeS_1
+!s105 plus2_sv_unit
+!s85 0
+!s108 1492889504.762741
+!s107 /home/rmathur2/fmax_420/mp3/plus2.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/plus2.sv|
+>>>>>>> counters
 !s101 -O0
 vregfile
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 15 regfile_sv_unit 0 22 5NPFQYU;HE8`[gR7=0KkL2
 V`Wb6ocgM=VWm:Fa<3Fznl1
 r1
@@ -1599,16 +2872,38 @@ R7
 Z161 !s108 1492966472.524273
 Z162 !s107 /home/tdubey3/fmax_420/mp3/regfile.sv|
 Z163 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/regfile.sv|
+=======
+DXx4 work 15 regfile_sv_unit 0 22 hflGW1P?W;P[mb1cHd04W1
+V`Wb6ocgM=VWm:Fa<3Fznl1
+r1
+31
+IidmHQz=jX:bQA_b275DCA0
+S1
+R3
+R103
+Z157 8/home/rmathur2/fmax_420/mp3/regfile.sv
+Z158 F/home/rmathur2/fmax_420/mp3/regfile.sv
+L0 3
+R7
+Z159 !s108 1492889509.370841
+Z160 !s107 /home/rmathur2/fmax_420/mp3/regfile.sv|
+Z161 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/regfile.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 ]N?ILe9<8YImEBi=]LMP82
+=======
+!s100 ?]mA_zJT]9=jToE[<eLe60
+>>>>>>> counters
 !s105 regfile_sv_unit
 !s101 -O0
 Xregfile_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V5NPFQYU;HE8`[gR7=0KkL2
 r1
 31
@@ -1623,15 +2918,36 @@ R7
 R161
 R162
 R163
+=======
+VhflGW1P?W;P[mb1cHd04W1
+r1
+31
+IhflGW1P?W;P[mb1cHd04W1
+S1
+R3
+R103
+R157
+R158
+L0 1
+R7
+R159
+R160
+R161
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 Ic>X[`PJ77`_87jSBQjhc0
+=======
+!s100 d^mQhJ`dd=L<QDYW@7G_V1
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vregister
 R1
+<<<<<<< HEAD
 Ik@6kAR=P<Gf>ETHacnRSz1
 Vm?1?_kU07ZI0RR??U8keg2
 S1
@@ -1639,6 +2955,15 @@ R3
 R157
 8/home/tdubey3/fmax_420/mp3/register.sv
 F/home/tdubey3/fmax_420/mp3/register.sv
+=======
+I_T]C3PG7M7cbEM[1ME4OO1
+VVWH2GIcWRQ29K?3;26c491
+S1
+R3
+w1492884477
+8/home/rmathur2/fmax_420/mp3/register.sv
+F/home/rmathur2/fmax_420/mp3/register.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1646,6 +2971,7 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 :Ij]2gMDLc9amboVI65@02
 !s105 register_sv_unit
 !s85 0
@@ -1662,6 +2988,24 @@ R3
 w1492555907
 8/home/tdubey3/fmax_420/mp3/shiftunit.sv
 F/home/tdubey3/fmax_420/mp3/shiftunit.sv
+=======
+!s100 9[zN^aGd8`<8@DFG7=cfX1
+!s105 register_sv_unit
+!s85 0
+!s108 1492889504.862679
+!s107 /home/rmathur2/fmax_420/mp3/register.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/register.sv|
+!s101 -O0
+vshiftunit
+R1
+ICMW]?N1;>?P1:Kz:XDXEM2
+VM9_S3b81?[A8SAeA0R@6P1
+S1
+R3
+w1492618548
+8/home/rmathur2/fmax_420/mp3/shiftunit.sv
+F/home/rmathur2/fmax_420/mp3/shiftunit.sv
+>>>>>>> counters
 L0 1
 R7
 r1
@@ -1669,16 +3013,26 @@ r1
 R11
 R12
 !i10b 1
+<<<<<<< HEAD
 !s100 `d=YSZ_^hUoF_@Uc[3kIP3
 !s105 shiftunit_sv_unit
 !s85 0
 !s108 1492966469.105543
 !s107 /home/tdubey3/fmax_420/mp3/shiftunit.sv|
 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/shiftunit.sv|
+=======
+!s100 `^O@kUfQ[J0DaYIX=Qf113
+!s105 shiftunit_sv_unit
+!s85 0
+!s108 1492889505.540557
+!s107 /home/rmathur2/fmax_420/mp3/shiftunit.sv|
+!s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/shiftunit.sv|
+>>>>>>> counters
 !s101 -O0
 vudj
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 11 udj_sv_unit 0 22 3Eh36_996Z_T4;EBkDf]23
 VHC3PzEjkUeUAOjQ]3Fjz<3
 r1
@@ -1694,16 +3048,38 @@ R7
 Z167 !s108 1492966472.690315
 Z168 !s107 /home/tdubey3/fmax_420/mp3/udj.sv|
 Z169 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/udj.sv|
+=======
+DXx4 work 11 udj_sv_unit 0 22 AVlF2:o6_dNSVNcF3gB353
+VHC3PzEjkUeUAOjQ]3Fjz<3
+r1
+31
+IA`ePX73Jl6m3^`z8[6hKF2
+S1
+R3
+Z162 w1492618555
+Z163 8/home/rmathur2/fmax_420/mp3/udj.sv
+Z164 F/home/rmathur2/fmax_420/mp3/udj.sv
+L0 6
+R7
+Z165 !s108 1492889509.571630
+Z166 !s107 /home/rmathur2/fmax_420/mp3/udj.sv|
+Z167 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/udj.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 0NeM@>bg5LkNe9coLaUAF2
+=======
+!s100 d7iLD06n9^iTz17a4D_?80
+>>>>>>> counters
 !s105 udj_sv_unit
 !s101 -O0
 Xudj_sv_unit
 R1
 R2
+<<<<<<< HEAD
 V3Eh36_996Z_T4;EBkDf]23
 r1
 31
@@ -1718,16 +3094,37 @@ R7
 R167
 R168
 R169
+=======
+VAVlF2:o6_dNSVNcF3gB353
+r1
+31
+IAVlF2:o6_dNSVNcF3gB353
+S1
+R3
+R162
+R163
+R164
+L0 1
+R7
+R165
+R166
+R167
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 nNIz1z6C[JZn:h1S>EJ0I0
+=======
+!s100 7EKk195BP7bV2@ZfFWX>n2
+>>>>>>> counters
 !i103 1
 !s101 -O0
 vudjns
 R1
 R2
+<<<<<<< HEAD
 DXx4 work 13 udjns_sv_unit 0 22 Rb8K`[SVUUETo8NXU98FP2
 VO8=aMl>T3SBQoQ3ln0LDJ0
 r1
@@ -1743,16 +3140,38 @@ R7
 Z172 !s108 1492966473.002012
 Z173 !s107 /home/tdubey3/fmax_420/mp3/udjns.sv|
 Z174 !s90 -sv|-work|work|+incdir+/home/tdubey3/fmax_420/mp3|/home/tdubey3/fmax_420/mp3/udjns.sv|
+=======
+DXx4 work 13 udjns_sv_unit 0 22 K0ZQ>`QK;V0BdYUGB=O:M0
+VO8=aMl>T3SBQoQ3ln0LDJ0
+r1
+31
+I[dg2^FCLBmiX@CXFd;`zl2
+S1
+R3
+R162
+Z168 8/home/rmathur2/fmax_420/mp3/udjns.sv
+Z169 F/home/rmathur2/fmax_420/mp3/udjns.sv
+L0 6
+R7
+Z170 !s108 1492889509.875575
+Z171 !s107 /home/rmathur2/fmax_420/mp3/udjns.sv|
+Z172 !s90 -sv|-work|work|+incdir+/home/rmathur2/fmax_420/mp3|/home/rmathur2/fmax_420/mp3/udjns.sv|
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 =i]ej6Y@XIRDDFSU:o_L_3
+=======
+!s100 e00S?NdzO;2@O4f`noVfV0
+>>>>>>> counters
 !s105 udjns_sv_unit
 !s101 -O0
 Xudjns_sv_unit
 R1
 R2
+<<<<<<< HEAD
 VRb8K`[SVUUETo8NXU98FP2
 r1
 31
@@ -1767,10 +3186,30 @@ R7
 R172
 R173
 R174
+=======
+VK0ZQ>`QK;V0BdYUGB=O:M0
+r1
+31
+IK0ZQ>`QK;V0BdYUGB=O:M0
+S1
+R3
+R162
+R168
+R169
+L0 1
+R7
+R170
+R171
+R172
+>>>>>>> counters
 R11
 R12
 !s85 0
 !i10b 1
+<<<<<<< HEAD
 !s100 2i6QC<<KlXKRzBHDegE9_3
+=======
+!s100 ;f9czo^aazN=7fCDIHjDn0
+>>>>>>> counters
 !i103 1
 !s101 -O0

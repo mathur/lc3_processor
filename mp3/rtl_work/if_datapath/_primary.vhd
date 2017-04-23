@@ -21,6 +21,8 @@ entity if_datapath is
         src2            : out    vl_logic_vector(2 downto 0);
         dest            : out    vl_logic_vector(2 downto 0);
         read_a          : out    vl_logic;
-        address_a       : out    vl_logic_vector(15 downto 0)
+        address_a       : out    vl_logic_vector(15 downto 0);
+        if_stall_count_reset: in     vl_logic;
+        if_stall_count  : out    vl_logic_vector(15 downto 0)
     );
 end if_datapath;
