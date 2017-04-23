@@ -45,12 +45,6 @@
 # 
 # Top level modules:
 # 	badder
-# vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mux3.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mux3
-# 
-# Top level modules:
-# 	mux3
 # vlog -sv -work work +incdir+/home/tdubey3/fmax_420/mp3 {/home/tdubey3/fmax_420/mp3/mux4.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux4
@@ -362,7 +356,6 @@
 # Loading work.ex_datapath_sv_unit
 # Loading work.ex_datapath
 # Loading work.badder
-# Loading work.mux3
 # Loading work.alu_sv_unit
 # Loading work.alu
 # Loading work.adjns_sv_unit
@@ -428,30 +421,34 @@
 # ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(104): [TFMPC] - Missing connection for port 'src2_data_out'.
 # ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(104): [TFMPC] - Missing connection for port 'dest_data_out'.
 # ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(104): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Too few port connections. Expected 31, found 19.
+# ** Warning: (vsim-3017) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Too few port connections. Expected 31, found 19.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/id_ex_buf
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'alu_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'pc_br_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'alu_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'pc_br_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(154): [TFMPC] - Missing connection for port 'br_out'.
-# ** Warning: (vsim-3017) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Too few port connections. Expected 31, found 23.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'alu_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'pc_br_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'alu_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'pc_br_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(168): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3017) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(222): [TFMPC] - Too few port connections. Expected 27, found 25.
+#         Region: /mp3_tb/dut/mcpu/cpu_datapath/hot_box
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(222): [TFMPC] - Missing connection for port 'mem_forward_a'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(222): [TFMPC] - Missing connection for port 'mem_forward_b'.
+# ** Warning: (vsim-3017) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Too few port connections. Expected 31, found 23.
 #         Region: /mp3_tb/dut/mcpu/cpu_datapath/ex_mem_buf
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'br_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'mar_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'mdr_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'dest_data_in'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'mar_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'mdr_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'dest_data_out'.
-# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(243): [TFMPC] - Missing connection for port 'br_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'br_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'mar_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'mdr_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'dest_data_in'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'mar_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'mdr_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'dest_data_out'.
+# ** Warning: (vsim-3722) /home/tdubey3/fmax_420/mp3/cpu_datapath.sv(250): [TFMPC] - Missing connection for port 'br_out'.
 # 
 #add wave *
 #view structure

@@ -14,6 +14,7 @@ entity ex_datapath is
         alu_input_one_mux_sel: in     vl_logic_vector(1 downto 0);
         alu_input_two_mux_sel: in     vl_logic_vector(1 downto 0);
         mem_input       : in     vl_logic_vector(15 downto 0);
-        wb_input        : in     vl_logic_vector(15 downto 0)
+        wb_input        : in     vl_logic_vector(15 downto 0);
+        mem_load_input  : in     vl_logic_vector(15 downto 0)
     );
 end ex_datapath;

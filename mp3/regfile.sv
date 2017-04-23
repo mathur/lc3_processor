@@ -22,7 +22,7 @@ begin
     end
 end
 
-always_ff @(posedge clk)
+always_ff @(negedge clk)
 begin
     if (load == 1)
     begin
@@ -32,16 +32,16 @@ end
 
 always_comb
 begin
-		if(load && (dest == src_a)) begin
-			reg_a = in;
-			reg_b = data[src_b];
-		end else if(load && (dest == src_b)) begin
-			reg_a = data[src_a];
-			reg_b = in;
-		end else begin
-			reg_a = data[src_a];
-			reg_b = data[src_b];
-		end
+    if(load && (dest == src_a)) begin
+        reg_a = in;
+        reg_b = data[src_b];
+    end else if (load && (dest == src_b)) begin
+        reg_a = data[src_a];
+        reg_b = in;
+    end else begin
+        reg_a = data[src_a];
+        reg_b = data[src_b];
+    end
 end
 
 endmodule : regfile

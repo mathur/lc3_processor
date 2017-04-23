@@ -48,17 +48,17 @@ lc3b_control_word mem_wb_ctrl;
 lc3b_reg mem_wb_src1, mem_wb_src2, mem_wb_dest;
 lc3b_word mem_wb_instruction, mem_wb_alu, mem_wb_pc, mem_wb_pc_br, mem_wb_src1_data, mem_wb_src2_data, mem_wb_dest_data, mem_wb_mar, mem_wb_mdr;
 logic mem_wb_br, mem_b11, flush_mem;
-lc3b_word trap_mem, nopforward_inst;
-
-logic stall_forwarding, flush_forwarding;
-lc3b_word sr1_fwd_out, sr2_fwd_out;
+lc3b_word trap_mem;
 
 assign wmask_a = 2'b11;
 assign write_a = 1'b0;
 assign wdata_a = 16'b0;
 
 logic [1:0] forward_a_mux_sel, forward_b_mux_sel;
-lc3b_control_word nopforward;
+logic id_forward_a_mux_sel, id_forward_b_mux_sel;
+
+lc3b_word id_forward_a_data;
+lc3b_word id_forward_b_data;
 
 if_datapath if_data
 (
@@ -81,14 +81,14 @@ if_datapath if_data
     .dest(if_dest),
     .read_a(read_a),
     .address_a(address_a),
-    .stall(stall_mem || stall_forwarding),
+    .stall(stall_mem),
     .flush(flush_mem)
 );
 
 buffer if_id_buf
 (
     .clk(clk),
-    .load(~stall_mem && ~stall_forwarding),
+    .load(~stall_mem),
     .flush(flush_mem),
     .src1_in(if_src1),
     .src2_in(if_src2),
@@ -129,18 +129,32 @@ id_datapath id
     .sr2_out(id_src2_data)
 );
 
+mux2 #(.width(16)) mem_to_id_sr1 (
+    .sel(id_forward_a_mux_sel),
+    .a(id_src1_data),
+    .b(dest_data),
+    .f(id_forward_a_data)
+);
+
+mux2 #(.width(16)) mem_to_id_sr2 (
+    .sel(id_forward_b_mux_sel),
+    .a(id_src2_data),
+    .b(dest_data),
+    .f(id_forward_b_data)
+);
+
 buffer id_ex_buf
 (
     .clk(clk),
-    .load(~stall_mem && ~stall_forwarding),
+    .load(~stall_mem),
     .flush(flush_mem),
     .src1_in(if_id_src1),
     .src2_in(if_id_src2),
     .dest_in(id_dest),
     .instruction_in(if_id_instruction),
     .pc_in(if_id_pc),
-    .src1_data_in(id_src1_data),
-    .src2_data_in(id_src2_data),
+    .src1_data_in(id_forward_a_data),
+    .src2_data_in(id_forward_b_data),
     .ctrl_in(id_ctrl_data),
 
     .ctrl_out(id_ex_ctrl),
@@ -172,46 +186,39 @@ ex_datapath ex
     .alu_input_one_mux_sel(forward_a_mux_sel), 
     .alu_input_two_mux_sel(forward_b_mux_sel),
     .mem_input(ex_mem_alu),
-    .wb_input(mem_wb_dest_data)
+    .wb_input(mem_wb_dest_data),
+    .mem_load_input(dest_data)
 );
 
 
 forwarding_unit hot_box
 (
-    .id_ex_r_one(id_ex_src1), 
-    .id_ex_r_two(id_ex_src2), 
-    .ex_mem_r_dest(ex_mem_dest), 
-    .mem_wb_r_dest(mem_wb_dest),
-    .ex_mem_regfile_write(ex_mem_ctrl.load_regfile),
-    .mem_wb_regfile_write(mem_wb_ctrl.load_regfile),
-    .if_id_r_one(if_id_src1),
-    .if_id_r_two(if_id_src2),
-    .uses_sr1(id_ex_ctrl.uses_sr1),
+    .ex_mem_out_regfile_write(ex_mem_ctrl.load_regfile),
+    .mem_wb_out_regfile_write(mem_wb_ctrl.load_regfile),
+    .mem_load_inst((ex_mem_ctrl.opcode == op_ldb) || (ex_mem_ctrl.opcode == op_ldi) || (ex_mem_ctrl.opcode == op_ldr)),
+	 .mem_str_inst((id_ctrl_data.opcode == op_str) || (id_ctrl_data.opcode == op_stb) || (id_ctrl_data.opcode == op_sti)),
+    .uses_sr1(id_ex_ctrl.uses_sr1), 
     .uses_sr2(id_ex_ctrl.uses_sr2),
     .uses_sr1_mem(ex_mem_ctrl.uses_sr1),
     .uses_sr2_mem(ex_mem_ctrl.uses_sr2),
-    .mem_read(ex_mem_ctrl.mem_read),
-    .mem_write(ex_mem_ctrl.mem_write),
-    .forward_a(forward_a_mux_sel), 
-    .forward_b(forward_b_mux_sel),
-    .stall_forwarding(stall_forwarding),
-    .flush_forwarding(flush_forwarding)
-);
+    .id_ex_in_uses_sr1(id_ctrl_data.uses_sr1),
+    .id_ex_in_uses_sr2(id_ctrl_data.uses_sr2),
+    .ex_mem_out_dest(ex_mem_dest),
+    .id_ex_out_sr1(id_ex_src1),
+    .id_ex_out_sr2(id_ex_src2),
+    .id_ex_in_src1(if_id_src1),
+    .id_ex_in_src2(if_id_src2),
+	 .id_ex_in_dest(if_id_dest),
+    .mem_wb_out_dest(mem_wb_dest),
+    .mem_wb_out_src1(mem_wb_src1),
+    .mem_wb_out_src2(mem_wb_src2),
+    .ex_mem_out_sr1(ex_mem_src1),
+    .ex_mem_out_sr2(ex_mem_src2),
 
-mux2 #(.width($bits(lc3b_control_word))) nopmux
-(
-    .sel(flush_forwarding),
-    .a(id_ex_ctrl),
-    .b({$bits(lc3b_control_word){1'b0}}),
-    .f(nopforward)
-);
-
-mux2 #(.width($bits(lc3b_word))) nopmux_inst
-(
-    .sel(flush_forwarding),
-    .a(id_ex_instruction),
-    .b({$bits(lc3b_word){1'b0}}),
-    .f(nopforward_inst)
+    .ex_forward_a(forward_a_mux_sel),
+    .ex_forward_b(forward_b_mux_sel),
+    .id_forward_a(id_forward_a_mux_sel),
+    .id_forward_b(id_forward_b_mux_sel)
 );
 
 buffer ex_mem_buf
@@ -222,13 +229,13 @@ buffer ex_mem_buf
     .src1_in(id_ex_src1),
     .src2_in(id_ex_src2),
     .dest_in(id_ex_dest),
-    .instruction_in(nopforward_inst),
+    .instruction_in(id_ex_instruction),
     .alu_in(ex_alu_out),
     .pc_in(id_ex_pc),
     .pc_br_in(ex_br_out),
     .src1_data_in(id_ex_src1_data),
     .src2_data_in(id_ex_src2_data),
-    .ctrl_in(nopforward),
+    .ctrl_in(id_ex_ctrl),
 
     .ctrl_out(ex_mem_ctrl),
     .src1_out(ex_mem_src1),
