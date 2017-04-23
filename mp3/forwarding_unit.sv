@@ -66,8 +66,8 @@ begin
 	mem_id_sr1 = ex_mem_out_regfile_write && (ex_mem_out_dest == id_ex_in_src1) && (id_ex_in_uses_sr1);
 	mem_id_sr2 = ex_mem_out_regfile_write && (ex_mem_out_dest == id_ex_in_src2) && (id_ex_in_uses_sr2);
 	
-	mem_id_str_sr1 = ex_mem_out_regfile_write && (ex_mem_out_dest == id_ex_in_dest) && (id_ex_in_uses_sr1) && mem_str_inst;
-	mem_id_str_sr2 = ex_mem_out_regfile_write && (ex_mem_out_dest == id_ex_in_dest) && (id_ex_in_uses_sr2) && mem_str_inst;
+	mem_id_str_sr1 = ex_mem_out_regfile_write && (ex_mem_out_dest == id_ex_in_dest) && mem_str_inst;
+	mem_id_str_sr2 = ex_mem_out_regfile_write && (ex_mem_out_dest == id_ex_in_dest) && mem_str_inst;
 
 
 	// EX to EX
@@ -110,13 +110,13 @@ begin
 		id_forward_b_int = 1'b1;
 	end
 	
-//	// MEM to ID with STORE
+	// MEM to ID with STORE
 //	if(mem_id_str_sr1) begin
 //		id_forward_a_int = 1'b1;
 //	end
-//	if(mem_id_str_sr2) begin
-//		id_forward_b_int = 1'b1;
-//	end
+	if(mem_id_str_sr2) begin
+		id_forward_b_int = 1'b1;
+	end
 end
 
 assign ex_forward_a = ex_forward_a_int;
