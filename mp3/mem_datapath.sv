@@ -50,7 +50,7 @@ always_ff @(posedge clk)
 begin
     if(br_count_reset == 1'b1) begin
         branch_counter = 16'b0;
-    end else if(ctrl.opcode == op_br) begin
+    end else if(ctrl.opcode == op_br && (instruction != 16'b0)) begin
         branch_counter = branch_counter + 1'b1;
     end else begin
         branch_counter = branch_counter;

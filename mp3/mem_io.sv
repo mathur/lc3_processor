@@ -30,147 +30,523 @@ module mem_io
 
 always_comb
 begin : outputs
-    /* Default output assignments */
-    rdata = rdata_pass;
-    resp = resp_pass;
-
-    read_pass = read;
-    address_pass = address;
-    write_pass = write;
-
-    br_count_reset = 1'b0;
-    br_mispredict_count_reset = 1'b0;
-    icache_hit_count_reset = 1'b0;
-    icache_miss_count_reset = 1'b0;
-    dcache_hit_count_reset = 1'b0;
-    dcache_miss_count_reset = 1'b0;
-    l2_hit_count_reset = 1'b0;
-    l2_miss_count_reset = 1'b0;
-    if_stall_count_reset = 1'b0;
-    mem_stall_count_reset = 1'b0;
-
     /* Actions for each state */
-    unique case (address)
-        4'hFFEC: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = if_stall_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                if_stall_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    if(address == 16'b1111111111110110) begin
+        if(read == 1'b1) begin
+            rdata = if_stall_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b1;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFED: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = mem_stall_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                mem_stall_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111110111) begin
+        if(read == 1'b1) begin
+            rdata = mem_stall_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b1;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFEE: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = icache_hit_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                icache_hit_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111000) begin
+        if(read == 1'b1) begin
+            rdata = icache_hit_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b1;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFEF: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = icache_miss_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                icache_miss_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111001) begin
+        if(read == 1'b1) begin
+            rdata = icache_miss_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b1;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFFA: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = dcache_hit_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                dcache_hit_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111010) begin
+        if(read == 1'b1) begin
+            rdata = dcache_hit_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b1;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFFB: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = dcache_miss_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                dcache_miss_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111011) begin
+        if(read == 1'b1) begin
+            rdata = dcache_miss_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b1;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFFC: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = l2_hit_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                l2_hit_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111100) begin
+        if(read == 1'b1) begin
+            rdata = l2_hit_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b1;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFFD: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = l2_miss_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                l2_miss_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111101) begin
+        if(read == 1'b1) begin
+            rdata = l2_miss_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b1;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFFE: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = br_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                br_count_reset = 1'b0;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111110) begin
+        if(read == 1'b1) begin
+            rdata = br_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b1;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-
-        4'hFFFF: begin
-            if(read == 1'b1) begin
-                read_pass = 1'b0;
-                rdata = br_mispredict_count;
-                resp = 1'b1;
-            end else if (write == 1'b1) begin
-                write_pass = 1'b0;
-                br_mispredict_count_reset = 1'b1;
-                resp = 1'b1;
-            end
+    end else if (address == 16'b1111111111111111) begin
+        if(read == 1'b1) begin
+            rdata = br_mispredict_count;
+            resp = 1'b1;
+            read_pass = 1'b0;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else if (write == 1'b1) begin
+            rdata = rdata_pass;
+            resp = 1'b1;
+            read_pass = read;
+            address_pass = address;
+            write_pass = 1'b0;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b1;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
+        end else begin
+            rdata = rdata_pass;
+            resp = resp_pass;
+            read_pass = read;
+            address_pass = address;
+            write_pass = write;
+            br_count_reset = 1'b0;
+            br_mispredict_count_reset = 1'b0;
+            icache_hit_count_reset = 1'b0;
+            icache_miss_count_reset = 1'b0;
+            dcache_hit_count_reset = 1'b0;
+            dcache_miss_count_reset = 1'b0;
+            l2_hit_count_reset = 1'b0;
+            l2_miss_count_reset = 1'b0;
+            if_stall_count_reset = 1'b0;
+            mem_stall_count_reset = 1'b0;
         end
-        default: /* do nothing */;
-    endcase
+    end else begin
+        rdata = rdata_pass;
+        resp = resp_pass;
+        read_pass = read;
+        address_pass = address;
+        write_pass = write;
+        br_count_reset = 1'b0;
+        br_mispredict_count_reset = 1'b0;
+        icache_hit_count_reset = 1'b0;
+        icache_miss_count_reset = 1'b0;
+        dcache_hit_count_reset = 1'b0;
+        dcache_miss_count_reset = 1'b0;
+        l2_hit_count_reset = 1'b0;
+        l2_miss_count_reset = 1'b0;
+        if_stall_count_reset = 1'b0;
+        mem_stall_count_reset = 1'b0;
+    end
 end
 endmodule : mem_io
