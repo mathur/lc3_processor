@@ -26,6 +26,9 @@ entity mem_datapath is
         trap_en         : out    vl_logic;
         b11             : out    vl_logic;
         stall           : out    vl_logic;
-        flush           : out    vl_logic
+        flush           : out    vl_logic;
+        ex_load_cc      : in     vl_logic;
+        ex_data         : in     vl_logic_vector(15 downto 0);
+        leap_signal     : in     vl_logic
     );
 end mem_datapath;

@@ -17,7 +17,12 @@ module mem_datapath (
 
     output lc3b_word regfilemux_out, trap_mem,
     output logic br_en, jmp_jsr_en, trap_en, b11, 
-	 output logic stall, flush
+	 output logic stall, flush,
+	 
+	 // LEAP
+	 input logic ex_load_cc,
+	 input lc3b_word ex_data,
+	 input leap_signal
 );
 
 lc3b_word trap_zext_out, marmux_out, mdrmux_out, zext_8_out, shift_out, ldb_zext_out, stbmux_out, indirect_addr;
@@ -31,6 +36,9 @@ assign flush = (br_en || trap_en || jmp_jsr_en);
 assign br_en = (br_en_internal && (ctrl.opcode == op_br));
 assign jmp_jsr_en = (ctrl.opcode == op_jsr || ctrl.opcode == op_jmp);
 assign trap_en = (ctrl.opcode == op_trap && resp_b == 1);
+
+lc3b_word gen_cc_mux_out;
+logic gen_cc_load_mux_out;
 
 always_comb
 begin
@@ -117,16 +125,32 @@ mux8 mdrmux
     .i(wdata_b)
 );
 
+mux2 gen_cc_mux
+(
+	.sel(leap_signal),
+	.a(regfilemux_out),
+	.b(ex_data),
+	.f(gen_cc_mux_out)
+);
+
+mux2 #(.width(1))gen_cc_load_mux
+(
+	.sel(leap_signal),
+	.a(ctrl.load_cc),
+	.b(ex_load_cc),
+	.f(gen_cc_load_mux_out)
+);
+
 gencc gen_cc
 (
-    .in(regfilemux_out),
+    .in(gen_cc_mux_out),
     .out(gencc_out)
 );
 
 register #(.width(3)) cc
 (
     .clk(clk),
-    .load(ctrl.load_cc),
+    .load(gen_cc_load_mux_out),
     .in(gencc_out),
     .out(cc_out),
     .flush(1'b0)

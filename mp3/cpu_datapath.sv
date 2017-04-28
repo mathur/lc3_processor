@@ -63,6 +63,16 @@ lc3b_word id_forward_b_data;
 logic wb_mem_forward_a, wb_mem_forward_b;
 logic [15:0] wb_mem_forward_a_data, wb_mem_forward_b_data;
 
+
+logic leap_frog_data_sel, leap_frog_reg_sel, leap_frog_write_sel;
+
+lc3b_word leap_frog_data_out;
+lc3b_reg leap_frog_reg_out;
+logic leap_frog_write_out;
+logic stall_pass_override;
+logic mem_load_cc_s;
+
+
 if_datapath if_data
 (
     .clk(clk),
@@ -106,6 +116,30 @@ buffer if_id_buf
     .pc_out(if_id_pc)
 );
 
+
+mux2 #(.width(16)) leap_frog_data (
+    .sel(leap_frog_data_sel),
+    .a(mem_wb_dest_data),
+    .b(ex_alu_out),
+    .f(leap_frog_data_out)
+);
+
+mux2 #(.width(3)) leap_frog_reg (
+    .sel(leap_frog_reg_sel),
+    .a(mem_wb_dest),
+    .b(id_ex_dest),
+    .f(leap_frog_reg_out)
+);
+
+mux2 #(.width(1)) leap_frog_write (
+    .sel(leap_frog_reg_sel),
+    .a(mem_wb_ctrl.load_regfile),
+    .b(id_ex_ctrl.load_regfile),
+    .f(leap_frog_write_out)
+);
+
+
+
 id_datapath id
 (
     .clk(clk),
@@ -122,9 +156,9 @@ id_datapath id
     .sr2(if_id_src2),
 
     // TODO: From WB
-    .wb_dest_addr(mem_wb_dest),
-    .wb_dest_data(mem_wb_dest_data),
-    .wb_load_dest(mem_wb_ctrl.load_regfile),
+    .wb_dest_addr(leap_frog_reg_out),
+    .wb_dest_data(leap_frog_data_out),
+    .wb_load_dest(leap_frog_write_out),
 
     /* Data Outputs */
     .destmux_out(id_dest),
@@ -229,6 +263,24 @@ forwarding_unit hot_box
 );
 
 
+leap_frog puff_puff_pass
+(
+	 .clk(clk),
+    .memstall(stall_mem),
+    .ex_dest(id_ex_dest),
+    .mem_dest(ex_mem_dest),
+    .ex_sr1(id_ex_src1),
+    .ex_sr2(id_ex_src2),
+    .ex_crtl(id_ex_ctrl),
+
+    .leap_frog_data_mux(leap_frog_data_sel),
+    .leap_frog_reg_mux(leap_frog_reg_sel),
+	 .other_stage_stall_override(stall_pass_override),
+	 .mem_load_cc(mem_load_cc_s)
+);
+
+
+
 buffer ex_mem_buf
 (
     .clk(clk),
@@ -298,7 +350,10 @@ mem_datapath mem
     .address_b(address_b),
     .wdata_b(wdata_b),
     .resp_b(resp_b),
-    .rdata_b(rdata_b)
+    .rdata_b(rdata_b),
+	 .ex_load_cc(id_ex_ctrl.load_cc),
+	 .ex_data(ex_alu_out),
+	 .leap_signal(mem_load_cc_s)
 );
 
 buffer mem_wb_buf
