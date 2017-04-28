@@ -1,0 +1,95 @@
+ORIGIN 0
+SEGMENT  CodeSegment:
+    LEA R0, DATA
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    LDR R1, R0, LVAL1
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    LDR R2, R0, LVAL2
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    LDR R3, R0, GOOD
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    BRnzp STORE
+
+
+STORE:
+    LEA R0, DATA
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    STR R1, R0, GOOD
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    LDR R2, R0, LVAL1
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    LDR R3, R0, LVAL2
+    NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+    BRnzp HALT
+
+;; Loop forever
+HALT:
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	BRnzp HALT
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+	NOP
+
+SEGMENT
+DATA:
+LVAL1:  DATA2 4x0020
+LVAL2:  DATA2 4x00D5
+GOOD:   DATA2 4x600D

@@ -1,0 +1,13 @@
+Info: Start Nativelink Simulation process
+Error: ERROR: Project does not exist or has illegal name characters: mp3. Specify a legal project name.
+ERROR: Project does not exist or has illegal name characters: mp3. Specify a legal project name.
+Error: NativeLink simulation flow was NOT successful
+
+
+
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  NONE
+Nativelink TCL script failed with errorInfo:  ERROR: Project does not exist or has illegal name characters: mp3. Specify a legal project name.
+
+    while executing
+"project_open $project -force -cmp $action_pt"

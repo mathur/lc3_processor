@@ -1,0 +1,31 @@
+Info: *******************************************************************
+Info: Running Quartus II 32-bit EDA Netlist Writer
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+    Info: Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Wed Apr 19 12:38:35 2017
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off mp3 -c mp3
+Info (204019): Generated file mp3_2_1100mv_85c_slow.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_0c_slow.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_min_1100mv_0c_fast.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3.svo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_85c_v_slow.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_2_1100mv_0c_v_slow.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_min_1100mv_0c_v_fast.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file mp3_v.sdo in folder "/home/tdubey3/fmax_420/mp3/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 455 megabytes
+    Info: Processing ended: Wed Apr 19 12:39:00 2017
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:21
