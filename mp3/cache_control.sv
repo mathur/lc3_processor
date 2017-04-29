@@ -36,7 +36,8 @@ module cache_control (
 	 output logic insert_mux_sel,
 	 output logic pmem_w_mux_sel,
 
-	 input lc3b_word mem_address,
+	 input lc3b_word mem_address_in,
+     output lc3b_word mem_address_out,
 	 output lc3b_pmem_addr pmem_address,
 
 	 input lc3b_cache_tag set_one_tag,
@@ -46,9 +47,12 @@ module cache_control (
 enum int unsigned {
     /* List of states */
     hit_s,
+    write_back_s,
     fetch_s,
-	write_back_s,
-    write_s
+    write_s,
+    write_back_2_s,
+    fetch_2_s,
+    write_2_s
 } state, next_state;
 
 always_comb
@@ -64,7 +68,8 @@ begin : state_actions
 	 pmem_write = 0;
 	 pmem_w_mux_sel = 0;
 	 insert_mux_sel = 0;
-	 pmem_address = (mem_address & 16'b1111111111110000);
+	 pmem_address = (mem_address_in & 16'b1111111111110000);
+     mem_address_out = mem_address_in;
 
 		case(state)
         hit_s: begin
@@ -88,20 +93,20 @@ begin : state_actions
 			end
 		end
 
+        write_back_s: begin
+            if (current_lru == 0) begin
+              pmem_write = 1;
+              pmem_w_mux_sel = 0;
+              pmem_address = {set_one_tag, mem_address_in[6:4], 4'b0000};
+            end else if(current_lru == 1) begin
+              pmem_write = 1;
+              pmem_w_mux_sel = 1;
+              pmem_address = {set_two_tag, mem_address_in[6:4], 4'b0000};
+            end
+        end
+
 		fetch_s: begin
 			pmem_read = 1;
-		end
-
-		write_back_s: begin
-			if (current_lru == 0) begin
-			  pmem_write = 1;
-			  pmem_w_mux_sel = 0;
-			  pmem_address = {set_one_tag, mem_address[6:4], 4'b0000};
-			end else if(current_lru == 1) begin
-			  pmem_write = 1;
-			  pmem_w_mux_sel = 1;
-			  pmem_address = {set_two_tag, mem_address[6:4], 4'b0000};
-			end
 		end
 
         write_s: begin
@@ -118,6 +123,42 @@ begin : state_actions
 			    write_type_set_two = mem_write;
 			    insert_mux_sel = 1;
 			end
+        end
+
+        write_back_2_s: begin
+            mem_address_out = mem_address_in + 5'b10000;
+            if (current_lru == 0) begin
+              pmem_write = 1;
+              pmem_w_mux_sel = 0;
+              pmem_address = {set_one_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
+            end else if(current_lru == 1) begin
+              pmem_write = 1;
+              pmem_w_mux_sel = 1;
+              pmem_address = {set_two_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
+            end
+        end
+
+        fetch_2_s: begin
+            mem_address_out = mem_address_in + 5'b10000;
+            pmem_read = 1;
+            pmem_address = (mem_address_in & 16'b1111111111110000) + 5'b10000;
+        end
+
+        write_2_s: begin
+            mem_address_out = mem_address_in + 5'b10000;
+            if (current_lru == 0) begin
+                /* Set one is LRU, replace */
+                load_set_one = 1;
+                cache_in_mux_sel = mem_write;
+                write_type_set_one = mem_write;
+                insert_mux_sel = 1;
+            end else if (current_lru == 1) begin
+                /* Set two is LRU, replace */
+                load_set_two = 1;
+                cache_in_mux_sel = mem_write;
+                write_type_set_two = mem_write;
+                insert_mux_sel = 1;
+            end
         end
     endcase
 end : state_actions
@@ -141,11 +182,18 @@ begin : next_state_logic
                     end
         end
 
-		  write_back_s: begin
+		write_back_s: begin
             if(!pmem_resp)
 					next_state = write_back_s;
             else
-					next_state = fetch_s;
+					next_state = write_back_2_s;
+        end
+
+        write_back_2_s: begin
+            if(!pmem_resp)
+                    next_state = write_back_2_s;
+            else
+                    next_state = fetch_s;
         end
 
 		fetch_s: begin
@@ -157,8 +205,20 @@ begin : next_state_logic
 		end
 
 		write_s: begin
-			next_state = hit_s;
+			next_state = fetch_2_s;
 		end
+
+        fetch_2_s: begin
+            if(!pmem_resp) begin
+                next_state = fetch_2_s;
+            end else begin
+                next_state = write_s;
+            end
+        end
+
+        write_2_s: begin
+            next_state = hit_s;
+        end
 	endcase
 end : next_state_logic
 

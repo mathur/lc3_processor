@@ -42,10 +42,12 @@ logic pmem_w_mux_sel;
 lc3b_cache_tag set_one_tag;
 lc3b_cache_tag set_two_tag;
 
+lc3b_word mem_address_internal;
+
 cache_datapath cdp(
     .clk(clk),
     .mem_rdata(mem_rdata),
-    .mem_address(mem_address),
+    .mem_address(mem_address_internal),
     .pmem_rdata(pmem_rdata),
     .pmem_wdata(pmem_wdata),
     .load_set_one(load_set_one),
@@ -96,7 +98,8 @@ cache_control ccl(
     .write_type_set_two(write_type_set_two),
     .insert_mux_sel(insert_mux_sel),
     .pmem_w_mux_sel(pmem_w_mux_sel),
-    .mem_address(mem_address),
+    .mem_address_in(mem_address),
+    .mem_address_out(mem_address_internal),
     .pmem_address(pmem_address),
     .set_one_tag(set_one_tag),
     .set_two_tag(set_two_tag)

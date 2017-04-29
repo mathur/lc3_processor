@@ -63,7 +63,6 @@ lc3b_word id_forward_b_data;
 logic wb_mem_forward_a, wb_mem_forward_b;
 logic [15:0] wb_mem_forward_a_data, wb_mem_forward_b_data;
 
-
 logic leap_frog_data_sel, leap_frog_reg_sel, leap_frog_write_sel;
 
 lc3b_word leap_frog_data_out;
