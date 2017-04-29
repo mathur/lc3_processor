@@ -18,8 +18,9 @@ add wave -noupdate /mp3_tb/dut/dcache/mem_address
 add wave -noupdate /mp3_tb/dut/dcache/mem_address_internal
 add wave -noupdate -radix hexadecimal /mp3_tb/dut/dcache/cdp/main_block/set_one/data
 add wave -noupdate -radix hexadecimal /mp3_tb/dut/dcache/cdp/main_block/set_two/data
+add wave -noupdate -radix hexadecimal /mp3_tb/memory/rdata
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {5775000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {19712655 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 588
 configure wave -valuecolwidth 204
@@ -35,4 +36,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {149868947 ps} {150006898 ps}
+WaveRestoreZoom {19712655 ps} {19910823 ps}

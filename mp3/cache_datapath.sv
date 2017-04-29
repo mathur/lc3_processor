@@ -37,7 +37,8 @@ module cache_datapath (
 	 output lc3b_cache_tag set_one_tag,
 	 output lc3b_cache_tag set_two_tag,
 
-     input lc3b_mem_wmask mem_byte_enable
+     input lc3b_mem_wmask mem_byte_enable,
+	  input logic insert_enable
 );
 
 logic hit_sig;
@@ -74,7 +75,8 @@ byte_insert binsert (
     .write_data(mem_wdata),
     .input_data(insert_mux_out),
     .mem_byte_enable(mem_byte_enable),
-    .output_data(insert_data)
+    .output_data(insert_data),
+	 .enable(insert_enable)
 );
 
 cache_block main_block (

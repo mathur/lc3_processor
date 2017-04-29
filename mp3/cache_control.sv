@@ -41,7 +41,8 @@ module cache_control (
 	 output lc3b_pmem_addr pmem_address,
 
 	 input lc3b_cache_tag set_one_tag,
-	 input lc3b_cache_tag set_two_tag
+	 input lc3b_cache_tag set_two_tag,
+	 output logic insert_enable
 );
 
 enum int unsigned {
@@ -53,8 +54,11 @@ enum int unsigned {
     write_back_2_s,
     fetch_2_s,
     write_2_s,
-    eval_2_s
+    eval_2_s,
+	 buffer_s
 } state, next_state;
+
+logic[2:0] incr;
 
 always_comb
 begin : state_actions
@@ -70,8 +74,9 @@ begin : state_actions
 	 pmem_w_mux_sel = 0;
 	 insert_mux_sel = 0;
 	 pmem_address = (mem_address_in & 16'b1111111111110000);
-     mem_address_out = mem_address_in;
-
+    mem_address_out = mem_address_in;
+	insert_enable = 1'b1;
+	 
 		case(state)
         hit_s: begin
             if((mem_read) && (hit)) begin
@@ -107,19 +112,22 @@ begin : state_actions
         end
 
         eval_2_s: begin
-            mem_address_out = mem_address_in + 5'b10000;
+				insert_enable = 1'b0;
+            mem_address_out = mem_address_in + 16'b0000000000010000;
+				pmem_address = (mem_address_in & 16'b1111111111110000) + 16'b0000000000010000;
         end
 		  
 		  write_back_2_s: begin
-            mem_address_out = mem_address_in + 5'b10000;
+				insert_enable = 1'b0;
+            mem_address_out = mem_address_in + 16'b0000000000010000;
             if (current_lru == 0) begin
               pmem_write = 1;
               pmem_w_mux_sel = 0;
-              pmem_address = {set_one_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
+              pmem_address = {set_one_tag, (mem_address_in[6:4]), 4'b0000} + 16'b0000000000010000;
             end else if(current_lru == 1) begin
               pmem_write = 1;
               pmem_w_mux_sel = 1;
-              pmem_address = {set_two_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
+              pmem_address = {set_two_tag, (mem_address_in[6:4]), 4'b0000} + 16'b0000000000010000;
             end
         end
 		  
@@ -144,13 +152,16 @@ begin : state_actions
         end
 
         fetch_2_s: begin
-            mem_address_out = mem_address_in + 5'b10000;
+		      insert_enable = 1'b0;
+            mem_address_out = mem_address_in + 16'b0000000000010000;
+				pmem_address = (mem_address_in & 16'b1111111111110000) + 16'b0000000000010000;
             pmem_read = 1;
-            pmem_address = (mem_address_in & 16'b1111111111110000) + 5'b10000;
         end
 
         write_2_s: begin
-            mem_address_out = mem_address_in + 5'b10000;
+				insert_enable = 1'b0;
+            mem_address_out = mem_address_in + 16'b0000000000010000;
+				pmem_address = (mem_address_in & 16'b1111111111110000) + 16'b0000000000010000;
             if (current_lru == 0) begin
                 /* Set one is LRU, replace */
                 load_set_one = 1;
@@ -165,6 +176,10 @@ begin : state_actions
                 insert_mux_sel = 1;
             end
         end
+		  
+		  buffer_s: begin
+			// nothing
+		  end
     endcase
 end : state_actions
 
@@ -232,8 +247,12 @@ begin : next_state_logic
         end
 
         write_2_s: begin
-            next_state = hit_s;
+            next_state = buffer_s;
         end
+		  
+		  buffer_s: begin
+			next_state = hit_s;
+		  end
 	endcase
 end : next_state_logic
 

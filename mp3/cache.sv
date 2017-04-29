@@ -38,6 +38,7 @@ logic write_type_set_one;
 logic write_type_set_two;
 logic insert_mux_sel;
 logic pmem_w_mux_sel;
+logic insert_enable;
 
 lc3b_cache_tag set_one_tag;
 lc3b_cache_tag set_two_tag;
@@ -69,7 +70,8 @@ cache_datapath cdp(
     .pmem_w_mux_sel(pmem_w_mux_sel),
     .set_one_tag(set_one_tag),
     .set_two_tag(set_two_tag),
-    .mem_byte_enable(mem_byte_enable)
+    .mem_byte_enable(mem_byte_enable),
+	 .insert_enable(insert_enable)
 );
 
 cache_control ccl(
@@ -102,7 +104,8 @@ cache_control ccl(
     .mem_address_out(mem_address_internal),
     .pmem_address(pmem_address),
     .set_one_tag(set_one_tag),
-    .set_two_tag(set_two_tag)
+    .set_two_tag(set_two_tag),
+	 .insert_enable(insert_enable)
 );
 
 endmodule : cache

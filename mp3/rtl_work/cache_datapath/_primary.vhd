@@ -26,6 +26,7 @@ entity cache_datapath is
         pmem_w_mux_sel  : in     vl_logic;
         set_one_tag     : out    vl_logic_vector(8 downto 0);
         set_two_tag     : out    vl_logic_vector(8 downto 0);
-        mem_byte_enable : in     vl_logic_vector(1 downto 0)
+        mem_byte_enable : in     vl_logic_vector(1 downto 0);
+        insert_enable   : in     vl_logic
     );
 end cache_datapath;

@@ -89,7 +89,7 @@ cache icache (
     .pmem_wdata(pmem_wdata_a)
 );
 
-cache dcache (
+dcache dcache_mod (
     .clk(clk),
 
     /* Memory signals from cpu */

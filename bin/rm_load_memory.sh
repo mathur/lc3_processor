@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Settings
-DEFAULT_TARGET=$HOME/ece411/fmax_420/mp3/simulation/modelsim/memory.lst
-ASSEMBLER=$HOME/ece411/fmax_420/bin/LC3bAssembler
+DEFAULT_TARGET=$HOME/fmax_420/mp3/simulation/modelsim/memory.lst
+ASSEMBLER=$HOME/fmax_420/bin/LC3bAssembler
 ADDRESSABILITY=16
 
 # Command line parameters
