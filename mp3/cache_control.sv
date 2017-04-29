@@ -212,7 +212,7 @@ begin : next_state_logic
             if(!pmem_resp) begin
                 next_state = fetch_2_s;
             end else begin
-                next_state = write_s;
+                next_state = write_2_s;
             end
         end
 
