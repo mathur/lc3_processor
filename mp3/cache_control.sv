@@ -52,7 +52,8 @@ enum int unsigned {
     write_s,
     write_back_2_s,
     fetch_2_s,
-    write_2_s
+    write_2_s,
+    eval_2_s
 } state, next_state;
 
 always_comb
@@ -125,6 +126,10 @@ begin : state_actions
 			end
         end
 
+        eval_2_s: begin
+            mem_address_out = mem_address_in + 5'b10000;
+        end
+
         write_back_2_s: begin
             mem_address_out = mem_address_in + 5'b10000;
             if (current_lru == 0) begin
@@ -187,6 +192,16 @@ begin : next_state_logic
 					next_state = write_back_s;
             else
 					next_state = write_back_2_s;
+        end
+
+        eval_2_s: begin
+            if(set_one_dirty && (current_lru == 0)) begin
+                next_state = write_back_2_s;
+            end else if(set_two_dirty && (current_lru == 1)) begin
+                next_state = write_back_2_s;
+            end else begin
+                next_state = fetch_2_s;
+            end
         end
 
         write_back_2_s: begin
