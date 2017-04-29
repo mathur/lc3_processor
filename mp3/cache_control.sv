@@ -55,7 +55,7 @@ enum int unsigned {
     fetch_2_s,
     write_2_s,
     eval_2_s,
-	 buffer_s
+	 eval_fetch_2
 } state, next_state;
 
 logic[2:0] incr;
@@ -177,8 +177,9 @@ begin : state_actions
             end
         end
 		  
-		  buffer_s: begin
-			// nothing
+		  eval_fetch_2: begin
+				insert_enable = 1'b0;
+            mem_address_out = mem_address_in + 16'b0000000000010000;
 		  end
     endcase
 end : state_actions
@@ -235,7 +236,15 @@ begin : next_state_logic
 		end
 
 		write_s: begin
-			next_state = fetch_2_s;
+			next_state = eval_fetch_2;
+		end
+		
+		eval_fetch_2: begin
+			if ((set_one_tag == mem_address_in[15:7]) || (set_two_tag == mem_address_in[15:7])) begin
+				next_state = hit_s;
+			end else begin
+				next_state = fetch_2_s;
+			end
 		end
 
         fetch_2_s: begin
@@ -247,12 +256,9 @@ begin : next_state_logic
         end
 
         write_2_s: begin
-            next_state = buffer_s;
+            next_state = hit_s;
         end
 		  
-		  buffer_s: begin
-			next_state = hit_s;
-		  end
 	endcase
 end : next_state_logic
 
