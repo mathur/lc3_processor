@@ -21,37 +21,20 @@ module if_datapath (
     output lc3b_word pc_out, instruction,
     output lc3b_reg src1, src2, dest,
     output logic read_a,
-    output logic [15:0] address_a,
-	 
-	     // counters
-    input logic if_stall_count_reset,
-    output lc3b_word if_stall_count
+    output logic [15:0] address_a
 );
 
 lc3b_word pc_plus2_out, pcmux_out;
 logic [2:0] pcmux_sel_internal;
 logic pc_load;
 
-logic ir_stall;
 logic branch_en_after_stall;
 logic [15:0] branch_rdata_after_stall;
 
 initial
 begin
 	 branch_en_after_stall = 0;
-    if_stall_count = 16'b0;
 	 branch_rdata_after_stall = 16'b0;
-end
-
-always_ff @(posedge clk)
-begin
-    if(if_stall_count_reset == 1'b1) begin
-        if_stall_count = 16'b0;
-    end else if(ir_stall == 1'b1) begin
-        if_stall_count = if_stall_count + 1'b1;
-    end else begin
-        if_stall_count = if_stall_count;
-    end
 end
 
 always_ff @(posedge clk) begin
@@ -130,8 +113,7 @@ ir ir_unit (
     .dest(dest),
     .src1(src1),
     .src2(src2),
-	 .instruction(instruction),
-	 .ir_stall(ir_stall)
+	 .instruction(instruction)
 );
 
 mux8 pcmux

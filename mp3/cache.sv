@@ -19,9 +19,7 @@ module cache (
     output pmem_write,
 
     output lc3b_pmem_addr pmem_address,
-    output lc3b_pmem_line pmem_wdata,
-    output lc3b_word hit_count, miss_count,
-    input logic hit_count_reset, miss_count_reset
+    output lc3b_pmem_line pmem_wdata
 );
 
 logic load_set_one;
@@ -101,11 +99,7 @@ cache_control ccl(
     .mem_address(mem_address),
     .pmem_address(pmem_address),
     .set_one_tag(set_one_tag),
-    .set_two_tag(set_two_tag),
-    .hit_count(hit_count),
-    .miss_count(miss_count),
-    .hit_count_reset(hit_count_reset),
-    .miss_count_reset(miss_count_reset)
+    .set_two_tag(set_two_tag)
 );
 
 endmodule : cache

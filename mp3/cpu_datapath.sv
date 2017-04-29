@@ -72,7 +72,6 @@ logic leap_frog_write_out;
 logic stall_pass_override;
 logic mem_load_cc_s;
 
-
 if_datapath if_data
 (
     .clk(clk),
@@ -137,8 +136,6 @@ mux2 #(.width(1)) leap_frog_write (
     .b(id_ex_ctrl.load_regfile),
     .f(leap_frog_write_out)
 );
-
-
 
 id_datapath id
 (
@@ -262,7 +259,6 @@ forwarding_unit hot_box
 	 .mem_forward_b(wb_mem_forward_b)
 );
 
-
 leap_frog puff_puff_pass
 (
 	 .clk(clk),
@@ -275,11 +271,9 @@ leap_frog puff_puff_pass
 
     .leap_frog_data_mux(leap_frog_data_sel),
     .leap_frog_reg_mux(leap_frog_reg_sel),
-	 .other_stage_stall_override(stall_pass_override),
-	 .mem_load_cc(mem_load_cc_s)
+	.other_stage_stall_override(stall_pass_override),
+	.mem_load_cc(mem_load_cc_s)
 );
-
-
 
 buffer ex_mem_buf
 (
@@ -342,7 +336,7 @@ mem_datapath mem
     .dest(ex_mem_dest),
     .stall(stall_mem),
     .flush(flush_mem),
-	 
+
     /* Port B */
     .read_b(read_b),
     .write_b(write_b),
