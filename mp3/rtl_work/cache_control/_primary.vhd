@@ -25,13 +25,10 @@ entity cache_control is
         write_type_set_two: out    vl_logic;
         insert_mux_sel  : out    vl_logic;
         pmem_w_mux_sel  : out    vl_logic;
-        mem_address     : in     vl_logic_vector(15 downto 0);
+        mem_address_in  : in     vl_logic_vector(15 downto 0);
+        mem_address_out : out    vl_logic_vector(15 downto 0);
         pmem_address    : out    vl_logic_vector(15 downto 0);
         set_one_tag     : in     vl_logic_vector(8 downto 0);
-        set_two_tag     : in     vl_logic_vector(8 downto 0);
-        hit_count       : out    vl_logic_vector(15 downto 0);
-        miss_count      : out    vl_logic_vector(15 downto 0);
-        hit_count_reset : in     vl_logic;
-        miss_count_reset: in     vl_logic
+        set_two_tag     : in     vl_logic_vector(8 downto 0)
     );
 end cache_control;

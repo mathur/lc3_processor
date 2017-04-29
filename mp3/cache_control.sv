@@ -106,6 +106,23 @@ begin : state_actions
             end
         end
 
+        eval_2_s: begin
+            mem_address_out = mem_address_in + 5'b10000;
+        end
+		  
+		  write_back_2_s: begin
+            mem_address_out = mem_address_in + 5'b10000;
+            if (current_lru == 0) begin
+              pmem_write = 1;
+              pmem_w_mux_sel = 0;
+              pmem_address = {set_one_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
+            end else if(current_lru == 1) begin
+              pmem_write = 1;
+              pmem_w_mux_sel = 1;
+              pmem_address = {set_two_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
+            end
+        end
+		  
 		fetch_s: begin
 			pmem_read = 1;
 		end
@@ -124,23 +141,6 @@ begin : state_actions
 			    write_type_set_two = mem_write;
 			    insert_mux_sel = 1;
 			end
-        end
-
-        eval_2_s: begin
-            mem_address_out = mem_address_in + 5'b10000;
-        end
-
-        write_back_2_s: begin
-            mem_address_out = mem_address_in + 5'b10000;
-            if (current_lru == 0) begin
-              pmem_write = 1;
-              pmem_w_mux_sel = 0;
-              pmem_address = {set_one_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
-            end else if(current_lru == 1) begin
-              pmem_write = 1;
-              pmem_w_mux_sel = 1;
-              pmem_address = {set_two_tag, (mem_address_in[6:4] + 1'b1), 4'b0000};
-            end
         end
 
         fetch_2_s: begin
@@ -182,7 +182,7 @@ begin : next_state_logic
                             end else if(set_two_dirty && (current_lru == 1)) begin
                                 next_state = write_back_s;
                             end else begin
-                                next_state = fetch_s;
+                                next_state = eval_2_s;
                             end
                     end
         end
@@ -191,7 +191,7 @@ begin : next_state_logic
             if(!pmem_resp)
 					next_state = write_back_s;
             else
-					next_state = write_back_2_s;
+					next_state = eval_2_s;
         end
 
         eval_2_s: begin
@@ -200,7 +200,7 @@ begin : next_state_logic
             end else if(set_two_dirty && (current_lru == 1)) begin
                 next_state = write_back_2_s;
             end else begin
-                next_state = fetch_2_s;
+                next_state = fetch_s;
             end
         end
 

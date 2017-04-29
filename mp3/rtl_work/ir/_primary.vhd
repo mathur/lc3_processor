@@ -10,7 +10,6 @@ entity ir is
         instruction     : out    vl_logic_vector(15 downto 0);
         dest            : out    vl_logic_vector(2 downto 0);
         src1            : out    vl_logic_vector(2 downto 0);
-        src2            : out    vl_logic_vector(2 downto 0);
-        ir_stall        : out    vl_logic
+        src2            : out    vl_logic_vector(2 downto 0)
     );
 end ir;

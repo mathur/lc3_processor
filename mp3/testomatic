@@ -8,14 +8,14 @@
 #MP project name
 MP=mp3
 #MP directory
-MP_DIR=$HOME/Desktop/fmax_420/$MP
+MP_DIR=$HOME/fmax_420/$MP
 #Location of LC3bAssembler; Should usually be in bin
-ASSEMBLER=$HOME/Desktop/fmax_420/bin/LC3bAssembler
+ASSEMBLER=$HOME/fmax_420/bin/LC3bAssembler
 #Addressability of physical memory; from load_memory.sh
 ADDRESSABILITY=16
 
 #Testcode directory;Not required but can be used to avoid entering path everytime
-TESTCODE_DIR=$HOME/Desktop/fmax_420/testcode
+TESTCODE_DIR=$HOME/fmax_420/testcode
 
 ####
 ####Change according to your design
