@@ -1,9 +1,16 @@
-# FMAX 420
+# Pipelined LC-3b Processor
 
-![alt text](http://i.imgur.com/SymyLUu.png "It's gonna to be lit")
+# Features
+* 5 stage pipelined processor (IF, ID, EX, MEM, WB)
+* Supports the full [LC-3b ISA](https://courses.engr.illinois.edu/ece411/mp/LC3b_ISA.pdf)
+* Physical memory
+* Split L1 cache (instruction cache and data cache)
+* Unified L2 cache with cache arbiter
+* Eviction write buffer
+* Memory-mapped I/O
+* MEM stage instruction leapfrogging
+* Instruction prefetching in hardware
 
-*I love the smell of cache hits in the morning.*
-
-Tadas Aleksonis (alekson2)
-Tanishq Dubey (tdubey3)
-Rohan Mathur (rmathur2)
+# Technical Specifications
+* Theoretical maximum frequency: 115.07 MHz
+* Slack: 0.00 ns
